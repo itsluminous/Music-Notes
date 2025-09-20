@@ -1,0 +1,26 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Build directory
+/.next/
+/out/
+
+# Local environment variables
+.env*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Turbopack
+.turbo
+
+# Editor directories
+.vscode
+.idea
+
+# OS-specific
+.DS_Store
