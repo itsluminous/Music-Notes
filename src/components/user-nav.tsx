@@ -14,9 +14,34 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import Image from 'next/image'
+import { supabase } from '@/lib/supabase'
+import { useRouter } from 'next/navigation'
+import { useAuth } from '@/hooks/use-auth'
 
 export function UserNav() {
   const userAvatar = PlaceHolderImages.find(p => p.id === 'user-avatar');
+  const router = useRouter();
+  const { user, loading } = useAuth();
+
+  async function handleSignOut() {
+    try {
+      const { error } = await supabase.auth.signOut();
+      if (error) {
+        // Minimal error handling: log and keep user on the page
+        // You can replace this with a toast notification using the project's toast hook
+        // e.g. useToast or similar
+        // eslint-disable-next-line no-console
+        console.error('Sign out error:', error.message)
+        return
+      }
+
+      // Redirect to the login page after successful sign out
+      router.push('/auth/login')
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.error('Unexpected sign out error:', err)
+    }
+  }
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -41,10 +66,7 @@ export function UserNav() {
       <DropdownMenuContent className="w-56" align="end" forceMount>
         <DropdownMenuLabel className="font-normal">
           <div className="flex flex-col space-y-1">
-            <p className="text-sm font-medium leading-none">User</p>
-            <p className="text-xs leading-none text-muted-foreground">
-              user@example.com
-            </p>
+            <p className="text-sm font-medium leading-none">{loading ? 'Loading...' : (user?.email ?? 'Not signed in')}</p>
           </div>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
@@ -59,7 +81,7 @@ export function UserNav() {
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>
+        <DropdownMenuItem onSelect={(e) => { e.preventDefault(); handleSignOut() }}>
           Log out
           <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
         </DropdownMenuItem>

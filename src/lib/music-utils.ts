@@ -154,12 +154,16 @@ export const linkify = (text: string): ContentPart[] => {
   if (!text) return [];
   const parts = text.split(URL_REGEX);
 
-  return parts.map((part) => {
-    if (part.match(URL_REGEX)) {
-      return { type: 'link', href: part, text: part };
-    }
-    return { type: 'text', text: part };
-  }).filter(part => part.text.length > 0);
+  return parts
+    .map((part) => {
+      if (part.match(URL_REGEX)) {
+        const linkPart: LinkPart = { type: 'link', href: part, text: part };
+        return linkPart;
+      }
+      const textPart: TextPart = { type: 'text', text: part };
+      return textPart;
+    })
+    .filter((part) => part.text.length > 0);
 };
 
 

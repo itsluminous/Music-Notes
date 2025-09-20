@@ -12,6 +12,6 @@ export type Note = {
   album?: string;
   metadata?: string;
   references?: string;
-  createdAt: string;
-  updatedAt?: string;
+  created_at: string;
+  updated_at?: string;
 };

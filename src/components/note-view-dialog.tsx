@@ -15,6 +15,20 @@ import { Badge } from '@/components/ui/badge';
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import { Separator } from '@/components/ui/separator';
 import { Pencil, Minus, Plus } from 'lucide-react';
+import { Trash } from 'lucide-react';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '@/components/ui/alert-dialog';
+import { supabase } from '@/lib/supabase';
+import { useToast } from '@/hooks/use-toast';
 import { highlightChordsAndCode, linkify, isLinkPart, parseCapoValue } from '@/lib/music-utils';
 import type { Note, Tag } from '@/lib/types';
 import { format } from 'date-fns';
@@ -25,9 +39,10 @@ interface NoteViewDialogProps {
   note: Note;
   allTags: Tag[];
   onEdit: () => void;
+  onDeleted?: (id: string) => void;
 }
 
-export function NoteViewDialog({ isOpen, onOpenChange, note, allTags, onEdit }: NoteViewDialogProps) {
+export function NoteViewDialog({ isOpen, onOpenChange, note, allTags, onEdit, onDeleted }: NoteViewDialogProps) {
   const [initialCapo, setInitialCapo] = React.useState(0);
   const [manualTransposeSteps, setManualTransposeSteps] = React.useState(0);
 
@@ -40,14 +55,21 @@ export function NoteViewDialog({ isOpen, onOpenChange, note, allTags, onEdit }: 
   }, [isOpen, note.metadata]);
 
   const noteTags = note.tags.map(tagId => allTags.find(t => t.id === tagId)).filter(Boolean) as Tag[];
-  const formattedCreationDate = format(new Date(note.createdAt), "MMM d, yyyy 'at' h:mm a");
-  const formattedUpdateDate = note.updatedAt ? format(new Date(note.updatedAt), "MMM d, yyyy 'at' h:mm a") : null;
+  const formattedCreationDate = format(new Date((note as any).created_at), "MMM d, yyyy 'at' h:mm a");
+  const rawUpdatedAt = (note as any).updated_at;
+  let formattedUpdateDate = rawUpdatedAt ? format(new Date(rawUpdatedAt), "MMM d, yyyy 'at' h:mm a") : null;
+  // If updated timestamp formats to the same string as creation, treat it as no update
+  if (formattedUpdateDate === formattedCreationDate) {
+    formattedUpdateDate = null;
+  }
   
   // The value displayed in the UI is the sum of the capo and manual steps
   const displayTranspose = initialCapo + manualTransposeSteps;
   
   // The actual transposition applied to chords is only the manual adjustment
   const effectiveTranspose = manualTransposeSteps;
+  const { toast } = useToast();
+  const [isDeleting, setIsDeleting] = React.useState(false);
 
 
   return (
@@ -113,8 +135,8 @@ export function NoteViewDialog({ isOpen, onOpenChange, note, allTags, onEdit }: 
           </ScrollArea>
         </div>
           
-        <DialogFooter className="flex-shrink-0 p-6 pt-4 border-t flex flex-row justify-between items-center w-full">
-          <div className="flex items-center gap-2">
+        <DialogFooter className="flex-shrink-0 p-6 pt-4 border-t flex flex-row items-center w-full">
+          <div className="flex items-center gap-2 flex-1">
             <span className="text-sm font-medium">Transpose:</span>
             <Button variant="outline" size="icon" className="h-8 w-8" onClick={() => setManualTransposeSteps(s => s - 1)}>
               <Minus className="h-4 w-4" />
@@ -124,9 +146,53 @@ export function NoteViewDialog({ isOpen, onOpenChange, note, allTags, onEdit }: 
               <Plus className="h-4 w-4" />
             </Button>
           </div>
-          <Button onClick={onEdit}>
-            <Pencil className="mr-2 h-4 w-4" /> Edit
-          </Button>
+          <div className="flex items-center gap-2 ml-auto">
+            <AlertDialog>
+              <AlertDialogTrigger asChild>
+                <Button variant="ghost" size="sm" className="text-destructive">
+                  <Trash className="mr-2 h-4 w-4" /> Delete
+                </Button>
+              </AlertDialogTrigger>
+              <AlertDialogContent>
+                <AlertDialogHeader>
+                  <AlertDialogTitle>Delete note</AlertDialogTitle>
+                  <AlertDialogDescription>
+                    Are you sure you want to delete this note? This action cannot be undone.
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <AlertDialogFooter>
+                  <AlertDialogCancel>Cancel</AlertDialogCancel>
+                  <AlertDialogAction asChild>
+                    <Button
+                      variant="destructive"
+                      onClick={async () => {
+                        try {
+                          setIsDeleting(true);
+                          const { error } = await supabase.from('notes').delete().eq('id', note.id).limit(1);
+                          if (error) throw error;
+                          toast({ title: 'Deleted', description: 'Note deleted successfully.' });
+                          // close the view dialog
+                          onOpenChange(false);
+                          if (typeof onDeleted === 'function') onDeleted(note.id);
+                        } catch (err: any) {
+                          console.error('Failed to delete note', err);
+                          toast({ title: 'Error', description: err.message || 'Failed to delete note.' });
+                        } finally {
+                          setIsDeleting(false);
+                        }
+                      }}
+                    >
+                      {isDeleting ? 'Deleting…' : 'Delete'}
+                    </Button>
+                  </AlertDialogAction>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialog>
+
+            <Button onClick={onEdit}>
+              <Pencil className="mr-2 h-4 w-4" /> Edit
+            </Button>
+          </div>
         </DialogFooter>
       </DialogContent>
     </Dialog>

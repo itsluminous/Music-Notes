@@ -86,14 +86,20 @@ export function NoteEditorDialog({ isOpen, onOpenChange, note, onSave, allTags, 
 
   
   const onSubmit = (data: NoteFormData) => {
-    const finalNote: Note = {
+    const now = new Date().toISOString();
+    // Prefer existing created_at if present
+    const existingCreatedAt = (note as any)?.created_at || now;
+
+    // Use snake_case timestamps throughout
+    const finalNote: any = {
       id: note?.id || new Date().toISOString(),
-      createdAt: note?.createdAt || new Date().toISOString(),
+      created_at: existingCreatedAt,
+      updated_at: now,
       ...data,
       artist: currentArtists.join(', '),
       tags: data.tags || [],
     };
-    onSave(finalNote);
+    onSave(finalNote as any);
   };
   
   const handleAddTag = (tagId: string) => {

@@ -1,4 +1,3 @@
-
 "use client";
 
 import * as React from 'react';
@@ -22,14 +21,16 @@ import { NoteCard } from '@/components/note-card';
 import { NoteEditorDialog } from '@/components/note-editor-dialog';
 import { NoteViewDialog } from '@/components/note-view-dialog';
 import { UserNav } from '@/components/user-nav';
-import { allNotes, allTags } from '@/lib/mock-data';
 import type { Note, Tag } from '@/lib/types';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { useRouter } from 'next/navigation';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import { supabase } from '@/lib/supabase';
+import { useToast } from '@/hooks/use-toast';
+import { useNotesData } from '@/hooks/use-notes-data';
 
 export default function Home() {
-  const [notes, setNotes] = React.useState<Note[]>(allNotes);
-  const [tags, setTags] = React.useState<Tag[]>(allTags);
+  const { notes, tags, loading: notesLoading, fetchNotesAndTags, saveNote } = useNotesData();
   const [searchQuery, setSearchQuery] = React.useState('');
   const [selectedTags, setSelectedTags] = React.useState<string[]>([]);
   const [editingNote, setEditingNote] = React.useState<Note | null>(null);
@@ -37,6 +38,21 @@ export default function Home() {
   const [isEditorOpen, setIsEditorOpen] = React.useState(false);
   const [isViewOpen, setIsViewOpen] = React.useState(false);
   const isMobile = useIsMobile();
+  const router = useRouter();
+  const { toast } = useToast();
+  // notes/tags loading handled by useNotesData
+
+  // Redirect to login if unauthenticated
+  React.useEffect(() => {
+    const ensureAuth = async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) {
+        router.replace('/auth/login');
+      }
+    };
+
+    ensureAuth();
+  }, [router]);
 
   const filteredNotes = React.useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
@@ -48,7 +64,7 @@ export default function Home() {
     });
 
     if (!query) {
-      return notesWithTags.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+      return notesWithTags.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
     }
 
     const searchWords = query.split(/\s+/).filter(Boolean);
@@ -122,24 +138,12 @@ export default function Home() {
     setIsViewOpen(true);
   }
 
-  const handleSaveNote = (savedNote: Note) => {
-    if (editingNote) {
-      const updatedNote = { ...savedNote, updatedAt: new Date().toISOString() };
-      setNotes(notes.map((n) => (n.id === updatedNote.id ? updatedNote : n)));
-    } else {
-      setNotes([savedNote, ...notes]);
+  const handleSaveNote = async (savedNote: Note) => {
+    const ok = await saveNote(savedNote, editingNote);
+    if (ok) {
+      setIsEditorOpen(false);
+      setEditingNote(null);
     }
-    const newTags = savedNote.tags
-      .map(tagId => tags.find(t => t.id === tagId) || { id: tagId, name: tagId }) // Create new tag if not found
-      .filter(tag => !tags.some(t => t.id === tag.id));
-      
-    if (newTags.length > 0) {
-      const uniqueNewTags = newTags.filter((v, i, a) => a.findIndex(t => t.id === v.id) === i);
-      setTags([...tags, ...uniqueNewTags]);
-    }
-
-    setIsEditorOpen(false);
-    setEditingNote(null);
   };
   
   const allArtists = React.useMemo(() => [...new Set(notes.flatMap(n => n.artist?.split(',').map(a => a.trim()) || []).filter(Boolean) as string[])], [notes]);
@@ -197,7 +201,6 @@ export default function Home() {
     
     return null;
   };
-
 
   return (
     <SidebarProvider defaultOpen={!isMobile}>
@@ -268,6 +271,12 @@ export default function Home() {
             note={viewingNote}
             allTags={tags}
             onEdit={() => handleEditNote(viewingNote)}
+            onDeleted={(id: string) => {
+              // Refresh notes and clear viewing state so deleted note disappears from grid
+              fetchNotesAndTags();
+              setViewingNote(null);
+              setIsViewOpen(false);
+            }}
           />
         )}
       </div>
