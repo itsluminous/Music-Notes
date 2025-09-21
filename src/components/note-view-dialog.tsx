@@ -72,7 +72,7 @@ export function NoteViewDialog({
       } else {
         el.scrollTop = next;
       }
-    }, 100);
+    }, 1000);
 
     return clearInterval;
   }, [scrollSpeed, isOpen]);
