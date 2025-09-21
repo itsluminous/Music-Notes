@@ -28,6 +28,7 @@ const noteSchema = z.object({
   content: z.string().min(1, 'Content is required'),
   artist: z.string().optional(),
   album: z.string().optional(),
+  release_year: z.string().optional(),
   metadata: z.string().optional(),
   references: z.string().optional(),
   tags: z.array(z.string()).optional(),
@@ -48,6 +49,7 @@ interface NoteEditorDialogProps {
 export function NoteEditorDialog({ isOpen, onOpenChange, note, onSave, allTags, allArtists, allAlbums }: NoteEditorDialogProps) {
   const [artistInput, setArtistInput] = React.useState('');
   const [albumInput, setAlbumInput] = React.useState('');
+  const [fetchingMB, setFetchingMB] = React.useState(false);
 
   const form = useForm<NoteFormData>({
     resolver: zodResolver(noteSchema),
@@ -56,6 +58,7 @@ export function NoteEditorDialog({ isOpen, onOpenChange, note, onSave, allTags, 
       content: '',
       artist: '',
       album: '',
+      release_year: '',
       metadata: '',
       references: '',
       tags: [],
@@ -73,13 +76,14 @@ export function NoteEditorDialog({ isOpen, onOpenChange, note, onSave, allTags, 
         content: note.content,
         artist: note.artist || '',
         album: note.album || '',
+        release_year: note.release_year ? String(note.release_year) : '',
         metadata: note.metadata || '',
         references: note.references || '',
         tags: note.tags || [],
       });
       setAlbumInput(note.album || '');
     } else {
-      form.reset({ title: '', content: '', artist: '', album: '', metadata: '', references: '', tags: [] });
+      form.reset({ title: '', content: '', artist: '', album: '', release_year: '', metadata: '', references: '', tags: [] });
       setAlbumInput('');
     }
   }, [note, form, isOpen]);
@@ -97,6 +101,7 @@ export function NoteEditorDialog({ isOpen, onOpenChange, note, onSave, allTags, 
       updated_at: now,
       ...data,
       artist: currentArtists.join(', '),
+      release_year: data.release_year ? parseInt(data.release_year) : undefined,
       tags: data.tags || [],
     };
     onSave(finalNote as any);
@@ -142,7 +147,7 @@ export function NoteEditorDialog({ isOpen, onOpenChange, note, onSave, allTags, 
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 flex-grow overflow-y-auto pr-2">
+          <form id="note-editor-form" onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 flex-grow overflow-y-auto pr-2">
             <FormField
               control={form.control}
               name="title"
@@ -150,7 +155,59 @@ export function NoteEditorDialog({ isOpen, onOpenChange, note, onSave, allTags, 
                 <FormItem>
                   <FormLabel>Title</FormLabel>
                   <FormControl>
-                    <Input placeholder="Note title" {...field} className="text-base" />
+                    <div className="flex gap-2">
+                      <Input
+                        placeholder="Note title"
+                        {...field}
+                        onChange={(e) => {
+                          field.onChange(e);
+                          const v = e.currentTarget.value;
+                          if (v && v.trim().length > 0) {
+                            form.clearErrors('title');
+                          }
+                        }}
+                        className="text-base"
+                      />
+                      <Button
+                        type="button"
+                        variant="ghost"
+                        size="sm"
+                        onClick={async () => {
+                          const title = form.getValues('title')?.trim();
+                          if (!title) {
+                            form.setError('title', { type: 'manual', message: 'Title is required' });
+                            return;
+                          }
+                          setFetchingMB(true);
+                          try {
+                            const params = new URLSearchParams({ query: title, fmt: 'json' });
+                            const resp = await fetch(`https://musicbrainz.org/ws/2/recording/?${params.toString()}`, {
+                              headers: { 'User-Agent': 'KeepNotesToSupabase/1.0 ( your_email@example.com )' },
+                            });
+                            if (!resp.ok) throw new Error(`MusicBrainz returned ${resp.status}`);
+                            const data = await resp.json();
+                            const rec = data.recordings && data.recordings[0];
+                            if (rec) {
+                              const artist = rec['artist-credit']?.[0]?.name || '';
+                              const album = rec.releases?.[0]?.title || '';
+                              const date = rec.releases?.[0]?.date || '';
+                              const year = date ? String(date).split('-')[0] : '';
+                              setValue('artist', artist);
+                              setValue('album', album);
+                              setValue('release_year', year);
+                              setAlbumInput(album);
+                            }
+                          } catch (e) {
+                            console.error('MusicBrainz fetch failed', e);
+                          } finally {
+                            setFetchingMB(false);
+                          }
+                        }}
+                        disabled={fetchingMB}
+                      >
+                        {fetchingMB ? 'Fetching…' : '✨ Fetch'}
+                      </Button>
+                    </div>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -182,8 +239,8 @@ export function NoteEditorDialog({ isOpen, onOpenChange, note, onSave, allTags, 
                 </FormItem>
               )}
             />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <FormItem>
+            <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
+              <FormItem className="md:col-span-2">
                   <FormLabel>Artists</FormLabel>
                   <div className="flex items-center flex-wrap gap-2">
                       {currentArtists.map(artist => (
@@ -233,7 +290,7 @@ export function NoteEditorDialog({ isOpen, onOpenChange, note, onSave, allTags, 
                 control={form.control}
                 name="album"
                 render={({ field }) => (
-                  <FormItem>
+                  <FormItem className="md:col-span-3">
                     <FormLabel>Album</FormLabel>
                     <Popover>
                         <PopoverTrigger asChild>
@@ -284,6 +341,20 @@ export function NoteEditorDialog({ isOpen, onOpenChange, note, onSave, allTags, 
                             </Command>
                         </PopoverContent>
                     </Popover>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="release_year"
+                render={({ field }) => (
+                  <FormItem className="md:col-span-1">
+                    <FormLabel>Release Year</FormLabel>
+                    <FormControl>
+                      <Input placeholder="e.g., 1998" {...field} className="text-base" />
+                    </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
