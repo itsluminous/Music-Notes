@@ -30,7 +30,7 @@ export function NoteViewFooter({
         >
           <Minus className="h-4 w-4" />
         </Button>
-        <span className="font-bold w-8 text-center">
+        <span className="font-bold w-4 text-center">
           {displayTranspose > 0 ? '+' : ''}
           {displayTranspose}
         </span>
@@ -54,7 +54,7 @@ export function NoteViewFooter({
         >
           <ChevronDown className="h-4 w-4" />
         </Button>
-        <span className="font-bold w-12 text-center">{scrollSpeed}</span>
+        <span className="font-bold w-4 text-center">{scrollSpeed}</span>
         <Button
           variant="outline"
           size="icon"
