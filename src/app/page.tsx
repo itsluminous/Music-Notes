@@ -69,14 +69,23 @@ export default function Home() {
 
     const searchWords = query.split(/\s+/).filter(Boolean);
 
+    // If the user typed a single 4-digit year (e.g. "1999"), treat this as a year-only search
+    const yearOnlyMatch = /^\d{4}$/.test(query);
+    if (yearOnlyMatch) {
+      return notesWithTags
+        .filter((note) => note.release_year && String(note.release_year) === query)
+        .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+    }
+
     const getScore = (note: Note) => {
       const title = note.title.toLowerCase();
       const content = note.content.toLowerCase();
       const metadata = note.metadata?.toLowerCase() || '';
       const artist = note.artist?.toLowerCase() || '';
       const album = note.album?.toLowerCase() || '';
-      
-      const combinedContent = `${title} ${content} ${metadata} ${artist} ${album}`;
+      const yearStr = note.release_year ? String(note.release_year) : '';
+
+      const combinedContent = `${title} ${content} ${metadata} ${artist} ${album} ${yearStr}`;
 
       // Check if all search words are present in the combined content
       const allWordsPresent = searchWords.every(word => combinedContent.includes(word));
@@ -182,6 +191,14 @@ export default function Home() {
   );
   
   const renderEmptyState = () => {
+    if (notesLoading) {
+      return (
+        <div className="text-center text-muted-foreground">
+          <p>Fetching your notes…</p>
+        </div>
+      );
+    }
+
     if (filteredNotes.length === 0 && (searchQuery || selectedTags.length > 0)) {
       return (
         <div className="text-center text-muted-foreground">
@@ -190,7 +207,7 @@ export default function Home() {
       );
     }
 
-    if (notes.length === 0) {
+    if (!notesLoading && notes.length === 0) {
       return (
         <div className="text-center text-muted-foreground">
           <p>You don't have any notes yet.</p>

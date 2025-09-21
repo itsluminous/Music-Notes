@@ -10,7 +10,9 @@ export type Note = {
   tags: string[]; // array of tag IDs
   artist?: string;
   album?: string;
+  release_year?: number;
   metadata?: string;
+  isPinned?: boolean;
   references?: string;
   created_at: string;
   updated_at?: string;

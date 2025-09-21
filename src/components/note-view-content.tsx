@@ -36,7 +36,23 @@ export function NoteViewContent({ note, allTags, effectiveTranspose, scrollRef }
       >
         <div>
           {note.metadata && (
-            <div className="text-sm text-muted-foreground whitespace-pre-wrap">{note.metadata}</div>
+            <div className="text-sm text-muted-foreground whitespace-pre-wrap break-words">
+              {linkify(note.metadata).map((part, index) =>
+                isLinkPart(part) ? (
+                  <a
+                    key={index}
+                    href={part.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary underline hover:text-primary/80"
+                  >
+                    {part.text}
+                  </a>
+                ) : (
+                  <React.Fragment key={index}>{part.text}</React.Fragment>
+                )
+              )}
+            </div>
           )}
           <div className="whitespace-pre-wrap text-base font-body leading-relaxed  py-4">
             {highlightChordsAndCode(note.content, effectiveTranspose)}
