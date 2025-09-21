@@ -4,7 +4,7 @@ import './globals.css';
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
-  title: 'Music App',
+  title: 'Music Notes',
   description: 'Your personal music notebook.',
 };
 
