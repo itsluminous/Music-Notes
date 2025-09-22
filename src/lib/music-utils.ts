@@ -190,3 +190,31 @@ export const parseCapoValue = (metadata: string | undefined): number => {
 
   return 0;
 };
+
+/**
+ * Fetches MusicBrainz recording info for a given title.
+ * Returns artist name, album title and year (as a string) or nulls on failure/no-data.
+ */
+export async function fetchMusicBrainzData(title: string) {
+  const params = new URLSearchParams({ query: title, fmt: 'json' });
+  const resp = await fetch(`https://musicbrainz.org/ws/2/recording/?${params.toString()}`, {
+    headers: { 'User-Agent': 'KeepNotesToSupabase/1.0' },
+  });
+
+  if (!resp.ok) {
+    throw new Error(`MusicBrainz returned ${resp.status}`);
+  }
+
+  const data = await resp.json();
+  const rec = data.recordings && data.recordings[0];
+
+  if (rec) {
+    const artist = rec['artist-credit']?.[0]?.name || '';
+    const album = rec.releases?.[0]?.title || '';
+    const date = rec.releases?.[0]?.date || '';
+    const year = date ? String(date).split('-')[0] : '';
+    return { artist, album, year };
+  }
+
+  return null;
+}

@@ -4,9 +4,9 @@ import * as React from 'react';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { parseCapoValue } from '@/lib/music-utils';
 import type { Note, Tag } from '@/lib/types';
-import { NoteViewHeader } from './note-view-header';
-import { NoteViewContent } from './note-view-content';
-import { NoteViewFooter } from './note-view-footer';
+import { NoteViewHeader } from './note-view/header';
+import { NoteViewContent } from './note-view/content';
+import { NoteViewFooter } from './note-view/footer';
 
 interface NoteViewDialogProps {
   isOpen: boolean;
