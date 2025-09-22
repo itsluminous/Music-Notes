@@ -33,6 +33,7 @@ export default function Home() {
   const { notes, tags, loading: notesLoading, fetchNotesAndTags, saveNote } = useNotesData();
   const [searchQuery, setSearchQuery] = React.useState('');
   const [selectedTags, setSelectedTags] = React.useState<string[]>([]);
+  const [showUntagged, setShowUntagged] = React.useState(false);
   const [editingNote, setEditingNote] = React.useState<Note | null>(null);
   const [viewingNote, setViewingNote] = React.useState<Note | null>(null);
   const [isEditorOpen, setIsEditorOpen] = React.useState(false);
@@ -59,6 +60,12 @@ export default function Home() {
 
     // Filter by tags first
     const notesWithTags = notes.filter((note) => {
+      // If 'Untagged' is the only filter, show notes with no tags
+      if (showUntagged && selectedTags.length === 0) {
+        return note.tags.length === 0;
+      }
+      
+      // If other tags are selected, 'Untagged' is ignored
       if (selectedTags.length === 0) return true;
       return selectedTags.every((tagId) => note.tags.includes(tagId));
     });
@@ -123,12 +130,16 @@ export default function Home() {
       .sort((a, b) => b.score - a.score)
       .map(item => item.note);
 
-  }, [notes, searchQuery, selectedTags]);
+  }, [notes, searchQuery, selectedTags, showUntagged]);
 
   const handleTagToggle = (tagId: string) => {
-    setSelectedTags((prev) =>
-      prev.includes(tagId) ? prev.filter((id) => id !== tagId) : [...prev, tagId]
-    );
+    if (tagId === 'untagged') {
+      setShowUntagged(prev => !prev);
+    } else {
+      setSelectedTags((prev) =>
+        prev.includes(tagId) ? prev.filter((id) => id !== tagId) : [...prev, tagId]
+      );
+    }
   };
 
   const handleCreateNewNote = () => {
@@ -185,6 +196,17 @@ export default function Home() {
               </Label>
             </SidebarMenuItem>
           ))}
+          <Separator className="my-2" />
+          <SidebarMenuItem className="px-2">
+            <Label htmlFor="tag-untagged" className="flex items-center gap-3 cursor-pointer w-full text-sm font-normal">
+              <Checkbox
+                id="tag-untagged"
+                checked={showUntagged}
+                onCheckedChange={() => handleTagToggle('untagged')}
+              />
+              Untagged
+            </Label>
+          </SidebarMenuItem>
         </SidebarMenu>
       </SidebarContent>
     </>
@@ -199,7 +221,7 @@ export default function Home() {
       );
     }
 
-    if (filteredNotes.length === 0 && (searchQuery || selectedTags.length > 0)) {
+    if (filteredNotes.length === 0 && (searchQuery || selectedTags.length > 0 || showUntagged)) {
       return (
         <div className="text-center text-muted-foreground">
           <p>No notes found for the selected filters and search query.</p>

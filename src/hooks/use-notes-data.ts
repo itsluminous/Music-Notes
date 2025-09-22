@@ -5,6 +5,40 @@ import { supabase } from '@/lib/supabase';
 import type { Note, Tag } from '@/lib/types';
 import { useToast } from './use-toast';
 
+// Helper function to fetch all records with pagination
+const fetchAllPaginated = async (table: string, user_id: string) => {
+  const PAGE_SIZE = 900;
+  let allData: any[] = [];
+  let page = 0;
+  let hasMore = true;
+
+  while (hasMore) {
+    const { data, error } = await supabase
+      .from(table)
+      .select('*')
+      .eq('user_id', user_id)
+      .range(page * PAGE_SIZE, (page + 1) * PAGE_SIZE - 1);
+
+    if (error) {
+      // Re-throw the error to be caught by the caller
+      throw error;
+    }
+
+    if (data) {
+      allData = [...allData, ...data];
+    }
+
+    // If we get less than PAGE_SIZE, we're on the last page.
+    if (!data || data.length < PAGE_SIZE) {
+      hasMore = false;
+    } else {
+      page++;
+    }
+  }
+  return allData;
+};
+
+
 export function useNotesData() {
 	const [notes, setNotes] = useState<Note[]>([]);
 	const [tags, setTags] = useState<Tag[]>([]);
@@ -22,34 +56,12 @@ export function useNotesData() {
 				return;
 			}
 
-			const { data: notesData, error: notesError } = await supabase
-				.from('notes')
-				.select('*')
-				.eq('user_id', user.id);
-
-			if (notesError) {
-				toast({ title: 'Error fetching notes', description: notesError.message, variant: 'destructive' });
-				setNotes([]);
-			}
-
-			const { data: tagsData, error: tagsError } = await supabase
-				.from('tags')
-				.select('*')
-				.eq('user_id', user.id);
-
-			if (tagsError) {
-				toast({ title: 'Error fetching tags', description: tagsError.message, variant: 'destructive' });
-				setTags([]);
-			}
-
-			const { data: noteTagsData, error: noteTagsError } = await supabase
-				.from('note_tags')
-				.select('*')
-				.eq('user_id', user.id);
-
-			if (noteTagsError) {
-				toast({ title: 'Error fetching note tags', description: noteTagsError.message, variant: 'destructive' });
-			}
+            // Using the paginated fetcher
+            const [notesData, tagsData, noteTagsData] = await Promise.all([
+              fetchAllPaginated('notes', user.id),
+              fetchAllPaginated('tags', user.id),
+              fetchAllPaginated('note_tags', user.id)
+            ]);
 
 			const notesWithTags = (notesData || []).map((note: any) => {
 				const noteTags = (noteTagsData || []).filter((nt: any) => nt.note_id === note.id);
@@ -62,7 +74,8 @@ export function useNotesData() {
 
 			setNotes(notesWithTags);
 			setTags(tagsData || []);
-		} catch (error) {
+		} catch (error: any) {
+            toast({ title: 'Error fetching data', description: error.message, variant: 'destructive' });
 			console.error('Failed to fetch notes/tags:', error);
 			setNotes([]);
 			setTags([]);
@@ -187,4 +200,3 @@ export function useNotesData() {
 
 	return { notes, tags, loading, fetchNotesAndTags, saveNote };
 }
-

@@ -35,11 +35,17 @@ export function NoteCard({ note, allTags, onCardClick }: NoteCardProps) {
         </div>
       </CardContent>
       <CardFooter className="flex flex-wrap gap-2 pt-4">
-        {noteTags.map(tag => (
-          <Badge key={tag.id} variant="secondary" className="font-normal">
-            {tag.name}
+        {noteTags.length > 0 ? (
+          noteTags.map(tag => (
+            <Badge key={tag.id} variant="secondary" className="font-normal">
+              {tag.name}
+            </Badge>
+          ))
+        ) : (
+          <Badge variant="outline" className="font-normal">
+            Untagged
           </Badge>
-        ))}
+        )}
       </CardFooter>
     </Card>
   );
