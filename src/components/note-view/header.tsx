@@ -39,6 +39,32 @@ interface NoteViewHeaderProps {
 export function NoteViewHeader({ note, onEdit, onDeleted, onOpenChange }: NoteViewHeaderProps) {
   const { toast } = useToast();
   const [isDeleting, setIsDeleting] = React.useState(false);
+  const [isPinning, setIsPinning] = React.useState(false);
+
+  const handlePinToggle = async () => {
+    try {
+      setIsPinning(true);
+      const { error } = await supabase
+        .from('notes')
+        .update({ is_pinned: !note.is_pinned })
+        .eq('id', note.id);
+      
+      if (error) throw error;
+      
+      toast({ 
+        title: note.is_pinned ? 'Unpinned' : 'Pinned', 
+        description: `Note ${note.is_pinned ? 'unpinned' : 'pinned'} successfully.` 
+      });
+      
+      // Refresh the note data by closing and reopening (or you could add a callback)
+      onOpenChange(false);
+    } catch (err: any) {
+      console.error('Failed to toggle pin', err);
+      toast({ title: 'Error', description: err.message || 'Failed to update note.' });
+    } finally {
+      setIsPinning(false);
+    }
+  };
 
   return (
     <DialogHeader className="p-6 pb-0 flex-shrink-0">
@@ -64,6 +90,9 @@ export function NoteViewHeader({ note, onEdit, onDeleted, onOpenChange }: NoteVi
             <DropdownMenuContent align="end" sideOffset={8} className="w-44">
               <DropdownMenuItem onSelect={(e) => { e.preventDefault(); onEdit(); }}>
                 Edit
+              </DropdownMenuItem>
+              <DropdownMenuItem onSelect={(e) => { e.preventDefault(); handlePinToggle(); }} disabled={isPinning}>
+                {isPinning ? 'Updating...' : (note.is_pinned ? 'Unpin' : 'Pin')}
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <AlertDialog>

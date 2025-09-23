@@ -9,19 +9,20 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { PlaceHolderImages } from "@/lib/placeholder-images"
-import Image from 'next/image'
+import { User, Download, Sun, Moon, Power } from "lucide-react"
 import { supabase } from '@/lib/supabase'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/hooks/use-auth'
+import { useTheme } from '@/components/theme-provider'
+import { useNotesData } from '@/hooks/use-notes-data'
 
 export function UserNav() {
-  const userAvatar = PlaceHolderImages.find(p => p.id === 'user-avatar');
   const router = useRouter();
   const { user, loading } = useAuth();
+  const { theme, setTheme } = useTheme();
+  const { notes, tags } = useNotesData();
 
   async function handleSignOut() {
     try {
@@ -42,24 +43,43 @@ export function UserNav() {
       console.error('Unexpected sign out error:', err)
     }
   }
+
+  function handleExportNotes() {
+    const exportData = notes.map(note => {
+      const noteTags = note.tags.map(tagId => tags.find(t => t.id === tagId)?.name).filter(Boolean);
+      return {
+        title: note.title,
+        metadata: note.metadata || "",
+        content: note.content,
+        references: note.references || "",
+        labels: noteTags,
+        is_pinned: false,
+        created_at_iso: note.created_at,
+        updated_at_iso: note.updated_at,
+        artist: note.artist || "",
+        album: note.album || "",
+        release_year: note.release_year || null
+      };
+    });
+
+    const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `music-notes-${new Date().toISOString().split('T')[0]}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="relative h-10 w-10 rounded-full">
           <Avatar className="h-10 w-10">
-            {userAvatar ? (
-               <Image 
-                src={userAvatar.imageUrl} 
-                alt="User Avatar"
-                width={40}
-                height={40}
-                className="rounded-full"
-                data-ai-hint={userAvatar.imageHint}
-              />
-            ) : (
-              <AvatarImage src="/placeholder-user.jpg" alt="@shadcn" />
-            )}
-            <AvatarFallback>USER</AvatarFallback>
+            <AvatarFallback>
+              <User className="h-5 w-5" />
+            </AvatarFallback>
           </Avatar>
         </Button>
       </DropdownMenuTrigger>
@@ -71,19 +91,19 @@ export function UserNav() {
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem>
-            Profile
-            <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
+          <DropdownMenuItem className="cursor-pointer" onSelect={() => setTheme(theme === "dark" ? "light" : "dark")}>
+            {theme === "dark" ? <Sun className="mr-2 h-4 w-4" /> : <Moon className="mr-2 h-4 w-4" />}
+            {theme === "dark" ? "Light Mode" : "Dark Mode"}
           </DropdownMenuItem>
-          <DropdownMenuItem>
-            Settings
-            <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
+          <DropdownMenuItem className="cursor-pointer" onSelect={handleExportNotes}>
+            <Download className="mr-2 h-4 w-4" />
+            Export Notes
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
-        <DropdownMenuItem onSelect={(e) => { e.preventDefault(); handleSignOut() }}>
+        <DropdownMenuItem className="cursor-pointer" onSelect={(e) => { e.preventDefault(); handleSignOut() }}>
+          <Power className="mr-2 h-4 w-4" />
           Log out
-          <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

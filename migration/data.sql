@@ -21,7 +21,7 @@ INSERT INTO public.tags (id, user_id, name) VALUES ('22c9085c-724b-4679-aa10-b79
 INSERT INTO public.tags (id, user_id, name) VALUES ('74d4c762-17cd-4377-b23a-52bf90f64c92', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tamil');
 INSERT INTO public.tags (id, user_id, name) VALUES ('50e1f043-40b6-42ce-8468-0952aa965c22', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Telugu');
 INSERT INTO public.tags (id, user_id, name) VALUES ('f6f1fa22-4ebb-4dfc-8a00-65f2e520dc91', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ver 2');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('867bed7b-2203-44de-8d47-14928d2db39a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Rahogi Meri - Love Aaj Kal', '[C]Ha tum ho [Am]Na tum ho 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('867bed7b-2203-44de-8d47-14928d2db39a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Rahogi Meri - Love Aaj Kal', '[C]Ha tum ho [Am]Na tum ho 
 [F]Tum ho khaamoshi [G]meri
 [C]Chaahe bolo ya [Am]na bolo 
 [F]Tum to rahogi [G]meri 
@@ -54,12 +54,12 @@ Strumming Pattern: D UUD UUD DU
 Chords used : C, Am, F, G', 'https://rewindcaps.com/tum-to-rahogi-meri-chords/', FALSE, '2020-03-07T02:43:27.446000+00:00', '2020-03-07T02:56:28.228000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f2e7ac0c-05f8-4301-8d9a-3e7c6f227239', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '867bed7b-2203-44de-8d47-14928d2db39a', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c7c5e911-081d-4c29-ba1b-b9f2baf825c3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '867bed7b-2203-44de-8d47-14928d2db39a', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('4b95e358-c1b4-4886-af68-f616213d5549', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Twinkle Twinkle', '0 0 7 7 9 9 7 5 5 4 4 2 2 0
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('4b95e358-c1b4-4886-af68-f616213d5549', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Twinkle Twinkle', '0 0 7 7 9 9 7 5 5 4 4 2 2 0
 7 7 5 5 4 4 2 7 7 5 5 4 4 0', 'Jane Taylor', 'Unknown', 1806, NULL, NULL, FALSE, '2017-10-06T03:04:11.673000+00:00', '2019-10-10T02:17:55.887000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('23731217-4bbb-4c80-be77-91a782595608', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4b95e358-c1b4-4886-af68-f616213d5549', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('825832e1-3bfa-4f37-9521-44a4146f114f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4b95e358-c1b4-4886-af68-f616213d5549', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2a43f5a5-62dc-4fd0-bc89-d14e69c8a8fb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4b95e358-c1b4-4886-af68-f616213d5549', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('d10e33a0-ab2d-4982-aed9-c12a8be477fe', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dard dilo ke', '```B|-3-1-3--1--1----------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('d10e33a0-ab2d-4982-aed9-c12a8be477fe', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dard dilo ke', '```B|-3-1-3--1--1----------
 G|-0------3----3-2-3-2-0-2-0-
 D|-----3-----1---------
 ```
@@ -206,7 +206,7 @@ Main aur tum agar hum ho jate', 'Mohammed Irfan', 'The Xposé', 2014, NULL, 'htt
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ade619b3-0178-4259-bd05-2b84130575c2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd10e33a0-ab2d-4982-aed9-c12a8be477fe', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c9928e1e-966d-4524-a4b3-3db6b0dae431', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd10e33a0-ab2d-4982-aed9-c12a8be477fe', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8b33ccb7-f637-4ce8-942c-e759be64bf43', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd10e33a0-ab2d-4982-aed9-c12a8be477fe', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('553ac788-1eba-4cd3-948c-572492212a60', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Shaktimaan', 'Shaktimaan shaktimaan shaktimaan
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('553ac788-1eba-4cd3-948c-572492212a60', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Shaktimaan', 'Shaktimaan shaktimaan shaktimaan
 ```e | - - - - - 1 - - - - - - - - - - - - - - - - - - - - -
 B | - 2 - 3 - - - - 3 - 2 - - - - - - - 3 - 2 - - - -
 G | - - - - - - - - - - - - - 4 - - - 1 - - - - - - - -
@@ -255,11 +255,11 @@ Shaktimaan shaktimaan
 Shaktimaan shaktimaan.', 'Channi Singh', 'Shaktiman', 1993, NULL, NULL, FALSE, '2017-10-31T02:21:09.242000+00:00', '2017-10-31T05:11:55.155000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5274030a-bb98-4e41-9cdb-49ae16c126e1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '553ac788-1eba-4cd3-948c-572492212a60', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9e6114b9-8148-4107-b050-0d83762bcf2d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '553ac788-1eba-4cd3-948c-572492212a60', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('376e4b09-56f9-4f24-af66-4159cde585ee', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Pyar Deewana Hota Hai', '', 'Kumar Sanu', 'Pyar Deewana Hota Hai', 1992, NULL, 'http://blog.lematacademy.com/pyar-deewana-hota-hai-guitar-tab-kati-patang/', FALSE, '2019-04-22T03:52:48.891000+00:00', '2019-04-22T03:53:01.017000+00:00');
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('376e4b09-56f9-4f24-af66-4159cde585ee', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Pyar Deewana Hota Hai', '', 'Kumar Sanu', 'Pyar Deewana Hota Hai', 1992, NULL, 'http://blog.lematacademy.com/pyar-deewana-hota-hai-guitar-tab-kati-patang/', FALSE, '2019-04-22T03:52:48.891000+00:00', '2019-04-22T03:53:01.017000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4d3f14ae-8919-40f8-89f3-92778f8705c8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '376e4b09-56f9-4f24-af66-4159cde585ee', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7940f409-1ae1-417a-8d55-d65ee93c8b66', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '376e4b09-56f9-4f24-af66-4159cde585ee', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b9f74fd3-4dff-401f-9115-63318ada1f11', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '376e4b09-56f9-4f24-af66-4159cde585ee', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('cfe0ac2c-6309-4cfe-9553-a8c180807327', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Pal kaisa pal', 'Intro
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('cfe0ac2c-6309-4cfe-9553-a8c180807327', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Pal kaisa pal', 'Intro
 ```e |------------------------------8----------------10-
 B |-8------8--10---------8-----------8/10-------
 ```
@@ -342,11 +342,11 @@ B | ------10---------10-8--
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d196a2ca-7c91-4fe2-824c-081256e7ef4a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'cfe0ac2c-6309-4cfe-9553-a8c180807327', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6c035e78-f8d5-46b0-8c19-c23216737dd8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'cfe0ac2c-6309-4cfe-9553-a8c180807327', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a6a94560-834c-438c-8a37-96235061040a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'cfe0ac2c-6309-4cfe-9553-a8c180807327', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('26d501c5-a682-42ad-ae69-fb6745e4698c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tere Jaisa Yaar Kahan', '', 'Kishore Kumar', 'Yaarana & Dostana', 1981, NULL, 'https://www.youtube.com/watch?v=Nnh9irfR9U4', FALSE, '2018-09-04T16:14:42.876000+00:00', '2018-09-04T16:14:52.418000+00:00');
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('26d501c5-a682-42ad-ae69-fb6745e4698c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tere Jaisa Yaar Kahan', '', 'Kishore Kumar', 'Yaarana & Dostana', 1981, NULL, 'https://www.youtube.com/watch?v=Nnh9irfR9U4', FALSE, '2018-09-04T16:14:42.876000+00:00', '2018-09-04T16:14:52.418000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('51628f25-494f-4d58-afe2-c67e89bd199e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '26d501c5-a682-42ad-ae69-fb6745e4698c', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('30916777-4d0b-43f0-bd28-c039d582cb18', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '26d501c5-a682-42ad-ae69-fb6745e4698c', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('cd05d41b-8657-4811-a547-ad60778467dc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '26d501c5-a682-42ad-ae69-fb6745e4698c', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('9c67203e-0906-4a50-9c8e-7533dec21bf3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Funky Retro Mashup - 15 Songs', '(G)....(G)....(G)...(G)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('9c67203e-0906-4a50-9c8e-7533dec21bf3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Funky Retro Mashup - 15 Songs', '(G)....(G)....(G)...(G)
 (G)....(G)....(G)...(G)
 
 Mere (G)Saamne Waali (C)Khidki Mein
@@ -432,7 +432,7 @@ Chords used : G, C, D', 'https://www.youtube.com/watch?v=QPlsvCmeqHQ&feature=you
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('58abf647-3402-4d83-ac25-d1565fe10f89', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9c67203e-0906-4a50-9c8e-7533dec21bf3', '07483aae-aaf2-498a-ad00-7abd0a0d46c3');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('37ed37ce-e97d-4200-9920-f5db44c6f7ae', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9c67203e-0906-4a50-9c8e-7533dec21bf3', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('809f03e1-7fe0-462d-ad41-bcd405711a79', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9c67203e-0906-4a50-9c8e-7533dec21bf3', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('411db1b2-c880-48dd-aadc-927471263004', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chahu Main Ya Na', 'Tu Hi Ye Mujhko Bata De Chahun Main Ya Naa
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('411db1b2-c880-48dd-aadc-927471263004', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chahu Main Ya Na', 'Tu Hi Ye Mujhko Bata De Chahun Main Ya Naa
 ```E|--0--8--7--8--7--5h7--7--5--3--3--5--7--5--5--
 ```
 
@@ -486,7 +486,7 @@ Chords used : Am, G, F, E, C, Em', 'https://youtu.be/gJxirJzHY7Y', FALSE, '2018-
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9364d248-3d51-4183-8b18-e1f63cd190e4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '411db1b2-c880-48dd-aadc-927471263004', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a2ce778d-57b1-4999-9798-fbc9ab5e8d41', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '411db1b2-c880-48dd-aadc-927471263004', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('fd511b64-74b3-4569-ba26-cf49fa831641', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '411db1b2-c880-48dd-aadc-927471263004', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('41ececca-30fa-4037-993a-1e26f67e8eb9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Love Me Like You Do', '```e|---------------------------------------------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('41ececca-30fa-4037-993a-1e26f67e8eb9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Love Me Like You Do', '```e|---------------------------------------------------
 B|---------------------------------------------------
 G|-5-8-8-----5-8-8-----5-8-8-6-6-5-3--
 ```
@@ -572,7 +572,7 @@ B|-----------------------------------------------6--
 Touch me like you do….to-to-touch like you do..', 'Ellie Goulding', 'Fifty Shades of Grey (Original Motion Picture Soundtrack)', 2015, NULL, 'https://tabs.ultimate-guitar.com/tab/ellie_goulding/love_me_like_you_do_tabs_1743048', FALSE, '2018-07-29T08:06:44.380000+00:00', '2019-01-01T14:42:55.887000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7cf6be9d-f5ca-4deb-a95b-ebfd14d0eb3c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '41ececca-30fa-4037-993a-1e26f67e8eb9', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4caba0f7-49c3-46ac-8877-e6a5c7e981dd', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '41ececca-30fa-4037-993a-1e26f67e8eb9', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('ea06c589-a7d8-4c94-97a7-b291023e67d1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dekhte Dekhte (Sochta Hoon) (Am, F, Em, G)', '```e | - - - - - - - - - - - - - - - - - - - - - - - - - - -
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('ea06c589-a7d8-4c94-97a7-b291023e67d1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dekhte Dekhte (Sochta Hoon) (Am, F, Em, G)', '```e | - - - - - - - - - - - - - - - - - - - - - - - - - - -
 B | - - - - -1 - - 0-1-3- - 1h3p1- -0 - - - -
 G | - - - - - - - - - - - - - - - - - - - - - - - 0- - -
 D | - - 2- - - - - - - - - - - - - - - - - - - - - - - - 
@@ -648,7 +648,7 @@ FingerStyle : 4 3 2 4 1 2 3 2', 'https://www.youtube.com/watch?v=YuidBFaG42g', F
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('866941e5-b508-44a4-afa0-721378986240', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ea06c589-a7d8-4c94-97a7-b291023e67d1', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f338d0b5-8707-4fa7-b8d0-a69c2532fa53', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ea06c589-a7d8-4c94-97a7-b291023e67d1', '375ee2c2-3bd4-473f-afd0-87ef7a38f19a');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f1af008a-3acd-470c-94b8-a5f489ea416e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ea06c589-a7d8-4c94-97a7-b291023e67d1', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('5d868c05-9167-4e95-be21-327bfbeebe0d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'O Sanam', 'Strum : D UUD UUD DU
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('5d868c05-9167-4e95-be21-327bfbeebe0d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'O Sanam', 'Strum : D UUD UUD DU
 
 Intro  (https://youtu.be/4LFO6oZmHWY?t=163)
 tududu tududu tudu du tun-tunun.....x4
@@ -688,7 +688,7 @@ Chords used : G, C, A, D', 'https://www.youtube.com/watch?v=4LFO6oZmHWY', FALSE,
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f1be3827-cd87-4843-9302-5a9d37906089', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5d868c05-9167-4e95-be21-327bfbeebe0d', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6a047433-6c64-43c7-bdf8-6f749e6b1ca2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5d868c05-9167-4e95-be21-327bfbeebe0d', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('092a6171-ad11-4c2b-937d-2ad6002ffe14', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5d868c05-9167-4e95-be21-327bfbeebe0d', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('9ef41a5e-c605-4ea9-ae05-d63f119d1a3a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ek Ladki Ko Dekha To Aisa Laga - Darshan Raval', '===========FINGERSTYLE===============
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('9ef41a5e-c605-4ea9-ae05-d63f119d1a3a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ek Ladki Ko Dekha To Aisa Laga - Darshan Raval', '===========FINGERSTYLE===============
 (G)Akhiyaan De Kol reh Jaane(Em7) De
 Kahna Hai (C)Jo, Kah Jaane(D) De(G)
 
@@ -741,7 +741,7 @@ Pattern 3 : D U Chuck D  UUD DU', 'https://www.youtube.com/watch?v=OhLVdCCMQP4',
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e0fa7b34-aaf4-414a-9c85-53de16ae4771', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9ef41a5e-c605-4ea9-ae05-d63f119d1a3a', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('51da4f4a-3e67-408d-804c-434d076eb9d7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9ef41a5e-c605-4ea9-ae05-d63f119d1a3a', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4b08f60a-ce81-48cc-bce6-b27584ae596d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9ef41a5e-c605-4ea9-ae05-d63f119d1a3a', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('f00a9c83-8879-4c73-961c-6ca387a7e225', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aahista aahista - Swades', 'Aahista aahista aahista aahista
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('f00a9c83-8879-4c73-961c-6ca387a7e225', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aahista aahista - Swades', 'Aahista aahista aahista aahista
 Nindiya tu aa in do nainon mein
 Halke se holle se kuch sapne bhole se
 Nindiya tu laa in do nainon mein ho
@@ -790,7 +790,7 @@ Pattern : 5 - 2 -  - 2', 'https://www.youtube.com/watch?v=bL_3ye2jLzU', FALSE, '
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9c37d909-a706-4ff9-8c87-c5f57b3894ad', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f00a9c83-8879-4c73-961c-6ca387a7e225', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('52a8f38a-6f9a-40f7-abb3-e730c90ef823', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f00a9c83-8879-4c73-961c-6ca387a7e225', '375ee2c2-3bd4-473f-afd0-87ef7a38f19a');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8ebd4626-4169-4be5-bb65-7c0592ae464f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f00a9c83-8879-4c73-961c-6ca387a7e225', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('2e09bb64-5aa1-4309-b3e7-74d32412cc64', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mere Mehboob Qayamat Hogi', '```E |------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('2e09bb64-5aa1-4309-b3e7-74d32412cc64', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mere Mehboob Qayamat Hogi', '```E |------------
 B |----3-1/3-1-------
 G |-0-2-3------3-2-0----0-0-----2--
 D |--------------3-----3-
@@ -915,7 +915,7 @@ Aaj Rusva Teri Galiyon Mein Mohabbat Hogi
 Mere Mehboob…', 'Kishore Kumar', 'Mr. X in Bombay', 1964, NULL, NULL, FALSE, '2017-11-03T16:27:51.652000+00:00', '2020-08-25T02:24:17.366000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5d774469-2f42-493c-920c-21c51fa67b4a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2e09bb64-5aa1-4309-b3e7-74d32412cc64', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('de60b951-3a9b-4d5b-b050-eb25444fec09', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2e09bb64-5aa1-4309-b3e7-74d32412cc64', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('ac41fdea-28b2-4c01-9cf3-bec6bae42e95', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Lollipop Lagelu - Siddharth Slathia', 'INTRO (Em) (D) (Em) (D)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('ac41fdea-28b2-4c01-9cf3-bec6bae42e95', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Lollipop Lagelu - Siddharth Slathia', 'INTRO (Em) (D) (Em) (D)
 
 (Em)Lagaweli jab lipi(D)stic , hi(Em)lela arra dis(D)trict
 Tu, lag(Em)aweli jab lipis(D)tic , hil(Em)ela arra distr(D)ic
@@ -946,7 +946,7 @@ Chords used : Em, D, C', 'https://www.youtube.com/watch?v=l4aCho0jbmw', FALSE, '
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6c193691-f698-4414-947d-5309fe224c40', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ac41fdea-28b2-4c01-9cf3-bec6bae42e95', '375ee2c2-3bd4-473f-afd0-87ef7a38f19a');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('04efbf0a-1b03-472f-a60f-174020abec3e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ac41fdea-28b2-4c01-9cf3-bec6bae42e95', '2478154f-b5c6-43c0-86a6-9c5190154ada');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ad9f44ec-d165-4d47-987e-508a8f65fc67', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ac41fdea-28b2-4c01-9cf3-bec6bae42e95', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('d7efe60b-d219-42e0-b80a-8b6196edfe5e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dhokha - Arijit Singh', '(Em) Dil Se Chahne Ki Mujheyy(C) Saza Dete Hoo
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('d7efe60b-d219-42e0-b80a-8b6196edfe5e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dhokha - Arijit Singh', '(Em) Dil Se Chahne Ki Mujheyy(C) Saza Dete Hoo
 Main (E) Rota Hoonn Aur Tum Maza (C) Lete Hoo
 
 (Em) Teri Shikayatt Karr Doonn
@@ -1035,7 +1035,7 @@ Fingerstyle : 5-4-3-1-2-3
 Strumming : D UU D UU D (DU)', 'https://www.youtube.com/watch?v=JfMXDVpt7oE', FALSE, '2022-04-19T05:41:10.865000+00:00', '2022-07-01T13:31:57.623000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5960deec-d6d9-420e-8a0f-11eb1e4553aa', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd7efe60b-d219-42e0-b80a-8b6196edfe5e', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('fac82cda-b6f2-4ec4-b0cb-7d71879739e9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd7efe60b-d219-42e0-b80a-8b6196edfe5e', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('7e3d2d82-7456-4baf-abd5-d039e74504d5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hawayein - Shaukeens', 'Tujh(D)ko...
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('7e3d2d82-7456-4baf-abd5-d039e74504d5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hawayein - Shaukeens', 'Tujh(D)ko...
 main rakh loon wa(G)han
 Jahan pe ka(A)hin hai mera ya(D)keen
 
@@ -1095,7 +1095,7 @@ O o (D)o…(A)...(D)', 'Pritam, Arijit Singh', 'Jab Harry Met Sejal', 2017, 'D D
 Chords used : D, G, A, Em', 'https://youtu.be/juAtl5LdTEw', FALSE, '2018-10-30T04:32:50.787000+00:00', '2018-10-31T16:26:03.417000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('59dcab77-d9db-4d0c-aa70-b0e2c806fd2e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7e3d2d82-7456-4baf-abd5-d039e74504d5', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('0e64885b-c7e1-4650-b7b6-fa5062254164', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7e3d2d82-7456-4baf-abd5-d039e74504d5', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('b08ce99d-7a33-4b96-a56f-174633c3eeed', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kaise Hua', 'Music:
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('b08ce99d-7a33-4b96-a56f-174633c3eeed', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kaise Hua', 'Music:
 [Am] [Am]
 
 =========PALM MUTING========
@@ -1144,7 +1144,7 @@ Chords used : Am, Em, F, G, C, Dm', 'https://www.youtube.com/watch?v=wFaxPagr830
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('feede774-3953-4954-8c35-454c9d0545ba', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b08ce99d-7a33-4b96-a56f-174633c3eeed', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b00040ff-bdfc-46be-9932-0a98b7f2b36c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b08ce99d-7a33-4b96-a56f-174633c3eeed', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('56959bb0-4deb-412e-bd05-fc79dd4b1ce4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b08ce99d-7a33-4b96-a56f-174633c3eeed', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('5f2f5bfd-8820-4e25-8476-cb055c92fd4f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Awari - Ek Villain :', 'INTRO               
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('5f2f5bfd-8820-4e25-8476-cb055c92fd4f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Awari - Ek Villain :', 'INTRO               
 Am                                                          -->  5 4 3  (Open)2 2 1 3 2
 Am (Pinky on 3rd fret 6 string)           --> 6 4 3  (Open)2 2 1 3 2
 Am (Index on 1st fret 6 string)           --> 6 4 3  (Open)2 2 1 3 2
@@ -1195,7 +1195,7 @@ Chords used : Am, C, G, F, E', 'https://www.youtube.com/watch?v=sTYbdWRm5Gc', FA
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('de259b6d-29af-4524-937a-815b9eea454b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5f2f5bfd-8820-4e25-8476-cb055c92fd4f', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('506a0ef5-cebf-4437-ba7c-a3b94a2128cc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5f2f5bfd-8820-4e25-8476-cb055c92fd4f', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4f939368-a95f-471a-9d37-4f9dcddc8ee2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5f2f5bfd-8820-4e25-8476-cb055c92fd4f', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('16223720-69a5-4d8c-b333-7779e1a2da2f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jai Jai Kaara (Dandalayya) - Baahubali 2', '[[INTRO]]
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('16223720-69a5-4d8c-b333-7779e1a2da2f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jai Jai Kaara (Dandalayya) - Baahubali 2', '[[INTRO]]
 Keep 2nd finger on 3rd string 5th fret,  ring finger on 4th string 7th fret
 and little finger on 3rd  string 7th fret only in 4th strum
 
@@ -1267,7 +1267,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b7087ead-fd
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8d6ddaa5-a4e4-457d-8d20-5df8dfcff67c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '16223720-69a5-4d8c-b333-7779e1a2da2f', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('abb6758e-e57a-40f9-962c-ad6a77170063', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '16223720-69a5-4d8c-b333-7779e1a2da2f', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('eca1612e-a30a-4b6b-80bb-6fd5376c9a30', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '16223720-69a5-4d8c-b333-7779e1a2da2f', '50e1f043-40b6-42ce-8468-0952aa965c22');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('34fcaeeb-e46a-4c0c-8a69-66ff12687857', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ikk kudi', 'Intro
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('34fcaeeb-e46a-4c0c-8a69-66ff12687857', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ikk kudi', 'Intro
 ```e | - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 B | - -6-6- - 6-3 - -3-6-8-8/9 - 9/11-11-8 - - - - - - - - - - - - - - - - - 
 G | -3- - - - - - - - - - - - - - - - - - - - - - - - - - - 8 - - 7- - - - - - - - - - - -7-7- 
@@ -1307,7 +1307,7 @@ Gum hai, gum hai, gum hai', 'Diljit Dosanjh', 'Udta Punjab', 2016, 'Chords used 
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1319b507-8bd4-44b6-bec1-e6e91ed38d29', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '34fcaeeb-e46a-4c0c-8a69-66ff12687857', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('92439828-f70a-4334-9559-90705e751271', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '34fcaeeb-e46a-4c0c-8a69-66ff12687857', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('06c0f66f-adc2-4529-8243-b97a8c1afdd2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '34fcaeeb-e46a-4c0c-8a69-66ff12687857', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('f207fb51-0023-427f-8d6c-eefdb1cf27ca', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tu Hai Meri Kiran', '```E|----------------------------------------------------------------||
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('f207fb51-0023-427f-8d6c-eefdb1cf27ca', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tu Hai Meri Kiran', '```E|----------------------------------------------------------------||
 B|----------------------------------------------------------------||
 G|----0---7-----5--7--5--3--2----------5--3--5--3--2--0---||
 D|-------------------------------------3------------------------||
@@ -1383,11 +1383,11 @@ tu hai..meri kiran...
 tu hai..meri kiran...', 'Lata Mangeshkar, Hariharan', 'Darr', 1993, NULL, NULL, FALSE, '2017-11-07T17:01:43.939000+00:00', '2018-02-04T01:21:09.225000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4f8b3012-3d36-4c21-a7a7-2e1510ff59db', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f207fb51-0023-427f-8d6c-eefdb1cf27ca', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('acf7b677-81b3-4131-a142-0d0e467dc25e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f207fb51-0023-427f-8d6c-eefdb1cf27ca', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('a6eda8cd-de60-40b9-90eb-be923e2d8fe0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Zara Si Dil Mein De Jagah Tu - Jannat', '', 'KK', 'Jannat', 2008, NULL, 'https://www.youtube.com/watch?v=d6bGCWhKt14', FALSE, '2018-09-02T15:50:58.960000+00:00', '2018-09-04T02:19:14.536000+00:00');
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('a6eda8cd-de60-40b9-90eb-be923e2d8fe0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Zara Si Dil Mein De Jagah Tu - Jannat', '', 'KK', 'Jannat', 2008, NULL, 'https://www.youtube.com/watch?v=d6bGCWhKt14', FALSE, '2018-09-02T15:50:58.960000+00:00', '2018-09-04T02:19:14.536000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('dc170ef8-a687-4a33-b5f5-57d4474f4e0e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a6eda8cd-de60-40b9-90eb-be923e2d8fe0', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ea193d03-ae6f-4604-9ea1-64cbd36361bf', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a6eda8cd-de60-40b9-90eb-be923e2d8fe0', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('74e24d91-8869-4c84-9b06-8a1bfe6f692c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a6eda8cd-de60-40b9-90eb-be923e2d8fe0', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('a8636456-b93d-4bd5-bda2-6a243f899817', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Emptiness', 'Melody V2   https://youtu.be/vzdr4RKmiDs 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('a8636456-b93d-4bd5-bda2-6a243f899817', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Emptiness', 'Melody V2   https://youtu.be/vzdr4RKmiDs 
 Melody
 ```B|---1-----1--
 G|--2-2---2--2-
@@ -1564,7 +1564,7 @@ Yeah!', 'Gajendra Verma', 'Emptiness', 2014, NULL, 'http://chordforum.com/viewto
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('fc628a20-6849-48d3-bccd-046efde2d531', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a8636456-b93d-4bd5-bda2-6a243f899817', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c149b89d-a3f5-490d-a48a-3528d2f2c704', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a8636456-b93d-4bd5-bda2-6a243f899817', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ae0419d5-3cc2-48f5-a843-73f8e2de2139', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a8636456-b93d-4bd5-bda2-6a243f899817', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('7a2d7f41-e6c1-41a0-ba06-ce2d443ae519', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Narayan mil jayega', '(Em)Prem Prabhu Ka Baras Raha Hai
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('7a2d7f41-e6c1-41a0-ba06-ce2d443ae519', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Narayan mil jayega', '(Em)Prem Prabhu Ka Baras Raha Hai
 (Am)Pee Le Amrit Pyase
 (D)Saaton Tirath Tere Andar
 (Em)Baahar Kise Talaase ... (Am)..(Em)
@@ -1659,7 +1659,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('14d9f49e-a7
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ec7ed732-d37c-4976-8cb5-6887c25811c6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7a2d7f41-e6c1-41a0-ba06-ce2d443ae519', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('81cfab0b-d2af-41f2-9274-4ed22a7d6d27', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7a2d7f41-e6c1-41a0-ba06-ce2d443ae519', '6a3e1159-3e7b-4145-b202-58429f143d25');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c8f873be-d8aa-4734-a532-ff49657c2617', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7a2d7f41-e6c1-41a0-ba06-ce2d443ae519', '8d4fc519-7375-432c-8b6a-6cf000e9f287');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('32f0433d-59ce-454a-8b6c-7e80316bc213', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ek Pyaar ka Nagma Hai', '```e | - - - - - - - - - - - - - - - -  - - - 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('32f0433d-59ce-454a-8b6c-7e80316bc213', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ek Pyaar ka Nagma Hai', '```e | - - - - - - - - - - - - - - - -  - - - 
 B | - - - - - - - - - - - - - - - - - - -
 G|--------0------
 D|--0-2---3--3-3-2-2-
@@ -1687,7 +1687,7 @@ D|--3-0---3--3-2-2-
 Teri Meri Kahani Hai', 'Lata Mangeshkar, Mukesh', 'Shor', 1972, NULL, NULL, FALSE, '2017-10-28T11:40:37.030000+00:00', '2018-08-31T16:03:29.790000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3a878c13-d8c8-4b53-aebb-a772dd2316b4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '32f0433d-59ce-454a-8b6c-7e80316bc213', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('96ad0356-d5d6-497d-890b-689ec85df329', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '32f0433d-59ce-454a-8b6c-7e80316bc213', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('10d78755-b46d-4d62-abf4-ecdcfa37be9f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Wake me up when september ends', '[Intro]
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('10d78755-b46d-4d62-abf4-ecdcfa37be9f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Wake me up when september ends', '[Intro]
 
 ```e|------------------|------------------|------------------|------------------|
 B|-----3------3---|-----3------3---|-----3------3---|-----3------3---|
@@ -1698,7 +1698,7 @@ Dd Dd Dd      -Later part (heavypart)', 'https://tabs.ultimate-guitar.com/tab/gr
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6b119893-b0af-4d45-9a9b-6034c091993d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '10d78755-b46d-4d62-abf4-ecdcfa37be9f', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('049fc4ba-3079-40b4-8093-c616c90e70a3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '10d78755-b46d-4d62-abf4-ecdcfa37be9f', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2a3a52bc-c8d3-434a-9fb3-e8caaa6d0940', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '10d78755-b46d-4d62-abf4-ecdcfa37be9f', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('c860b825-788f-482d-831a-d0b5235ed446', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Vaishnav Jan Ko (Incomplete)', '```e | - - - - - - - - - - - - - - - - - - - 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('c860b825-788f-482d-831a-d0b5235ed446', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Vaishnav Jan Ko (Incomplete)', '```e | - - - - - - - - - - - - - - - - - - - 
 B | - 1 - 3 - 1s5 - - 5 - 5 - 6p5- -
 ```
 
@@ -1716,7 +1716,7 @@ B | - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('fbccc927-1261-4b98-a03c-48a0277bc0af', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c860b825-788f-482d-831a-d0b5235ed446', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('643eaed2-f235-4080-b321-fc329b7d57c5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c860b825-788f-482d-831a-d0b5235ed446', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1c78aea9-3271-42b9-ac10-d714dbb41d0f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c860b825-788f-482d-831a-d0b5235ed446', '6a3e1159-3e7b-4145-b202-58429f143d25');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('a9b01bdd-44ba-4015-bb99-d25886defa4b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hasi Ban Gaye', 'Haan aa…
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('a9b01bdd-44ba-4015-bb99-d25886defa4b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hasi Ban Gaye', 'Haan aa…
 ```e | - - 5- 4h5p4 - - - - 5 - 7 - 5 - - 4 - - 5 - - 4h5p4 - - - 
 B | -7- - - - - - - - 5 - - - - - - - - - - - - - - - - - - - - - - - - - 5 -
 ```
@@ -1784,7 +1784,7 @@ Haan hansi ban gaye...', 'Ami Mishra', 'Hamari Adhuri Kahani', 2015, NULL, 'http
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b8454d14-ae82-4dda-8595-a8971ff8c85b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a9b01bdd-44ba-4015-bb99-d25886defa4b', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('96d73d2c-a7e4-44f4-bc1f-5c4d61345ec3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a9b01bdd-44ba-4015-bb99-d25886defa4b', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c6ed6f63-5d2b-42d3-bf30-efe9c7a2cc78', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a9b01bdd-44ba-4015-bb99-d25886defa4b', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('eeab82ce-e951-49ad-8c86-8427f09727ec', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Naina - Dangal', '[Intro]
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('eeab82ce-e951-49ad-8c86-8427f09727ec', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Naina - Dangal', '[Intro]
 (C)Jhootha jag rain ba(F)sera
 (G)Saancha dard me(F)ra
 (Dm)Mrig trishna sa moh pi(G)ya
@@ -1830,7 +1830,7 @@ D DU UDU
 Chords used : C, Am, Dm, G, F', 'https://tabs.ultimate-guitar.com/tab/arijit_singh/naina_chords_1928963', FALSE, '2018-11-01T04:56:45.689000+00:00', '2018-11-01T12:46:53.278000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('474c264a-afbb-4c84-a731-41319eaf3463', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'eeab82ce-e951-49ad-8c86-8427f09727ec', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a8346a95-e47a-48ac-a028-478fdf24bf85', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'eeab82ce-e951-49ad-8c86-8427f09727ec', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('411f3008-784a-4b2f-9190-0a89f1bf7722', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Perfect -Ed Sheeran', 'Strum 1 : Ddd Ddd Ddd Ddd  (Verse)      https://youtu.be/OCYXDBOZPp8?t=81
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('411f3008-784a-4b2f-9190-0a89f1bf7722', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Perfect -Ed Sheeran', 'Strum 1 : Ddd Ddd Ddd Ddd  (Verse)      https://youtu.be/OCYXDBOZPp8?t=81
 Strum 2 : D UD UD UD  (Pre-Chorus)     https://youtu.be/OCYXDBOZPp8?t=105
 Strum 3 : D DU D DU  (Chorus)                https://youtu.be/OCYXDBOZPp8?t=264
 
@@ -1893,7 +1893,7 @@ G D Em D |  C D | G         =====>    Dd Dd Dd Dd', 'Ed Sheeran', '÷ (Divide)',
 Chords used : G, Em, C, D', 'https://www.youtube.com/watch?v=OCYXDBOZPp8', FALSE, '2018-10-21T02:09:29.840000+00:00', '2018-10-31T14:22:37.418000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b2e422e8-70f7-4185-bd5c-9e65854ac9ba', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '411f3008-784a-4b2f-9190-0a89f1bf7722', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d8e1ef57-17ad-4aa5-b92b-6b851c5ba90b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '411f3008-784a-4b2f-9190-0a89f1bf7722', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('4f6dd436-cbc0-4275-8452-770d782caf01', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Yaara Seeli Seeli', '```E|----------------6-4------4-
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('4f6dd436-cbc0-4275-8452-770d782caf01', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Yaara Seeli Seeli', '```E|----------------6-4------4-
 B|-6-4--4-6-6- -6-6-7-6---- 6-4-4-4---
 G|---6------------------
 ```
@@ -1975,7 +1975,7 @@ G|------------------6------3-6------
 Phir se guzarna, Yaara seeli sili, dhola sili sili', 'Lata Mangeshkar', 'Lekin...', 1991, NULL, 'http://tabandchord.com/2015/01/yaara-seeli-seeli-tab-lata-mangeshkar/', FALSE, '2018-08-27T01:43:48.799000+00:00', '2018-09-30T11:40:33.526000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c3f1539f-b301-4aa4-b284-47dca58a2ce5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4f6dd436-cbc0-4275-8452-770d782caf01', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c7a6ec19-4e40-4170-8fc0-4a756aea135f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4f6dd436-cbc0-4275-8452-770d782caf01', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('2986cd02-b4de-469a-99c1-95bb149ece98', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ik Bagal', 'Ik bagal mein chaand hoga ik bagal mein rotiyan
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('2986cd02-b4de-469a-99c1-95bb149ece98', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ik Bagal', 'Ik bagal mein chaand hoga ik bagal mein rotiyan
 
 Ik bagal mein chaand hoga ik bagal mein rotiyan
 Ik bagal mein neend hogi ik bagal mein loriyaan
@@ -2014,13 +2014,13 @@ Chords used : G, B, D, E, F', 'https://www.pianodaddy.com/hindi-songs/ek-bagal-m
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c477457b-764f-4072-866e-534b867102e5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2986cd02-b4de-469a-99c1-95bb149ece98', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('db8ad052-7101-4b23-8702-793a4ff4904c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2986cd02-b4de-469a-99c1-95bb149ece98', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a867993d-2e72-43ac-837a-c749b458b020', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2986cd02-b4de-469a-99c1-95bb149ece98', '8d4fc519-7375-432c-8b6a-6cf000e9f287');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('d9a92d96-2451-4332-b01d-fc2cc209bedf', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Teri Ungli Pakad Ke Chala', 'NOTE : Can play Bm in place of F#', 'Udit Narayan, Jyotsna Hardikar', 'Laadla', 1994, 'D DUDU
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('d9a92d96-2451-4332-b01d-fc2cc209bedf', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Teri Ungli Pakad Ke Chala', 'NOTE : Can play Bm in place of F#', 'Udit Narayan, Jyotsna Hardikar', 'Laadla', 1994, 'D DUDU
 Chords used : Bm, G, A, Em, D, F#, F#m', 'https://sanjaymusicworld.blogspot.com/2019/09/teri-ungli-pakad-ke-laadla-guitar-chords.html?m=1
 https://youtu.be/flkDLcPNN4c', FALSE, '2019-10-12T02:22:07.364000+00:00', '2019-10-12T02:24:30.773000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4864389d-6d6a-4a20-9b8e-12edd38b3646', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd9a92d96-2451-4332-b01d-fc2cc209bedf', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ba4271ad-01d5-4845-bd23-a5acf0e11caf', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd9a92d96-2451-4332-b01d-fc2cc209bedf', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c179d2de-9e5d-4f2c-a166-bcfc988bce62', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd9a92d96-2451-4332-b01d-fc2cc209bedf', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('7bef3c5f-8d5e-41c7-99f1-80baecbed2b3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Saware - Phantom', '(C)....(G)....(C)....(G)...
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('7bef3c5f-8d5e-41c7-99f1-80baecbed2b3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Saware - Phantom', '(C)....(G)....(C)....(G)...
 
 (Em) Pehle (Bm) kyun na (C) mile hum
 (Em) Tanha (Bm) hi kyun (C) jale hum
@@ -2063,7 +2063,7 @@ Strum : D D UDU DU
 Chords used : Em, Bm, C, Am, G, D', 'https://www.youtube.com/watch?v=Rv80t8dTTh0', FALSE, '2022-02-14T07:46:40.056000+00:00', '2022-02-15T08:36:11.767000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('69fafeb0-50df-496e-92f1-f1e3b9c4d4d0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7bef3c5f-8d5e-41c7-99f1-80baecbed2b3', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9ee51eb9-dc5d-4e9d-b664-343533bcbc45', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7bef3c5f-8d5e-41c7-99f1-80baecbed2b3', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('e477346d-8292-42af-b034-250c3c73c255', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ekla Cholo Re', '(D)Open thy (A)mind walk (D)alone
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('e477346d-8292-42af-b034-250c3c73c255', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ekla Cholo Re', '(D)Open thy (A)mind walk (D)alone
 (D)Be not (A)afraid, walk (D)alone
 
 Jodi tor (D)đak shune keu (A)na ashe tôbe (D)êkla chôlo re..........x2
@@ -2101,7 +2101,7 @@ Jodi tor (D)đak shune keu (A)na ashe tôbe (D)êkla chôlo re
 Strumming : D DUDU', 'https://www.youtube.com/watch?v=6sCyCwcpEB4&feature=emb_title', FALSE, '2020-10-01T15:49:01.081000+00:00', '2020-10-03T03:21:52.167000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('266f866e-5987-4dbd-9c4c-74002aadef7a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e477346d-8292-42af-b034-250c3c73c255', 'da9a1522-98fb-4b92-bae9-f41c00333985');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('cfcc5a35-ee20-41ff-8bb3-d2ea5a3aa4a5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e477346d-8292-42af-b034-250c3c73c255', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('de09397a-55c6-44b1-aa55-3d380c896258', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Challa (Intro)', '```e | - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('de09397a-55c6-44b1-aa55-3d380c896258', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Challa (Intro)', '```e | - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 B | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 G | - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 D | - - - 7 - 10 -7 -7 -7 - - - - - -7 - 10 -7 -7 -7 - 
@@ -2117,7 +2117,7 @@ A | -10 - - - - -10 - 8 -10 -10 -8 -7 -
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('16a8f21c-4b6b-4b02-9ce0-c3868f82360e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'de09397a-55c6-44b1-aa55-3d380c896258', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9754905b-be4a-4b40-8f24-9467f44a4696', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'de09397a-55c6-44b1-aa55-3d380c896258', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('edcf971b-8bc8-4a9f-b294-a987ef27902b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'de09397a-55c6-44b1-aa55-3d380c896258', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('3ac39ca2-56a4-4524-8143-461f95b529c2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ek Ajnabee Haseena Se', '0-9-7-9-9-7-9-10e - 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('3ac39ca2-56a4-4524-8143-461f95b529c2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ek Ajnabee Haseena Se', '0-9-7-9-9-7-9-10e - 
 
 10-10-9-7-0-9-7-5e - 
 
@@ -2135,7 +2135,7 @@ INSERT INTO public.notes (id, user_id, title, content, artist, album, release_ye
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('23381c7d-02c7-4f15-8c1c-a57edafa2e26', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '3ac39ca2-56a4-4524-8143-461f95b529c2', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('061176cb-1f43-4db7-96bc-79d63d9aaf8e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '3ac39ca2-56a4-4524-8143-461f95b529c2', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('aa9557fb-2e2b-4901-9fb1-7e4e0569525f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '3ac39ca2-56a4-4524-8143-461f95b529c2', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('f93b7988-4919-4a70-a903-4021b6e2b045', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Give Me Some Sunshine', '[Intro]
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('f93b7988-4919-4a70-a903-4021b6e2b045', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Give Me Some Sunshine', '[Intro]
 | C F   |   C F   |   C F   |   C G |
 | C F   |   C F   |   C F   |   C G |
 
@@ -2192,7 +2192,7 @@ Chords used : C, F, G', 'https://tabs.ultimate-guitar.com/tab/3_idiots/give_me_s
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('21b0cdc4-5ab8-4640-bf34-93733760c10f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f93b7988-4919-4a70-a903-4021b6e2b045', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f721a062-d529-4260-aea4-26515a1f4c5f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f93b7988-4919-4a70-a903-4021b6e2b045', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c9313316-3269-452a-ae3c-dd7d0a024dde', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f93b7988-4919-4a70-a903-4021b6e2b045', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('9cfeffc1-b5d2-42d5-9b46-b5b1fb0d4fe7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tere bina zindagi se koi', 'TBD - Arrange notes
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('9cfeffc1-b5d2-42d5-9b46-b5b1fb0d4fe7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tere bina zindagi se koi', 'TBD - Arrange notes
 ```E|--------------
 B|---1-3-1---1-------
 G|-0-1----1---1-0-0---
@@ -2351,7 +2351,7 @@ D---1-3---3-----3----------------3---------', 'Lata Mangeshkar, Kishore Kumar', 
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2693ab93-f2cc-4045-b1cd-0f6c454ca0f3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9cfeffc1-b5d2-42d5-9b46-b5b1fb0d4fe7', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('573fc2ab-a7c9-4ca6-b728-05a2ee55c819', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9cfeffc1-b5d2-42d5-9b46-b5b1fb0d4fe7', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c14d64fb-3929-4b77-bdf9-9eff7c5c26f9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9cfeffc1-b5d2-42d5-9b46-b5b1fb0d4fe7', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('182ed5db-9ee9-457d-9e96-db1a6b8b6459', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Castle of glass', '[Intro]
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('182ed5db-9ee9-457d-9e96-db1a6b8b6459', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Castle of glass', '[Intro]
 Am 
 
 [Verse]
@@ -2394,7 +2394,7 @@ Strum : D D UUD DU    OR
 Chords used : Am, G, F, C', 'https://tabs.ultimate-guitar.com/tab/linkin_park/castle_of_glass_chords_1162454', FALSE, '2018-10-25T03:06:10.638000+00:00', '2019-10-25T02:44:35.841000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6d19c11c-8644-4ffa-8dab-4fa80b5e3fe8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '182ed5db-9ee9-457d-9e96-db1a6b8b6459', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f093e031-2b16-41a7-956f-1a944b5b8e69', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '182ed5db-9ee9-457d-9e96-db1a6b8b6459', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('fd67ce24-7015-4ba2-9624-bc2e27c8b876', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Genda Phool - Badshah', 'Boroloker bitilo,  Lomba lomba chul
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('fd67ce24-7015-4ba2-9624-bc2e27c8b876', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Genda Phool - Badshah', 'Boroloker bitilo,  Lomba lomba chul
 ```e | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 B | - 4- -4h6 - 6-6- -4-6-4 - - - - - - 4-6 - 6-6- -4-6-4 - - 
 G | - - - - - - - - - - - - - - - - - 6- - - - - - - - - - - - - - - - - - -6-
@@ -2407,7 +2407,7 @@ G | -3-3- -6-6- - - - - - - - - - - - - - - - - - - -
 ```', 'Badshah, Payal Dev', 'Genda Phool', 2020, NULL, 'https://guitartwitt.com/genda-phool-tab-badshah/', FALSE, '2020-04-13T15:04:40.209000+00:00', '2020-04-17T03:02:56.019000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c8d3d58b-8505-4352-a1f7-0f62574d4a37', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fd67ce24-7015-4ba2-9624-bc2e27c8b876', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e1da4dff-52b7-497e-a1bc-386c7c38e497', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fd67ce24-7015-4ba2-9624-bc2e27c8b876', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('43c1a90e-68d6-415b-95fa-2436f83e1a69', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ek do teen', 'Ding DOng DIng, ding dong ding dong.. (X2)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('43c1a90e-68d6-415b-95fa-2436f83e1a69', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ek do teen', 'Ding DOng DIng, ding dong ding dong.. (X2)
 ```e|--3--5--7---5--7--5--7--5--3-3---5--6--5--6--5--3------|
 ```
 
@@ -2426,7 +2426,7 @@ B|-------------3-------3---------------------------------------|
 ```', 'Alka Yagnik', 'Tezaab', 1988, NULL, NULL, FALSE, '2019-01-04T03:51:16.097000+00:00', '2019-01-04T03:56:42.054000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8234ab5a-17bb-4499-bca8-cacea2027335', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '43c1a90e-68d6-415b-95fa-2436f83e1a69', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('918c97a4-a3fd-4d9c-8a28-0e843f02e049', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '43c1a90e-68d6-415b-95fa-2436f83e1a69', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('85658d68-287b-40d0-8744-5b8dbea4f4cb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Merry Christmas & Happy New Year', 'We wish you a merry christmas
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('85658d68-287b-40d0-8744-5b8dbea4f4cb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Merry Christmas & Happy New Year', 'We wish you a merry christmas
 ```e | - - - - - - - - - - - - - - 
 B | - - 1-1-3-1-0- - - - -
 G | -0 - - - - - - - - -2-2-
@@ -2451,7 +2451,7 @@ G | -0-0-2- - - - - - -
 ```', 'Various Artists', 'Christmas & New Year Songs', 2023, NULL, 'https://www.youtube.com/watch?v=skjvNWtCSjM', FALSE, '2018-12-21T03:03:14.387000+00:00', '2018-12-22T08:57:12.201000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('168bf238-8a37-48bf-8ff8-f931c47ef6e4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '85658d68-287b-40d0-8744-5b8dbea4f4cb', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('396beae0-217b-4153-81b1-4bcfc8d1dab7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '85658d68-287b-40d0-8744-5b8dbea4f4cb', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('eaed7052-e6df-4f96-a5e0-1178bf7d3a44', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kabhi Kabhi Aditi', 'INTRO - Gif attached
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('eaed7052-e6df-4f96-a5e0-1178bf7d3a44', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kabhi Kabhi Aditi', 'INTRO - Gif attached
 
 Kabhi ka(Em)bhi Aditi Zindagi mein yuhi koi (Am)Apna lagta hai
 Kabhi ka(Em)bhi Aditi Wo bichad jaaye to ek (Am)Sapna lagta hai
@@ -2500,7 +2500,7 @@ D U  Chuck  D   D D    D U. (https://youtu.be/Nvv5jCUCcXw?t=308)', 'https://www.
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('64c7f84e-a77d-4ce0-8f15-4dca92064676', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'eaed7052-e6df-4f96-a5e0-1178bf7d3a44', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('77fe097c-4b11-4b26-b89c-ca27ca79cda5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'eaed7052-e6df-4f96-a5e0-1178bf7d3a44', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a454857b-19dd-4a81-aa6f-d2eb64c48cd6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'eaed7052-e6df-4f96-a5e0-1178bf7d3a44', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('6bbf9a4a-bbca-4acf-84b4-3a41283d2ed7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Humko humeesey chura lo', '```E |-------9----7--9---7----5-7-------------7---5-7----5-----4-5------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('6bbf9a4a-bbca-4acf-84b4-3a41283d2ed7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Humko humeesey chura lo', '```E |-------9----7--9---7----5-7-------------7---5-7----5-----4-5------------
 B |----7--------------------------9----5---------------------------7-------
 ```
 Humko humi se chura lo, Dil mein kahin tum chupa lo
@@ -2556,7 +2556,7 @@ B |----7--------------------------9----5---------------------------7---
 Humko humi se chura lo, Dil mein kahin tum chupa lo', 'Lata Mangeshkar, Udit Narayan', 'Mohabbatein', 2000, NULL, NULL, FALSE, '2017-11-09T01:58:33.364000+00:00', '2017-11-09T02:07:31.751000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('df687fb7-e1ed-4adc-b7fa-b825980ff979', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6bbf9a4a-bbca-4acf-84b4-3a41283d2ed7', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a7338fb8-9746-4006-b4b8-b3a305f4c962', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6bbf9a4a-bbca-4acf-84b4-3a41283d2ed7', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('50b579f5-c8c3-4356-84bb-19b2fea54dbd', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Moh Moh Ke Dhaage', 'hmmm…
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('50b579f5-c8c3-4356-84bb-19b2fea54dbd', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Moh Moh Ke Dhaage', 'hmmm…
 ```e | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 B | -5/7--5-7--5-7-5-7--5- - - - - - - 5/7--5-7--5-7-5-7- 
 G | - - - - - - - - - - - - - - - -7-6- - - - - - - - - - - - - - - - - 
@@ -2628,7 +2628,7 @@ Kis tarah girah ye suljhe', 'Papon, Monali Thakur', 'Dum Laga Ke Haisha', 2015, 
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2cb1c7fd-9077-4b7a-8a01-a3cda0fe56e8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '50b579f5-c8c3-4356-84bb-19b2fea54dbd', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2a16ac6f-48aa-44bb-9bed-7cc9d225e9b1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '50b579f5-c8c3-4356-84bb-19b2fea54dbd', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('54098b6d-9f4d-47b0-b93b-8a4755b80bdb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '50b579f5-c8c3-4356-84bb-19b2fea54dbd', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('57467e8b-4461-41aa-90f2-d5184cfb2ad3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Yu Hi Re (Kanave Kanave / Love Failure)', 'Laakh Roka, Par Ruka Na
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('57467e8b-4461-41aa-90f2-d5184cfb2ad3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Yu Hi Re (Kanave Kanave / Love Failure)', 'Laakh Roka, Par Ruka Na
 e-887810~12-887810~12-
 Ishq Yeh Sarsor Hai
 e-887810~12----12-10-12
@@ -2704,7 +2704,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('678cfe0d-3a
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e539799c-a732-4159-9028-89aa8a96e3d1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '57467e8b-4461-41aa-90f2-d5184cfb2ad3', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d53603a9-dfb5-4553-a40f-31b34d3293c3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '57467e8b-4461-41aa-90f2-d5184cfb2ad3', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3b035f72-6f78-478b-b9c5-2f81af469e0e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '57467e8b-4461-41aa-90f2-d5184cfb2ad3', '50e1f043-40b6-42ce-8468-0952aa965c22');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('450e355d-114f-4e5a-be5e-ddc981d788b3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ek Hasina Thi (Karz)', '```E|-----------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('450e355d-114f-4e5a-be5e-ddc981d788b3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ek Hasina Thi (Karz)', '```E|-----------------
 B|-4-3-1-3-0--3-1-0-1--
 G|---------------1-
 ```
@@ -2864,8 +2864,8 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('20c7cca8-7a
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('43fd8798-91ae-49b7-b6d1-9acac2b74ada', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '450e355d-114f-4e5a-be5e-ddc981d788b3', 'f6f1fa22-4ebb-4dfc-8a00-65f2e520dc91');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('de7fb209-c659-4adb-bc93-8d985d4405d2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '450e355d-114f-4e5a-be5e-ddc981d788b3', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('09c69f13-1087-4c58-8d09-571ecc65dff3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '450e355d-114f-4e5a-be5e-ddc981d788b3', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('d97d2ee0-afae-40c6-aa95-615bd15c6e67', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dil Chahta Hai', '', 'Shankar Mahadevan, Clinton Cerejo', 'Dil Chahta Hai', 2001, NULL, 'https://www.acousterr.com/tab/dil-chahta-hai', FALSE, '2019-08-18T05:52:38.147000+00:00', '2019-08-18T05:52:42.940000+00:00');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('753db830-67f5-4339-bf6b-4c19cce68597', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bin Tere Sanam', '(Em)Bin tere sanam
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('d97d2ee0-afae-40c6-aa95-615bd15c6e67', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dil Chahta Hai', '', 'Shankar Mahadevan, Clinton Cerejo', 'Dil Chahta Hai', 2001, NULL, 'https://www.acousterr.com/tab/dil-chahta-hai', FALSE, '2019-08-18T05:52:38.147000+00:00', '2019-08-18T05:52:42.940000+00:00');
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('753db830-67f5-4339-bf6b-4c19cce68597', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bin Tere Sanam', '(Em)Bin tere sanam
 (C)Mar mitenge hum
 (A)Aa meri zinda(D)gi
 (Em)Aana hi pada (D)sajana
@@ -2925,7 +2925,7 @@ Ho.. (Em)Aana hi pada (D)sajana
 Chords used : Em, C, A, D, G, Bm', 'https://tabs.ultimate-guitar.com/tab/udit_narayan/bin_tere_sanam_chords_2384057', FALSE, '2019-01-12T02:47:52.075000+00:00', '2019-01-13T10:50:45.422000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3213a1a6-d04d-4bf3-9bf2-a8701e3f617b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '753db830-67f5-4339-bf6b-4c19cce68597', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('96c0c7e5-dc95-448f-b0e2-34e89d2cadfd', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '753db830-67f5-4339-bf6b-4c19cce68597', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('fd6f8321-fe11-483e-9a46-0000c8c0e2c4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tune Jo Na Kaha', 'Line 1
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('fd6f8321-fe11-483e-9a46-0000c8c0e2c4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tune Jo Na Kaha', 'Line 1
 ```G|----------------5-------------------------------------|
 D|------5-7-8--------5---------------------------------|
 A|-8----------------------------------------------------|
@@ -3123,7 +3123,7 @@ A|---------8--------------------------------------------|
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('05750454-462b-4d59-98bc-419e49ff1d5b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fd6f8321-fe11-483e-9a46-0000c8c0e2c4', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c0b1ead3-bb1f-4923-81bb-40f3b05e349f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fd6f8321-fe11-483e-9a46-0000c8c0e2c4', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5af89c46-d258-412f-9f00-e8584741e42c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fd6f8321-fe11-483e-9a46-0000c8c0e2c4', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('cced6ab3-1a19-4e7b-bf24-bd47dbd6af98', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tu Saath Hai To', 'INTRO
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('cced6ab3-1a19-4e7b-bf24-bd47dbd6af98', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tu Saath Hai To', 'INTRO
 (Em)
 
 VERSE
@@ -3232,7 +3232,7 @@ Capo : 4
 Strumming: D Chuck DU Chuck', 'https://www.chordzone.org/2025/05/vishal-mishra-mithoon-tu-saath-hai-toh-chords-for-piano-guitar.html', FALSE, '2025-07-19T11:41:48.685000+00:00', '2025-07-20T02:20:20.041000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d415e9ac-caf2-4bfa-b1a7-0271eafceaab', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'cced6ab3-1a19-4e7b-bf24-bd47dbd6af98', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3b232d7f-10ea-48ff-a071-7447a2f33229', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'cced6ab3-1a19-4e7b-bf24-bd47dbd6af98', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('da039fff-9c24-4f38-a469-d438191877c2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Requiem For A Dream Theme', '[Intro]
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('da039fff-9c24-4f38-a469-d438191877c2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Requiem For A Dream Theme', '[Intro]
 ```e|-6-5-3----6-5-3-----6-5-3------8-6-5-6-|
 B|--------3--------3-----------3--------------|
 ```
@@ -3274,11 +3274,11 @@ B|----------3-----------3-----------3---|
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3fa41ff8-0199-4094-b156-1afa6162fde1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'da039fff-9c24-4f38-a469-d438191877c2', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('88a2fe35-b353-447b-a634-176d79d6ffb8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'da039fff-9c24-4f38-a469-d438191877c2', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('cb383312-6d19-4616-ab7d-8de779164172', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'da039fff-9c24-4f38-a469-d438191877c2', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('a27cdee9-041b-4243-9b7a-ec3ddfddd08f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chaand Sifarish', '7-8-7-7-12-8-7-5-5-5-10-2-3-2-2-7-2-0', 'Shaan, Kailash Kher', 'Fanaa', 2006, NULL, NULL, FALSE, '2017-10-06T03:09:13.694000+00:00', '2017-10-07T04:56:34.822000+00:00');
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('a27cdee9-041b-4243-9b7a-ec3ddfddd08f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chaand Sifarish', '7-8-7-7-12-8-7-5-5-5-10-2-3-2-2-7-2-0', 'Shaan, Kailash Kher', 'Fanaa', 2006, NULL, NULL, FALSE, '2017-10-06T03:09:13.694000+00:00', '2017-10-07T04:56:34.822000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9423af32-0fbf-4b15-a12c-7be569bee6db', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a27cdee9-041b-4243-9b7a-ec3ddfddd08f', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1080beda-db61-498a-adbb-e24e83cb834d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a27cdee9-041b-4243-9b7a-ec3ddfddd08f', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('af879e53-3d8f-47aa-bf90-18ee517e61ff', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a27cdee9-041b-4243-9b7a-ec3ddfddd08f', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('1b6682aa-2ee0-4143-95a3-0d75f93d8096', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aur Ahista Kijiye Baatein - Pankaj Udhas', 'Aur (C)aahista kijiye (Am)baatein, dhad(C)kane koi sun (G)raha hoga
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('1b6682aa-2ee0-4143-95a3-0d75f93d8096', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aur Ahista Kijiye Baatein - Pankaj Udhas', 'Aur (C)aahista kijiye (Am)baatein, dhad(C)kane koi sun (G)raha hoga
 Aur (C)aahista kijiye (Am)baatein, dhad(C)kane koi sun (G)raha hoga
 Labz (F)girane na paaye honton (G)se, 
 Waqt (Am)ke haath inako (G)chun lenge 
@@ -3324,7 +3324,7 @@ Chords used : C, Am, G, F', 'https://www.youtube.com/watch?v=R0vkevAsTCI
 https://tabs.ultimate-guitar.com/tab/pankaj-udhas/aur-ahista-kijiye-baatein-chords-1033742', FALSE, '2022-11-21T13:23:20.628000+00:00', '2022-11-21T14:06:51.104000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f13f1d20-7f82-4827-8545-7af289ff0233', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '1b6682aa-2ee0-4143-95a3-0d75f93d8096', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('af0479eb-14f5-4419-adc4-5b911ed5a711', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '1b6682aa-2ee0-4143-95a3-0d75f93d8096', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('eb87bbf8-fc12-492c-b925-3f68b43ac9e7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chhathi Maiya Bulaye', '[Intro]
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('eb87bbf8-fc12-492c-b925-3f68b43ac9e7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chhathi Maiya Bulaye', '[Intro]
 G........Am..G........
 
 (G)Ban pardesiya je gai(C)la shahar tu
@@ -3383,7 +3383,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('01893a7d-a0
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9badf76c-751a-4437-a31c-1a4d8372b238', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'eb87bbf8-fc12-492c-b925-3f68b43ac9e7', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1ec3a141-d685-4375-b4a8-140d33219ff4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'eb87bbf8-fc12-492c-b925-3f68b43ac9e7', '6a3e1159-3e7b-4145-b202-58429f143d25');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d81665a6-9a4a-4b8d-ab87-17a793df5b89', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'eb87bbf8-fc12-492c-b925-3f68b43ac9e7', '8d4fc519-7375-432c-8b6a-6cf000e9f287');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('54c316c7-857e-42bd-a210-ac01c0680f9f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Humsafar (Badrinath Ki Dulhania)', 'Sun mere humsafar
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('54c316c7-857e-42bd-a210-ac01c0680f9f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Humsafar (Badrinath Ki Dulhania)', 'Sun mere humsafar
 ```e | - - - - - - - - - - - - - - - - - -
 B | - 8 - 8 - 7 - 7h8p7 - - - - - 
 G | - - - - - - - - - - - - - -  7- 9 - -
@@ -3453,13 +3453,13 @@ G | - - - - - 7 - 9 - - - - - - - - - - - - - - - -  - -9 -
 ```', 'Akhil Sachdeva, Mansheel Gujral', 'Badrinath Ki Dulhania', 2017, NULL, 'https://www.youtube.com/watch?v=3jFLPniCjA4', FALSE, '2017-12-31T09:49:37.780000+00:00', '2019-04-14T09:53:57.694000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('90bf4588-7032-4e1d-a381-57c7d2b99090', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '54c316c7-857e-42bd-a210-ac01c0680f9f', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6af54fe2-e87a-497b-a768-0dd24857fc87', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '54c316c7-857e-42bd-a210-ac01c0680f9f', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('611436f2-3c37-40b4-9ba5-a631c112296d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'JIngle bell', '4 4 4  4 4 4  4 7 0 2 4
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('611436f2-3c37-40b4-9ba5-a631c112296d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'JIngle bell', '4 4 4  4 4 4  4 7 0 2 4
 
 5 5 5  4 4 4  2 2 2 4 0', 'James Lord Pierpont', 'Christmas Songs', 1857, NULL, NULL, FALSE, '2017-10-06T03:04:47.554000+00:00', '2017-10-06T03:05:13.407000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ac879dbf-de1b-464b-90dc-cb9ba5204d49', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '611436f2-3c37-40b4-9ba5-a631c112296d', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3034f3bc-2862-462f-b4cc-5b90adfa7187', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '611436f2-3c37-40b4-9ba5-a631c112296d', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('14ffb45e-fe18-4605-b6d5-86a872b1edc1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '611436f2-3c37-40b4-9ba5-a631c112296d', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('b1071f29-b9de-4245-be6f-bee065c65211', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chookar Mere Man Ko', '[F]Chukar Mere [C]Man Ko
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('b1071f29-b9de-4245-be6f-bee065c65211', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chookar Mere Man Ko', '[F]Chukar Mere [C]Man Ko
 Kiya [Am]Tune Kya I[F]shara
 
 [F]Chukar Mere [C]Man Ko
@@ -3504,7 +3504,7 @@ OR  D DUDU
 Chords used : F, C, Am, Bb', 'http://tabandchord.com/2013/02/chookar-mere-man-ko-guitar-chords-yaarana/', FALSE, '2018-11-16T18:57:32.129000+00:00', '2019-03-15T02:38:49.611000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e9bcb4fa-aef9-4101-bb35-de2877176275', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b1071f29-b9de-4245-be6f-bee065c65211', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('bb6c40c7-9e7b-4785-8a67-b2645b207d9c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b1071f29-b9de-4245-be6f-bee065c65211', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('0a9c40b9-0dfe-4c96-a536-c53df44be567', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jaane De - Qarib Qarib Single', 'Woh jo (D) tha khwaab (Bm) saa
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('0a9c40b9-0dfe-4c96-a536-c53df44be567', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jaane De - Qarib Qarib Single', 'Woh jo (D) tha khwaab (Bm) saa
 Kya ka(Am)hein jaane (D) de
 Yeh jo (D) hai kam se (Bm) kam
 Yeh ra(Am)he ke jaane (D) de
@@ -3561,7 +3561,7 @@ Fast Strumming : D UU D UU D DU   (kyun na rok kar khud ko...)', 'https://www.yo
 https://wrytin.com/gauravbhatt/jaane-de-chords-qarib-qarib-single-jda8hfvl', FALSE, '2023-07-30T01:52:12.324000+00:00', '2023-07-30T01:56:07.909000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('aae795af-2aee-437a-a9a4-c6071e265232', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0a9c40b9-0dfe-4c96-a536-c53df44be567', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c5f78fa0-e3b6-4961-a9ef-30bbc47075a0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0a9c40b9-0dfe-4c96-a536-c53df44be567', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('18568d38-33df-403e-966c-945b40d7f7dd', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dilbar Mere', '(Em)Dilbar mere (C)kab tak mu(Em)jhe (Em)aise hi tadpao(D)ge
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('18568d38-33df-403e-966c-945b40d7f7dd', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dilbar Mere', '(Em)Dilbar mere (C)kab tak mu(Em)jhe (Em)aise hi tadpao(D)ge
 (C)Mai aag dil me laga dunga (D)woh ke (B)pal me pighal jao(Em)ge
 
 (E)Ik din aaye(A)ga,Pyar (E)ho ja(A)yega
@@ -3583,7 +3583,7 @@ INSERT INTO public.notes (id, user_id, title, content, artist, album, release_ye
 D DUDU', 'http://indichords.com/songDetails.jsp?songId=1380&titleExtra=Dilbar-mere-kab-tak-mujhe-Sandhya', FALSE, '2019-03-04T13:44:21.210000+00:00', '2019-04-17T06:53:15.988000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2782cd4c-7c2f-47cd-a0a8-bb24b2789a16', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '18568d38-33df-403e-966c-945b40d7f7dd', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('212ae9da-c10d-4651-90b1-555c0f5a8e3d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '18568d38-33df-403e-966c-945b40d7f7dd', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('16d895e4-a608-483a-93b2-e66cefebbd85', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jahan Daal Daal Par', '```E|-----------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('16d895e4-a608-483a-93b2-e66cefebbd85', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jahan Daal Daal Par', '```E|-----------------
 B|-------------1-1-1-
 G|---0-3-3-3-3-0-3-3-----
 D|-1-3-------------
@@ -3696,7 +3696,7 @@ D|-1-3--------3-1-3-1-1-
 Vo bhaarat desh hai mera', 'Mohammed Rafi', 'Sikander-E-Azam', 1965, NULL, 'http://tabandchord.com/2014/08/jahan-daal-daal-par-tab-deshbhakti-song-tab/', FALSE, '2018-08-27T01:33:33.745000+00:00', '2019-01-08T13:49:07.573000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f4547d6a-a6aa-46a7-b37a-0b600c3fef0f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '16d895e4-a608-483a-93b2-e66cefebbd85', 'ae6a7dff-8c54-4846-bf93-deb177ecbb68');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6b02f5e6-3b8e-4674-9deb-7b168ff0d39f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '16d895e4-a608-483a-93b2-e66cefebbd85', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('0d2c0be8-3c69-4463-a5be-afde0f61ce38', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tere Naam (sad) (G, Em, D)', '(G)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('0d2c0be8-3c69-4463-a5be-afde0f61ce38', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tere Naam (sad) (G, Em, D)', '(G)
 ```E|--------------------------------------------7--6--9--7---6h-7p6-----------
 B|-----------7--9---7h-9p7--7-----7---------------------------------9-----9--
 G|--8--9-----------------------------------------------------------
@@ -3750,7 +3750,7 @@ D DU UDU', 'https://www.youtube.com/watch?v=hdSc8FbYDrw', FALSE, '2018-12-29T08:
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('017d3a56-4fc7-4568-aea0-3b41ebba851c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0d2c0be8-3c69-4463-a5be-afde0f61ce38', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3d6cdd88-ec66-4b1d-bbff-b6e883bd8999', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0d2c0be8-3c69-4463-a5be-afde0f61ce38', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1f3f7f8d-383e-4d41-a4de-6030f09351d5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0d2c0be8-3c69-4463-a5be-afde0f61ce38', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('289cee83-79d3-47c5-a7f4-bcba6f45ee4f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bewajah - Coke Studio', '(A)Hijr-i yaa(G)raan (A)na sata (D)be-wajah
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('289cee83-79d3-47c5-a7f4-bcba6f45ee4f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bewajah - Coke Studio', '(A)Hijr-i yaa(G)raan (A)na sata (D)be-wajah
 (D)Hijr-i yaa(G)raan (A)na sata (D)be-wajah
 (D)Ban gaya (G)tu kyoon wajah (A)be-wajah
 (D)Ban gaya (G)tu kyoon wajah (A)be-wajah
@@ -3787,7 +3787,7 @@ Chords used : A, G, D, Bm', 'https://www.youtube.com/watch?v=O92hNfI1A8M
 https://tabs.ultimate-guitar.com/tab/nabeel-shaukat-ali/bewajah-chords-1775081', FALSE, '2022-05-09T15:20:08.845000+00:00', '2022-05-09T15:31:41.865000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e132d702-2369-4611-b5d0-bff383f45dfb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '289cee83-79d3-47c5-a7f4-bcba6f45ee4f', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('62e6527f-6cd0-447f-8037-d193f9520f99', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '289cee83-79d3-47c5-a7f4-bcba6f45ee4f', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('957d5e90-3691-4972-a71e-822d0ee68a58', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bholenath (A Love Story)', 'Main (Em)Bhola Parbat Ka
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('957d5e90-3691-4972-a71e-822d0ee68a58', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bholenath (A Love Story)', 'Main (Em)Bhola Parbat Ka
 Re Tu (D)Rani Mehla Ki
 Teri (C)Meri Paar Pade Na
 Beshak (D)Likhi Pehla Ki
@@ -3867,7 +3867,7 @@ Chords used : A', 'https://www.youtube.com/watch?v=wKW30VhAEXg&list=RDwKW30VhAEX
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6f1518b6-9d61-4a85-a8cd-77972b47032a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '957d5e90-3691-4972-a71e-822d0ee68a58', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ad130413-17cb-4628-a704-6b8c2ac22c66', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '957d5e90-3691-4972-a71e-822d0ee68a58', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7581e406-43cc-4c30-9117-e2063b0448ec', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '957d5e90-3691-4972-a71e-822d0ee68a58', '6a3e1159-3e7b-4145-b202-58429f143d25');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('990985d3-b30c-49f5-a539-685a5a422c6c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aa chal ke tujhe', 'Aa chal ke tujhe main le ke chaluun
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('990985d3-b30c-49f5-a539-685a5a422c6c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aa chal ke tujhe', 'Aa chal ke tujhe main le ke chaluun
 ```e | - - - - - - - - - - - - - - - - - - - - - - - - - - 
 B | - - - - - - - -6 - - - - - - - - - - - - -6 - - -
 G | - - -8 - - 8- - -8 - - - -  - -8 - - 8- - -8 - 
@@ -3937,7 +3937,7 @@ Bas pyaar hi pyaar pale
 Ik aise gagan ke tale', 'Kishore Kumar', 'Door Gagan Ki Chhaon Mein', 1964, NULL, 'https://youtu.be/Blj4Wh9MKCA', FALSE, '2018-09-26T15:13:31.468000+00:00', '2018-09-27T03:56:27.639000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f0018fbd-d911-47ff-94db-1c879e2a1cd2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '990985d3-b30c-49f5-a539-685a5a422c6c', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('76827b55-7266-4c80-876c-a727559c7208', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '990985d3-b30c-49f5-a539-685a5a422c6c', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('1b48e57e-6d35-412e-b2d6-630ae5e64551', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hosh Walon Ko Khabar Kya', '(G)हम .. आ ..(C) हा हा हा  (G) हा हा हा
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('1b48e57e-6d35-412e-b2d6-630ae5e64551', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hosh Walon Ko Khabar Kya', '(G)हम .. आ ..(C) हा हा हा  (G) हा हा हा
 
 (G)होशवालों  (C)को खबर क्या, (D)बेखुदी क्या (G)चीज़ है   x2 
 (G)इश्क कीजिये (C)फिर समझिये      x2
@@ -3982,7 +3982,7 @@ INSERT INTO public.notes (id, user_id, title, content, artist, album, release_ye
 Chords used : G, C, D, G', 'https://tabs.ultimate-guitar.com/tab/jagjit_singh/hoshwalon_ko_khabar_kya_chords_1785478', FALSE, '2018-10-10T03:15:23.451000+00:00', '2018-11-09T02:46:12.085000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('55f336be-8f75-478c-b85f-cb72ce752991', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '1b48e57e-6d35-412e-b2d6-630ae5e64551', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('87eebf2e-bcf0-4478-a586-324f2234fd31', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '1b48e57e-6d35-412e-b2d6-630ae5e64551', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('a213bbc8-798e-4a9e-859e-da9550df3c37', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '12 Bollywood Hit Songs - Am G F E', 'Chahu main ya na  [D D UUD DDU]
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('a213bbc8-798e-4a9e-859e-da9550df3c37', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '12 Bollywood Hit Songs - Am G F E', 'Chahu main ya na  [D D UUD DDU]
 (Am)Tu hi ye mujhko ba(G)ta de
 (F)Chahun main ya naa(Am)
 (Am)Apne tu dil ka pa(G)ta de
@@ -4118,7 +4118,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('66b6af9f-19
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('bf1baca2-f99a-44a3-b2ae-54d60c8430e8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a213bbc8-798e-4a9e-859e-da9550df3c37', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('fa780fdc-74ee-4db8-b622-a2ec9aa1ed75', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a213bbc8-798e-4a9e-859e-da9550df3c37', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e3126369-6158-4dd0-8668-6e4a3194efae', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a213bbc8-798e-4a9e-859e-da9550df3c37', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('90b99bcd-ad51-41a2-b5dc-b05d4748e2ba', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jaane dil main kab se hai tu', 'E----------------------------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('90b99bcd-ad51-41a2-b5dc-b05d4748e2ba', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jaane dil main kab se hai tu', 'E----------------------------------
 B--0--5--7--8--7--5--8--12-
 Jaane dil main kab se hai tuuu
 E----------------------------------
@@ -4138,7 +4138,7 @@ B--1--1--3--5--1--8--10--5--
 Yaara rab se pehle haaaai tu…', 'Lata Mangeshkar, Sonu Nigam', 'Mujhse Dosti Karoge!', 2002, NULL, NULL, FALSE, '2017-11-07T17:29:18.701000+00:00', '2017-11-07T17:38:13.212000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e83c6e47-feec-4e2f-a3e2-19bd6a0987e7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '90b99bcd-ad51-41a2-b5dc-b05d4748e2ba', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('fdc1bb74-ab6a-41cd-91b9-d40ddbdee749', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '90b99bcd-ad51-41a2-b5dc-b05d4748e2ba', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('d916ee54-4e80-4241-80ca-fff0c26acd2b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aadat Se Majboor (Tune Only)', '```e | - - - 11 - 12 - 11 - - - - 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('d916ee54-4e80-4241-80ca-fff0c26acd2b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aadat Se Majboor (Tune Only)', '```e | - - - 11 - 12 - 11 - - - - 
 B | - 9 - - - - - - - - - - - -
 ```
 
@@ -4151,7 +4151,7 @@ B | - 9 - - - - - - - - - 12 - 9 -
 ```', 'Benny Dayal, Ranveer Singh', 'Ladies vs Ricky Bahl', 2011, NULL, NULL, FALSE, '2017-11-01T05:39:24.212000+00:00', '2017-11-01T05:44:11.120000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('25ed488b-923c-47b8-9e45-77276825570e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd916ee54-4e80-4241-80ca-fff0c26acd2b', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('fa6663f3-fb4c-447f-943c-bd77a894943b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd916ee54-4e80-4241-80ca-fff0c26acd2b', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('a8a66a43-58dd-4a7e-8972-edbe677d0617', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ke Tui Bol', '(Am)Mon amar tor kinare
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('a8a66a43-58dd-4a7e-8972-edbe677d0617', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ke Tui Bol', '(Am)Mon amar tor kinare
 (E)Haralo din-dahare
 (F)Se-to ar manche na re
 (E)Ebar valo(Am)bashte aye
@@ -4190,7 +4190,7 @@ D UU D UU D (DU)', 'http://www.uniquechords.com/ke-tui-bol-herogiri-chords/
 https://www.youtube.com/watch?v=peboMi4kabo', FALSE, '2019-01-20T11:26:28.139000+00:00', '2019-01-20T11:33:09.069000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3bd1f943-5e7d-435f-8b67-136943794e51', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a8a66a43-58dd-4a7e-8972-edbe677d0617', 'da9a1522-98fb-4b92-bae9-f41c00333985');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('636d6ce1-1907-402a-97f0-430bbe56af5f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a8a66a43-58dd-4a7e-8972-edbe677d0617', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('5d2dfcd4-08d9-4107-9bdf-5e308aa89f99', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tum Mile Dil Khile - Raj Barman', '(Am)Tum Mile (G)Dil Khile Aur (C)Jeene Ko Kya Chaahi(Am)ye
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('5d2dfcd4-08d9-4107-9bdf-5e308aa89f99', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tum Mile Dil Khile - Raj Barman', '(Am)Tum Mile (G)Dil Khile Aur (C)Jeene Ko Kya Chaahi(Am)ye
 Haan, (Am)Tum Mile (G)Dil Khile Aur (C)Jeene Ko Kya Chaahi(Am)ye
 
 Na Ho (C)Tu Udaas Tere Paas Paas Main Ra(Am)hunga Zindagi Bhar
@@ -4218,7 +4218,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('99acb8b3-65
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('394c5fb7-a7c0-4004-9644-505a6be7d8d0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5d2dfcd4-08d9-4107-9bdf-5e308aa89f99', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('aef10d03-bc59-4d5d-b7a1-35f0d914f82a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5d2dfcd4-08d9-4107-9bdf-5e308aa89f99', 'f22d1b82-b224-4a44-a581-b5c25015af54');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('60948377-8fa9-4d93-939d-c7a809cf6448', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5d2dfcd4-08d9-4107-9bdf-5e308aa89f99', '8d4fc519-7375-432c-8b6a-6cf000e9f287');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('e8fd146b-a06e-4d93-a487-669c46733156', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chehra Hai Ya Chand Khila Hai', 'E--0----------0-------------0------------0---------------0-1-0---0-1-0---0-1-0-1-0-1-0-
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('e8fd146b-a06e-4d93-a487-669c46733156', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chehra Hai Ya Chand Khila Hai', 'E--0----------0-------------0------------0---------------0-1-0---0-1-0---0-1-0-1-0-1-0-
 B----1-0--------1-0----------1-0---------1-0----------------------------------------------------
 G----------2-----------2-------------2------------2------------------------------------------------
 D DU UDU
@@ -4264,7 +4264,7 @@ Aur (Am)Tu Mujhse An(D)jaan Sa(G)hi
 (Am)Ye To Bataa Tera (C)Naam Hai (Am)Kyaa', 'Kishore Kumar', 'Saagar', 1985, 'Chords used : Am, E, D, C', 'http://tabandchord.com/2013/03/chehra-hai-ya-chand-khila-guitar-hai-chords/', FALSE, '2018-11-16T15:41:36.640000+00:00', '2018-12-31T11:00:30.290000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('30332c34-7502-44df-92d4-bb495d294ea8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e8fd146b-a06e-4d93-a487-669c46733156', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d50d37b3-08ab-4f4d-90a7-b368696df8d5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e8fd146b-a06e-4d93-a487-669c46733156', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('c8f952e6-a124-48dc-a994-1c04a5f55c72', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tera Ghata - Gajendra Verma', 'INTRO (https://youtu.be/JguIUz87APo?t=295)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('c8f952e6-a124-48dc-a994-1c04a5f55c72', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tera Ghata - Gajendra Verma', 'INTRO (https://youtu.be/JguIUz87APo?t=295)
 Hold Am with 2nd string open.     Hammer & pull off on 2 and then play 3
 Hold F then                                      4 3  (12)  Slap
 Hold C then                                      (23)  5 3 (12)
@@ -4326,7 +4326,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('320e49a3-2d
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b712e587-e857-45b0-8877-88788ad3571c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c8f952e6-a124-48dc-a994-1c04a5f55c72', '375ee2c2-3bd4-473f-afd0-87ef7a38f19a');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8ae39119-1e97-4ec9-8baa-dc5183beb43b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c8f952e6-a124-48dc-a994-1c04a5f55c72', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c44ead1b-cccd-4d3e-a0da-ed685ac5db3b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c8f952e6-a124-48dc-a994-1c04a5f55c72', '8d4fc519-7375-432c-8b6a-6cf000e9f287');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('2852e5a6-7d27-4381-961f-5dafea7f38dc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kina Chir by PropheC', 'INTRO
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('2852e5a6-7d27-4381-961f-5dafea7f38dc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kina Chir by PropheC', 'INTRO
 (Am) Mm(F)mmm (G) hmmmm
 ```e | - - - - - - -17-14- - - - - - - - -| x3 - - - - - - - - - - - - - - - -
 B | -15-14- - - - - - - 14- - - - - | x3 - - - - - - - -14-15-14 - 
@@ -4402,7 +4402,7 @@ Chords used : Am, F, G', 'https://www.youtube.com/watch?v=XsY18ODdOOI', FALSE, '
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f32127d3-586f-457a-bb05-6d7aa6d0ca3f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2852e5a6-7d27-4381-961f-5dafea7f38dc', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1facbe2e-fd68-4e79-8b7f-527bba061a56', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2852e5a6-7d27-4381-961f-5dafea7f38dc', 'f38a575b-3040-4496-8494-78d603e260b4');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4911b337-6a5e-4bf3-a56a-e89097a42a06', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2852e5a6-7d27-4381-961f-5dafea7f38dc', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('8100a1d8-da56-4ef1-9119-381800e04dfe', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'tujhe dekha to', '```e | - - - - - - - - 9 - 7 - 9 - 5 - 7 - 10 - 9 -
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('8100a1d8-da56-4ef1-9119-381800e04dfe', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'tujhe dekha to', '```e | - - - - - - - - 9 - 7 - 9 - 5 - 7 - 10 - 9 -
 B | - 7 - 7 - 7 - - - - - - - - - - - - - - - - - 
 ```
 
@@ -4418,7 +4418,7 @@ B | - 7 - 7 - 7 - - - - - - - - - - - - - - - - -
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8aec94ac-32ef-4248-9b8a-90d917d8aabb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '8100a1d8-da56-4ef1-9119-381800e04dfe', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('aa451731-1fb9-482c-81b4-4965d0e64ad1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '8100a1d8-da56-4ef1-9119-381800e04dfe', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ac8c32ae-d48b-492d-928c-3bd9b5dc9453', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '8100a1d8-da56-4ef1-9119-381800e04dfe', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('bfde3d80-5b1c-4a20-bf14-693981585938', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dhoom Theme', '```e | - - - - - 11 - 9 - 11 - 9 - 11 - - - - 9 - 11 - 9 - - - - - - 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('bfde3d80-5b1c-4a20-bf14-693981585938', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dhoom Theme', '```e | - - - - - 11 - 9 - 11 - 9 - 11 - - - - 9 - 11 - 9 - - - - - - 
 B | - 4/9 - - - - - - - - - - - - - - 12 - - - - - - - - 12 - 10 - 
 ```
 
@@ -4436,7 +4436,7 @@ G | - 11 - - - - - - - - - - - - - - 11 - - - - - -
 ```', 'Pritam', 'Dhoom', 2004, NULL, NULL, FALSE, '2017-12-31T13:57:28.347000+00:00', '2017-12-31T15:19:51.332000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('db6d3b94-3027-4e34-894c-0e194a566509', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'bfde3d80-5b1c-4a20-bf14-693981585938', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('0d3907bb-11ef-47bd-b5c0-d39bbf6c6219', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'bfde3d80-5b1c-4a20-bf14-693981585938', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('aa19dab0-b466-4dd4-b810-84d9a45ee453', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tujh Mein Rab Dikhta Hai', 'Intro (Em Em)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('aa19dab0-b466-4dd4-b810-84d9a45ee453', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tujh Mein Rab Dikhta Hai', 'Intro (Em Em)
 
 Tu hi toh (D)jannat meri, Tu hi (Em)mera junoon
 Tu hi to (D)mannat meri, Tu hi (Em)rooh ka sukoon
@@ -4478,13 +4478,13 @@ Strum : D DU UDU
 Chords used : Em, D, G, Am', 'https://www.youtube.com/watch?v=yy8LkCz3_5Q', FALSE, '2018-10-30T03:16:28.831000+00:00', '2018-11-10T15:02:01.902000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c5a87ac9-27ce-48f2-82c5-cff69018da8d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'aa19dab0-b466-4dd4-b810-84d9a45ee453', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4e5cf500-ee76-4ca9-b010-f8d41b0dbeed', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'aa19dab0-b466-4dd4-b810-84d9a45ee453', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('2c49dc1b-0410-4952-84f9-4afc805cca57', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Zara Zara (RHTDM)', '', 'Bombay Jayashri', 'Rehnaa Hai Terre Dil Mein', 2001, 'Capo at 2
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('2c49dc1b-0410-4952-84f9-4afc805cca57', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Zara Zara (RHTDM)', '', 'Bombay Jayashri', 'Rehnaa Hai Terre Dil Mein', 2001, 'Capo at 2
 Dd D DU', 'https://tabs.ultimate-guitar.com/tab/bombay_jayashri/zara_zara_chords_1711548
 https://www.youtube.com/watch?v=3Ah64BPygmk', FALSE, '2019-08-25T03:21:43.656000+00:00', '2020-12-31T05:35:58.400000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a9fed824-140e-4d48-8a6c-5210c9d858e4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2c49dc1b-0410-4952-84f9-4afc805cca57', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f6d925a6-e498-4637-8636-6fd7eda6bddd', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2c49dc1b-0410-4952-84f9-4afc805cca57', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1133321f-5127-441b-83fb-aeba559d77c9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2c49dc1b-0410-4952-84f9-4afc805cca57', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('6013f02e-d747-4b7b-aeed-3979c28b4ae7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Guncha Koi', '(D)Guncha (A)Koi, Mere Naam Kar (D)Diya..............................x2
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('6013f02e-d747-4b7b-aeed-3979c28b4ae7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Guncha Koi', '(D)Guncha (A)Koi, Mere Naam Kar (D)Diya..............................x2
 (D)Saaki Ne (A)Phir Se Mera (Em)Jaam (A)Bhar (D)Diya........x2
 (D)Guncha (A)Koi...
 
@@ -4513,7 +4513,7 @@ Chords used : D, A, Em, G', 'http://ultimatechords.blogspot.com/2013/07/guncha-k
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ed6a2e23-239e-418f-8d43-350cbabdc2ee', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6013f02e-d747-4b7b-aeed-3979c28b4ae7', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ab492623-369e-446a-bf3b-39f34cdcde1e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6013f02e-d747-4b7b-aeed-3979c28b4ae7', '375ee2c2-3bd4-473f-afd0-87ef7a38f19a');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('89c7790c-a8d6-40c2-8b1e-f6efb9f1d82c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6013f02e-d747-4b7b-aeed-3979c28b4ae7', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('4c089173-e479-481a-b7ca-3ce4f9a95711', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Lag Jaa Gale', '(G) Lag Ja Gale Ki (Em) Phir Ye Hasin (G) Raat Ho Na (D) Ho
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('4c089173-e479-481a-b7ca-3ce4f9a95711', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Lag Jaa Gale', '(G) Lag Ja Gale Ki (Em) Phir Ye Hasin (G) Raat Ho Na (D) Ho
 (C) Shaayad Phir Is (D) Janam Men Mulaa(G)qaat (Am) Ho Na (G) Ho
 
 (G) Lag Ja Gale Ki (Em) Phir Ye Hasin (G) Raat Ho Na (D) Ho
@@ -4541,7 +4541,7 @@ Fingerstyle : 4 2 1 2 3 2  (https://youtu.be/HS0lWYr87AI?t=48)
 Chords used : G, Em, D, C, Am', 'https://www.youtube.com/watch?v=A1hgCqi-tuk', FALSE, '2018-10-19T01:47:23.639000+00:00', '2023-07-30T01:51:34.704000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3536e328-4130-4c51-b7eb-2cb733461d75', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4c089173-e479-481a-b7ca-3ce4f9a95711', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5558393c-fc6a-4364-9c63-7c44186f2005', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4c089173-e479-481a-b7ca-3ce4f9a95711', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('b5e86f50-3939-4567-9a70-d27c38637c35', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ek Ajnabee Haseena Se', 'Ek ajna(G)bi hasina (C)se yu mula(D)kat ho ga(G)yi
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('b5e86f50-3939-4567-9a70-d27c38637c35', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ek Ajnabee Haseena Se', 'Ek ajna(G)bi hasina (C)se yu mula(D)kat ho ga(G)yi
 Phir kya hu(G)wa yeh naa pu(C)chho, kuchh aisi (D)bat ho ga(G)yi…x2
 
 Verse 1
@@ -4576,9 +4576,9 @@ Phir kya hu(G)wa yeh naa pu(C)chho, kuchh aisi (D)bat ho ga(G)yi…x2', 'Kishore
 Chords used : G, C, D, Am, A', 'https://www.youtube.com/watch?v=RTGn1N4ps88', FALSE, '2018-11-05T15:19:45.196000+00:00', '2018-12-23T14:00:28.297000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('50df2985-cbdd-4f34-96bf-13ea3edfb6eb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b5e86f50-3939-4567-9a70-d27c38637c35', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('73e78b51-f805-42bc-a33b-d42439492832', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b5e86f50-3939-4567-9a70-d27c38637c35', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('6bfe9b09-0401-4919-ab65-4db7e3998e0a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Fun Friday Games', 'Guess location on map : https://openguessr.com/
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('6bfe9b09-0401-4919-ab65-4db7e3998e0a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Fun Friday Games', 'Guess location on map : https://openguessr.com/
 Mini counter-strike on browser : https://shellshock.io/', 'Unavailable', 'Unavailable', 2001, NULL, NULL, FALSE, '2025-01-14T10:55:26.034000+00:00', '2025-01-14T10:56:00.896000+00:00');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('98063934-efc7-431c-b43c-14c8796246db', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Swaar Loon', 'Lead Played at Starting
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('98063934-efc7-431c-b43c-14c8796246db', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Swaar Loon', 'Lead Played at Starting
 ```D|--7-8-7-5-5-8------7-8-7-5-------7----------------|
 A|---------------------------------8--------------------|
 ```
@@ -4660,7 +4660,7 @@ D|-----------------------10-----------------------------|
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('54ec7249-0d5a-4196-8315-703d72e25d05', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '98063934-efc7-431c-b43c-14c8796246db', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('281b214e-f78c-4039-bd85-c13a415b6ba7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '98063934-efc7-431c-b43c-14c8796246db', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ed05cd1d-b6ae-44fd-a600-d2c4591b8f00', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '98063934-efc7-431c-b43c-14c8796246db', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('2f30254f-3c4a-4c7d-be84-2b447a6da061', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jeeta tha jiske liye', '--12-12-5-5-7--9-12-----12-12-14-12-8--5-5--7-7
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('2f30254f-3c4a-4c7d-be84-2b447a6da061', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jeeta tha jiske liye', '--12-12-5-5-7--9-12-----12-12-14-12-8--5-5--7-7
 Jeeta tha jiske liye Jiske liye marta tha
 --0-2-5--5-5-7-8-7--7-7-5----9---9--7-8-7-5-5
 Ek eisi ladki thi jise mei pyar karta tha
@@ -4669,7 +4669,7 @@ Ek eisi ladki thi jise mei pyar karta tha
 eik eisi ladi thi jise mei. pyarrrrrr karta tha', 'Kumar Sanu, Alka Yagnik', 'Dilwale', 1994, NULL, NULL, FALSE, '2017-11-07T18:04:55.050000+00:00', '2017-11-07T18:10:17.642000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3b83fdb1-f05f-4cc8-ab70-2c0e5464cebc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2f30254f-3c4a-4c7d-be84-2b447a6da061', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d12173ef-fd47-4c10-a031-cd226f5bcc22', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2f30254f-3c4a-4c7d-be84-2b447a6da061', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('1120dcac-fa45-45e3-82c2-c2a3be13645a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bairiya - Arijit Singh', '======= NO CHORDS =======  
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('1120dcac-fa45-45e3-82c2-c2a3be13645a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bairiya - Arijit Singh', '======= NO CHORDS =======  
 Moti Teri Yaad Ke, Dori Meri Saans,
 Piro Piro Ke Kaatun Kab Tak... Jeevan Ka Banbaas?
 O... Mitti Ki Kaaya Mein Ab... Bhookh Bachi Na Pyaas
@@ -4724,7 +4724,7 @@ Chords used : Am, Em, G, F', 'https://www.youtube.com/watch?v=kuQlIfmsdQY', FALS
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('def96abd-bb52-4396-805d-c9bba247a065', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '1120dcac-fa45-45e3-82c2-c2a3be13645a', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('887ec3d2-28e5-4e08-85a5-f95384d345cb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '1120dcac-fa45-45e3-82c2-c2a3be13645a', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('29dc5962-ae14-4398-bd46-5792d4a33d0a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '1120dcac-fa45-45e3-82c2-c2a3be13645a', '8d4fc519-7375-432c-8b6a-6cf000e9f287');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('5ec95910-c996-4e7e-9cfb-85fb4be1da5c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kya khoob lagti ho', '(Am)kya khoob lagti (G)ho
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('5ec95910-c996-4e7e-9cfb-85fb4be1da5c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kya khoob lagti ho', '(Am)kya khoob lagti (G)ho
 (C)badi sundar dikhti (Am)ho........(x2)
 
 (G)Phir se kaho kahte raho (C)accha lagta hai
@@ -4743,7 +4743,7 @@ Su(C)raj hoga (G)jab tak nil ga(Am)gan mein
 Chords used : Am, G, C', NULL, FALSE, '2018-11-16T18:47:14.994000+00:00', '2018-12-31T10:59:06.012000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('910bb225-e782-4269-a247-6773e7c35e39', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5ec95910-c996-4e7e-9cfb-85fb4be1da5c', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a59f4067-b6df-4759-a9b8-17732b3c0453', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5ec95910-c996-4e7e-9cfb-85fb4be1da5c', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('f12a0dd0-33e0-4307-b5e9-df8abc45ef9f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ek din aap yun', 'aik din app houn hum ko mil jaien gey
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('f12a0dd0-33e0-4307-b5e9-df8abc45ef9f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ek din aap yun', 'aik din app houn hum ko mil jaien gey
 E-3---3-3---7--7-7---7--7-7-8-7-5--------------------------------
 phool hi phool rahon mein khil jaien gey
 E-3-2-3---7--7-7---7-7-7-8-7-5-----------------------------------
@@ -4756,12 +4756,12 @@ jhoomeinga assman gaee gi yea zameen
 mein nein soocha na tha', 'Alka Yagnik, Kumar Sanu', 'Yes Boss', 1997, NULL, NULL, FALSE, '2017-11-07T18:11:46.898000+00:00', '2017-11-07T18:20:28.655000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8c2c56de-94db-42b8-bef0-9c8f06e89bb4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f12a0dd0-33e0-4307-b5e9-df8abc45ef9f', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d687b983-416d-46c2-ab07-edf8a55fead0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f12a0dd0-33e0-4307-b5e9-df8abc45ef9f', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('db5eb2b4-b760-4f6d-bc2b-ed2307edd44f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Afreen | Duet | Coke Studio', '', 'Rahat Fateh Ali Khan, Momina Mustehsan', 'Coke Studio Season 9', 2016, 'Strumming    DD UUUD DU﻿
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('db5eb2b4-b760-4f6d-bc2b-ed2307edd44f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Afreen | Duet | Coke Studio', '', 'Rahat Fateh Ali Khan, Momina Mustehsan', 'Coke Studio Season 9', 2016, 'Strumming    DD UUUD DU﻿
 Chords used : G, D, C, Em, Bm, Am', 'https://www.youtube.com/watch?v=-eXbGHZaku8', FALSE, '2018-10-18T06:16:19.091000+00:00', '2018-10-18T12:40:45.245000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('837b1cad-be1f-4dea-aac6-93817beec220', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'db5eb2b4-b760-4f6d-bc2b-ed2307edd44f', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('49009db9-fb76-4016-9dc5-450e7168b930', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'db5eb2b4-b760-4f6d-bc2b-ed2307edd44f', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9ca2b60c-a4a6-449f-bd1d-1c8f6ae28508', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'db5eb2b4-b760-4f6d-bc2b-ed2307edd44f', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('f3486711-e764-4ff3-a5ab-a270ae6a95e9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Raat Kali', '```B|-5-7-9-10-9-7-9-7-5-7-3-
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('f3486711-e764-4ff3-a5ab-a270ae6a95e9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Raat Kali', '```B|-5-7-9-10-9-7-9-7-5-7-3-
 ```
 Raat Kali Ek Khwaab Mein Aayi
 
@@ -4771,7 +4771,7 @@ Aur Gale Ka Haar Hui', 'Kishore Kumar', 'Buddha Mil Gaya', 1971, NULL, 'http://w
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2e0804d4-23f0-4f65-8168-fe0e7e726253', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f3486711-e764-4ff3-a5ab-a270ae6a95e9', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8dba26a8-c0a2-4b90-b5d7-e45802a8c93b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f3486711-e764-4ff3-a5ab-a270ae6a95e9', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a2ca374b-a000-443f-8f02-4c402ee70a84', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f3486711-e764-4ff3-a5ab-a270ae6a95e9', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('42c04b21-81e4-4a97-b8b3-fd4360e03648', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mehram - Jersey', 'Verse
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('42c04b21-81e4-4a97-b8b3-fd4360e03648', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mehram - Jersey', 'Verse
 [Em]Mehram tu hi hai mera
 Le [C]sun le meri daas[D]tan
 [Em]Ranjishey dhuan-dhuan si ye
@@ -4838,7 +4838,7 @@ Strumming : D DUDU
 Chords used : Em, C, D, G, Am, Bm', 'https://www.youtube.com/watch?v=z0VnH2bLcDU', FALSE, '2022-06-27T11:19:50.566000+00:00', '2022-06-27T13:02:20.085000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('420e0ec5-a6b8-4dd4-a295-6959d933223a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '42c04b21-81e4-4a97-b8b3-fd4360e03648', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('cc0a5d84-8d0c-4963-9d31-122687b3be28', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '42c04b21-81e4-4a97-b8b3-fd4360e03648', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('0366c18c-f977-4846-9902-39ed4dd76014', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Main yahan hu yaha', 'Jaanam Dekh Lo Mit Gayi Dooriyan
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('0366c18c-f977-4846-9902-39ed4dd76014', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Main yahan hu yaha', 'Jaanam Dekh Lo Mit Gayi Dooriyan
 ```e|----0-2-2-3---2-0-2--0-----2--------
 B|-0-------------------------3------------
 ```
@@ -4861,7 +4861,7 @@ G|---------------------------------------2--4--
 ```', 'Udit Narayan', 'Veer-Zaara', 2004, NULL, NULL, FALSE, '2017-11-07T17:56:11.897000+00:00', '2017-11-07T18:06:28.009000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d02a96ed-60aa-49ef-b441-5bada3e5bfdf', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0366c18c-f977-4846-9902-39ed4dd76014', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ab12ef49-3c63-4c39-a267-738910826088', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0366c18c-f977-4846-9902-39ed4dd76014', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('25734dff-249a-460c-8da3-398ef8180248', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Pehla Nasha', '(C)Chaahe tum kuchh (F)na kaho
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('25734dff-249a-460c-8da3-398ef8180248', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Pehla Nasha', '(C)Chaahe tum kuchh (F)na kaho
 (C)maine sun li(G)ya
 (C)Ke saathi (G)pyaar ka
 (Am)mujhe chun li(F)ya
@@ -4967,7 +4967,7 @@ Me(Bb)re dil-e-beka(F)raar
 Tu hi ba(C)ta', 'Udit Narayan, Sadhana Sargam', 'Jo Jeeta Wohi Sikandar', 1992, 'Strum : D D UUD DDU
 Capo at 5
 Chords used : C, F, Am, G, F, Bb, Dm, C', 'https://youtu.be/0giVLbQ-7tI', FALSE, '2018-11-01T11:21:03.066000+00:00', '2022-01-20T06:48:50.067000+00:00');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('99585387-d1d9-43b9-9473-83fdfd431006', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Airtel tune', '```E|-------------------10-
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('99585387-d1d9-43b9-9473-83fdfd431006', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Airtel tune', '```E|-------------------10-
 B|----------------------
 G|--12-12-12-12----
 ```
@@ -5005,7 +5005,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('003e91a6-fa
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d41c1eed-81c2-4dfd-a8f1-af3f8285b9d1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '99585387-d1d9-43b9-9473-83fdfd431006', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9f493821-be5c-4aba-ae68-fab5b5d6d860', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '99585387-d1d9-43b9-9473-83fdfd431006', 'f6f1fa22-4ebb-4dfc-8a00-65f2e520dc91');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2cb840d4-eafe-4391-b521-192d12b68e64', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '99585387-d1d9-43b9-9473-83fdfd431006', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('ed44f55d-b8ab-42df-a80b-cb9916405a13', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tera Hi Rahun - Gajendra Verma', '(Hold Cadd9 and play 5,4,3  1,2,3 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('ed44f55d-b8ab-42df-a80b-cb9916405a13', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tera Hi Rahun - Gajendra Verma', '(Hold Cadd9 and play 5,4,3  1,2,3 
  Then Dsus4 and play 4,3,2   1p,2,3)
 ```e | - - - - - - 3- - - - - - - - - - - - - - -3p2 - - - - - - 
 B | - - - - - - - - 3- - - - - - - - - - 3- - - - - -3 - - - - 
@@ -5053,14 +5053,14 @@ Chords used : C, D, G', 'https://www.youtube.com/watch?v=s3Vl3nrE9Y8', FALSE, '2
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('fca18cc4-55a7-44c0-861f-d4d7e99bd38b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ed44f55d-b8ab-42df-a80b-cb9916405a13', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7ade9ab8-cf24-4c1f-a061-fc684d85dc8b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ed44f55d-b8ab-42df-a80b-cb9916405a13', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('44afdd95-61fa-4cc2-a972-eb918e025782', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ed44f55d-b8ab-42df-a80b-cb9916405a13', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('4a9c63ac-9284-46e5-9647-cfef87581d5b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ek Pyar ka Nagma hai', 'Notes : https://tabs.ultimate-guitar.com/tab/mukesh/ek-pyar-ka-nagma-hai-chords-2470370', 'Lata Mangeshkar, Mukesh', 'Shor', 1972, 'Original Strum : Dd UDU   Dd UDU
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('4a9c63ac-9284-46e5-9647-cfef87581d5b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ek Pyar ka Nagma hai', 'Notes : https://tabs.ultimate-guitar.com/tab/mukesh/ek-pyar-ka-nagma-hai-chords-2470370', 'Lata Mangeshkar, Mukesh', 'Shor', 1972, 'Original Strum : Dd UDU   Dd UDU
 Panotra sir : D UUD UUD DU
 Fingerstyle : 43123123
 Chords used : D, A, G, C', 'https://www.youtube.com/watch?v=tjPcl5dWMNQ', FALSE, '2020-06-24T06:11:58.592000+00:00', '2020-06-26T03:27:55.062000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a53343a3-d53c-44bd-8453-205aa437ab24', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4a9c63ac-9284-46e5-9647-cfef87581d5b', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3f679e5d-6b55-4908-b535-0ad520fd2510', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4a9c63ac-9284-46e5-9647-cfef87581d5b', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('263d9a8a-53de-488b-bed6-f6137308425b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4a9c63ac-9284-46e5-9647-cfef87581d5b', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('f380494d-50d0-404a-893f-02ce05ee4d6d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jai Jai Shiva Shamboo', '(Em)Jai jai shiv sham(G)boo
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('f380494d-50d0-404a-893f-02ce05ee4d6d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jai Jai Shiva Shamboo', '(Em)Jai jai shiv sham(G)boo
 (D)Jai jai shiv sham(Em)boo
 
 (C)Mahadev sham(G)boo (Am)mahadev sham(Em)boo
@@ -5073,7 +5073,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d92b3af6-18
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d2e3070c-41f2-4f8d-969e-42238e60c0cc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f380494d-50d0-404a-893f-02ce05ee4d6d', '375ee2c2-3bd4-473f-afd0-87ef7a38f19a');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a28b7c11-e973-4d44-a4f5-f5898cf2be4f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f380494d-50d0-404a-893f-02ce05ee4d6d', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7e5dc874-c2a0-4969-9de3-8fe30e558ccc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f380494d-50d0-404a-893f-02ce05ee4d6d', '6a3e1159-3e7b-4145-b202-58429f143d25');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('0eeedf8a-d87b-4a13-9bf4-afe879d827d3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Saare Jahan Se Accha', 'sare jahan achcha,  hindusta hamara hamara
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('0eeedf8a-d87b-4a13-9bf4-afe879d827d3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Saare Jahan Se Accha', 'sare jahan achcha,  hindusta hamara hamara
 ```E|-------------------------------------------------------------4---5-4---4------5--4--------
 B|-5/8--8--7--5--7---4---4/5--5-------------5---7------------------7----------7--5--
 G|---------------------------------------------2/4------------------------------------------------
@@ -5154,7 +5154,7 @@ G|---------------------------------------------2/4---------------------------
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('54d45177-e558-4c23-a8d7-81b00c33a8c8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0eeedf8a-d87b-4a13-9bf4-afe879d827d3', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f762a283-b252-47b7-84c2-1d3bb78fc8d0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0eeedf8a-d87b-4a13-9bf4-afe879d827d3', 'ae6a7dff-8c54-4846-bf93-deb177ecbb68');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('bf1fb3ec-00c6-400e-85c6-da91099381fc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0eeedf8a-d87b-4a13-9bf4-afe879d827d3', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('ed7ce0a6-28fb-4242-80fa-256b9d5a8db6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mere Rashke Qamar', '```E |------------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('ed7ce0a6-28fb-4242-80fa-256b9d5a8db6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mere Rashke Qamar', '```E |------------------
 B |-4-3-------3/6-3--------
 G |---5-5-5-5-------5-3-3-3---
 ```
@@ -5381,7 +5381,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1e335ba5-1f
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('826bfe8a-e84c-4f4e-8869-52c54a361675', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ed7ce0a6-28fb-4242-80fa-256b9d5a8db6', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('fd3221e1-eeaa-41bc-b02a-b3530996eba5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ed7ce0a6-28fb-4242-80fa-256b9d5a8db6', 'f6f1fa22-4ebb-4dfc-8a00-65f2e520dc91');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('160acb3f-b8c0-41c6-b046-f404619d3f93', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ed7ce0a6-28fb-4242-80fa-256b9d5a8db6', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('70f6163d-3271-4547-b4c6-eb74539bbb68', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Maayi re Maayi Tor Manwa - Md. Rafi', '(D)Mayi ke mamta...ketna nirmal, (G)Kehu na sake... pahi(D)chaan
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('70f6163d-3271-4547-b4c6-eb74539bbb68', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Maayi re Maayi Tor Manwa - Md. Rafi', '(D)Mayi ke mamta...ketna nirmal, (G)Kehu na sake... pahi(D)chaan
 (G)Mayi ka manwa me jaise, (G)Aap base.....bhag(D)waan
 
 (D)Maayi re Maayi tor (G)manwa, Ganga ke paniy(A)a ho (D)ram ...x2
@@ -5417,7 +5417,7 @@ Strumming : Ddd D D', NULL, FALSE, '2023-07-22T11:14:54.271000+00:00', '2023-07-
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('87c5c191-87d8-42f3-9153-6dc482bbe145', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '70f6163d-3271-4547-b4c6-eb74539bbb68', '2478154f-b5c6-43c0-86a6-9c5190154ada');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('efa52433-4790-4fb7-b72d-354f9c2e3e0a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '70f6163d-3271-4547-b4c6-eb74539bbb68', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('bc7392c3-1184-4121-8319-a10cf5454c0a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '70f6163d-3271-4547-b4c6-eb74539bbb68', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('31e2d3ae-e55f-486a-ac47-45581b50e02a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kya Hua Tera Waada', 'Intro 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('31e2d3ae-e55f-486a-ac47-45581b50e02a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kya Hua Tera Waada', 'Intro 
 ```e|--------------------------------------------|
 B|--------------------3----------3--------------|
 G|------2----2-2-------2-2-------5--3------|
@@ -5520,7 +5520,7 @@ Woh kasam woh irada', 'Mohammed Rafi, Sushma Shrestha', 'Hum Kisise Kum Naheen',
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6d708520-b9f1-4c29-ba5b-13cfd035aeb1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '31e2d3ae-e55f-486a-ac47-45581b50e02a', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('baaf6e87-05e3-4bbd-91c3-a7031e682981', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '31e2d3ae-e55f-486a-ac47-45581b50e02a', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9aa584b4-b818-4d64-b0da-454d5c5e4e65', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '31e2d3ae-e55f-486a-ac47-45581b50e02a', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('965771cb-04e6-4aff-a99c-b22aa51987a5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Sanu Ek Pal Chain Na Aave', 'Sanu [G]ek pal chain na [D]aave 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('965771cb-04e6-4aff-a99c-b22aa51987a5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Sanu Ek Pal Chain Na Aave', 'Sanu [G]ek pal chain na [D]aave 
 Sanu [G]ek pal chain na [D]aave 
 Sajna[G] tere bina...[C] 
 Sajna [G]tere bina 
@@ -5549,7 +5549,7 @@ Reference : Some app', 'Rahat Fateh Ali Khan', 'Raid', 2018, 'Strumming:-D DU UD
 Chords used : G, D, C', NULL, FALSE, '2018-11-01T04:45:11.253000+00:00', '2019-01-09T02:16:35.717000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('54fc18a5-20bb-45e6-86a2-7295acb4d551', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '965771cb-04e6-4aff-a99c-b22aa51987a5', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('15609797-c8c4-4fcd-b999-e4b1f8dd828c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '965771cb-04e6-4aff-a99c-b22aa51987a5', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('ad63d876-2b44-4640-9421-87c1fd228f70', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Abhi Mujhme Kahi', 'Intro (D)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('ad63d876-2b44-4640-9421-87c1fd228f70', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Abhi Mujhme Kahi', 'Intro (D)
 
 (D) Abhi mujh mein kahin
 Baaki (G) thodi si (D) hai zindagi (Bm)
@@ -5609,11 +5609,11 @@ Ya (D) ro loon (A) zara
 Mar (G) jaaoon ya (A) jee loon (D) zaraa', 'Sonu Nigam', 'Agneepath', 2012, 'Ddd DUDU', 'https://www.youtube.com/watch?v=LLyjLo02Hw8', FALSE, '2021-01-24T15:16:35.185000+00:00', '2021-01-24T15:16:55.967000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('bf36f306-a2c4-49f0-82d5-e1fca24dcad2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ad63d876-2b44-4640-9421-87c1fd228f70', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9616e438-6693-420e-b180-cfb84fab61cb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ad63d876-2b44-4640-9421-87c1fd228f70', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('fa9d6938-5683-4f30-a9fb-f69e99fc59f7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Sa Re Ga Ma', 'e - - - - - - - - - - - - - 0 - 2 - 3 -
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('fa9d6938-5683-4f30-a9fb-f69e99fc59f7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Sa Re Ga Ma', 'e - - - - - - - - - - - - - 0 - 2 - 3 -
 B - - - - - - 0 - 1 - 3 - - - - - - - -
 G - 0 - 2 - - - - - - - - - - - - - - -', 'Unknown', 'Unknown', NULL, NULL, NULL, FALSE, '2017-10-07T04:00:14.448000+00:00', '2017-10-07T04:02:38.191000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('587a05b4-b6d6-4642-9339-b67c99d44837', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fa9d6938-5683-4f30-a9fb-f69e99fc59f7', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('5d35c87d-8479-4a69-ba91-347f5f36ed91', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tere Naam (sad)', 'tere ishq me....
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('5d35c87d-8479-4a69-ba91-347f5f36ed91', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tere Naam (sad)', 'tere ishq me....
 ```E|--6--7---7/9--7---7/9--7--6---6h-7p6-----------6--7---7/9--7---7/9--7--7-----7--
 B|-----------------------------------------------------9/11------------------------------------
 ```
@@ -5707,7 +5707,7 @@ G|-9-10------------------
 ```', 'Udit Narayan', 'Tere Naam', 2003, NULL, 'https://www.youtube.com/watch?v=hdSc8FbYDrw', FALSE, '2018-12-29T08:21:34.047000+00:00', '2018-12-31T10:56:17.297000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('540e3ace-16e8-4411-bd61-537533cbae76', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5d35c87d-8479-4a69-ba91-347f5f36ed91', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('862109de-f5b8-43bf-b5f4-f5056e1710dc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5d35c87d-8479-4a69-ba91-347f5f36ed91', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('751c710f-d3c0-4c1a-b459-af49e8f007e8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mann Bharrya - Raj Barman', '=========SINGLE STRUM========
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('751c710f-d3c0-4c1a-b459-af49e8f007e8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mann Bharrya - Raj Barman', '=========SINGLE STRUM========
 Tu (C)sab janda aen
 Main (Am)chhad ni sakdi tainu
 Taan(F)hi taan ungalan te
@@ -5762,7 +5762,7 @@ Chords used : C, Am, F, G', 'https://www.youtube.com/watch?v=9sB4stB78Go', FALSE
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a641df6f-fa08-4880-9d1f-25e06a94d7ee', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '751c710f-d3c0-4c1a-b459-af49e8f007e8', 'f38a575b-3040-4496-8494-78d603e260b4');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b56a0f0c-290b-4caf-854f-39150ef66e9b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '751c710f-d3c0-4c1a-b459-af49e8f007e8', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('90981556-67ee-4a1f-b70a-42d5ab228e6d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '751c710f-d3c0-4c1a-b459-af49e8f007e8', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('01c114b6-4e07-46fd-aef6-43b743113968', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jab Koi Baat', 'E----------------------------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('01c114b6-4e07-46fd-aef6-43b743113968', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jab Koi Baat', 'E----------------------------------
 B--5-5-5--------7s9--------------
 Jab koi ....... baat....
 E----------------------------------
@@ -5810,7 +5810,7 @@ B---0-2-5-----2h5------------------
 O hum nava.....', 'Kumar Sanu, Sadhana Sargam', 'Jurm', 1990, NULL, NULL, FALSE, '2017-10-26T17:08:35.050000+00:00', '2017-12-10T07:21:43.622000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('50efd2fd-b5c2-4642-8fcc-410133137de6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '01c114b6-4e07-46fd-aef6-43b743113968', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2a6a954d-3a15-4d3c-8409-6d3a58f48c00', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '01c114b6-4e07-46fd-aef6-43b743113968', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('c00a040d-3b7b-403d-99e0-ea6a7e6090c7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Filhaal', 'Intro with capo  ([F] [Em] [Am]).................. [x4 Times]
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('c00a040d-3b7b-403d-99e0-ea6a7e6090c7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Filhaal', 'Intro with capo  ([F] [Em] [Am]).................. [x4 Times]
 ```e | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 B | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 G | - - - - - - 5-4-2- -0-2 - 0-2- -0-5-4-2-0 -2/4 - 
@@ -5903,11 +5903,11 @@ Strumming Pattern: D D UUD DU', 'https://www.youtube.com/watch?v=cEGGXdON28M', F
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b5d87be0-d253-4c49-8d50-5a242b2b6815', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c00a040d-3b7b-403d-99e0-ea6a7e6090c7', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7badc0c4-552e-4c04-a046-d16e9c238228', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c00a040d-3b7b-403d-99e0-ea6a7e6090c7', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c22959a3-5776-48a9-b5e4-9403bef501bc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c00a040d-3b7b-403d-99e0-ea6a7e6090c7', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('a8e2a06b-aa4b-4b82-9a74-a2dd5862635f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Namo Namo Ji Shankara - Kedarnath', '', 'Amit Trivedi', 'Kedarnath', 2018, NULL, 'https://www.youtube.com/watch?v=1KdNcV4siqA', FALSE, '2020-09-21T13:14:18.832000+00:00', '2020-09-21T13:14:33.219000+00:00');
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('a8e2a06b-aa4b-4b82-9a74-a2dd5862635f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Namo Namo Ji Shankara - Kedarnath', '', 'Amit Trivedi', 'Kedarnath', 2018, NULL, 'https://www.youtube.com/watch?v=1KdNcV4siqA', FALSE, '2020-09-21T13:14:18.832000+00:00', '2020-09-21T13:14:33.219000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a416080d-3a6b-47c3-b436-4c83e1f5b704', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a8e2a06b-aa4b-4b82-9a74-a2dd5862635f', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a242f084-f5f2-4963-8f7b-6b06988f64f0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a8e2a06b-aa4b-4b82-9a74-a2dd5862635f', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f5e85e5b-7819-4188-b81c-90240cb678d7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a8e2a06b-aa4b-4b82-9a74-a2dd5862635f', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('5812fdbe-44fc-4a1a-96c9-f6d70328faec', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Darkhaast', '=========FINGERSTYLE========
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('5812fdbe-44fc-4a1a-96c9-f6d70328faec', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Darkhaast', '=========FINGERSTYLE========
 (G) Is kadar (Bm)
 Tu mujhe (G) pyaar kar (Bm)
 Jisey (G) kabhi naa main (Bm) sakoon
@@ -5978,7 +5978,7 @@ Strumming : D D UUD DDU
 Chords used : G, Bm, D, Em, Am', 'https://www.youtube.com/watch?v=KTmaYwZGGfI', FALSE, '2022-01-13T04:26:24.442000+00:00', '2022-01-20T10:36:31.313000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f0e44ee9-95ca-49e2-919f-ee9cca8ad30f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5812fdbe-44fc-4a1a-96c9-f6d70328faec', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d0c32869-f1d8-4d71-82b5-b27666a11958', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5812fdbe-44fc-4a1a-96c9-f6d70328faec', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('f9c2da9a-a13d-488e-8176-93fe2f2c8b86', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Maan Meri Jaan - King', 'Main Teri (G)Aankhon Mein
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('f9c2da9a-a13d-488e-8176-93fe2f2c8b86', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Maan Meri Jaan - King', 'Main Teri (G)Aankhon Mein
 Udaasi Kabhi (Em)Dekh Sakda Nahi
 Tujhe (Am)Khush Main Rakhunga Sohne(Em)ya (D)
 Main Tere (G)Hothon Pe
@@ -6039,7 +6039,7 @@ Tu (D)Maan Meri (G)Jaan…(Em) (Am)
 Chords used : G, Em, Am, D', 'https://www.youtube.com/watch?v=iFzpQngfWLk', FALSE, '2023-01-06T03:08:23.676000+00:00', '2023-01-07T15:21:39.192000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a0548f32-8039-4a22-bb51-44aa3045c3c7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f9c2da9a-a13d-488e-8176-93fe2f2c8b86', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7b86f8fb-5c82-459c-83b1-d3b6bc8c65ab', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f9c2da9a-a13d-488e-8176-93fe2f2c8b86', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('86fad9cd-5903-4254-8635-4faba42e3b4d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Munjane Manjalli', 'Intro :  A.....D....A....E
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('86fad9cd-5903-4254-8635-4faba42e3b4d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Munjane Manjalli', 'Intro :  A.....D....A....E
 
 (A)Munjaane (D)manjalli.. (A)Mussanje (E)tilitampalli...
 (A)O Olave (D)neenelli.. (A)Hudukaata (E)ninaginelli..
@@ -6095,7 +6095,7 @@ Aavari(A)su.. Maidum(D)bi..(E).. Just Maat Maathal(A)li..', 'S.P. Balasubrahmany
 Chords used : A, D, E, G, Bm', 'https://www.youtube.com/watch?v=q-hvu9GQutY&feature=youtu.be', FALSE, '2018-11-01T10:38:56.408000+00:00', '2018-11-03T04:27:41.645000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('67f41acc-95af-4798-8696-b3ec62ef53a5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '86fad9cd-5903-4254-8635-4faba42e3b4d', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('68d1fa56-00de-44a6-9689-f653566e9f3b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '86fad9cd-5903-4254-8635-4faba42e3b4d', 'bfb29683-c6ea-4f7b-affc-5fe459c721bd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('7f7ecd09-dddd-4e30-b6ec-01ab8ea9d111', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Pal Pal Dil Ke Paas', 'e-----------------------------------------------------------------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('7f7ecd09-dddd-4e30-b6ec-01ab8ea9d111', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Pal Pal Dil Ke Paas', 'e-----------------------------------------------------------------------
 B-----------3----------------------------------------------------------
 G--------------5--4--2--5--4-------2--5--4--2-----------------------
 D-------5-----------------------------------------------5--4--------2--4--5-
@@ -6202,7 +6202,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('727cbdc8-e6
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('16b5b61c-30b1-4cf0-8caf-9cee20928a18', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7f7ecd09-dddd-4e30-b6ec-01ab8ea9d111', 'f6f1fa22-4ebb-4dfc-8a00-65f2e520dc91');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8782f1db-c50c-4b82-bf5a-6b58f6a0c485', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7f7ecd09-dddd-4e30-b6ec-01ab8ea9d111', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6549db84-46fb-4fcd-be7b-4fef0901309a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7f7ecd09-dddd-4e30-b6ec-01ab8ea9d111', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('8f7900c5-2d7e-49b2-8fa5-0629448c407e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Lag ja gale', '```E |---8-8-8-8---8-8--8-8----8-----8------8-------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('8f7900c5-2d7e-49b2-8fa5-0629448c407e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Lag ja gale', '```E |---8-8-8-8---8-8--8-8----8-----8------8-------
 B |-11------11-------11----9-9----11-11---8-6-4--
 ```
 Lag ja gale ki phir Ye hasin raat ho na ho
@@ -6249,7 +6249,7 @@ B |-4-6------------
 Mulakat ho na ho', 'Lata Mangeshkar', 'Woh Kaun Thi?', 1964, NULL, NULL, FALSE, '2017-12-30T13:34:00.739000+00:00', '2019-01-08T14:21:05.289000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6023a398-18d7-486c-b236-d2ff6e359ea4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '8f7900c5-2d7e-49b2-8fa5-0629448c407e', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('dc447410-8685-4ef8-a2cc-7460b357f33d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '8f7900c5-2d7e-49b2-8fa5-0629448c407e', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('2ff57fb2-b7d7-4053-9dfe-9f5de1105343', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Meri Maa Ke Barabar Koi Nahi', '(D) Uncha hai bhawan, uncha mandir
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('2ff57fb2-b7d7-4053-9dfe-9f5de1105343', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Meri Maa Ke Barabar Koi Nahi', '(D) Uncha hai bhawan, uncha mandir
 (D) Unchi teri shan mai (A) yya teri
 (D) Charno me jhuke baadal bhi tere
 (D) Parvat pe lage shai (A) yya teri
@@ -6314,7 +6314,7 @@ Strumming : D Dd DU', 'https://indichords.com/songDetails.jsp?songId=2843&titleE
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('238b142a-b865-4462-ac2a-b3a70d9cc799', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2ff57fb2-b7d7-4053-9dfe-9f5de1105343', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6547dfdd-4bda-4269-9f13-fcf36516884a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2ff57fb2-b7d7-4053-9dfe-9f5de1105343', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d3d55698-f638-4cdb-a1ba-b3e6c3402087', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2ff57fb2-b7d7-4053-9dfe-9f5de1105343', '6a3e1159-3e7b-4145-b202-58429f143d25');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('66fa4801-6afb-41fb-824e-3d483fce3b29', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Nazm Nazm', 'Intro: 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('66fa4801-6afb-41fb-824e-3d483fce3b29', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Nazm Nazm', 'Intro: 
 ```E |------------
 B |------------
 G |-4-4-4/7-2-2-2/4--
@@ -6436,7 +6436,7 @@ Tujhse tu maangun re', 'Arko', 'Bareilly Ki Barfi', 2017, NULL, 'http://msworlds
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a841d38f-6c8e-4b1b-88d7-972f882a6384', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '66fa4801-6afb-41fb-824e-3d483fce3b29', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('208dabe0-d0ed-4d05-95c6-a24f56e2195f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '66fa4801-6afb-41fb-824e-3d483fce3b29', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('502ed813-69c1-4e22-825b-0a7fe5ee2976', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '66fa4801-6afb-41fb-824e-3d483fce3b29', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('a9507d69-1bf2-4576-98ea-f25f568f6a78', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jaan Nisaar - Kedarnath', 'STRUM (can be used in place of Fingerstyle 2) : D Chuck U  U Chuck U
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('a9507d69-1bf2-4576-98ea-f25f568f6a78', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jaan Nisaar - Kedarnath', 'STRUM (can be used in place of Fingerstyle 2) : D Chuck U  U Chuck U
 My Strum (for fingerstyle 2) : D Chuck  D U Chuck
 
 [intro]
@@ -6504,8 +6504,8 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('00b57106-8d
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('97a04218-fa0b-433d-927d-8bf18ccbbede', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a9507d69-1bf2-4576-98ea-f25f568f6a78', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b64d9621-0bfb-4b0d-9d32-c44ff7a384d0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a9507d69-1bf2-4576-98ea-f25f568f6a78', '375ee2c2-3bd4-473f-afd0-87ef7a38f19a');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('be3178f2-88d4-4897-a0c3-42b1f662c76f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a9507d69-1bf2-4576-98ea-f25f568f6a78', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('e0e15c86-8f28-40a5-a32e-8cc4cd7bf717', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ek Tarfa', '', 'Darshan Raval', 'Ek Tarfa', 2020, NULL, 'https://www.youtube.com/watch?v=NWHUwA9g9G4', FALSE, '2020-10-10T14:49:23.521000+00:00', '2020-10-10T14:49:28.661000+00:00');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('7c9ea3a6-8587-48f8-8f99-09c02dd29036', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mera Mann - Nautanki Sala', '[G] hmmm [D] hmmm [G] hmmm [D] hmmm 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('e0e15c86-8f28-40a5-a32e-8cc4cd7bf717', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ek Tarfa', '', 'Darshan Raval', 'Ek Tarfa', 2020, NULL, 'https://www.youtube.com/watch?v=NWHUwA9g9G4', FALSE, '2020-10-10T14:49:23.521000+00:00', '2020-10-10T14:49:28.661000+00:00');
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('7c9ea3a6-8587-48f8-8f99-09c02dd29036', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mera Mann - Nautanki Sala', '[G] hmmm [D] hmmm [G] hmmm [D] hmmm 
 [Em] hmmm [C] hmmm [D] hmmm 
 
 [G] Tujhse hi to mili hai rahat 
@@ -6557,12 +6557,12 @@ Reference : some app', 'Falak Shabbir', 'Nautanki Saala!', 2013, 'Strumming:-D-D
 Chords used : G, D, Em, C', NULL, FALSE, '2018-11-01T04:47:57.480000+00:00', '2018-11-01T12:47:37.855000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('76d02bb9-932e-4866-8805-65b92de9a3b1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7c9ea3a6-8587-48f8-8f99-09c02dd29036', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5997cf06-5964-4b9a-9b47-7c1b9ffcf4fe', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7c9ea3a6-8587-48f8-8f99-09c02dd29036', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('27bc9964-c9a2-4b6b-90ad-c90a18ba2ba0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tera Woh Pyaar', '', 'Asim Azhar, Momina Mustehsan', 'Coke Studio Season 9', 2016, 'Ddd', 'https://tabs.ultimate-guitar.com/tab/momina_mustehsan/tera_woh_pyar_nawazishein_karam_chords_1996633
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('27bc9964-c9a2-4b6b-90ad-c90a18ba2ba0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tera Woh Pyaar', '', 'Asim Azhar, Momina Mustehsan', 'Coke Studio Season 9', 2016, 'Ddd', 'https://tabs.ultimate-guitar.com/tab/momina_mustehsan/tera_woh_pyar_nawazishein_karam_chords_1996633
 https://www.youtube.com/watch?v=CyFTEUKshr4', FALSE, '2018-11-16T02:30:50.392000+00:00', '2018-11-16T02:31:13.857000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d52a9c38-251a-4559-9a96-6ec4c7cc0e86', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '27bc9964-c9a2-4b6b-90ad-c90a18ba2ba0', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f039bbf5-1cde-4c17-bb34-e20e47cdbc4f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '27bc9964-c9a2-4b6b-90ad-c90a18ba2ba0', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('836a94a7-b6eb-43fa-a093-bce32a1f7ef9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '27bc9964-c9a2-4b6b-90ad-c90a18ba2ba0', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('6e2cd164-ff8d-44dc-8a35-0ff3924ed971', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Shikwa Nahi - Jubin Nautiyal', '(C)-(Am)-(F)-(G)........x2
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('6e2cd164-ff8d-44dc-8a35-0ff3924ed971', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Shikwa Nahi - Jubin Nautiyal', '(C)-(Am)-(F)-(G)........x2
 
 (C) Tere bin na r(F)aha kabhi
 Tere b(Dm)in na r(F)eh sakun(C)ga
@@ -6617,7 +6617,7 @@ Shi(Am)kwa (F) nahin ki(C)si se', 'Jubin Nautiyal', 'Shikwa Nahi', 2016, 'D D UU
 Chords used : C, Am, F, G, Dm, E', 'https://www.youtube.com/watch?v=EAvaZSJiVCc', FALSE, '2022-03-17T10:32:43.078000+00:00', '2022-03-17T10:39:18.382000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('03beec15-71e8-4321-8f4b-56e5ae63e6c3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6e2cd164-ff8d-44dc-8a35-0ff3924ed971', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('784fc18b-f1d2-4695-a052-ebe939af09d2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6e2cd164-ff8d-44dc-8a35-0ff3924ed971', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('429c71a1-5e65-438b-8e7c-56b2abf1dfb5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Code Phatt Gaya [Sutta] -', '(G)Doston me (D)baitha, mai (Em)gaming kar ra(C)ha
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('429c71a1-5e65-438b-8e7c-56b2abf1dfb5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Code Phatt Gaya [Sutta] -', '(G)Doston me (D)baitha, mai (Em)gaming kar ra(C)ha
 (G)Agle long (D)weekend ki (Em)planing kar ra(C)ha
 Call mujhko aayi, mai jhat se darr gaya
 Baithe baithe lag gayi,. mujhe pata bhi na chala
@@ -6683,7 +6683,7 @@ pehli release me, exception aagaya
 Chords used : G, D, Em, C', 'https://tabs.ultimate-guitar.com/tab/gaurav-madaan/code-phat-gaya-chords-2977874', FALSE, '2021-06-27T09:00:46.705000+00:00', '2021-06-27T09:12:17.052000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a0a9ec5a-9255-4691-a38a-56c229b17751', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '429c71a1-5e65-438b-8e7c-56b2abf1dfb5', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b7483095-a40b-449e-bc34-c3ae456b44a4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '429c71a1-5e65-438b-8e7c-56b2abf1dfb5', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('4bd887d6-c72a-4f9b-b768-cb5af1aa499a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jehda Nasha - Amar Jalal & Faridkot', '[Intro]
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('4bd887d6-c72a-4f9b-b768-cb5af1aa499a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jehda Nasha - Amar Jalal & Faridkot', '[Intro]
 Jehda (Em)nasha nasha teri (Em)akhaan vichon aave mainu
 Main (Em)vekhya bada bada na oh (D)lakhaan vichon aave (Em)mainu
 Jehda (Em)nasha nasha teri (Em)akhaan vichon aave mainu
@@ -6737,7 +6737,7 @@ Strumming : D Chuck D U Chuck', 'https://www.musicallytech.com/nasha-chords-by-a
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('dcae3296-68f1-4252-b805-2e64bd6ffd84', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4bd887d6-c72a-4f9b-b768-cb5af1aa499a', 'f38a575b-3040-4496-8494-78d603e260b4');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('52a4df19-9307-4190-b7d0-76dd864a1362', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4bd887d6-c72a-4f9b-b768-cb5af1aa499a', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2adf2f88-3557-452d-8813-d36f7ab5eb72', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4bd887d6-c72a-4f9b-b768-cb5af1aa499a', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('0ef9df4b-1324-4df0-ac4e-102a0c68440c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Main Haara - Emptiness', '(F)...(Am)...(A#)...(C)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('0ef9df4b-1324-4df0-ac4e-102a0c68440c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Main Haara - Emptiness', '(F)...(Am)...(A#)...(C)
 (F)...(Am)...(A#)...(C)
 
 (F)Main haara (Am)main haara
@@ -6791,7 +6791,7 @@ Chords used : F, Am, A#, C', 'https://www.youtube.com/watch?v=Wthvl2jztTo
 https://www.guitarchordworld.net/2011/11/main-haara-emptiness-1-gajendra-verma.html', FALSE, '2019-04-11T04:55:30.190000+00:00', '2019-04-11T04:57:04.284000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('16e39b2e-cc3d-4b1c-b903-fdac1ea6683d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0ef9df4b-1324-4df0-ac4e-102a0c68440c', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e5d6ff0b-3c96-49ab-84c4-3ff965404f1b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0ef9df4b-1324-4df0-ac4e-102a0c68440c', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('cb55d91e-551f-4d69-b34a-22addaa69ec5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Zara Zara (RHTDM)', 'Paste these notes in VS Code and play
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('cb55d91e-551f-4d69-b34a-22addaa69ec5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Zara Zara (RHTDM)', 'Paste these notes in VS Code and play
 
 ```e|-----------------------------------------------------------------------------------------------------------------------------------------
 ```
@@ -6971,7 +6971,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a76ea25f-50
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c8d8eb0b-1681-46eb-87aa-917b9f19921d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'cb55d91e-551f-4d69-b34a-22addaa69ec5', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('39cad709-c22d-43df-a68e-678f90f11b9d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'cb55d91e-551f-4d69-b34a-22addaa69ec5', 'f6f1fa22-4ebb-4dfc-8a00-65f2e520dc91');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('35ee7a09-eaf1-4b99-9b0c-f70f830f8a80', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'cb55d91e-551f-4d69-b34a-22addaa69ec5', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('35cda9cb-726c-46a1-b81b-d79be5af0c5f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mehraman - Love Aaj Kal', '```e | - 7h10p7- - -7h10p7 - - - 5h7p5- - - - - - - 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('35cda9cb-726c-46a1-b81b-d79be5af0c5f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mehraman - Love Aaj Kal', '```e | - 7h10p7- - -7h10p7 - - - 5h7p5- - - - - - - 
 B | - - - - - - - - - - - - - - - - - - - - - - - - - - - 5/8- - 
 ```
 
@@ -7028,7 +7028,7 @@ Chords used : G, C, Em, D', 'https://www.youtube.com/watch?v=57ulJwWzz-s', FALSE
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('763470ae-ba9a-4a25-a794-c5f2f0eba73e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '35cda9cb-726c-46a1-b81b-d79be5af0c5f', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a81f2729-cb90-4566-bbaf-65afe5f5885c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '35cda9cb-726c-46a1-b81b-d79be5af0c5f', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('48d039ef-80c6-430f-b5ea-f0ce13a76f0d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '35cda9cb-726c-46a1-b81b-d79be5af0c5f', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('5b09fe6f-4fcc-4700-bc44-c82c2115f190', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Sandese aate hain', '```E |-9-10-14-12--10-9-7-9-12-10----------9----------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('5b09fe6f-4fcc-4700-bc44-c82c2115f190', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Sandese aate hain', '```E |-9-10-14-12--10-9-7-9-12-10----------9----------
 B |-----------------10-12--------9-7-12-10--
 G |---------------------------------
 ```
@@ -7390,7 +7390,7 @@ Main Ek Din Aaoonga', 'Sonu Nigam, Roop Kumar Rathod', 'Border', 1997, NULL, NUL
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a61e2f41-2588-4f58-af8d-52f81cd6a9ca', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5b09fe6f-4fcc-4700-bc44-c82c2115f190', 'ae6a7dff-8c54-4846-bf93-deb177ecbb68');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('cdeb5018-9909-44e8-bc7b-fd68bf6aa699', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5b09fe6f-4fcc-4700-bc44-c82c2115f190', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c843bdff-613e-4044-be29-459ad576fa93', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5b09fe6f-4fcc-4700-bc44-c82c2115f190', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('689bdd9e-6ff8-45d1-b967-96961db7ed3c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dil Diyan Gallan', '```E |-------------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('689bdd9e-6ff8-45d1-b967-96961db7ed3c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dil Diyan Gallan', '```E |-------------------
 B |---7-7-7---8-8-8---7-7-----
 G |-7-9----9----9-----7-9--
 ```
@@ -7489,7 +7489,7 @@ B |---8-8-8-10----10---10---
 Akh naal akh nu milaa ke', 'Atif Aslam', 'Tiger Zinda Hai', 2017, NULL, 'http://msworldsite.com/dil-diyan-gallan-guitar-tabs-lead-tiger-zinda-hai-atif-aslam/', FALSE, '2018-07-29T13:54:50.564000+00:00', '2018-10-01T16:27:28.115000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1374fd0b-1d0b-4a46-8ba3-e565de8ecdd1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '689bdd9e-6ff8-45d1-b967-96961db7ed3c', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2210e44d-d8f9-4c57-b2c3-85a61c023e78', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '689bdd9e-6ff8-45d1-b967-96961db7ed3c', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('47529b89-dbc9-41fd-8d98-e420700d7fc5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Humnava Mere | Jubin Nautiyal', '```e | - - - - - - - - - - - - - - - - - - - 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('47529b89-dbc9-41fd-8d98-e420700d7fc5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Humnava Mere | Jubin Nautiyal', '```e | - - - - - - - - - - - - - - - - - - - 
 B | - - - - - - - - - - - - - - 8 - - - - - 
 G | - 10 - 8-10-8 - 10---10 - - -
 ```
@@ -7521,7 +7521,7 @@ G | - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('96214a7b-0767-4036-9e38-92b4c08ce0d2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '47529b89-dbc9-41fd-8d98-e420700d7fc5', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('129dc593-c5c4-4f67-bf25-fd05f3fffe15', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '47529b89-dbc9-41fd-8d98-e420700d7fc5', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d37fcc1c-2ec8-4f7a-876b-07f12f28d4b9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '47529b89-dbc9-41fd-8d98-e420700d7fc5', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('b3271d4e-82ef-435b-b916-145e8fad8364', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Roke Na Ruke Naina', '```E |-9-9-10-9--------9-----
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('b3271d4e-82ef-435b-b916-145e8fad8364', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Roke Na Ruke Naina', '```E |-9-9-10-9--------9-----
 B |------12-10-10-10------
 G |-----------------
 ```
@@ -7585,7 +7585,7 @@ D |-------------------
 Roke na ruke naina…', 'Arijit Singh', 'Badrinath Ki Dulhania', 2017, NULL, 'http://msworldsite.com/roke-na-ruke-naina-guitar-tabs-lead-arijit-singh-badrinath-ki-dulhania/', FALSE, '2018-09-20T14:45:19.672000+00:00', '2019-04-13T06:48:48.933000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b2ea9af3-1e0a-4fd6-9d97-453f8eeadf40', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b3271d4e-82ef-435b-b916-145e8fad8364', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f61c1811-c8cf-4ecd-a655-9900b5aba3a9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b3271d4e-82ef-435b-b916-145e8fad8364', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('fa6ad70c-cd84-4ef1-a8e4-e0ccf85fa112', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Game Of Thrones', '8 10 12 5        ×4 times
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('fa6ad70c-cd84-4ef1-a8e4-e0ccf85fa112', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Game Of Thrones', '8 10 12 5        ×4 times
 
 9 10 12 5        ×3 times
 
@@ -7617,7 +7617,7 @@ INSERT INTO public.notes (id, user_id, title, content, artist, album, release_ye
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c44c8219-4ee7-4950-b8e2-89ae6dbd1674', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fa6ad70c-cd84-4ef1-a8e4-e0ccf85fa112', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2d518d38-99fc-4b51-9222-196fd775291d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fa6ad70c-cd84-4ef1-a8e4-e0ccf85fa112', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2a269900-96d4-4273-9b36-8b77f5ba5b43', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fa6ad70c-cd84-4ef1-a8e4-e0ccf85fa112', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('00bc2a02-7c02-43c8-a236-e9eff23add16', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ae Mere.. Humsafar, Ek Tera Intezaar', 'Ae Mere.... Humsafar
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('00bc2a02-7c02-43c8-a236-e9eff23add16', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ae Mere.. Humsafar, Ek Tera Intezaar', 'Ae Mere.... Humsafar
 ```e | 8-7-5----8-7-5
 ```
 
@@ -7641,7 +7641,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ab154079-61
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('77aa7c85-f508-4958-8a39-58e53a8df3a8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '00bc2a02-7c02-43c8-a236-e9eff23add16', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ce244e2d-e4b3-4a14-ac5a-26d21327a2e7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '00bc2a02-7c02-43c8-a236-e9eff23add16', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7f887831-c2d7-4396-905f-44518d3f14e8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '00bc2a02-7c02-43c8-a236-e9eff23add16', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('e2cbac11-3505-4d7b-9f51-9ec7ec13f110', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Zehnaseeb', 'Zehnaseeb
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('e2cbac11-3505-4d7b-9f51-9ec7ec13f110', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Zehnaseeb', 'Zehnaseeb
 ```e|------------10--9h10-----|
 B|--10-12-------------------|
 ```
@@ -7723,7 +7723,7 @@ G|--7------------------|
 ```', 'Chinmayi, Shekhar Ravjiani', 'Hasee Toh Phasee', 2014, NULL, NULL, FALSE, '2017-12-18T17:09:26.271000+00:00', '2018-02-04T01:05:44.921000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f8ccdac7-2cc6-4012-802e-c486f41bb344', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e2cbac11-3505-4d7b-9f51-9ec7ec13f110', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8f68cf20-8fb3-4887-b5f4-f332d46428eb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e2cbac11-3505-4d7b-9f51-9ec7ec13f110', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('6f5bded7-c6ef-49da-8f88-330e9efd030d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ye Hai Game Of Thrones Ki Kahani', 'Am   Am   Am   Am
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('6f5bded7-c6ef-49da-8f88-330e9efd030d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ye Hai Game Of Thrones Ki Kahani', 'Am   Am   Am   Am
 A      A       A      A
 
 (Am)Yeh (Am)hai
@@ -7785,7 +7785,7 @@ Chords used : Am, Em, G, F', 'https://youtu.be/F6SxzmEOHMI', FALSE, '2019-01-10T
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d0ae4e46-3b06-423f-8005-abbf119f2625', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6f5bded7-c6ef-49da-8f88-330e9efd030d', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('391ef754-0d7f-4526-b4af-d167e825d0b8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6f5bded7-c6ef-49da-8f88-330e9efd030d', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9664c25e-5ce2-49da-9594-dd381ce9b834', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6f5bded7-c6ef-49da-8f88-330e9efd030d', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('95620da3-cd4a-4384-9020-ba3afd78b6b1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ruk Ja O Dil Deewane - DDLJ', 'Dekhe woh idhar hans ke bekhabar
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('95620da3-cd4a-4384-9020-ba3afd78b6b1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ruk Ja O Dil Deewane - DDLJ', 'Dekhe woh idhar hans ke bekhabar
 ```E|---8/10--8h10p8--------------------10--8h10p8--------------------
 B|--------------------11----11-11-------------------11----11-11----
 ```
@@ -7838,7 +7838,7 @@ B|-----------------------------------------------------
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('56363c6b-cefa-4d97-9e44-1b04a8cc76b4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '95620da3-cd4a-4384-9020-ba3afd78b6b1', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a08b2ad1-40b0-4aad-914d-6240b77deace', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '95620da3-cd4a-4384-9020-ba3afd78b6b1', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('36b8adb4-d008-4628-beb6-e5f43cc5d3e5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '95620da3-cd4a-4384-9020-ba3afd78b6b1', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('ef38625a-06f4-466a-aa51-915d2226cdf5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chand Chupa Badal Mein', 'Chaand Chhupa Baadal Mein
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('ef38625a-06f4-466a-aa51-915d2226cdf5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chand Chupa Badal Mein', 'Chaand Chhupa Baadal Mein
 e-----------------------------------------------------
 B-----------------------------------------------------
 G-7------77-----------------------------------------|
@@ -8003,7 +8003,7 @@ D-------------------4------------4----99--11-------|
 A-----7--------77-----7---5-7-----------------------|', 'Udit Narayan, Alka Yagnik', 'Hum Dil De Chuke Sanam', 1999, NULL, 'http://rockonguitar247.blogspot.com/2013/12/chand-chupa-badal-mein-guitar-tabs-hddcs.html', FALSE, '2018-08-28T15:38:48.195000+00:00', '2018-10-01T17:09:14.190000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('111a4d7d-87ad-4dfe-bbb5-4d881baa13eb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ef38625a-06f4-466a-aa51-915d2226cdf5', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('13e63dd9-c00d-4a16-ab88-de1dc89ab4b7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ef38625a-06f4-466a-aa51-915d2226cdf5', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('f18b019b-a55f-4762-8328-e137cee526e2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Main Phir Bhi Tumko Chaahunga', 'Intro
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('f18b019b-a55f-4762-8328-e137cee526e2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Main Phir Bhi Tumko Chaahunga', 'Intro
 ```e | - - - 7 - - - - - - - - - - - - - - - 
 B | - 7 - - - 10 - 8 - 7 - - - - 7 - - 
 G | - - - - - - - - - - - - - 9 - - - - 
@@ -8080,7 +8080,7 @@ G | - - - - - - - - - - - 9 - - - - - - -
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7eb787ad-9220-4ca7-9953-cd9852cefa4c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f18b019b-a55f-4762-8328-e137cee526e2', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a1a294cc-f025-470a-9eb6-dbcd5a78f385', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f18b019b-a55f-4762-8328-e137cee526e2', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c24c4e63-fbfa-4a17-aead-651810faa249', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f18b019b-a55f-4762-8328-e137cee526e2', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('fc768094-40a9-4fc7-84b1-5a1991d96872', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hai Mera Dil Churake Le Gaya', '```E|--------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('fc768094-40a9-4fc7-84b1-5a1991d96872', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hai Mera Dil Churake Le Gaya', '```E|--------------
 B|-----3--1------
 G|-0-0-3-3--3---3-2-3-0-
 ```
@@ -8162,7 +8162,7 @@ G|-------------3--3-2-0-
 Churaane waala mera kaatil', 'Udit Narayan, Alka Yagnik', 'Josh', 2000, NULL, 'http://tabandchord.com/2013/02/hai-mera-dil-churake-le-gaya-guitar-tab-josh/', FALSE, '2019-05-25T11:08:28.585000+00:00', '2019-05-25T11:11:55.802000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('73f214e8-2803-4bbf-abef-02d21ba3e612', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fc768094-40a9-4fc7-84b1-5a1991d96872', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('723938f6-fe22-4aa7-9be9-274ade10dd9f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fc768094-40a9-4fc7-84b1-5a1991d96872', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('e560e52a-4460-4064-9b86-c8ce805cddd1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'O Hansini', 'O Hansni Meri Hansni
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('e560e52a-4460-4064-9b86-c8ce805cddd1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'O Hansini', 'O Hansni Meri Hansni
 ```e | - - - - - - - - - - - - - - - 5 - - - - 
 B | - - 8 - 9-6 - - - 6 - - 8 - - 6 - - 
 G | - 5 - - - - - - - - - 5 - - - - - - - 
@@ -8211,7 +8211,7 @@ G | - - - - - - - - - - - - - - - - - - - - - -- 10-10 - - - - 10-8-10 - - 10-
 O Hansni Meri Hansni, Kahaan Ud Chali', 'Kishore Kumar', 'Zehreela Insaan', 1974, NULL, 'https://www.youtube.com/watch?v=ePvK1d4o2YM', FALSE, '2018-09-11T23:36:09.525000+00:00', '2025-09-12T15:04:23.188000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7a918c8f-567c-4422-ade3-ff5f04b707ad', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e560e52a-4460-4064-9b86-c8ce805cddd1', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ce95edcb-68e9-47d6-8f13-07f9dc9e6986', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e560e52a-4460-4064-9b86-c8ce805cddd1', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('a1b67057-fdc1-48b2-90bb-4a5bc8308294', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Friendship Mashup', '======SINGLE STRUM=========
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('a1b67057-fdc1-48b2-90bb-4a5bc8308294', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Friendship Mashup', '======SINGLE STRUM=========
 (G)Yaaron (D)dosti,(G) badi hi ha(C)seen hai
 
 ======D D UDUD DU=========
@@ -8257,7 +8257,7 @@ Chords used : G, C, D', 'https://www.youtube.com/watch?v=g-R6UaeScW8', FALSE, '2
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('57ba5066-de50-4a35-9673-9a44fc49c35c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a1b67057-fdc1-48b2-90bb-4a5bc8308294', '07483aae-aaf2-498a-ad00-7abd0a0d46c3');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('dfee62c8-655c-47cb-88e2-04fea0bb9fbc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a1b67057-fdc1-48b2-90bb-4a5bc8308294', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('fe7c08ef-e41e-4920-a272-1bf7a2b5c8f2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a1b67057-fdc1-48b2-90bb-4a5bc8308294', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('d7db2280-0937-4271-99db-d1ec003e92ef', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mi Gente', '```e | - - - - - - 7- - - - - - 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('d7db2280-0937-4271-99db-d1ec003e92ef', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mi Gente', '```e | - - - - - - 7- - - - - - 
 B | - 5- -8 - - - - 7- 7-
 ```
 
@@ -8265,7 +8265,7 @@ B | - 5- -8 - - - - 7- 7-
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('79aabb02-4651-4276-a8f5-b1e8f71961af', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd7db2280-0937-4271-99db-d1ec003e92ef', '19e5627d-a2b0-4d3f-9425-eb88225bd761');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f4b33654-edad-48fc-8326-100164826033', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd7db2280-0937-4271-99db-d1ec003e92ef', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6d7fc586-8b19-404d-b5bb-cbc03a7171a1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd7db2280-0937-4271-99db-d1ec003e92ef', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('dd61a1d9-586a-4e06-84aa-7a60f53343c7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ek Tukda Dhoop', 'INTRO  (C...C....C....C...)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('dd61a1d9-586a-4e06-84aa-7a60f53343c7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ek Tukda Dhoop', 'INTRO  (C...C....C....C...)
 
 (C)Toot ke hum (F)dono mein, (C)Jo bacha woh (F)kum sa (C)hai
 (C)Ek tukda (F)dhoop ka, (C)Andar andar (F)namm sa (C)hai
@@ -8313,7 +8313,7 @@ Mine : D Chuck D U Chuck
 Chords used : C, F, G', 'https://www.youtube.com/watch?v=Kwz_VEf82kI', FALSE, '2020-03-04T16:24:24.874000+00:00', '2020-05-03T02:48:15.766000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6e71db03-cddc-4d7e-afc0-8f9912ba25c4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'dd61a1d9-586a-4e06-84aa-7a60f53343c7', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('12ee8ad0-41a1-476b-8b68-e758cf2db159', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'dd61a1d9-586a-4e06-84aa-7a60f53343c7', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('944353b0-c2d8-4275-bc66-0d279f4d7a06', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Khamoshiyan', '(Am)Khamoshiyan (C)awaaz hain
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('944353b0-c2d8-4275-bc66-0d279f4d7a06', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Khamoshiyan', '(Am)Khamoshiyan (C)awaaz hain
 Tum (Em)sunne to (G)ao (Dm)kabhi
 Chu (Am)kar tumhein khil (C)jaen gi
 Ghar (Em)inko (G)bulao (Dm)kabhi
@@ -8364,7 +8364,7 @@ D DUDU
 Chords used : Am, C, Em, G, Dm, F, E', 'https://www.youtube.com/watch?v=rOx-nVNT9W4', FALSE, '2019-04-18T08:30:30.159000+00:00', '2019-04-18T14:21:08.712000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c715e4fc-6135-4279-8a74-c1c6a0c32fec', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '944353b0-c2d8-4275-bc66-0d279f4d7a06', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('800da4ff-793f-4433-8134-c92980bec4ca', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '944353b0-c2d8-4275-bc66-0d279f4d7a06', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('2f79d853-af4e-47a4-8e3a-226b4d0b90fd', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ghar se nikalte hi - Armaan Malik', 'If not able to play Bb, use C
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('2f79d853-af4e-47a4-8e3a-226b4d0b90fd', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ghar se nikalte hi - Armaan Malik', 'If not able to play Bb, use C
 
 ========FINGERSTYLE==========
 Ghar se (F) nikalte hi
@@ -8435,7 +8435,7 @@ https://tabandchord.com/2018/04/ghar-se-nikalte-hi-chords-armaan-malik/', FALSE,
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d3824ba1-1d0d-4820-ab80-d6006d0288f8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2f79d853-af4e-47a4-8e3a-226b4d0b90fd', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3a2d1fbe-d1e6-4654-a9eb-77ef8f0ee75e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2f79d853-af4e-47a4-8e3a-226b4d0b90fd', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a6dd1ac8-189d-4c43-ac39-3f8d9c84c5da', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2f79d853-af4e-47a4-8e3a-226b4d0b90fd', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('7bf4010e-a476-47cc-a11c-32bd8bd6c4bc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Humein Tumse Pyaar Kitna', 'Humein tumse pyaar kitna
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('7bf4010e-a476-47cc-a11c-32bd8bd6c4bc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Humein Tumse Pyaar Kitna', 'Humein tumse pyaar kitna
 ```e | - - - - - - 3 - 3 - 5 - - - 5 - 5 - 5 - 
 B | - 5 - 6 - - - - - - - - - - - - - - - - -
 ```
@@ -8456,7 +8456,7 @@ B | - 3s8 - 8 - 3 - 6 - 5 - - - - - - - - -
 ```', 'Kishore Kumar', 'Kudrat', 1981, NULL, NULL, FALSE, '2018-01-24T13:59:02.966000+00:00', '2018-01-24T14:45:20.973000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('065a8ed5-b59a-4c14-a741-78ea39dfef80', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7bf4010e-a476-47cc-a11c-32bd8bd6c4bc', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8cdef669-51d5-4500-bb5c-29c8f80b1b4f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7bf4010e-a476-47cc-a11c-32bd8bd6c4bc', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('88a8d5b5-c402-446c-b41e-98924f389dd4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Neeralli Sanna - Sonu Nigam (Kannada)', 'Neeralli sanna, ale ondu Mudi 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('88a8d5b5-c402-446c-b41e-98924f389dd4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Neeralli Sanna - Sonu Nigam (Kannada)', 'Neeralli sanna, ale ondu Mudi 
 ```e | - - - - - - - - 5 - - - - - - - - - - - - -5- - - - -  
 B | - 5 - 7 - 8 - - - 8 -7 - - 5 - 7 - 8 - - - 8 -7  -
 ```
@@ -8479,7 +8479,7 @@ G | - 7 - - - - - - - - - - - -  - - - - - - - - - - - -
 ```', 'Sonu Nigam, Shreya Ghoshal', 'Hudugaru', 2011, NULL, 'https://www.youtube.com/watch?v=OMaQW24nAYU', FALSE, '2017-12-23T13:28:35.741000+00:00', '2017-12-24T17:15:42.318000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b65a8d8f-e9e6-47b5-abc0-24cf25210885', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '88a8d5b5-c402-446c-b41e-98924f389dd4', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('32722a84-5073-4789-be1e-7acdac4c2277', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '88a8d5b5-c402-446c-b41e-98924f389dd4', 'bfb29683-c6ea-4f7b-affc-5fe459c721bd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('6f577649-6e45-4153-b26b-91a26c8bb31f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aye Kaash Ke Hum', '(Am) Intro (Am)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('6f577649-6e45-4153-b26b-91a26c8bb31f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aye Kaash Ke Hum', '(Am) Intro (Am)
 
 (Am)aye kaash ke hum 
 (C)hosh mein ab 
@@ -8524,7 +8524,7 @@ Strum : D DUDU  OR   D D DU
 Chords used : Am, C, G, F', 'https://youtu.be/5LX-QQhdrrc', FALSE, '2018-10-28T01:39:17.279000+00:00', '2018-11-03T08:14:33.240000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('0ce79d4d-720b-4ccd-b99e-ce4b19eab982', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6f577649-6e45-4153-b26b-91a26c8bb31f', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9f3465ac-6d97-49b3-9a4c-cd436ca18151', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6f577649-6e45-4153-b26b-91a26c8bb31f', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('155ad22d-aaaf-4579-9198-8f7bd0346343', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mere Bina Tu - Phata Poster', 'Mere (C)Bina Tu, Mere (Am)Bina Tu
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('155ad22d-aaaf-4579-9198-8f7bd0346343', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mere Bina Tu - Phata Poster', 'Mere (C)Bina Tu, Mere (Am)Bina Tu
 Mere (F)Bina Tu, Mere (C)Bina Tu
 
 Mere (Am)Bina Khush Rahe Tu (F)Zamane Mein
@@ -8583,11 +8583,11 @@ Mere (F)Bina Tu, Mere (C)Bina Tu....', 'Rahat Fateh Ali Khan', 'Phata Poster Nik
 D D UDUD D (DU)', 'http://guitarchordshub.blogspot.com/2013/11/mere-bina-tu-guitar-chords.html', FALSE, '2021-01-09T04:46:05.137000+00:00', '2021-01-09T05:14:07.128000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a7e90c18-bfe1-4d37-a0ac-2e8fe99af67e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '155ad22d-aaaf-4579-9198-8f7bd0346343', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f6c30193-f56a-4043-b385-083b35d827f0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '155ad22d-aaaf-4579-9198-8f7bd0346343', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('5d203b0c-1b7c-4bd2-87c0-5391d49509ca', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Piya basanti re', '', 'Sultan Khan, K. S. Chithra', 'Piya Basanti', 2000, 'Chords used : A, D, Bm, F#m, E', 'https://www.youtube.com/watch?v=6qwkB9Jc2-A', FALSE, '2019-05-26T12:11:32.770000+00:00', '2019-05-26T12:12:18.927000+00:00');
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('5d203b0c-1b7c-4bd2-87c0-5391d49509ca', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Piya basanti re', '', 'Sultan Khan, K. S. Chithra', 'Piya Basanti', 2000, 'Chords used : A, D, Bm, F#m, E', 'https://www.youtube.com/watch?v=6qwkB9Jc2-A', FALSE, '2019-05-26T12:11:32.770000+00:00', '2019-05-26T12:12:18.927000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('bd8b05bb-7e3a-42e9-a6d3-25b4a8582daa', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5d203b0c-1b7c-4bd2-87c0-5391d49509ca', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('54e6f92f-84be-4e1f-a3d7-af6a7961ae68', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5d203b0c-1b7c-4bd2-87c0-5391d49509ca', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c1e51287-7c04-4f26-8811-ce13634f2c32', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5d203b0c-1b7c-4bd2-87c0-5391d49509ca', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('6992ab60-ff27-42db-b93e-c8a748eeeaf0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Gulabi Aankhein', 'Intro
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('6992ab60-ff27-42db-b93e-c8a748eeeaf0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Gulabi Aankhein', 'Intro
 (Am) (G) (F) (E)
 
 Gulaabi (Am)Aankhen Jo Teri (G)Dekhi
@@ -8627,7 +8627,7 @@ Sambhalna (F)Mushkil Ho (E)Gaya.', 'Mohammed Rafi', 'The Train', 1970, 'D UUD UU
 Chords used : Am, G, F, E', 'https://www.youtube.com/watch?v=SbbVZ27I2sc', FALSE, '2018-11-03T14:04:48.953000+00:00', '2018-11-09T02:45:02.065000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('89c9628a-2371-4080-aaa3-59cc74179f30', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6992ab60-ff27-42db-b93e-c8a748eeeaf0', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('084e9740-c8b5-4e9c-b033-af937042be99', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6992ab60-ff27-42db-b93e-c8a748eeeaf0', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('48455c4a-471a-4707-9c56-c820302fbf15', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Do pal Ruka', '......Do....pal....ruka....khwaabon....ka...carvan
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('48455c4a-471a-4707-9c56-c820302fbf15', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Do pal Ruka', '......Do....pal....ruka....khwaabon....ka...carvan
 ```e |--6-----4-----------------------------------------------
 B |---------------7-6----6-4-----------6-----4-----6----
 G |-----------------------------------------------6-------
@@ -8719,7 +8719,7 @@ G |------------------------------4------------------------6-------4-3------
 ```', 'Lata Mangeshkar, Sonu Nigam', 'Veer-Zaara', 2004, NULL, NULL, FALSE, '2017-11-08T02:55:47.628000+00:00', '2017-11-08T03:15:41.933000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('af176bdd-5977-4adf-a66b-0f134db0ac99', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '48455c4a-471a-4707-9c56-c820302fbf15', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('504cd1ed-758a-4706-ae5f-26b117578b29', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '48455c4a-471a-4707-9c56-c820302fbf15', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('5cd825fa-468e-45eb-952c-4e073650b605', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aye Zindagi - Ram Sampath - Satyamev Jayte', 'Aye(C) zindagi tu hi(F) bata
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('5cd825fa-468e-45eb-952c-4e073650b605', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aye Zindagi - Ram Sampath - Satyamev Jayte', 'Aye(C) zindagi tu hi(F) bata
 Khoya hai (G) jo paaun (C)kahaan?
 Har bhool(C) ko maafi (F)mile
 Roothe (G)palon ko main laaun (C)manaa?
@@ -8756,7 +8756,7 @@ Khoya hai (G)jo paaun (C)kahaan?
 Roothe (G)palon ko main laaun (C)manaa', 'Ram Sampath', 'Satyamev Jayate', 2012, 'D D UUD DU', 'https://tabs.ultimate-guitar.com/tab/ram-sampath/aye-zindagi-chords-1165329', FALSE, '2022-02-20T12:47:09.096000+00:00', '2022-02-20T12:51:31.187000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('beacb476-fd85-44f1-a656-3f9de9ae0285', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5cd825fa-468e-45eb-952c-4e073650b605', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b9f2b343-efc2-4eca-9c02-60d51b211392', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5cd825fa-468e-45eb-952c-4e073650b605', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('cd02ac16-aaeb-4d03-92b9-b641522dac62', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tujhe Kitna Chahein Aur Hum', '=========SINGLE STRUM========
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('cd02ac16-aaeb-4d03-92b9-b641522dac62', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tujhe Kitna Chahein Aur Hum', '=========SINGLE STRUM========
 Dil ka dari(G)ya beh hi ga(Em)ya
 Raahon mein (C)yun jo tu mil ga(D)ya
 Mushqil se (G)main sambhla tha (Em)haan
@@ -8796,7 +8796,7 @@ D D UDUD D (DU)
 Chords used : G, Em, C, D', 'https://www.youtube.com/watch?v=Tx9f9IleaRo&feature=youtu.be', FALSE, '2021-01-09T05:14:41.297000+00:00', '2021-01-09T05:39:27.437000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5728e181-3a81-4f58-a1d7-0a20e51cfd7e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'cd02ac16-aaeb-4d03-92b9-b641522dac62', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('752e3adc-bdc9-4449-b7b1-2011a42a624f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'cd02ac16-aaeb-4d03-92b9-b641522dac62', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('5d2bb846-3699-48b2-83bc-f2991c270b34', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kaun Tujhe (Dhoni)', 'Tu aata hai seene mei
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('5d2bb846-3699-48b2-83bc-f2991c270b34', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kaun Tujhe (Dhoni)', 'Tu aata hai seene mei
 ```e | - - - - - - - - - - - - - - - - - - - - - - - - - - -
 B | -10-11-10- - - - - - - - - - - - - - - -  - - - -
 G | - - - - - - - -12- -10-9- -9-10-10-12-12 -
@@ -8945,7 +8945,7 @@ B-2------------------------', 'Palak Muchhal', 'M.S. Dhoni: The Untold Story', 2
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('004b7f71-f944-4944-a851-35a29b108176', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5d2bb846-3699-48b2-83bc-f2991c270b34', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('27347602-dbd9-4560-a908-c337b4c73bac', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5d2bb846-3699-48b2-83bc-f2991c270b34', 'f6f1fa22-4ebb-4dfc-8a00-65f2e520dc91');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('17060c40-e77e-47ed-8e5c-9793f0c813e7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5d2bb846-3699-48b2-83bc-f2991c270b34', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('3b323aae-e7ad-41bb-af1c-b41cf362d9b8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Thodi Jagah - Marjaavan', '```e | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('3b323aae-e7ad-41bb-af1c-b41cf362d9b8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Thodi Jagah - Marjaavan', '```e | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 B | - - - 0-1-3- - - - 0-1-3- - - - - - -0-1-3 - - - - -0-1-3 -
 G | - 2- - - - - - - -2 - - - - - - - - - - - - - - - - - - - - - - - - - - 
 D | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -8997,7 +8997,7 @@ Intro: [Dm] [G] [F] [G]', 'https://www.youtube.com/watch?v=_axFQkRzRQ4', FALSE, 
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4c326d89-3fd7-465c-b24f-a75007f782ed', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '3b323aae-e7ad-41bb-af1c-b41cf362d9b8', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('449684a8-fe55-4d6a-a46d-411c74a38bb5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '3b323aae-e7ad-41bb-af1c-b41cf362d9b8', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('45f51c1f-20ab-4127-aaef-f4d8e3942ab0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '3b323aae-e7ad-41bb-af1c-b41cf362d9b8', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('3b86cb09-e36a-4aa1-873b-ebe538df6df0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ishq Wala Love', 'Starting Tune :
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('3b86cb09-e36a-4aa1-873b-ebe538df6df0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ishq Wala Love', 'Starting Tune :
 ```E |------------
 B |----4-6-------
 G |-3/5-5----3------
@@ -9184,7 +9184,7 @@ Hota hai jo love se jyada waise wala love
 Ishq wala love (x2)', 'Salim Merchant, Neeti Mohan, Shekhar Ravjiani', 'Student of the Year', 2012, NULL, NULL, FALSE, '2017-11-03T16:18:06.738000+00:00', '2018-09-12T16:11:16.841000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7bf671f9-44e7-44aa-aab0-8053e4555c71', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '3b86cb09-e36a-4aa1-873b-ebe538df6df0', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2f7174d8-1d96-4dea-a9bf-0cde78d28465', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '3b86cb09-e36a-4aa1-873b-ebe538df6df0', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('e665e647-3491-4479-8018-ab1135a0ad0a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dil Ne Yeh Kaha Hai Dil Se', 'E --------------------------------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('e665e647-3491-4479-8018-ab1135a0ad0a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dil Ne Yeh Kaha Hai Dil Se', 'E --------------------------------------
 B -----6---------------------------------
 G -5-7---7-5-4-7-5---------------------
 Dil ne yeh kaha hai dil se
@@ -9224,7 +9224,7 @@ G -7-5-4-4----4-4--7-5-5---------------
 tum bhi muj se pyar ker lo', 'Udit Narayan, Alka Yagnik, Kumar Sanu', 'Dhadkan', 2000, NULL, NULL, FALSE, '2017-11-08T02:50:21.585000+00:00', '2017-11-08T03:01:16.933000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b7064b25-795c-4dfe-8a99-69aad01950ba', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e665e647-3491-4479-8018-ab1135a0ad0a', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b35f91cc-afbb-4b2c-a91e-467781a107fb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e665e647-3491-4479-8018-ab1135a0ad0a', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('f79848ec-cd42-4a9f-b34e-e45fc6d93b7e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kho Gaye Hum Kahan', 'Intro (G) - 6-4 3 434343 3-6
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('f79848ec-cd42-4a9f-b34e-e45fc6d93b7e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kho Gaye Hum Kahan', 'Intro (G) - 6-4 3 434343 3-6
 
 (G) Rooh se behti hui (Am7)dhun ye ishare de..(D)....(D)....
 (G) Kuch mere raaz tere (Am7)raaz aawara se..(D)....(D)....
@@ -9283,7 +9283,7 @@ Chords used : G, D, C, B7', 'https://www.youtube.com/watch?v=lKpQjjKOXto', FALSE
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d7a23fe4-55dc-4cfc-b1cd-c972ce7ca9ae', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f79848ec-cd42-4a9f-b34e-e45fc6d93b7e', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8ea9742a-39ee-4242-8e02-253bf60584c5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f79848ec-cd42-4a9f-b34e-e45fc6d93b7e', '375ee2c2-3bd4-473f-afd0-87ef7a38f19a');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('64629382-530f-44ed-85f7-6ebfba74842a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f79848ec-cd42-4a9f-b34e-e45fc6d93b7e', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('49e6f668-1c94-426a-b714-067ef03d51a3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dheere Dheere Se', 'Saxophone intro
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('49e6f668-1c94-426a-b714-067ef03d51a3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dheere Dheere Se', 'Saxophone intro
 ```E|--------------------------------------------------------------------------------
 B|---4h5---5/7-----5--4---2h4-----2---------2h4-----5-----4--2--------2--4--5--4--
 G|---------------------------------------------------------------------------------4--------------
@@ -9408,7 +9408,7 @@ G|------------------------------------------------------------------------------
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9d17701a-7e31-4227-9f89-fe3a625dfd4e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '49e6f668-1c94-426a-b714-067ef03d51a3', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a6d9b106-966a-4a83-8c8a-2d5dd4044745', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '49e6f668-1c94-426a-b714-067ef03d51a3', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('0235064f-339a-4080-9fdf-dff24818721a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '49e6f668-1c94-426a-b714-067ef03d51a3', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('8a518fc5-6730-4e0e-9a38-a594af5873bc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mission Impossible', '```e | - - - - - - - - - - - - - - - - - - - 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('8a518fc5-6730-4e0e-9a38-a594af5873bc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mission Impossible', '```e | - - - - - - - - - - - - - - - - - - - 
 B | - - - - - - - - - - - - - - - - - - -
 G | - - - - - - - - - - - - - - - - - - -         ....................x2
 D | - - - - - - - - - - - - - - - - - - - 
@@ -9518,7 +9518,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('fab74660-6e
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a5bbb793-47e0-48fd-b4ca-eb931f580838', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '8a518fc5-6730-4e0e-9a38-a594af5873bc', 'f6f1fa22-4ebb-4dfc-8a00-65f2e520dc91');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7838a87e-ad56-4242-8d9e-1e8f4e9e6f1d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '8a518fc5-6730-4e0e-9a38-a594af5873bc', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('34452b0c-edfe-4e88-a903-544904f05dfd', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '8a518fc5-6730-4e0e-9a38-a594af5873bc', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('779133db-4f77-4681-83a2-827b374a9e56', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tu Hi Yeh Mujhko Bata De', 'Tu hi yeh mujhko bata de
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('779133db-4f77-4681-83a2-827b374a9e56', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tu Hi Yeh Mujhko Bata De', 'Tu hi yeh mujhko bata de
 2-10-9-10-9-7-9-7-5
 
 Chahoon main ya na
@@ -9563,7 +9563,7 @@ Tu hi yeh mujhko bata de
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('db0e4415-c9d9-4a2a-b524-569e67aac94f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '779133db-4f77-4681-83a2-827b374a9e56', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d7591467-91c7-440d-b94b-5446d6013046', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '779133db-4f77-4681-83a2-827b374a9e56', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ecb10fba-b241-4c88-8e29-c151a8d461e9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '779133db-4f77-4681-83a2-827b374a9e56', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('39949683-cef2-49dc-b06e-e0fdc44b9bec', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dhaaga - TVF Aspirants', '=========SINGLE STRUM========
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('39949683-cef2-49dc-b06e-e0fdc44b9bec', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dhaaga - TVF Aspirants', '=========SINGLE STRUM========
 (G)Haule se sir(Em)hane mein
 (C)rakh kar ye (G)yade
 (G)mere man ki (Em)jholi me 
@@ -9605,7 +9605,7 @@ Strum :  ddD DU
                Dd D U  (My Version)', 'https://www.youtube.com/watch?v=fI1Eg9Qc0vw', FALSE, '2021-05-08T09:38:27.430000+00:00', '2021-05-08T10:41:16.705000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b9e3a919-9f11-4345-a41d-0feedc1ac63f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '39949683-cef2-49dc-b06e-e0fdc44b9bec', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('27e07026-d830-43eb-8046-32cd53b4ed03', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '39949683-cef2-49dc-b06e-e0fdc44b9bec', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('484d58de-7523-4baf-a727-e43abddc38f3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'The Night King - Game of Thrones', '```E|--5--------5--8--8--5--------5--------5--8--8--5--------12----------8--8--10----8-----5--8--8--5-
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('484d58de-7523-4baf-a727-e43abddc38f3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'The Night King - Game of Thrones', '```E|--5--------5--8--8--5--------5--------5--8--8--5--------12----------8--8--10----8-----5--8--8--5-
 B|------------------------------------------------------------------10----------------------------------
 ```
 
@@ -9761,7 +9761,7 @@ G|--5-----------5------------
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4e61809d-22e5-4505-a344-d0da6d339139', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '484d58de-7523-4baf-a727-e43abddc38f3', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4e8aefe7-33f1-4d3b-8aac-4a3d3a39f893', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '484d58de-7523-4baf-a727-e43abddc38f3', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4b8c1ea4-3f1a-4b93-96b1-a78027e1e2c3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '484d58de-7523-4baf-a727-e43abddc38f3', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('9af9ecd5-8de9-45e1-8b9d-291d61a098e3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Memories - Maroon 5', 'Here''s to the ones that we got 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('9af9ecd5-8de9-45e1-8b9d-291d61a098e3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Memories - Maroon 5', 'Here''s to the ones that we got 
 Cheers to the wish you were here, but you''re?not 
 ```E|-------------------------------------------------------------------------------- 
 B|---5/7--4--5--7--4--5---5/7-----4-----------4-----------4-----------4-------- 
@@ -9863,7 +9863,7 @@ G|--4--4--4-----4--3--3--3--3--4--4-----
 ```', 'Maroon 5', 'Jordi', 2019, NULL, 'https://www.youtube.com/watch?v=tp-u6r2l4TY', FALSE, '2020-01-26T11:08:51.196000+00:00', '2020-01-26T12:02:09.709000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a99093da-967c-48ee-9a44-455e55b66f73', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9af9ecd5-8de9-45e1-8b9d-291d61a098e3', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('60e39506-9200-4cb6-ab17-ac5787c28937', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9af9ecd5-8de9-45e1-8b9d-291d61a098e3', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('5114ed90-6d61-40e6-b92a-2cd487102a89', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Pi Jaun', '(Am)...(G)...(F)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('5114ed90-6d61-40e6-b92a-2cd487102a89', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Pi Jaun', '(Am)...(G)...(F)
 (Am)...(F)...(G)
 
 (Am)Bhulaon kaisey
@@ -9946,7 +9946,7 @@ D DU UDU
 Chords used : Am, G, F, C', 'https://youtu.be/BB5JAKmZU3k', FALSE, '2018-11-20T04:12:03.952000+00:00', '2018-11-20T14:27:17.903000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('179ba764-4901-45ef-bd1f-3c0b18572473', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5114ed90-6d61-40e6-b92a-2cd487102a89', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a814819e-adf9-414f-aac7-cdd827aac59e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5114ed90-6d61-40e6-b92a-2cd487102a89', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('9b824707-f7b5-4970-ac4d-64abcc1af353', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ye Dhuan Dhuan (Intro)', '```e | - - - - - - - - - - - - - - - - - - - - - - - - - - -
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('9b824707-f7b5-4970-ac4d-64abcc1af353', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ye Dhuan Dhuan (Intro)', '```e | - - - - - - - - - - - - - - - - - - - - - - - - - - -
 B | - - - 3 - 5 - 3-5 -6 - - - - - 1 - 3 - 1-3 - 5 - 
 G | - 2 - - - - - - - - - - - - - 0 - - - - - - - - - - 
 ```
@@ -9963,7 +9963,7 @@ G | - 0 - - - - - - - - - -  - - - - - - - - - - - - -
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9a13af3e-5bbc-4fca-9607-c8d91a88bdee', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9b824707-f7b5-4970-ac4d-64abcc1af353', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3212e7e6-ee2e-443a-87eb-ee8b6a805cb5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9b824707-f7b5-4970-ac4d-64abcc1af353', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ec3a0490-004c-4dca-bad7-21e81a805a9f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9b824707-f7b5-4970-ac4d-64abcc1af353', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('2ef2d8e9-7c3e-4fe2-94f9-75af9669b28a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mera Pyar Tera Pyar - Jalebi', 'Fingerstyle -  4/5/6   3 2 3 1 2 3 2
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('2ef2d8e9-7c3e-4fe2-94f9-75af9669b28a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mera Pyar Tera Pyar - Jalebi', 'Fingerstyle -  4/5/6   3 2 3 1 2 3 2
 Strum - D Chak U     U Chak U
 
 ===========FINGERSTYLE===========
@@ -10023,7 +10023,7 @@ Chords used : Em, D, Bm, C, A, G', 'https://www.youtube.com/watch?v=nmM5Hds61DQ'
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('39493f98-c877-4d15-ac82-c36a6ad639bd', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2ef2d8e9-7c3e-4fe2-94f9-75af9669b28a', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('80ff501b-3bc8-4425-8297-9958eb5fbc36', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2ef2d8e9-7c3e-4fe2-94f9-75af9669b28a', '375ee2c2-3bd4-473f-afd0-87ef7a38f19a');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d91a16d1-698e-45d3-946e-0ec9a7bf8936', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2ef2d8e9-7c3e-4fe2-94f9-75af9669b28a', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('9f795a76-eb6a-4b8d-a087-965545b8e2b3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ram Siya Ram - Adipurush', 'Ho (Em)Janam Janam Ki (Am)Khoj Bataye                 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('9f795a76-eb6a-4b8d-a087-965545b8e2b3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ram Siya Ram - Adipurush', 'Ho (Em)Janam Janam Ki (Am)Khoj Bataye                 
 (D)Ram Se Chalke (Em)Ram Pe Aaye            
 (Em)Prem Koyi Hum (Am)Aur Na Jaane      
 (D)Ram Se Roothe (Em)Ram Se Maane
@@ -10048,7 +10048,7 @@ Chords used : Em, Am, D, A', 'https://www.youtube.com/watch?v=XikCX5EnFao', FALS
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7fcb5227-9829-4919-8c72-f7395c4074c4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9f795a76-eb6a-4b8d-a087-965545b8e2b3', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('286d822f-2689-47d9-99d2-7959a253242d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9f795a76-eb6a-4b8d-a087-965545b8e2b3', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('aeb4dce8-bc63-4626-ab07-7892ff6bf75e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9f795a76-eb6a-4b8d-a087-965545b8e2b3', '6a3e1159-3e7b-4145-b202-58429f143d25');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('722a4c8d-2eba-4678-b8df-99c67b0b8e8e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'O Bedardeya - Arijit Singh', '[Intro]
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('722a4c8d-2eba-4678-b8df-99c67b0b8e8e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'O Bedardeya - Arijit Singh', '[Intro]
 (G)
 
 [Verse]
@@ -10109,7 +10109,7 @@ https://mjmusicnotes.com/o-bedardeya-guitar-chords/
 https://tabs.ultimate-guitar.com/tab/misc-soundtrack/tu-jhoothi-main-makkaar-o-bedardeya-chords-4678445', FALSE, '2023-04-21T15:10:52.499000+00:00', '2023-04-21T15:16:35.059000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8ac8d0aa-9582-4530-9ae1-f1905704d53d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '722a4c8d-2eba-4678-b8df-99c67b0b8e8e', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('84cdaca4-aeeb-49d3-9df5-37629af01388', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '722a4c8d-2eba-4678-b8df-99c67b0b8e8e', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('d2d7426f-0e02-4c03-88b8-bcfdc1870e70', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Gori Tera Gaon Bada Pyara', '```e|---------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('d2d7426f-0e02-4c03-88b8-bcfdc1870e70', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Gori Tera Gaon Bada Pyara', '```e|---------------
 B|----------0-----
 G|--0-----0-2--2-0---
 D|-2--2-0-2--------2-0-
@@ -10223,7 +10223,7 @@ Tinke Jama Re
 Gori Tera Gaon…', 'K. J. Yesudas', 'Chitchor', 1976, NULL, 'http://tabandchord.com/2013/06/gori-tera-gaon-bada-pyara-guitar-tabs-yesudas/', FALSE, '2018-08-27T01:54:17.828000+00:00', '2018-10-01T17:03:57.682000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2c91c428-0fe8-45a3-ac5b-b510c1570f9c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd2d7426f-0e02-4c03-88b8-bcfdc1870e70', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5e7cd032-d548-4dfb-a3b9-2f53df823f6b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd2d7426f-0e02-4c03-88b8-bcfdc1870e70', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('0c95d41f-ec13-4ebe-8bde-52bd4085adce', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Sabka Katega', '[D]Din Kate Na Raat
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('0c95d41f-ec13-4ebe-8bde-52bd4085adce', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Sabka Katega', '[D]Din Kate Na Raat
 
 What Brought Us [D]Together, Might Remain Unspoken.
 What Held Us Together, Might Be Worn Off And Broken.
@@ -10260,7 +10260,7 @@ Jaise [A]Sabka Katega [D]
 Chords used : D, A, Bm', NULL, FALSE, '2019-04-23T02:53:33.494000+00:00', '2019-04-23T02:54:48.677000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7e1fef80-2a71-42eb-81ca-031e0e77cfca', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0c95d41f-ec13-4ebe-8bde-52bd4085adce', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1fc69834-23ae-45c9-b936-287cdf21b3ab', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0c95d41f-ec13-4ebe-8bde-52bd4085adce', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('fdeae2a0-2f30-4855-9c7b-ec70b8181b7a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mohabbatein Theme', '```E|---------------------------------------10----
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('fdeae2a0-2f30-4855-9c7b-ec70b8181b7a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mohabbatein Theme', '```E|---------------------------------------10----
 B|--------10-11-10-11-10-------------13-
 G|---9\12----------------------12-------
 ```
@@ -10290,7 +10290,7 @@ G|--10-12--------------10-10\12----
 ```', 'Jatin-Lalit', 'Mohabbatein', 2000, NULL, 'https://www.youtube.com/watch?v=FDXp6EzKkSQ', FALSE, '2018-09-10T11:07:59.399000+00:00', '2019-04-10T04:17:18.040000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7d12aeb8-1ea0-420b-b221-1d37058c6ea7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fdeae2a0-2f30-4855-9c7b-ec70b8181b7a', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('eac65ac6-3f5f-47f8-b4f8-505a0c7855bc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fdeae2a0-2f30-4855-9c7b-ec70b8181b7a', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('aa07db93-4177-4276-89f3-5e1d7bcee21d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Soniyo - Raaz 2', '=============D Chuck D U Chuck=============
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('aa07db93-4177-4276-89f3-5e1d7bcee21d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Soniyo - Raaz 2', '=============D Chuck D U Chuck=============
 (G) Soni(Em)yo (G) O soni(Em)yo
 Tumhe (F) Dekhta hoon
 To (C) sochta hoon (G) bas yahi
@@ -10349,7 +10349,7 @@ I’ll (C)give all my love in (G)whole of my life
 Chords used : Em, G, F, C', 'https://wrytin.com/rahulpandey/soniyo-chords-raaz-2-jgktsqys', FALSE, '2020-03-21T12:32:50.830000+00:00', '2020-03-21T12:46:02.734000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('03725422-2c96-4ae6-89c8-e5f1f19dc3b6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'aa07db93-4177-4276-89f3-5e1d7bcee21d', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('651612ba-f1a7-4807-8dbe-5c156b44a852', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'aa07db93-4177-4276-89f3-5e1d7bcee21d', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('82dd6bfa-cad7-4460-96de-2c051dccbf6e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ghar aaja', 'INTRO
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('82dd6bfa-cad7-4460-96de-2c051dccbf6e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ghar aaja', 'INTRO
 Em C D Em C D x2
 
 VERSE 1
@@ -10414,7 +10414,7 @@ Strumming: DU,DU,DU,DU
 Chords used : Em, C, D', 'https://www.chordzone.org/2017/12/mrs-sen-ghar-aaja-chords-and-lyrics.html', FALSE, '2018-11-06T01:18:22.782000+00:00', '2018-11-08T09:45:36.095000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a5cbd363-0459-4f24-ad85-886bb03ff391', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '82dd6bfa-cad7-4460-96de-2c051dccbf6e', 'da9a1522-98fb-4b92-bae9-f41c00333985');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a42734bc-8a93-4a1d-b75b-495e8f2fe06d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '82dd6bfa-cad7-4460-96de-2c051dccbf6e', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('a367ee8a-bb1e-48d8-9904-8c067b783972', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'O Soniye - Arijit Singh', 'INTRO - Em D C D
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('a367ee8a-bb1e-48d8-9904-8c067b783972', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'O Soniye - Arijit Singh', 'INTRO - Em D C D
 
 O soniye..
 O soniye.. Tera mera saath yunhi rehna
@@ -10461,7 +10461,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5bda8168-49
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f78a4439-63ff-4037-b001-8bf4970926ca', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a367ee8a-bb1e-48d8-9904-8c067b783972', 'f38a575b-3040-4496-8494-78d603e260b4');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1d61b311-6981-4737-9aa0-fec73aae47c2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a367ee8a-bb1e-48d8-9904-8c067b783972', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e2363f20-e6c4-4e53-85d4-81ea729f3a87', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a367ee8a-bb1e-48d8-9904-8c067b783972', '8d4fc519-7375-432c-8b6a-6cf000e9f287');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('0052552b-f569-47e3-ad1e-99ab278d6ced', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kuch Kuch Hota Hai', '```E |-7-8-7------7-
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('0052552b-f569-47e3-ad1e-99ab278d6ced', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kuch Kuch Hota Hai', '```E |-7-8-7------7-
 B |-----10-8----
 ```
 Tum Paas Aaye
@@ -10571,7 +10571,7 @@ Kuch Kuch Hota Hai
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a7386cd9-0f79-4bb5-9f13-e5bb748ee19d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0052552b-f569-47e3-ad1e-99ab278d6ced', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('57dd9adb-da27-427d-bb4d-5ad4f2f8afe6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0052552b-f569-47e3-ad1e-99ab278d6ced', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('def6e543-f1b7-4c07-a801-de8c82bb36eb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0052552b-f569-47e3-ad1e-99ab278d6ced', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('18481678-7cf6-4852-afad-9b3a791ae5b8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '60 Years of Bollywood', 'Ye Chand sa Roshan chehra - Kashmir Ki Kali (1964)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('18481678-7cf6-4852-afad-9b3a791ae5b8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '60 Years of Bollywood', 'Ye Chand sa Roshan chehra - Kashmir Ki Kali (1964)
 Ae Dil Mujhe Bata De - Bhai Bhai (1956)
 Aajkal Tere Mere Pyar Ke Charche - Bhai Bhai (1968)
 Mere saamne waali khidki mein - Padosan (1968)
@@ -10635,7 +10635,7 @@ Chords used : G, D, Em, C', 'https://chordify.net/chords/scoopwhoop-60-years-of-
 https://chordify.net/chords/scoopwhoop-60-years-of-bollywood-part-ii-sw-cafe-session-v-scoopwhoop', FALSE, '2018-10-06T05:17:32.063000+00:00', '2018-10-06T12:51:48.460000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8d7e02f4-67be-4a56-ac2f-c3739b964f55', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '18481678-7cf6-4852-afad-9b3a791ae5b8', '07483aae-aaf2-498a-ad00-7abd0a0d46c3');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c6311af6-0c9d-4fa5-9bf1-70e7ffa411ca', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '18481678-7cf6-4852-afad-9b3a791ae5b8', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('38115573-4b18-4d48-9a53-0f6650f69946', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Sach Keh Raha Hai Deewana - RHTDM', '(Am) Sach Keh raha Hai Dee(F)wana Dil
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('38115573-4b18-4d48-9a53-0f6650f69946', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Sach Keh Raha Hai Deewana - RHTDM', '(Am) Sach Keh raha Hai Dee(F)wana Dil
 (Am) Dil na Kisi se La(F)gana
 
 (Am) Sach Keh raha Hai Dee(F)wana Dil
@@ -10699,12 +10699,12 @@ Chords used : Am, G, F, D, C', 'https://www.youtube.com/watch?v=9hUsfGDkxTI
 https://wrytin.com/rahulpandey/sach-keh-raha-hai-deewana-chords-rehna-hai-tere-dil-mein-jgp1q3tz', FALSE, '2022-11-21T14:37:46.692000+00:00', '2022-11-21T15:28:51.447000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a0dd2c78-376a-4ed0-9ac4-e0f4732f1141', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '38115573-4b18-4d48-9a53-0f6650f69946', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('303f20af-84cb-4af3-9996-b7a0367a949e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '38115573-4b18-4d48-9a53-0f6650f69946', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('10135167-2f31-4b7e-a165-c2d8a706d0dc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Na Kajre ki Dhaar Intro', 'E----------------------------------------------------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('10135167-2f31-4b7e-a165-c2d8a706d0dc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Na Kajre ki Dhaar Intro', 'E----------------------------------------------------------
 B--9-9--11--11--8--8--9--9--6--6--8-9-8-6-6--6-6/8-', 'Pankaj Udhas, Sadhana Sargam', 'Mohra', 1994, NULL, NULL, FALSE, '2018-01-14T08:24:55.518000+00:00', '2018-01-14T09:47:57.863000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2f0b0f37-7f09-4239-8c2b-ce3d54c6c54d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '10135167-2f31-4b7e-a165-c2d8a706d0dc', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ed6dced0-4567-497b-86d1-559d186099a7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '10135167-2f31-4b7e-a165-c2d8a706d0dc', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ff3a4bfc-a0c0-4ae7-9d93-c7d57159d9ca', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '10135167-2f31-4b7e-a165-c2d8a706d0dc', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('fabe3fe5-d9b7-4b12-b487-02d8a5f5d25a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bandeya - Arijit Singh', '```e | - - - - 7- - -10-8-7-8 - - - - 7- -
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('fabe3fe5-d9b7-4b12-b487-02d8a5f5d25a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bandeya - Arijit Singh', '```e | - - - - 7- - -10-8-7-8 - - - - 7- -
 B | - 10- - - - - - - - - - - - -10 - - - -
 ```
 
@@ -10746,7 +10746,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a45600c6-25
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9f8d0d2f-d00c-4ddb-a217-b859b81a7918', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fabe3fe5-d9b7-4b12-b487-02d8a5f5d25a', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a4cf30c9-ecc3-42e9-ac92-0cce481b21a6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fabe3fe5-d9b7-4b12-b487-02d8a5f5d25a', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2dd70c26-3b01-4064-b28d-c69ee1bd757c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fabe3fe5-d9b7-4b12-b487-02d8a5f5d25a', '8d4fc519-7375-432c-8b6a-6cf000e9f287');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('c3c7c066-b78e-46f9-b939-771b5cdd4091', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aap ki nazron ne samjha', '(Am)Aap ki naz(Em)ron ne samjha, 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('c3c7c066-b78e-46f9-b939-771b5cdd4091', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aap ki nazron ne samjha', '(Am)Aap ki naz(Em)ron ne samjha, 
 (F)pyaar ke qaa(G)bil mujhe
 (Am)Dil ki aye dhad(Em)kan theher jaa, 
 (F)mill gayi man(G)zil mujhe
@@ -10786,7 +10786,7 @@ Ddd DUDU
 Chords used : Am, Em, F, G, C, E', 'https://www.youtube.com/watch?v=p4_IhJHKsAA', FALSE, '2019-01-27T07:13:52.325000+00:00', '2021-08-03T08:04:50.165000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1128ea6a-ea53-4968-9d6c-e6197a8f9eed', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c3c7c066-b78e-46f9-b939-771b5cdd4091', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1c54a1aa-5a6b-4012-99a3-e7a92bc4d3f2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c3c7c066-b78e-46f9-b939-771b5cdd4091', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('a19a918a-4c1a-42ad-bbd1-0a7326aaadc6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dil De Diya Hai', 'Dil De Diya Hai
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('a19a918a-4c1a-42ad-bbd1-0a7326aaadc6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dil De Diya Hai', 'Dil De Diya Hai
 ```e | - 6/8 - 10 - 11 - 8 - 10 - 11 - 13 - 11 - 10 - 8 - - -  
 B | - - - - - - - - - - - - - - - - - - - - - - - - - - - - -11 -
 ```
@@ -10883,7 +10883,7 @@ Dil De Diya Hai, Jan Tumhe Denge
 Daga Nahee Karenge Sanam', 'Anand Raj Anand', 'Masti', 2004, NULL, 'https://www.youtube.com/watch?v=evxt-t4yTkk', FALSE, '2017-12-20T15:18:32.460000+00:00', '2017-12-23T01:51:06.246000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('62d4e584-ab95-4549-b70a-6dc11ab11bee', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a19a918a-4c1a-42ad-bbd1-0a7326aaadc6', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ab9b337d-6b67-4516-8d88-a5154cc7dbba', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a19a918a-4c1a-42ad-bbd1-0a7326aaadc6', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('46989354-71be-44b9-8324-9cfcc6219824', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Gratitude (Easiest version)', 'Part 01 : https://youtu.be/1BqKjVXpzwk?t=39
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('46989354-71be-44b9-8324-9cfcc6219824', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Gratitude (Easiest version)', 'Part 01 : https://youtu.be/1BqKjVXpzwk?t=39
 
 Part 02 : https://youtu.be/1BqKjVXpzwk?t=144
 
@@ -10913,7 +10913,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c10fd670-7c
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8e26e21e-bae0-4005-9c71-b0fc601815d4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '46989354-71be-44b9-8324-9cfcc6219824', '375ee2c2-3bd4-473f-afd0-87ef7a38f19a');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('587c85c8-3f59-4255-aec9-417f24a23bf1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '46989354-71be-44b9-8324-9cfcc6219824', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a3cd4540-aadc-4acb-a591-4ca09e664e95', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '46989354-71be-44b9-8324-9cfcc6219824', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('0342fe5f-4371-43ae-9342-a58896ea9a56', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tu Jaane Na', 'Kaise Bataaye Kyun Tujhko Chaahe
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('0342fe5f-4371-43ae-9342-a58896ea9a56', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tu Jaane Na', 'Kaise Bataaye Kyun Tujhko Chaahe
 ```e|----------------------------------------------------|
 B|----------------------------------------------------|
 G|-2-4-44-5-4-----2-4-44-5-4----------------------|
@@ -11102,7 +11102,7 @@ D|--4/5--2-4-5--------------------------------------|
 ```', 'Atif Aslam', 'Ajab Prem Ki Ghazab Kahani', 2009, NULL, 'http://rockonguitar247.blogspot.com/2013/12/tu-jaane-na-guitar-tabs.html', FALSE, '2018-08-28T15:39:46.278000+00:00', '2018-10-01T15:05:35.460000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e6e2c1b3-2d77-4bb3-9d62-07652fe7d219', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0342fe5f-4371-43ae-9342-a58896ea9a56', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e643aa5d-fc39-4493-9406-956c355956bb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0342fe5f-4371-43ae-9342-a58896ea9a56', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('86d1ca47-b473-46e2-9a7f-46635751fa4f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Careless Whisper (starting tune)', '```e | - 12 - 10 - - - - - - - - 12 - 10- - - - - - - - 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('86d1ca47-b473-46e2-9a7f-46635751fa4f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Careless Whisper (starting tune)', '```e | - 12 - 10 - - - - - - - - 12 - 10- - - - - - - - 
 B | - - - - - - 10 - - - - - - - - - - - -10 - - - - - -
 G | - - - - - - - - -10 - - - - - - - - - - - 10 - - - 
 ```
@@ -11125,7 +11125,7 @@ D | - 7 - 8 - - - - - - - - - - - - - - - - -
 ```', 'George Michael', 'Make It Big', 1984, NULL, NULL, FALSE, '2017-11-08T14:52:37.656000+00:00', '2019-01-20T10:39:33.763000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d7129fb4-6227-4fa3-b4bd-a1a79998a172', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '86d1ca47-b473-46e2-9a7f-46635751fa4f', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2b04d2f6-48c2-48fd-8bd5-703acdb8ac24', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '86d1ca47-b473-46e2-9a7f-46635751fa4f', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('560d6392-f576-4564-8a5e-6c3e970541f0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Raabta (Intro)', '```e|---7-8-7------7-8-7------7-8-7-----12-12--10-10--8-8--7-7--8-
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('560d6392-f576-4564-8a5e-6c3e970541f0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Raabta (Intro)', '```e|---7-8-7------7-8-7------7-8-7-----12-12--10-10--8-8--7-7--8-
 B|-8-----------8----------8---------------------------------------
 ```
 
@@ -11143,7 +11143,7 @@ B|-10------------------10-------------------------------------------------------
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7b9e9570-92c1-4327-9fde-5ae18d24b786', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '560d6392-f576-4564-8a5e-6c3e970541f0', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('165a6d0c-fcd1-46c7-92f3-be89873dc31c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '560d6392-f576-4564-8a5e-6c3e970541f0', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('cb81407c-d492-42ec-af5a-8ccc3890d3ee', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '560d6392-f576-4564-8a5e-6c3e970541f0', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('bb8616cb-fec9-43ce-8820-1c920bfbebcc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dilbara | Pati Patni Aur Woh', 'Intro Music:      (D UDUD UDUD)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('bb8616cb-fec9-43ce-8820-1c920bfbebcc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dilbara | Pati Patni Aur Woh', 'Intro Music:      (D UDUD UDUD)
 [Am] [Am] [G] [F]
 
 [Am]Dilbara ve teri[G]yaan dilbari[F]yaan
@@ -11199,7 +11199,7 @@ Strumming : D UUD UUD
 Chords used : Am, G, F, Em', 'https://www.youtube.com/watch?v=ja2pgKAMqH4', FALSE, '2020-03-15T12:41:40.722000+00:00', '2020-03-16T15:04:59.623000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3b751611-1923-4983-8f02-d2ce49231e75', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'bb8616cb-fec9-43ce-8820-1c920bfbebcc', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('40336f22-52bf-485f-8930-ce919f443dc2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'bb8616cb-fec9-43ce-8820-1c920bfbebcc', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('c6340673-e4d2-4bb6-8bca-ff9f1827fc39', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ban Ja Tu Meri Rani', 'Ban ja tu meri rani, Tenu mahal dawa dunga
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('c6340673-e4d2-4bb6-8bca-ff9f1827fc39', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ban Ja Tu Meri Rani', 'Ban ja tu meri rani, Tenu mahal dawa dunga
 ```e | - 7- 7 - 7 - 8 - 7 - - - - - -7 - - - - - - - - - - - - 8 - 7  - - -
 B | - - - - - - - - - - - 10 - 10 - - -10- 8 - 8 - 8 - 8 - - - - -10 -
 ```
@@ -11231,7 +11231,7 @@ G | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 9 - - - - -
 ```', 'Guru Randhawa', 'Tumhari Sulu', 2017, NULL, NULL, FALSE, '2017-12-23T12:26:22.910000+00:00', '2017-12-23T13:26:10.663000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e26e8765-7898-4413-a504-73ff7983ad3a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c6340673-e4d2-4bb6-8bca-ff9f1827fc39', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('036c8524-0844-49d1-a21d-abb7db5ca6fb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c6340673-e4d2-4bb6-8bca-ff9f1827fc39', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('299acddb-550f-4abd-9fbd-a6d7b2784e81', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tera Ban Jaunga - Kabir Singh', '[G]Meri raahein [C]tere tak hain
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('299acddb-550f-4abd-9fbd-a6d7b2784e81', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tera Ban Jaunga - Kabir Singh', '[G]Meri raahein [C]tere tak hain
 [Em]Tujhpe hi toh [C]mera haq hai
 [G]Ishq mera [C]tu beshaq hai
 [Em]Tujhpe hi toh [C]mera haq hai
@@ -11278,7 +11278,7 @@ D D UUD D DU
 Chords used : G, C, D, Em', 'https://tabs.ultimate-guitar.com/tab/akhil_sachdeva/tera_ban_jaunga_chords_2732076', FALSE, '2019-06-23T07:12:19.675000+00:00', '2019-06-26T02:38:02.373000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f2dbca78-c4b7-4f04-8e43-46a32ba14fd7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '299acddb-550f-4abd-9fbd-a6d7b2784e81', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('58e79606-4ee4-4204-b12f-d01020c6db7d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '299acddb-550f-4abd-9fbd-a6d7b2784e81', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('f391a82e-97d8-4f22-8b9a-19d2f209fea2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chaha Hai Tujko', 'CHAHA HAI TUJHKO CHAHENGE HARDAM
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('f391a82e-97d8-4f22-8b9a-19d2f209fea2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chaha Hai Tujko', 'CHAHA HAI TUJHKO CHAHENGE HARDAM
 5-8-7-7-5-8-7-7-5-8-7-5-7-3
 
 MARKE BHI DIL SE YEH PYAR NA HOGA KAM
@@ -11315,7 +11315,7 @@ KYA YE TAMANNA KYA YE SACH HAI BAS ITNA KAH DE
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ae1c69d8-9554-4338-a457-9744d71e52ea', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f391a82e-97d8-4f22-8b9a-19d2f209fea2', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c76e4d21-111f-4afb-ac92-2841a373fc1f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f391a82e-97d8-4f22-8b9a-19d2f209fea2', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('60678b1b-c19f-4a6c-9fc8-daa0d23ac9cd', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f391a82e-97d8-4f22-8b9a-19d2f209fea2', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('2d4a3f33-151a-42f6-9a8a-d39b5f91da7e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chaand Ne kuch kaha', 'chaand ne kuch kaha , raat ne kuch suna
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('2d4a3f33-151a-42f6-9a8a-d39b5f91da7e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chaand Ne kuch kaha', 'chaand ne kuch kaha , raat ne kuch suna
 e--------------------------------------------
 B--------------------------------------------
 G------0--2-2-0------------0--2-2-0-------
@@ -11351,7 +11351,7 @@ G--2-2-0--3-2---2-2-0-
 D-------------3--------', 'Lata Mangeshkar, Udit Narayan', 'Dil To Pagal Hai', 1997, NULL, NULL, FALSE, '2017-11-08T03:19:57.757000+00:00', '2017-12-14T13:37:53.171000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f314ea62-47a4-46fa-9e74-7f48c4cfc9e8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2d4a3f33-151a-42f6-9a8a-d39b5f91da7e', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('33f42fa2-1478-4839-8978-60a4647a3554', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2d4a3f33-151a-42f6-9a8a-d39b5f91da7e', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('5e7d70fb-5407-4b3c-9ae6-744eea84c6aa', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aaj Jaane Ki Zid Na Karo - Arijit Singh', '(G) Aaaj janey (A) kii zidd naa (Bm) karoo ...x2
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('5e7d70fb-5407-4b3c-9ae6-744eea84c6aa', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aaj Jaane Ki Zid Na Karo - Arijit Singh', '(G) Aaaj janey (A) kii zidd naa (Bm) karoo ...x2
 Yunhi (Em) pehloo meinn bethe (A) rahoo ...x2
 
 Aaaj (G) jane kii (Gm) zidd naa (D) karoo ...x2
@@ -11400,7 +11400,7 @@ Original Singer - Farida Khanum
 Chords used : G, A, Em, Bm, F#m, Gm, D', 'https://tabs.ultimate-guitar.com/tab/arijit-singh/aaj-jaane-ki-zid-na-karo-chords-2234447', FALSE, '2023-07-30T02:06:56.480000+00:00', '2023-07-30T02:37:13.691000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('0e1d817a-9d24-4cd3-baca-b21596e2f6e6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5e7d70fb-5407-4b3c-9ae6-744eea84c6aa', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3060d854-9430-46f4-81f5-50d52e6b67ce', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5e7d70fb-5407-4b3c-9ae6-744eea84c6aa', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('b167ba4c-cec8-4fee-8929-1074da82a64c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bas ek sanam chahiye', 'Intro
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('b167ba4c-cec8-4fee-8929-1074da82a64c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bas ek sanam chahiye', 'Intro
 E-------------------------------------------
 B-------------------------------------------
 G-4-2-4-2-0-2-4-5-4- -2-2-2-0-2-0----
@@ -11653,13 +11653,13 @@ D--0-3------------------------------------------------', 'Kumar Sanu', 'Aashiqui
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('08460619-acca-4034-bc44-c9b0c16d5845', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b167ba4c-cec8-4fee-8929-1074da82a64c', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e7aa3fa2-7c0f-4d20-b249-6669f65e7f6e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b167ba4c-cec8-4fee-8929-1074da82a64c', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2f2c2a8c-8b4d-43cf-a7c7-d06272c8efdf', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b167ba4c-cec8-4fee-8929-1074da82a64c', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('93e08a11-9559-4d7d-b1a8-74cb7e989868', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Koi Mil Gaya (Jadoo/ Alien) Theme', '6-7-12-11
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('93e08a11-9559-4d7d-b1a8-74cb7e989868', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Koi Mil Gaya (Jadoo/ Alien) Theme', '6-7-12-11
 6-7-11-9
 6-7-12-11-9-11-9
 6-7-11-9', 'Rajesh Roshan', 'Koi... Mil Gaya', 2003, 'Play on any string (Preferably  thick E string)', 'https://www.youtube.com/watch?v=4CmDXJIWoNs', FALSE, '2019-03-15T02:22:14.335000+00:00', '2019-03-15T02:23:14.321000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7526d54f-a7c5-4fd1-87b3-d53111709b4a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '93e08a11-9559-4d7d-b1a8-74cb7e989868', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5ddd8a54-263a-4697-8ab5-9f4d5c2389db', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '93e08a11-9559-4d7d-b1a8-74cb7e989868', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('7aedd555-cba4-4622-8de0-8b63a82c1ff2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kalank - Title track', 'Fmaj7 : Same as C Major, just shift middle and ring one down
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('7aedd555-cba4-4622-8de0-8b63a82c1ff2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kalank - Title track', 'Fmaj7 : Same as C Major, just shift middle and ring one down
 F#m:  Play C till you learn it
 
 ```E|----------------------------------------------------------------------
@@ -11747,7 +11747,7 @@ Fingerstyle - 4-3-2-1  (change 4 based on base note)
 Strumming - D Chuck U  U Chuck U', 'https://www.youtube.com/watch?v=4jH_jjED_7A', FALSE, '2019-10-25T01:45:37.424000+00:00', '2019-10-25T02:32:55.076000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('cf11e21b-36e1-4080-9725-1109e8d66cec', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7aedd555-cba4-4622-8de0-8b63a82c1ff2', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7d93116d-751b-4559-8a30-439d3d390a36', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7aedd555-cba4-4622-8de0-8b63a82c1ff2', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('b2d88b41-e461-4f2a-865e-88bf69e905ba', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Sandese Aate Hain', '(G)Hoho...Ho(Am)ooo
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('b2d88b41-e461-4f2a-865e-88bf69e905ba', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Sandese Aate Hain', '(G)Hoho...Ho(Am)ooo
 (G)Hooho...ho(Am)oooo    ]............x2
 
 Sandese (D)aate (G)hain, hame tad(D)pate (G)hain
@@ -11945,7 +11945,7 @@ Chords used : Em, C, Gm, Am, D, G, A', 'https://www.youtube.com/watch?v=VT0WKNGO
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('cc8b8e71-fe07-4104-b0ef-1818ff5f2ed5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b2d88b41-e461-4f2a-865e-88bf69e905ba', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7518e6b7-c04c-485a-9e4e-17d021640b22', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b2d88b41-e461-4f2a-865e-88bf69e905ba', 'ae6a7dff-8c54-4846-bf93-deb177ecbb68');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e1f566b7-17e9-4a53-9c15-61113ed6a688', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b2d88b41-e461-4f2a-865e-88bf69e905ba', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('e487b45c-a2da-493a-84d9-f735e0efd3fa', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tere Bina : Heropanti', '(G)Ho Oo..[D]Oo Oo..
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('e487b45c-a2da-493a-84d9-f735e0efd3fa', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tere Bina : Heropanti', '(G)Ho Oo..[D]Oo Oo..
 ..Ha [Am]Aaa Aa..[C]Aa Aa [D]Ha [G]Ha..[Em]
 
 [G]..[Em]..[C]..[Am]..[D]
@@ -11975,7 +11975,7 @@ D D UUD DD U
 Chords used : G, C, D, Em, Am', 'http://guitarbajalo.blogspot.com/2016/05/tere-bina-heropanti-transposed-guitar.html', FALSE, '2019-06-13T07:03:50.245000+00:00', '2019-06-13T07:04:47.331000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('cedd39ad-e099-4932-8095-947778afa885', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e487b45c-a2da-493a-84d9-f735e0efd3fa', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('471c4f7d-b0d5-4046-9ce5-1f42d50a07c7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e487b45c-a2da-493a-84d9-f735e0efd3fa', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('79211a02-0cfc-47b5-a32a-ab06b123605b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mitti Di Khushboo', 'Jadon (Em)ambaraan barasya paa(C)ni
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('79211a02-0cfc-47b5-a32a-ab06b123605b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mitti Di Khushboo', 'Jadon (Em)ambaraan barasya paa(C)ni
 (D)Mitti di khushboo..(Am)Mitti di khushboo..
 (D)Mitti di khushbu aa(Em)yi
 (Em)Ambaraan barasya (G)paani (Em)
@@ -12026,7 +12026,7 @@ Chords used : Em, C, D, Am, G', 'https://tabs.ultimate-guitar.com/tab/ayushmann_
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3963373d-aa47-4c1a-abae-4651a6f50ac0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '79211a02-0cfc-47b5-a32a-ab06b123605b', 'f38a575b-3040-4496-8494-78d603e260b4');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d645a806-ab0f-4856-b7e5-e5d1cdb285c4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '79211a02-0cfc-47b5-a32a-ab06b123605b', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('0230f895-0c0d-48de-92f1-d43cdeb662b1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '79211a02-0cfc-47b5-a32a-ab06b123605b', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('e72d79fa-4847-4c2d-99a1-c544a20ec0e2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Salamat (Sarabjit)', '```E |------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('e72d79fa-4847-4c2d-99a1-c544a20ec0e2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Salamat (Sarabjit)', '```E |------------
 B |----8-10-12-10-12--
 G |-9-11---------
 ```
@@ -12129,7 +12129,7 @@ G |-9-9-11----------11-9-8-11-9--
 Tere mere pyar ki umar salamat rahe', 'Arijit Singh, Tulsi Kumar', 'Sarbjit', 2016, NULL, NULL, FALSE, '2017-10-21T14:12:04.896000+00:00', '2017-10-21T15:04:29.080000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f8b64dd7-0c1b-444c-a324-bed53f6dbb53', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e72d79fa-4847-4c2d-99a1-c544a20ec0e2', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8007f3cb-a026-4bf3-8b3a-d1190e215fc2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e72d79fa-4847-4c2d-99a1-c544a20ec0e2', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('e5ad6d1b-cdab-4267-8835-91558743f008', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bojhena Shey Bojhena', 'Boro (C)ichchey korche (G)dkte
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('e5ad6d1b-cdab-4267-8835-91558743f008', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bojhena Shey Bojhena', 'Boro (C)ichchey korche (G)dkte
 Tar(F)gondhey mekhe (Em)thkte
 Keno(Am)sondhe-sondhe (A#)naamle sey(C)palay
 Takey(Em)atkey rakhaa(Am)chestaa
@@ -12185,12 +12185,12 @@ Chords used : C, G, Am, F, Dm, Em, Bb/A#', 'https://tabs.ultimate-guitar.com/tab
 https://rewindcaps.com/bojhena-shey-bojhena-chords/', FALSE, '2023-07-30T00:51:48.298000+00:00', '2023-07-30T01:21:38.848000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3afaac3a-2bd2-4801-ab7f-9219abecd462', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e5ad6d1b-cdab-4267-8835-91558743f008', 'da9a1522-98fb-4b92-bae9-f41c00333985');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('32b1f663-f61d-4add-a539-8eb71016053d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e5ad6d1b-cdab-4267-8835-91558743f008', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('a184bb73-9484-490f-b281-d89ac308341a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Faded - Alan Walker', '', 'Alan Walker', 'Different World', 2015, NULL, 'https://www.youtube.com/watch?v=qtfbhVeIZ10', FALSE, '2021-05-31T04:25:13.857000+00:00', '2021-05-31T04:25:18.867000+00:00');
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('a184bb73-9484-490f-b281-d89ac308341a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Faded - Alan Walker', '', 'Alan Walker', 'Different World', 2015, NULL, 'https://www.youtube.com/watch?v=qtfbhVeIZ10', FALSE, '2021-05-31T04:25:13.857000+00:00', '2021-05-31T04:25:18.867000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5d835d90-452d-489d-bae5-7b285bba472d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a184bb73-9484-490f-b281-d89ac308341a', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e20f9d12-7b0a-4358-a808-f3821f5c6481', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a184bb73-9484-490f-b281-d89ac308341a', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8dd3a13f-cf9c-49a1-a74b-5af704162660', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a184bb73-9484-490f-b281-d89ac308341a', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('34bd1795-c3fd-450a-8594-9322e72582b5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a184bb73-9484-490f-b281-d89ac308341a', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('0972da77-6334-41c0-8444-d9279b823b63', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Arijit Singh - Royal Stag Mirchi Awards', '(Em)Dil.. sambhal ja za(D)ra
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('0972da77-6334-41c0-8444-d9279b823b63', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Arijit Singh - Royal Stag Mirchi Awards', '(Em)Dil.. sambhal ja za(D)ra
 Phir mo(C)habbat karne cha(D)la hai tu
 (Em)Dil.. yahin ruk jaa za(D)ra
 Phir mo(C)habbat karne cha(D)la hai
@@ -12307,7 +12307,7 @@ Chords used : Em, C, D, G', 'https://youtu.be/tf_memh99mU', FALSE, '2018-10-15T1
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('83b70c42-1212-476c-9c7e-9b0459ec4cb6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0972da77-6334-41c0-8444-d9279b823b63', '07483aae-aaf2-498a-ad00-7abd0a0d46c3');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('653d3d7f-923c-4629-952c-f50e54dfe229', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0972da77-6334-41c0-8444-d9279b823b63', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ca15c2ed-e184-498f-a92d-e0204221e3de', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0972da77-6334-41c0-8444-d9279b823b63', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('7bf07eb8-388a-43e1-be89-4b26e440000c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Teri Aankhein Bhool Bhulaiyaa', '```B|-1-1-1-1-1-1-3-4-
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('7bf07eb8-388a-43e1-be89-4b26e440000c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Teri Aankhein Bhool Bhulaiyaa', '```B|-1-1-1-1-1-1-3-4-
 ```
 Starting Melody
 
@@ -12451,12 +12451,12 @@ B|-1-----4-3-1-3-4-
 hare krishna hare ram.. ohhh oooo', 'KK', 'Bhool Bhulaiyaa', 2007, NULL, NULL, FALSE, '2017-12-23T06:50:12.027000+00:00', '2017-12-23T17:33:59.147000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b3f82b6a-52cb-433f-9d2a-b2a674d50a3e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7bf07eb8-388a-43e1-be89-4b26e440000c', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9b15a48b-a559-4470-b2aa-f8d53b8dc60d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7bf07eb8-388a-43e1-be89-4b26e440000c', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('fe43329b-8b58-4b77-b179-0d0cd0ed814e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bakhuda Tumhi Ho', '', 'Atif Aslam, Alka Yagnik', 'Kismat Konnection', 2008, NULL, 'https://www.youtube.com/watch?v=TIg_iqLxkNk', FALSE, '2021-04-17T13:47:01.205000+00:00', '2021-04-17T13:47:12.771000+00:00');
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('fe43329b-8b58-4b77-b179-0d0cd0ed814e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bakhuda Tumhi Ho', '', 'Atif Aslam, Alka Yagnik', 'Kismat Konnection', 2008, NULL, 'https://www.youtube.com/watch?v=TIg_iqLxkNk', FALSE, '2021-04-17T13:47:01.205000+00:00', '2021-04-17T13:47:12.771000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f3387b9e-15ed-475b-a619-2e0deb2c469d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fe43329b-8b58-4b77-b179-0d0cd0ed814e', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('458d9c75-e5e1-4ffd-aa35-c16829e89c05', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fe43329b-8b58-4b77-b179-0d0cd0ed814e', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1807895b-3382-4a9c-b95c-d121012bf0b5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fe43329b-8b58-4b77-b179-0d0cd0ed814e', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c77e314f-f581-4e5b-8c9c-c44c8cc133a4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fe43329b-8b58-4b77-b179-0d0cd0ed814e', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('8a2d4493-5f78-4891-969e-6454242821d1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Har Har Gange', '=======SINGLE STRUM=======
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('8a2d4493-5f78-4891-969e-6454242821d1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Har Har Gange', '=======SINGLE STRUM=======
 (D) Karam jise pukaare
 Wo (A) pahunche Ganga kinaare
 Na (Bm) kar maili tu Ganga
@@ -12524,13 +12524,13 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c176da05-20
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('0db71668-bd56-40ae-aaf2-d07f697bac05', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '8a2d4493-5f78-4891-969e-6454242821d1', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2fe98533-1a44-434e-8e69-5cab3b291f9f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '8a2d4493-5f78-4891-969e-6454242821d1', '6a3e1159-3e7b-4145-b202-58429f143d25');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('361b1998-f90c-4e75-8228-07177668b193', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '8a2d4493-5f78-4891-969e-6454242821d1', '8d4fc519-7375-432c-8b6a-6cf000e9f287');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('64df4604-4785-4839-b493-3bfb19883a50', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Cute vol 1 intro', 'e---------------------------------------------------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('64df4604-4785-4839-b493-3bfb19883a50', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Cute vol 1 intro', 'e---------------------------------------------------------
 B-------9-------------7-------------------------------------
 G---6------9------6------8-------6---9---6------4-4s6----------', 'Unavailable', 'Unavailable', 2011, NULL, NULL, FALSE, '2018-09-04T15:58:08.017000+00:00', '2018-09-05T01:39:41.840000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5378b7f5-125e-431b-b3a3-921a860fe2cb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '64df4604-4785-4839-b493-3bfb19883a50', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e174374c-b4c1-4109-90eb-b5d99bc1e153', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '64df4604-4785-4839-b493-3bfb19883a50', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('46b13d94-3dc0-4ec6-87d9-c50656b03b70', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '64df4604-4785-4839-b493-3bfb19883a50', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('0e0e3340-5c07-4ddd-87af-bd7724f89240', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Love Story Theme', 'e - 8 - - - - - 8 - 8
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('0e0e3340-5c07-4ddd-87af-bd7724f89240', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Love Story Theme', 'e - 8 - - - - - 8 - 8
 B - - - 5 - 5 - - - -
 e - - - - - 8 - 8 - - - - - - - - - - - - - 7 - 7
 B - 5 - 5 - - - - - 5 - 6 - 5 - - - - - - - - - -
@@ -12553,7 +12553,7 @@ B | - 4 - - - - - -- - -
 ```', 'Francis Lai', 'Love Story (Original Motion Picture Soundtrack)', 1970, NULL, NULL, FALSE, '2017-10-06T14:17:43.191000+00:00', '2018-06-30T09:37:31.144000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('97ab62fd-26fc-4225-805a-dccfb620ed5e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0e0e3340-5c07-4ddd-87af-bd7724f89240', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5f45b5ce-ab1e-4c97-8a5a-62a3a99e21ad', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0e0e3340-5c07-4ddd-87af-bd7724f89240', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('38b3e780-f562-41c9-87a6-986424c6aba8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hawa Banke - Darshan Rawal', 'Capo at 3
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('38b3e780-f562-41c9-87a6-986424c6aba8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hawa Banke - Darshan Rawal', 'Capo at 3
 Fingerstyle : 6 3 1 2    |    5 3 1 2    |    4 3 1 2
 Fingerstyle 2 : https://youtu.be/7l25I9uJowk?t=354
 Strum : D U Chuck D   U U D    D U
@@ -12606,7 +12606,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7648b037-af
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('077f1d1a-dca2-4e1e-a540-f822c6250b80', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '38b3e780-f562-41c9-87a6-986424c6aba8', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4b7bcb9f-e610-4e20-a0b7-c82bdeb7b735', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '38b3e780-f562-41c9-87a6-986424c6aba8', '375ee2c2-3bd4-473f-afd0-87ef7a38f19a');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('36bffbab-8355-435b-a44f-5461fc57377c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '38b3e780-f562-41c9-87a6-986424c6aba8', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('df8fb23e-a96f-4f62-952a-721039a699e9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hum Mar Jayenge (Aashiqui 2)', '```E |-5-7-9-9-9-7-9-7-5-4-2-----
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('df8fb23e-a96f-4f62-952a-721039a699e9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hum Mar Jayenge (Aashiqui 2)', '```E |-5-7-9-9-9-7-9-7-5-4-2-----
 ```
 Apni aankhein khaali kar de
 
@@ -12688,7 +12688,7 @@ B |------------3---
 Ho….o..o… Hum mar jayenge', 'Arijit Singh, Tulsi Kumar', 'Aashiqui 2', 2013, NULL, 'http://msworldsite.com/hum-mar-jayenge-aashiqui-2-guitar-tabs/', FALSE, '2018-06-28T03:22:15.588000+00:00', '2018-10-01T16:52:25.821000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('145d5ff3-f607-44bf-96df-e15e3b6d6db2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'df8fb23e-a96f-4f62-952a-721039a699e9', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d66372cd-8890-4558-9eea-f77e84297708', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'df8fb23e-a96f-4f62-952a-721039a699e9', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('4ac3467f-d476-4a0a-9f4d-22c6663aa091', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Phoolon Ke Rang Se', '(F) Phoolo Ke Rang Se, Dil Ki Kalam Se
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('4ac3467f-d476-4a0a-9f4d-22c6663aa091', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Phoolon Ke Rang Se', '(F) Phoolo Ke Rang Se, Dil Ki Kalam Se
 Tujhko Likhi Roz (C) Paati
 (F) Kaise Batau, Kis Kis Tarah Se
 Pal Pal Mujhe Tu Sa(C)tati
@@ -12751,7 +12751,7 @@ Haan, (C) Itna Madir, (Bb) Itna Madhur
 (F) Kayi (C) Kayi (F) Bar', 'Kishore Kumar', 'Prem Pujari', 1970, 'D DU  Chuck. (https://youtu.be/EltFLIkB7h4?t=14)', 'https://wrytin.com/priyankayadav/phoolon-ke-rang-se-chords-prem-pujari-kishore-kumar-jhnd3y4i', FALSE, '2020-03-08T07:02:08.796000+00:00', '2020-03-08T07:04:06.741000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('02947252-4ae3-417b-9108-33bb242f98ff', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4ac3467f-d476-4a0a-9f4d-22c6663aa091', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f486125b-82d7-418e-ae00-ede5cff4d52c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4ac3467f-d476-4a0a-9f4d-22c6663aa091', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('882cdf38-d4e1-463d-ae9f-2d6ba903c716', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hothon se chhoo lo tum', 'INTRO
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('882cdf38-d4e1-463d-ae9f-2d6ba903c716', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hothon se chhoo lo tum', 'INTRO
 ```e | - - - - - - - - - - - - - - - - - - - - - -
 B | - - 3- 5- 6- - - - - -3-3 - - - - - -
 G | -5 - - - - - - - - - 5- - - - -5 - - -
@@ -12780,7 +12780,7 @@ D | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -3- - 
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('248e9c6b-29bc-424a-9549-37f9032fd043', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '882cdf38-d4e1-463d-ae9f-2d6ba903c716', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('0b295c13-ecbe-427c-81e0-d3b4a0fe4bbf', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '882cdf38-d4e1-463d-ae9f-2d6ba903c716', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('fb613847-3b72-45de-9d73-2a6e1b5bb436', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '882cdf38-d4e1-463d-ae9f-2d6ba903c716', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('53d1717f-878c-441e-9153-0d48e28394bf', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Lo Maan Liya', 'INTRO
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('53d1717f-878c-441e-9153-0d48e28394bf', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Lo Maan Liya', 'INTRO
 e---------5-4-5-4-5-4-5\7-7-4-4----
 B-1/2-------------------------------
 e---------5-4-5-4-5-4-5\7-7-4-4---4-
@@ -12841,7 +12841,7 @@ Hum yaad nahi tumko', 'Arijit Singh', 'Raaz Reboot', 2016, NULL, 'https://www.yo
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a4f38a28-c257-4d94-9e82-2728a2bb416a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '53d1717f-878c-441e-9153-0d48e28394bf', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('900fc60b-4b7a-485d-8809-a6567ad485c7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '53d1717f-878c-441e-9153-0d48e28394bf', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a6c2a588-7b2c-4ac3-90da-9ae54c9b080b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '53d1717f-878c-441e-9153-0d48e28394bf', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('e712d3cd-ac76-4272-9476-ebb1d32202af', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Vande Mataram', 'Vande Maataram
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('e712d3cd-ac76-4272-9476-ebb1d32202af', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Vande Mataram', 'Vande Maataram
 ```e|-----------------
 B|-0-2--5-7-5-7-
 ```
@@ -12953,7 +12953,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b3ed2560-3e
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('df314b86-dbec-47b6-a2ec-87d40ca6abe9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e712d3cd-ac76-4272-9476-ebb1d32202af', 'f6f1fa22-4ebb-4dfc-8a00-65f2e520dc91');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('cb5e82e6-e5d8-458b-b195-7ae779da4ac0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e712d3cd-ac76-4272-9476-ebb1d32202af', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9c5c9a58-4195-43c2-a7cf-028141cc575f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e712d3cd-ac76-4272-9476-ebb1d32202af', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('be668048-3c73-4e74-b57f-f5488b2d9011', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Nalone Pongenu Narmada', 'intro lead
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('be668048-3c73-4e74-b57f-f5488b2d9011', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Nalone Pongenu Narmada', 'intro lead
 e -------------------------------------------
 B -------------5-----------------3s5--5----
 G --4--6--7-------7--6-----4--------------
@@ -13014,7 +13014,7 @@ Naalona Pongenu..', 'S. P. Balasubrahmanyam, K. S. Chithra', 'Surya IPS', 1991, 
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5acb3601-08af-4036-b5f7-1737486a3967', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'be668048-3c73-4e74-b57f-f5488b2d9011', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('50ab7766-34dc-416b-953c-2b8c0751320d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'be668048-3c73-4e74-b57f-f5488b2d9011', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('96836959-2cff-466a-a692-bc7898ef95a2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'be668048-3c73-4e74-b57f-f5488b2d9011', '50e1f043-40b6-42ce-8468-0952aa965c22');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('c4479c6d-ffe7-4851-a9e1-4402c9aa8b42', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Emptiness', 'Intro (Pattern - 3 2 1 2 ) : https://youtu.be/fDuEXqSmxl0?t=90
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('c4479c6d-ffe7-4851-a9e1-4402c9aa8b42', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Emptiness', 'Intro (Pattern - 3 2 1 2 ) : https://youtu.be/fDuEXqSmxl0?t=90
 
 ```e | - 8- - - 8- - - - -8 - - 8- - - - -7 - -7 - - - -5 - - - - - - - - -
 B | - 11 - -11 - - - 11- -11 - - - 6- - 6- - - - 5 - - - - - - - - - 
@@ -13073,7 +13073,7 @@ Chords used : F, Am, Dm, Bb, C', 'https://www.youtube.com/watch?v=fDuEXqSmxl0&fe
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3b06f517-82f6-418d-8266-a022a3b3fc22', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c4479c6d-ffe7-4851-a9e1-4402c9aa8b42', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ced4bd3f-e4c9-480b-8fa4-9f365940446b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c4479c6d-ffe7-4851-a9e1-4402c9aa8b42', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5dc320aa-c522-48f7-8123-24d0f5d0a7cd', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c4479c6d-ffe7-4851-a9e1-4402c9aa8b42', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('610f62e8-3f0a-4d56-bd84-9bab29c266ad', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tu Hi Meri Shab Hai', 'Tu Hi Meri Shab Hai Subha Hai
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('610f62e8-3f0a-4d56-bd84-9bab29c266ad', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tu Hi Meri Shab Hai', 'Tu Hi Meri Shab Hai Subha Hai
 5-7-8-7-5-7-3--0-3-5
 
 Tu Hi Din Hai Mera
@@ -13114,7 +13114,7 @@ O O O O O O O O
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('49388eec-706e-4396-bbc0-ab2b4bf052fd', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '610f62e8-3f0a-4d56-bd84-9bab29c266ad', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('79cfbd6e-81e4-466d-a93c-b1ca17d4d960', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '610f62e8-3f0a-4d56-bd84-9bab29c266ad', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('55971d81-ff49-499f-bdd0-01c5bcb26d04', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '610f62e8-3f0a-4d56-bd84-9bab29c266ad', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('4b6dfcc8-d446-478c-bba2-b530cdf71a08', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Saiyaara - Faheem Adullah', '[Intro]
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('4b6dfcc8-d446-478c-bba2-b530cdf71a08', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Saiyaara - Faheem Adullah', '[Intro]
 (Em) (D) (C) (Em)
 
 Hold like this
@@ -13171,7 +13171,7 @@ https://gsma.co.in/blog/guitar/saiyaara-guitar-chords/', FALSE, '2025-07-14T03:5
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5105ac2c-db03-4a4f-be78-1f698f92b33e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4b6dfcc8-d446-478c-bba2-b530cdf71a08', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('85c31f79-e545-40b5-819d-56332357b93c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4b6dfcc8-d446-478c-bba2-b530cdf71a08', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('cd40cdc2-ffd8-4b54-ad0a-326245916489', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4b6dfcc8-d446-478c-bba2-b530cdf71a08', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('d4eb63c3-a888-4a6d-a2ea-73423b2f2785', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tere Vaaste - Zara Hatke Zara Bachke', 'Orginal Scale : G minor
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('d4eb63c3-a888-4a6d-a2ea-73423b2f2785', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tere Vaaste - Zara Hatke Zara Bachke', 'Orginal Scale : G minor
 Capo: 3rd fret
 Strumming Pattern: D U Chuck D U Chuck
 
@@ -13221,7 +13221,7 @@ O… (Em)Hum hain zara hat (D)ke, Janaab-e-aali
 (Em)Rehna zara bach (D)ke, hmmm… (Em)', 'Varun Jain, Sachin-Jigar, Shadab Faridi, Altamash Faridi', 'Zara Hatke Zara Bachke', 2023, 'Chords used : Em, C, D, Bm, A', 'https://www.youtube.com/watch?v=PoOoEKpT0t8', FALSE, '2023-07-29T14:43:01.307000+00:00', '2023-07-29T14:44:36.843000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('952e73d9-3f67-476a-9b25-5068b6a6f9f5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd4eb63c3-a888-4a6d-a2ea-73423b2f2785', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e587db0b-97f6-4859-863c-2e205a8816e2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd4eb63c3-a888-4a6d-a2ea-73423b2f2785', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('b6349a43-7038-4121-816f-cf4c8f4a28a9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Be Intehaan', 'Suno Na, Kahe Kya, Suno Na
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('b6349a43-7038-4121-816f-cf4c8f4a28a9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Be Intehaan', 'Suno Na, Kahe Kya, Suno Na
 ```E|--7-5-7-7-7-5----7-5-7------------------------|
 B|----------------------8-------------------------------|
 ```
@@ -13336,7 +13336,7 @@ G|-----------------------------------------------|
 ```', 'Atif Aslam, Sunidhi Chauhan', 'Race 2', 2013, NULL, 'http://rockonguitar247.blogspot.com/2013/07/be-intehaan-guitar-tabs-race-2.html', FALSE, '2018-08-28T15:37:58.031000+00:00', '2019-01-20T10:21:37.384000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e9185704-de61-4d52-b915-57183182c41d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b6349a43-7038-4121-816f-cf4c8f4a28a9', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5f92b82f-daed-413a-b44f-f2870c34959d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b6349a43-7038-4121-816f-cf4c8f4a28a9', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('c047deb6-fbc5-4985-8826-e94a65fbd80d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tajdar E Haram - Atif Aslam', 'Tajdaar-e-haram Tajdaar-e-haram
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('c047deb6-fbc5-4985-8826-e94a65fbd80d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tajdar E Haram - Atif Aslam', 'Tajdaar-e-haram Tajdaar-e-haram
 ```E|--5--5-----5-----------5--5-----5-----------
 B|---------8-----8--7--7--------8-----8--7--7--
 ```
@@ -13392,7 +13392,7 @@ B|--------8-----8--7--7---------------------8--7--
 ```', 'Atif Aslam', 'Coke Studio Season 8', 2015, NULL, 'https://www.acousterr.com/tab/tajdar-e-haram-atif-aslam-tabs', FALSE, '2018-08-11T10:10:08.589000+00:00', '2019-01-01T14:38:30.803000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('643979c1-87e8-4ad8-9199-b560d3ed8e9c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c047deb6-fbc5-4985-8826-e94a65fbd80d', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('bf4a3a54-0037-463e-a200-e2fd602efaef', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c047deb6-fbc5-4985-8826-e94a65fbd80d', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('4b5ff34d-28d5-4837-8355-5ec69a006e6e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Sajni', 'Intro - (Em) (D) (Am) (Bm)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('4b5ff34d-28d5-4837-8355-5ec69a006e6e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Sajni', 'Intro - (Em) (D) (Am) (Bm)
 ```e | - - - - - - - - - - - -9 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 B | -7-9-9-9-7-9 - - - -9-7 - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 G | - - - - - - - - - - - - - - - - - 9-8 - - - - - - - - - - - - - - - - - - - - - - 8- 
@@ -13461,7 +13461,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ff1d23d1-9f
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('66336867-d3fe-4bea-b528-3a8de3632abf', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4b5ff34d-28d5-4837-8355-5ec69a006e6e', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('25aa84a7-c568-495b-92d7-6c4749f7f37d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4b5ff34d-28d5-4837-8355-5ec69a006e6e', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f9986514-fbcd-4f49-9a09-9130ce3af377', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4b5ff34d-28d5-4837-8355-5ec69a006e6e', '8d4fc519-7375-432c-8b6a-6cf000e9f287');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('7b556654-daf7-4441-bc9a-eef5b5158309', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Meherbani - Shaukeens', 'Hai (C)saaz tu, tera tarz main
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('7b556654-daf7-4441-bc9a-eef5b5158309', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Meherbani - Shaukeens', 'Hai (C)saaz tu, tera tarz main
 Tu (G)hai dava aur marz main
 Dil(F)daar tu.. khud(C)garz main
 
@@ -13500,7 +13500,7 @@ Strum : D D UUD DU    OR
 Chords used : C, G, F, Am', 'https://tabs.ultimate-guitar.com/tab/jubin_nautiyal/hai_teri_meherbani_chords_1716034', FALSE, '2018-10-30T03:01:16.241000+00:00', '2019-01-04T03:24:06.795000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7944d245-c195-4ed8-b64f-f728d2f12bbb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7b556654-daf7-4441-bc9a-eef5b5158309', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1019aa41-138b-4f3e-9bdf-ae31cd2ee38f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7b556654-daf7-4441-bc9a-eef5b5158309', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('8e53b840-0684-437b-8b4c-bac0661aa34f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Maa (Taare Zameen Par)', '[Intro]
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('8e53b840-0684-437b-8b4c-bac0661aa34f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Maa (Taare Zameen Par)', '[Intro]
 Hold C
 ```e|-----------------0--------------------|
 B|-------1-----1-------1----------------| 
@@ -13606,7 +13606,7 @@ Tujhe Sab Hai Pata Hai Na Maa......', 'Shankar Mahadevan', 'Taare Zameen Par', 2
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c7010273-5935-4e29-90b2-f5089b97ed44', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '8e53b840-0684-437b-8b4c-bac0661aa34f', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('554980b7-d56e-4794-a46c-70a91aa16082', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '8e53b840-0684-437b-8b4c-bac0661aa34f', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('86103a08-0b95-47b5-8712-dbb23be398e5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '8e53b840-0684-437b-8b4c-bac0661aa34f', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('fdcb8fe5-6eb6-4716-8ed1-fbf39ded4dac', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Raghupati Raghav Raja Ram', '```e|------------------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('fdcb8fe5-6eb6-4716-8ed1-fbf39ded4dac', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Raghupati Raghav Raja Ram', '```e|------------------------
 B|---------------------1-0-1-
 G|-0-0--0-0--0------2---2-----
 D|-----------3-2-3----------
@@ -13634,7 +13634,7 @@ Sab ko Sanmti De Bhagavan', 'Mahatma Gandhi (popularized by)', 'Traditional', 20
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('17d5637e-f861-48f0-ad63-3143d4004ccd', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fdcb8fe5-6eb6-4716-8ed1-fbf39ded4dac', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3a7441a1-5dd5-4a9c-8988-7a3033a4d2eb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fdcb8fe5-6eb6-4716-8ed1-fbf39ded4dac', '6a3e1159-3e7b-4145-b202-58429f143d25');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('00efd312-670c-4e56-8630-fd149c02d351', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fdcb8fe5-6eb6-4716-8ed1-fbf39ded4dac', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('83c800af-ca2c-43ba-9a60-524c6e9644b8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ankhon Mein Tera He Chehra', 'Maana ke tum saath nahi ho, mere dil ke paas nahi ho
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('83c800af-ca2c-43ba-9a60-524c6e9644b8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ankhon Mein Tera He Chehra', 'Maana ke tum saath nahi ho, mere dil ke paas nahi ho
 ```E|---5/8--7--7--7--8-----7---7h-8p7-----------7--8--10-8-----7---7h-8p7--7-----
 B|-----------------------------------10----10----------------------------------
 G|-----------------------------------------------------------------------------
@@ -13687,7 +13687,7 @@ B|---8/10-10----8------5/8--8--10--8h10p8--8--
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c8f1db66-9977-432c-a592-36624b33e784', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '83c800af-ca2c-43ba-9a60-524c6e9644b8', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('52a813ea-80e2-42cd-ab5d-ebd7158134ea', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '83c800af-ca2c-43ba-9a60-524c6e9644b8', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e490f37e-18e2-4c16-8fac-45dbb0053485', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '83c800af-ca2c-43ba-9a60-524c6e9644b8', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('32ffd7c2-fe67-4ef2-b0d9-f305c86ce27e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'KISS ME (Dairy Milk Silk Ad Song)', '```E|-----------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('32ffd7c2-fe67-4ef2-b0d9-f305c86ce27e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'KISS ME (Dairy Milk Silk Ad Song)', '```E|-----------------
 B|-----------------
 G|-----------4-----
 D|----5--7---------
@@ -13750,7 +13750,7 @@ MISS ME, CLOSE YOUR EYES', 'Armaan Malik', 'Single', 2015, NULL, 'https://www.yo
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('84fd82cc-7192-4f17-8c8e-cf394cc5f7d5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '32ffd7c2-fe67-4ef2-b0d9-f305c86ce27e', '19e5627d-a2b0-4d3f-9425-eb88225bd761');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('28341de2-6863-466d-916e-93a3df2ffe33', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '32ffd7c2-fe67-4ef2-b0d9-f305c86ce27e', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('684f2820-3a82-40d7-b754-6f6b3ca5460e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '32ffd7c2-fe67-4ef2-b0d9-f305c86ce27e', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('d59e335f-6fe4-4160-9acd-e14554f012ec', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Saiyaan - Kailash Kher', '(C) Heere moti main na chahoon
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('d59e335f-6fe4-4160-9acd-e14554f012ec', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Saiyaan - Kailash Kher', '(C) Heere moti main na chahoon
 (F) Main to chahoon (Am) sangam tera
 (G) Main to teri (F) saiyaan
 Tu (C) hai mera
@@ -13817,7 +13817,7 @@ Main to (F) teri, tu hai (G) mera', 'Kailash Kher', 'Jhoomo Re', 2007, 'Strummin
 Chords used : C, F, Am, G, B', 'https://wrytin.com/gauravbhatt/saiyaan-chords-kailash-kher-jf88o9qb', FALSE, '2022-05-09T15:34:23.333000+00:00', '2022-05-09T15:36:20.134000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('edf73ae4-3bbd-4965-99c8-dd78bdddf6be', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd59e335f-6fe4-4160-9acd-e14554f012ec', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9e0ec52c-45fe-4412-9ea2-c4d163b61fb3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd59e335f-6fe4-4160-9acd-e14554f012ec', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('2e6f3cf9-ceb1-4071-8f51-9b9d2493fd38', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mera Jahan - Gajendra Verma', 'INTRO (https://www.youtube.com/watch?v=NBFYR297ooE)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('2e6f3cf9-ceb1-4071-8f51-9b9d2493fd38', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mera Jahan - Gajendra Verma', 'INTRO (https://www.youtube.com/watch?v=NBFYR297ooE)
 ```e | - - - - - - - - - - - - - - - - - - - - - 
 B | - - 8- 7- 5- - - - - 5- - - -7 - - -
 G | -4 - - - - - - - - 7- - - - - - - 7- -
@@ -13893,7 +13893,7 @@ Mera (Em)yaar mila de, ik vaar mila de', 'Gajendra Verma', 'Mera Jahan', 2017, '
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d64604b1-720f-405b-bab5-265ce5c692d8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2e6f3cf9-ceb1-4071-8f51-9b9d2493fd38', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1a68bc21-0c40-408c-bf5b-89ecf254074e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2e6f3cf9-ceb1-4071-8f51-9b9d2493fd38', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('40117dec-a46c-4b81-9d9d-dcf1f84c933e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2e6f3cf9-ceb1-4071-8f51-9b9d2493fd38', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('b23a59d3-f6c4-41d7-8942-e3c34d6f8e66', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Lollipop Lagelu', '```E |-------12-12-----------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('b23a59d3-f6c4-41d7-8942-e3c34d6f8e66', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Lollipop Lagelu', '```E |-------12-12-----------------
 B |-12-12-12-----12-12-10-12-8-10-10s12-
 ```
 Lagawelu Jab Lipistic,
@@ -13944,7 +13944,7 @@ B |-5-5h7-10-10s12-12-10-9-7-
 Lollipop lagelu..', 'Pawan Singh', 'Lollipop Lagelu', 2008, 'Sidharth Salathia version chords : http://www.chordzone.org/2015/10/siddharth-slathia-feat-kimberly.html', 'https://www.youtube.com/watch?v=rpf2TgjG27A', FALSE, '2017-12-19T12:46:00.542000+00:00', '2019-01-06T07:51:24.320000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e736f665-8098-41a4-9271-782ff748a3a2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b23a59d3-f6c4-41d7-8942-e3c34d6f8e66', '2478154f-b5c6-43c0-86a6-9c5190154ada');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('27b50efe-8085-481d-baf5-28f1e3345755', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b23a59d3-f6c4-41d7-8942-e3c34d6f8e66', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('7f1c1e51-dcb5-47b4-a379-02f4b42fc8fe', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mile Ho Tum Humko (Reprise) - Neha Kakkar | Tony Kakkar', 'Mile ho tum humko
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('7f1c1e51-dcb5-47b4-a379-02f4b42fc8fe', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mile Ho Tum Humko (Reprise) - Neha Kakkar | Tony Kakkar', 'Mile ho tum humko
 ```e | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 B | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 G | - - - 13-13-13-13-13-12-10- - 10-12-12-12-12-12-10- - - -
@@ -14035,7 +14035,7 @@ Mile ho tum humko bade naseebon se
 Churaya hai maine kismat ki lakeeron se', 'Neha Kakkar, Tony Kakkar', 'Fever', 2016, NULL, 'https://www.youtube.com/watch?v=1L3-FIb-8RQ', FALSE, '2018-09-04T16:28:59.311000+00:00', '2018-10-24T04:06:09.849000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9ab393d4-50a9-4651-949b-3a33ffbed7ef', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7f1c1e51-dcb5-47b4-a379-02f4b42fc8fe', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('339a8e3c-f397-4f18-a911-a68289da6484', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7f1c1e51-dcb5-47b4-a379-02f4b42fc8fe', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('384da8c7-fe82-44e7-a11a-121ae9f0f163', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Uppenantha - Aarya 2', 'e----3/5---5---5---8---7---5-----------------------------5-------------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('384da8c7-fe82-44e7-a11a-121ae9f0f163', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Uppenantha - Aarya 2', 'e----3/5---5---5---8---7---5-----------------------------5-------------------
 B-5---------------------------------8---6---5---6---6---6-------8/10---8-------
 e----3/5---5---5---8---7---5----5---8---8/10---10--10/12-8--------
 B-5--------------------------------8---------------------------------------------10---
@@ -14047,7 +14047,7 @@ e----3/5---5---5---8---7---5-----------8--10---11---12--11--10--------------
 B-5--------------------------------8---10-------------------------------------13---10----', 'KK', 'Aarya-2', 2009, NULL, NULL, FALSE, '2018-02-06T12:24:08.794000+00:00', '2019-12-13T12:47:46.372000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('25e9faf1-1053-4227-8fb0-9bae6f477557', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '384da8c7-fe82-44e7-a11a-121ae9f0f163', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1adaa033-3a53-4343-9f0c-bb4a37f05625', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '384da8c7-fe82-44e7-a11a-121ae9f0f163', '50e1f043-40b6-42ce-8468-0952aa965c22');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('2f2d8ad5-21f5-4ba5-b814-c6ce4c27f1e4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jai Ganesh Deva', 'Jai Ganesh, Jai Ganesh, Jai Ganesh Deva
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('2f2d8ad5-21f5-4ba5-b814-c6ce4c27f1e4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jai Ganesh Deva', 'Jai Ganesh, Jai Ganesh, Jai Ganesh Deva
 ```e | - - - - - - - - - 5 - 5 -5-5 - - - 5 -5 - 6-5-6 - 5-5 - - -
 B | - 6 - 6-8-6 - - - - - - - - - - - - - - - - - - - - - - - - 8 - 
 ```
@@ -14081,7 +14081,7 @@ B | - 5-5 - 6 - 5 - - 8 - 8-8-6 - - - - - - 8-8 - 6-6 -
 ```', 'Anuradha Paudwal', 'Aarti', 1993, NULL, 'https://www.youtube.com/watch?v=RQo5uqktz-Q', FALSE, '2018-09-11T14:23:39.727000+00:00', '2018-09-13T15:18:34.145000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7362a2ca-8808-4334-a916-5c5d20c8a66f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2f2d8ad5-21f5-4ba5-b814-c6ce4c27f1e4', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5cfb7e60-d04f-404d-8eb9-2cd69c7b8212', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2f2d8ad5-21f5-4ba5-b814-c6ce4c27f1e4', '6a3e1159-3e7b-4145-b202-58429f143d25');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('ae566859-b0cf-427a-b19b-590eec475a0d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Xiaomi Mi Official Ringtone', '```E|--------8--------8-------------------10----------10---------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('ae566859-b0cf-427a-b19b-590eec475a0d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Xiaomi Mi Official Ringtone', '```E|--------8--------8-------------------10----------10---------
 B|-----8--------8--------------------8-----------8--------------
 G|--9--------9--------9h10----7-----------7--------7h9--
 ```
@@ -14092,7 +14092,7 @@ G|--5--------5---------5----------7-----------7-------------7-------
 ```', 'Xiaomi', 'N/A', 2023, NULL, 'https://www.youtube.com/watch?v=8mQUUHKjSwk', FALSE, '2018-12-25T07:08:14.177000+00:00', '2018-12-25T07:14:52.076000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('62d8757c-6ad0-4e62-a3e5-87428d7e10ca', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ae566859-b0cf-427a-b19b-590eec475a0d', '19e5627d-a2b0-4d3f-9425-eb88225bd761');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('df3b0492-07f0-442e-9e46-b36e68a79a53', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ae566859-b0cf-427a-b19b-590eec475a0d', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('cdd94a5e-30dd-4c26-a6a9-67b4a8fe252c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Maine Dil Se Kaha', 'Maine dil se kaha
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('cdd94a5e-30dd-4c26-a6a9-67b4a8fe252c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Maine Dil Se Kaha', 'Maine dil se kaha
 ```E|-------------------8--
 B|---------------------
 G|-9-7-5- - -5-7-9--------
@@ -14149,7 +14149,7 @@ Maine dil se kaha, dhoond laana khushi
 Nasamajh laya gum, to yeh gum hi sahi', 'KK', 'Rog', 2005, NULL, 'http://rockonguitar247.blogspot.com/2013/07/maine-dil-se-kaha-guitar-tabs-rog.html', FALSE, '2018-08-28T15:38:06.743000+00:00', '2019-04-10T10:32:34.151000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('eb8c101e-e4ea-4f79-9088-6f33d43eaf38', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'cdd94a5e-30dd-4c26-a6a9-67b4a8fe252c', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7b63c54f-c218-4d23-b515-ffa94313c5eb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'cdd94a5e-30dd-4c26-a6a9-67b4a8fe252c', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('ef38d721-c3b1-4614-8426-90b8df8c3f9f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hum bewafa hargiz na the', 'Hum bewafa hargiz na the
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('ef38d721-c3b1-4614-8426-90b8df8c3f9f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hum bewafa hargiz na the', 'Hum bewafa hargiz na the
 ```e|-----------------------------------
 ```
 b|---------------------------8--6-----
@@ -14165,7 +14165,7 @@ g|---------------------------------------10---------
 Repeat for Humko mili ... uski saza ... hum jo khata .... kar na sake', 'Kishore Kumar', 'Shalimar', 1978, NULL, NULL, FALSE, '2018-08-16T02:28:25.627000+00:00', '2019-01-01T14:35:04.464000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ca6ba0a2-bddf-4c55-a712-3842bdbe8cb5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ef38d721-c3b1-4614-8426-90b8df8c3f9f', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('37690364-66f3-4655-bceb-015339a6851f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ef38d721-c3b1-4614-8426-90b8df8c3f9f', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('2b2b9c52-4141-414f-b67f-3f82fbd90f15', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Yaar Ni Milya', '```e | - - - - - - - - - - - - -3-0 - - - - - - - - - - - - - - - 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('2b2b9c52-4141-414f-b67f-3f82fbd90f15', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Yaar Ni Milya', '```e | - - - - - - - - - - - - -3-0 - - - - - - - - - - - - - - - 
 B | -0h1- -1-1 - - - - - - - -3- -0h1p- -0-0-0 - 
 G | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ```
@@ -14243,7 +14243,7 @@ Chords used : C, Am, F, G', 'https://www.youtube.com/watch?v=IjUbzcjGkdw', FALSE
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('68eda5f1-68fa-486e-8a70-e65592751832', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2b2b9c52-4141-414f-b67f-3f82fbd90f15', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('38f9be4f-81fa-41a3-8a18-6c28f92d2e2f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2b2b9c52-4141-414f-b67f-3f82fbd90f15', 'f38a575b-3040-4496-8494-78d603e260b4');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('854a786d-3478-4edc-9385-09275a0a4f09', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2b2b9c52-4141-414f-b67f-3f82fbd90f15', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('f4d214e1-ce24-4bbd-b0d7-278d2c6849a5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Teri Panah mein hume rakhna', 'Te(Em)ri panah me hume rakh(D)na
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('f4d214e1-ce24-4bbd-b0d7-278d2c6849a5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Teri Panah mein hume rakhna', 'Te(Em)ri panah me hume rakh(D)na
 Si(Em)khe hum nek raah par chalna
 Te(Em)ri panah me hume rakh(D)na
 Si(Em)khe hum nek raah par chalna
@@ -14271,7 +14271,7 @@ Si(Em)khe hum nek raah par chalna', 'Sadhana Sargam, Sarika Kapoor', 'Panaah', 1
 Strumming don''t know - probably D DU UDU', 'http://musicguitarstation.blogspot.com/2016/07/guitar-chords-teri-panaah-mein-hume.html', FALSE, '2019-07-14T02:00:21.384000+00:00', '2019-09-18T02:24:49.944000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5382d90d-8f6b-40e1-ab61-2bb0d14b821e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f4d214e1-ce24-4bbd-b0d7-278d2c6849a5', '6a3e1159-3e7b-4145-b202-58429f143d25');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4b723286-78e6-49e5-b593-d039c6cfaf25', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f4d214e1-ce24-4bbd-b0d7-278d2c6849a5', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('33926114-6f0d-4d47-949a-5c870bc13eff', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Main Hoon Hero Tera', '```E |----8-8-------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('33926114-6f0d-4d47-949a-5c870bc13eff', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Main Hoon Hero Tera', '```E |----8-8-------
 B |-9-11----9-8-9/11----
 ```
 Aankhon ke panno pe
@@ -14348,13 +14348,13 @@ D |----------------------
 Ke Main Hoon Hero Tera', 'Salman Khan', 'Hero', 2015, NULL, NULL, FALSE, '2018-01-14T11:11:32.574000+00:00', '2018-01-14T11:26:08.354000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('00afc2ea-97b0-4f0e-9632-828e63f906c7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '33926114-6f0d-4d47-949a-5c870bc13eff', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8cc24167-cd7a-418d-8f9d-5e1eee868243', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '33926114-6f0d-4d47-949a-5c870bc13eff', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('0427c2d5-9eba-418e-8de3-d684985d6547', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tera Mera Pyar (Kumar Sanu)', 'Capo - 4th fret', 'Kumar Sanu', 'Tera Mera Pyar', 2004, 'd d udud du', 'https://aditsguitarlessons.com/tera-mera-pyar-kumar-sanu/
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('0427c2d5-9eba-418e-8de3-d684985d6547', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tera Mera Pyar (Kumar Sanu)', 'Capo - 4th fret', 'Kumar Sanu', 'Tera Mera Pyar', 2004, 'd d udud du', 'https://aditsguitarlessons.com/tera-mera-pyar-kumar-sanu/
 https://www.youtube.com/watch?v=mq4Yw1J_gcE', FALSE, '2019-02-18T02:52:15.203000+00:00', '2019-02-24T02:24:30.413000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('743fb7e4-6913-4a43-b015-42e5c5dd487c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0427c2d5-9eba-418e-8de3-d684985d6547', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c06aa506-f135-47f4-b4f2-63697f15b643', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0427c2d5-9eba-418e-8de3-d684985d6547', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('14268b55-7bdd-4519-9268-ce6f3cb39fbc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0427c2d5-9eba-418e-8de3-d684985d6547', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ba4b345e-ded4-4095-af4c-189102bb5d24', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0427c2d5-9eba-418e-8de3-d684985d6547', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('9ef50b78-347d-4767-bff6-b1f6b3334be6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Po nee po', 'Intro Music
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('9ef50b78-347d-4767-bff6-b1f6b3334be6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Po nee po', 'Intro Music
 ```e | - - - - - - - - - - - - - - - - - - -  - - - - - -
 B | - - - - - - - - - - - - - - - - - - - - - - - - -
 ```
@@ -14398,12 +14398,12 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f0affd0b-ad
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('efd8eea9-2c97-4d26-8616-e1ba466737d9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9ef50b78-347d-4767-bff6-b1f6b3334be6', '74d4c762-17cd-4377-b23a-52bf90f64c92');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('0abad076-ce47-4fb0-b32d-4408a4c2004d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9ef50b78-347d-4767-bff6-b1f6b3334be6', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e9aa6ba9-802e-4014-93d4-af95a1b5a2b7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9ef50b78-347d-4767-bff6-b1f6b3334be6', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('341769c6-a3cc-4ec1-b95d-271b44a538c6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tere Mere Milan Ki', '', 'Lata Mangeshkar, S. P. Balasubrahmanyam', 'Abhimaan', 1973, 'Ddd DUDU
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('341769c6-a3cc-4ec1-b95d-271b44a538c6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tere Mere Milan Ki', '', 'Lata Mangeshkar, S. P. Balasubrahmanyam', 'Abhimaan', 1973, 'Ddd DUDU
 Chords used : A, D, E, G', 'https://tabs.ultimate-guitar.com/tab/lata_mangeshkar/tere_mere_milan_ki_chords_1995647', FALSE, '2019-05-18T08:22:13.213000+00:00', '2019-05-18T08:22:52.324000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1b6b935d-207c-496a-bda7-6e14c6fffd5c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '341769c6-a3cc-4ec1-b95d-271b44a538c6', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9e4d6d43-ddd4-4cc5-9156-0ef3b4ef919d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '341769c6-a3cc-4ec1-b95d-271b44a538c6', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8621fcb2-820e-4765-b97c-b43f3c4629f0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '341769c6-a3cc-4ec1-b95d-271b44a538c6', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('8095cf9c-0fc7-4e81-a7ec-677953c62a3e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Shayad - Love Aaj Kal', '===========FINGERSTYLE===============
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('8095cf9c-0fc7-4e81-a7ec-677953c62a3e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Shayad - Love Aaj Kal', '===========FINGERSTYLE===============
 [C]Shayad kabhi na [D]keh sakun me [G]tum ko
 [Am]Kahe bina [D]samajhlo tum [Em]shayad
 [C]Shayad mere [D]khayal me tum [G]ikk din
@@ -14450,7 +14450,7 @@ Strum : D D UUD DU
 Chords used : C, D, G, Am, Em, Bm', 'https://www.youtube.com/watch?v=d2u_TKR7btc', FALSE, '2020-02-23T14:40:57.474000+00:00', '2020-03-07T03:01:42.663000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4d77f27f-23b5-44d3-8648-5ed4a13f3101', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '8095cf9c-0fc7-4e81-a7ec-677953c62a3e', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a763cff1-64c6-4fb6-8679-8737232b728d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '8095cf9c-0fc7-4e81-a7ec-677953c62a3e', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('c9772224-52b5-42b2-b1a8-4b14faab810b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Sun Raha Hai Na Tu', 'mujko iraade de
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('c9772224-52b5-42b2-b1a8-4b14faab810b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Sun Raha Hai Na Tu', 'mujko iraade de
 8-7-5-5-5-5
 
 kasme de vade de
@@ -14483,7 +14483,7 @@ ro rahan hu me
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e80bd253-8df5-4f38-bcd8-5018be64cc13', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c9772224-52b5-42b2-b1a8-4b14faab810b', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('093ab501-0ab3-4146-9d94-e51d5db0724a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c9772224-52b5-42b2-b1a8-4b14faab810b', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f31b0210-e1be-462f-9025-8b1aadb51006', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c9772224-52b5-42b2-b1a8-4b14faab810b', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('72560148-98e8-4710-a52d-4a2eb3a66ae4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kangal Irandal', 'Kangal Irandal Un Kangal Irandal
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('72560148-98e8-4710-a52d-4a2eb3a66ae4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kangal Irandal', 'Kangal Irandal Un Kangal Irandal
 B--------------------------8--------------------------------8---- B
 G------7--10---9-10------10-9----7--10---9-10------ G
 Ennai Katti Izhuthai Izhuthai Podhadhena
@@ -14543,7 +14543,7 @@ B------------------------------------------------8-8---------- B
 G-----------------------------------------------------10-9---- G', 'Belly Raj, Deepa Miriam', 'Subramaniapuram', 2008, NULL, NULL, FALSE, '2018-01-09T15:06:02.264000+00:00', '2019-01-03T15:44:50.515000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('cbaa7d64-13eb-40be-8ce3-6ff7da6a8880', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '72560148-98e8-4710-a52d-4a2eb3a66ae4', '74d4c762-17cd-4377-b23a-52bf90f64c92');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('20e9303a-6d33-44b9-974d-dceaae5401dc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '72560148-98e8-4710-a52d-4a2eb3a66ae4', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('1e1dc29d-0b79-4c42-8864-9c39c70f05c8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hum Thay Seedhe Saadhe', 'Intro (after capo)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('1e1dc29d-0b79-4c42-8864-9c39c70f05c8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hum Thay Seedhe Saadhe', 'Intro (after capo)
 ```e | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 B | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 G | - - - -  - 2 - -2- - - - - - - - - - - - - - - - - - - - - - 
@@ -14615,7 +14615,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e1dc96c6-31
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('307e659e-cb8a-4b20-9d4c-2cd1e958f27e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '1e1dc29d-0b79-4c42-8864-9c39c70f05c8', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('65402b15-fffd-4a49-acbc-310678b80812', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '1e1dc29d-0b79-4c42-8864-9c39c70f05c8', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a3487af8-cf74-4b37-bb0e-dffb1583d88c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '1e1dc29d-0b79-4c42-8864-9c39c70f05c8', '8d4fc519-7375-432c-8b6a-6cf000e9f287');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('9318e2c3-625b-437c-8597-8520a8a79f0f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Iss qadar pyar hai - Ankit Tiwari', 'Intro : E.....A.....D.....E
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('9318e2c3-625b-437c-8597-8520a8a79f0f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Iss qadar pyar hai - Ankit Tiwari', 'Intro : E.....A.....D.....E
 
 (E) Iss qadar pyar hai tumse (D) aye (E) humsafar
 (E) Chandani naram si raat (D) ke honth (E) par
@@ -14665,7 +14665,7 @@ Chords used : E, D, C', 'https://www.youtube.com/watch?v=nq3-SzyXuT0
 https://tabs.ultimate-guitar.com/tab/misc-soundtrack/bhaag-johnny-iss-qadar-chords-3041721', FALSE, '2022-04-19T05:19:57.813000+00:00', '2022-05-09T15:20:01.039000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('efec35a5-dd6c-4e61-ac59-ccd3237c2bda', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9318e2c3-625b-437c-8597-8520a8a79f0f', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5bf769d1-5782-469b-a781-91884ce86eda', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9318e2c3-625b-437c-8597-8520a8a79f0f', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('7613710d-10c2-4771-b61d-f04e04aff67e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Fur Elise (Beethoven)', '```e | -0- - - -0- - - -0- - - - - - - - - - - - -
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('7613710d-10c2-4771-b61d-f04e04aff67e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Fur Elise (Beethoven)', '```e | -0- - - -0- - - -0- - - - - - - - - - - - -
 B | - - -4- - - -4- - - -0- - - -3- -1- - - - 
 G | - - - - - - - - - - - - - - - - - - - - -2- -
 ```
@@ -14735,7 +14735,7 @@ A | -3- - - - - - - - - - - - - - - - - - - -
 ```', 'Ludwig van Beethoven', 'Classical Masterpieces', 1810, NULL, 'https://www.youtube.com/watch?v=vav0zFv4FHY', FALSE, '2018-01-23T14:11:10.462000+00:00', '2018-01-24T02:43:20.661000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('0d40471e-9056-4480-88a4-3c73ccc418d4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7613710d-10c2-4771-b61d-f04e04aff67e', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('25eab434-eea0-46e3-a779-7f3d7d65eee6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7613710d-10c2-4771-b61d-f04e04aff67e', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('e0ae6087-9d90-4157-877a-40a9bd6c1bca', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Coffin Dance MEME Song (Astronomia)', '```E|---------------------------------------------------------------------------------------------------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('e0ae6087-9d90-4157-877a-40a9bd6c1bca', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Coffin Dance MEME Song (Astronomia)', '```E|---------------------------------------------------------------------------------------------------------
 B|----------------------------------------6-6-6-6-8-8-8-8-8-8-8-8-8-8-8-8------------------
 G|--------------7-7-7-7-5-5-5-5-----------------------------------------------------5-------------
 D|--8-8-8-8---------------------------------------------------------------------------------8-7------
@@ -14766,7 +14766,7 @@ A|------------------------------------------------------------------------------
 ```', 'Vicetone & Tony Igy', 'Astronomia', 2014, NULL, 'https://www.youtube.com/watch?v=zDiWEHctxms', FALSE, '2020-04-27T01:08:13.809000+00:00', '2020-04-27T01:51:54.352000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('93076f26-5754-443b-86de-c5fce1e27ad2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e0ae6087-9d90-4157-877a-40a9bd6c1bca', '19e5627d-a2b0-4d3f-9425-eb88225bd761');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a382bc76-dd38-4d27-bca3-2dd88b131383', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e0ae6087-9d90-4157-877a-40a9bd6c1bca', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('065c6f31-de60-4c9b-8f68-24b97a2ff586', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Zehanaseeb', '(D)     Zehna(D)seeb, Zehana(G)seeb
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('065c6f31-de60-4c9b-8f68-24b97a2ff586', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Zehanaseeb', '(D)     Zehna(D)seeb, Zehana(G)seeb
 Tujhe (Am)chaahun beta(C)hasha zehna(D)seeb
 Mere ka(D)reeb, mere ha(G)beeb
 Tujhe (Am)chaahun beta(C)hasha zehna(D)seeb
@@ -14782,7 +14782,7 @@ Tujhe (Am)chaahun beta(C)hasha zehna(D)seeb', 'Chinmayi Sripada, Shekhar Ravjian
 Chords used : D, G, Am, C, E', 'https://www.youtube.com/watch?v=fAeAUFkg59w', FALSE, '2018-10-20T02:02:52.520000+00:00', '2018-10-20T02:12:15.193000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('07b9329c-acce-4973-93e7-3ee9f7a4c791', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '065c6f31-de60-4c9b-8f68-24b97a2ff586', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('21f54621-1597-43f8-a87b-b19621aeb029', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '065c6f31-de60-4c9b-8f68-24b97a2ff586', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('89601fa2-342f-4056-8642-75a7e2c378c2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'L''s Theme - Death Note', 'PART A/PARTE A:
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('89601fa2-342f-4056-8642-75a7e2c378c2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'L''s Theme - Death Note', 'PART A/PARTE A:
 
 ```e|-----------------7---------------------------7---------------|
 B|--8---10---7-8-----10-8-7-----8---10---7-8-----10-8-7--------|
@@ -14836,7 +14836,7 @@ E|---------------------------------------------------------|
 Keyboard notes attached in img', 'https://www.tron544.com/l-s-theme-tabs', FALSE, '2023-07-29T02:55:02.069000+00:00', '2023-07-29T03:00:51.326000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d213c516-068c-4805-9bea-ce745e020f1c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '89601fa2-342f-4056-8642-75a7e2c378c2', '19e5627d-a2b0-4d3f-9425-eb88225bd761');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ca98c942-0e4f-4033-9a4b-b7e4dbd9c4f2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '89601fa2-342f-4056-8642-75a7e2c378c2', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('8ee8003e-a6c7-439c-ac13-92565463a7ea', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Harry Potter Theme', '```e|-----------------7-5-------|--0--3-2----1-----|
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('8ee8003e-a6c7-439c-ac13-92565463a7ea', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Harry Potter Theme', '```e|-----------------7-5-------|--0--3-2----1-----|
 B|--0-5--8-7-5----------7--|-----------3----0--|
 ```
 
@@ -14847,7 +14847,7 @@ B|-0-5--8-7-5---------------|----------------------|
 new version', 'John Williams', 'Harry Potter and the Sorcerer''s Stone (Original Motion Picture Soundtrack)', 2001, NULL, 'https://www.youtube.com/watch?v=L2zhY1tuSkY', FALSE, '2017-11-07T18:09:13.258000+00:00', '2018-08-11T10:09:05.878000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b0765afe-6b1b-4395-85e9-93e3e9557415', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '8ee8003e-a6c7-439c-ac13-92565463a7ea', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ea323b26-cbba-422b-924a-a193fc45c781', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '8ee8003e-a6c7-439c-ac13-92565463a7ea', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('4b0588ec-ec47-420f-b24c-0cbbf4fdb6da', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Raakh', 'Bm, A, Em, F#m
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('4b0588ec-ec47-420f-b24c-0cbbf4fdb6da', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Raakh', 'Bm, A, Em, F#m
 ```e | - - - - - - - - - - - - - - - - - - - - - -0-3-3 - -2-3-3 - -0-3-3 - 2-3-3-
 B | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 G | - 0-2-0- 0-2-0- 0-2-0- 0-2- - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -14904,14 +14904,14 @@ Chords used : G, Em, Bm, A, F#m', 'https://www.youtube.com/watch?v=tWdi_RidBEU',
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('97c27a46-4a26-4fff-a6d8-3d73bdbed582', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4b0588ec-ec47-420f-b24c-0cbbf4fdb6da', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('34a5f442-1427-4658-93a4-0609352edb8c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4b0588ec-ec47-420f-b24c-0cbbf4fdb6da', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7c6c2dd9-7350-47d9-b301-57a3bbbfad4e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4b0588ec-ec47-420f-b24c-0cbbf4fdb6da', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('bc8d0035-9208-4d83-9980-440e7c70e574', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aa Bhi Ja - Sur', '', 'Lucky Ali, Sunidhi Chauhan', 'Sur - The Melody of Life', 2002, 'Strum : D Dd Ddd
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('bc8d0035-9208-4d83-9980-440e7c70e574', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aa Bhi Ja - Sur', '', 'Lucky Ali, Sunidhi Chauhan', 'Sur - The Melody of Life', 2002, 'Strum : D Dd Ddd
 Chords used : Am, F, G, C, E, D, Dm', 'https://www.youtube.com/watch?v=Rrl5MQS7ByE
 https://tabs.ultimate-guitar.com/tab/lucky-ali/aa-bhi-ja-chords-1947471', FALSE, '2020-12-20T08:20:02.556000+00:00', '2020-12-20T08:21:00.351000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4b9ad33e-345c-4a8a-abcc-882f43393add', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'bc8d0035-9208-4d83-9980-440e7c70e574', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('eadb48bc-9971-49f5-9427-1ab1b09b9284', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'bc8d0035-9208-4d83-9980-440e7c70e574', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('98412234-291b-4b47-878c-55a1e0760f2a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'bc8d0035-9208-4d83-9980-440e7c70e574', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('28587109-05a3-48f3-b3be-f22efb640196', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'bc8d0035-9208-4d83-9980-440e7c70e574', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('4f3e83c4-239b-4c3e-8758-9863564db31f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kuch Khaas Hai - Fashion', 'Theme of Fashion (https://www.youtube.com/watch?v=aFi0zFKeoLc)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('4f3e83c4-239b-4c3e-8758-9863564db31f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kuch Khaas Hai - Fashion', 'Theme of Fashion (https://www.youtube.com/watch?v=aFi0zFKeoLc)
 ```e | - - - - - - - -8 -6 -8 -4 -6 -3 - -
 B | - - - - - -6 - - - - - - - - - - - - - -
 G | - 5- -6 - - - - - - - - - - - - - - - -
@@ -14958,7 +14958,7 @@ Kya ye bahaar hai, ya intezaar hai
 Shayad ye pyar hai, Pyaar hai shayad', 'Mohit Chauhan, Neha Bhasin', 'Fashion', 2008, NULL, NULL, FALSE, '2018-08-26T05:57:41.914000+00:00', '2019-04-16T15:02:33.390000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3032d5b2-63d4-4e56-850b-04559395c863', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4f3e83c4-239b-4c3e-8758-9863564db31f', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1ab52e31-9d5b-47f3-8d92-742c8569fa3a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4f3e83c4-239b-4c3e-8758-9863564db31f', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('aa5a0f99-9b6b-47da-9a7a-2375a24a0a0b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Pal - Jalebi', '```e | - - 10-8 - -6-5 - -10-8 - -6-5 - - 10-8 - -6-5- - - 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('aa5a0f99-9b6b-47da-9a7a-2375a24a0a0b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Pal - Jalebi', '```e | - - 10-8 - -6-5 - -10-8 - -6-5 - - 10-8 - -6-5- - - 
 B | -8 - - - - - - - - -8 - - - - - - - - - -8 - - - - - - - - - -8h 
 ```
 
@@ -15027,7 +15027,7 @@ Fingerstyle - 5  3  1&2  3
 Chords used : Em, D, C, Am', 'https://www.youtube.com/watch?v=o8GoJNAwfPA', FALSE, '2018-10-12T16:31:10.867000+00:00', '2019-04-05T03:56:10.171000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6655f0b3-bc06-40f6-b3ce-37c4feb7e36b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'aa5a0f99-9b6b-47da-9a7a-2375a24a0a0b', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('88455b7f-a2d6-420a-b326-9791c4394276', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'aa5a0f99-9b6b-47da-9a7a-2375a24a0a0b', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('5caa9eee-d605-4c62-baaa-914f2740b28b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tera Yaar Hoon Main', '(G)Tu jo rootha toh (Cadd9)kaun hansega
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('5caa9eee-d605-4c62-baaa-914f2740b28b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tera Yaar Hoon Main', '(G)Tu jo rootha toh (Cadd9)kaun hansega
 (Em7)Tu jo chhoota toh (Dsus4)kaun rahega
 (G)Tu chup hai toh (Cadd9)yeh darr lagta hai
 (Em7)Apna mujhko ko (Dsus4)ab kaun kahega
@@ -15060,7 +15060,7 @@ D D UUD DU
 Chords used : G, D, Am', 'https://www.youtube.com/watch?v=SL4xTfmJ7Ac', FALSE, '2018-10-13T09:49:11.127000+00:00', '2019-01-09T02:47:08.695000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('07be2aaa-bc74-4789-a27d-aff2598d11fc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5caa9eee-d605-4c62-baaa-914f2740b28b', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('78cfdaac-777a-474d-8cf0-74db25e75d8d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5caa9eee-d605-4c62-baaa-914f2740b28b', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('87bd5e92-fbdd-4423-979c-57084effc93a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jo Tu Na Mila - Asim Azhar', '```e | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('87bd5e92-fbdd-4423-979c-57084effc93a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jo Tu Na Mila - Asim Azhar', '```e | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 B | - - -1- - - - - -0 - - - - - - - - - - - - - - - - - - - - - - - - - - - 1- 0- - - - - - - - - - - - - - 
 G |  - - - 2 - - - - - - -0 - - - - 2- -0 - - - 0- - - - - - - - - - 2 - - - - - 0 - - - - - - - - - - - -
 D | - - - - - 2- - - - - - - -2 - - - - - - -3- - - - - 2- - -0 -3 - - - - - - - - 2- 0 -2 -0 - - - - -
@@ -15133,7 +15133,7 @@ Fingerstyle :
 Chords used : Am, F, C, G, Dm, E, Em', 'https://www.youtube.com/watch?v=s-GK0Q8Rplk', FALSE, '2023-05-21T12:53:29.841000+00:00', '2023-05-21T13:28:34.842000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b452ab8b-37f3-4b04-9d68-f12ab3cbc5b2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '87bd5e92-fbdd-4423-979c-57084effc93a', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3ad24e1e-c500-4093-a4de-7a748a9229ed', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '87bd5e92-fbdd-4423-979c-57084effc93a', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('1f5831f6-615c-4584-a20e-0e4a7c5fec8d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Despacito (m = muted)', 'Sí, sabes que ya llevo un rato mirándote 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('1f5831f6-615c-4584-a20e-0e4a7c5fec8d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Despacito (m = muted)', 'Sí, sabes que ya llevo un rato mirándote 
 ```E|----------------------9--10-12-10-9------------------10m-10m-
 B|--7/12------12-------------------------12-10-----------------
 G|-----------11--------------------------------------12m---------
@@ -15244,7 +15244,7 @@ B|--10-10-10-10-10----------------------
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7dce3f67-648c-475b-bdd8-2899c7ff12f4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '1f5831f6-615c-4584-a20e-0e4a7c5fec8d', '19e5627d-a2b0-4d3f-9425-eb88225bd761');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9bd2ea30-dece-4369-b7fb-d8be6edf0891', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '1f5831f6-615c-4584-a20e-0e4a7c5fec8d', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('0d7090d6-cb54-495d-81d7-e5e4ff7b7259', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '1f5831f6-615c-4584-a20e-0e4a7c5fec8d', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('f93c0a9c-641a-4b24-9f84-030b9b031813', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aaja Piya Tohe Pyaar Doon', 'aaja piya tohe pyaar doon...
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('f93c0a9c-641a-4b24-9f84-030b9b031813', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aaja Piya Tohe Pyaar Doon', 'aaja piya tohe pyaar doon...
 B>-1-3-3-5---5-5-5s3-3-3------
 
 Gori baiyyaan tope vaar doon...
@@ -15279,7 +15279,7 @@ Gori baiyyaan tope vaar doon
 B>-5-7-7-9--9-9-7-7-5h----------------------', 'Lata Mangeshkar', 'Baharon Ke Sapne', 1967, NULL, NULL, FALSE, '2018-01-14T08:10:34.196000+00:00', '2018-01-14T09:50:01.176000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c814b8da-57cb-41e0-9c8a-35c580107ca4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f93c0a9c-641a-4b24-9f84-030b9b031813', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3ef7a8ba-7e97-4fe6-8bff-ecff9e115b47', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f93c0a9c-641a-4b24-9f84-030b9b031813', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('f7db8dca-8652-4664-9c5c-02872649af92', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mere haath mein-Fanna', '0-7-7-8-5
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('f7db8dca-8652-4664-9c5c-02872649af92', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mere haath mein-Fanna', '0-7-7-8-5
 
 0-7-7-10-5
 
@@ -15297,7 +15297,7 @@ INSERT INTO public.notes (id, user_id, title, content, artist, album, release_ye
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('86f950f5-6b08-48ae-9d41-75d6de7d0d1a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f7db8dca-8652-4664-9c5c-02872649af92', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('0e454165-345b-434c-9663-023b4c69cc07', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f7db8dca-8652-4664-9c5c-02872649af92', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7903452a-9e1a-4361-a63a-82646049b7cf', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f7db8dca-8652-4664-9c5c-02872649af92', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('e9f77d12-f961-49f3-a56e-0fb436967910', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Om Jai Jagdish Hare', 'Om Jai Jagadish Hare
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('e9f77d12-f961-49f3-a56e-0fb436967910', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Om Jai Jagdish Hare', 'Om Jai Jagadish Hare
 e --------------------------
 B --------------------------
 G 5--5--5-5--5--4s5-5--7---
@@ -15425,7 +15425,7 @@ Om Jai Jagadish Hare', 'Shraddha Bhakti', 'Traditional Aarti', 2010, NULL, 'http
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5f5f4db0-6e91-461e-a415-aefb1e19f7fa', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e9f77d12-f961-49f3-a56e-0fb436967910', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('64cc0a40-76de-439e-8423-76ea8985767c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e9f77d12-f961-49f3-a56e-0fb436967910', '6a3e1159-3e7b-4145-b202-58429f143d25');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8a6fc1e9-fc5b-4023-8dfa-6932854fd6b3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e9f77d12-f961-49f3-a56e-0fb436967910', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('664a0439-695e-4677-85c4-69de87209c74', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Papa kehate hain', '```e |-0-0------------1-0------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('664a0439-695e-4677-85c4-69de87209c74', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Papa kehate hain', '```e |-0-0------------1-0------
 B |---3-1-3-----1-1------3-
 G |-------0-2-------------
 ```
@@ -15528,7 +15528,7 @@ Ki Meri Manzil Hai Kahan
 Papa Kehte Hain Bada Naam Karega….', 'Udit Narayan', 'Qayamat Se Qayamat Tak', 1988, NULL, NULL, FALSE, '2017-11-03T15:08:16.437000+00:00', '2017-11-03T15:35:53.861000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1ff12970-5587-40de-a09c-5280bd064e1b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '664a0439-695e-4677-85c4-69de87209c74', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1533e97c-0ff3-44c6-9a30-f6f85a0c0750', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '664a0439-695e-4677-85c4-69de87209c74', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('dcb1a6fb-e9c7-4ec3-b4c8-38f7925d3462', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aashiqui 2 LOVE THEME', '```E|-----------------------------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('dcb1a6fb-e9c7-4ec3-b4c8-38f7925d3462', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aashiqui 2 LOVE THEME', '```E|-----------------------------------
 B|-----7--8-----7--8-----------------
 G|--9---------9-----------------------
 D|--------------------------9--10---10-9--10-
@@ -15616,7 +15616,7 @@ G|--------------------9-----9--7-----9--
 ```', 'Mithoon', 'Aashiqui 2', 2013, NULL, 'https://www.youtube.com/watch?v=exBn4SEIDGk', FALSE, '2018-09-09T11:24:56.884000+00:00', '2019-01-03T15:18:05.498000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('873dd907-aa96-41e3-a8b1-81e1d4cd0e7c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'dcb1a6fb-e9c7-4ec3-b4c8-38f7925d3462', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9d175363-974e-4487-bdca-3b5db55b4db4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'dcb1a6fb-e9c7-4ec3-b4c8-38f7925d3462', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('7667e95a-49bb-48d5-86bd-9a96ecb51ba6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Pyaar to hona hi tha', 'E---5-4-2-2--2-2-2--2-2-4-5-7
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('7667e95a-49bb-48d5-86bd-9a96ecb51ba6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Pyaar to hona hi tha', 'E---5-4-2-2--2-2-2--2-2-4-5-7
 jab kisi ki taraf dil jhukne lage( play it slowly to get the right effect)
 E---5-4-2-2--2-2-2--2-2-4-5-7
 baat aa kar zuba tak rukne lage
@@ -15635,12 +15635,12 @@ B------------------12------------------------------------------12--------------
 pyaar to hona hi that pyaar to hona hi thaaa', 'Remo Fernandes, Jaspinder Narula', 'Pyaar To Hona Hi Tha', 1998, NULL, NULL, FALSE, '2017-11-07T17:38:41.004000+00:00', '2017-11-07T17:44:45.265000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('17cfd709-d0e9-4280-afda-cbd866e2136e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7667e95a-49bb-48d5-86bd-9a96ecb51ba6', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7712cb9a-8140-4369-a2ae-47f592d47a17', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7667e95a-49bb-48d5-86bd-9a96ecb51ba6', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('4eb2883f-aa7a-4f29-a5c2-86ac92fec205', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Not Today - Imagine Dragons', '', 'Imagine Dragons', 'Me Before You (Original Motion Picture Soundtrack)', 2016, 'D DU UDU', 'https://tabs.ultimate-guitar.com/tab/imagine_dragons/not_today_chords_1840365
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('4eb2883f-aa7a-4f29-a5c2-86ac92fec205', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Not Today - Imagine Dragons', '', 'Imagine Dragons', 'Me Before You (Original Motion Picture Soundtrack)', 2016, 'D DU UDU', 'https://tabs.ultimate-guitar.com/tab/imagine_dragons/not_today_chords_1840365
 https://www.azchords.com/i/imaginedragons-tabs-47565/nottoday-tabs-904993.html', FALSE, '2019-05-01T13:48:26.468000+00:00', '2019-05-01T13:56:33.491000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b2239637-7ba8-48e1-915b-59b55b34df13', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4eb2883f-aa7a-4f29-a5c2-86ac92fec205', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d30bf0d2-df97-4d53-9c78-257d60e86ce1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4eb2883f-aa7a-4f29-a5c2-86ac92fec205', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d24e1548-28c0-4540-8fab-757e19c8f9b9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4eb2883f-aa7a-4f29-a5c2-86ac92fec205', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('0fe0dad4-807f-4c38-b76f-06f87cbdf53b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chaap Tilak', 'Hmmm....hmmmm...ooo
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('0fe0dad4-807f-4c38-b76f-06f87cbdf53b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chaap Tilak', 'Hmmm....hmmmm...ooo
 
 Do nain tere do nain mere
 
@@ -15689,7 +15689,7 @@ Chords used : A, E', 'https://www.youtube.com/watch?v=QN5ALEBOfF8', FALSE, '2022
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c91840ba-4fb1-4216-a847-9265692dc7bb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0fe0dad4-807f-4c38-b76f-06f87cbdf53b', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a7fc1ac1-146f-44b9-b77b-e40beabe3e5b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0fe0dad4-807f-4c38-b76f-06f87cbdf53b', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5896c3eb-f34c-470e-8b2c-b6c808b4b891', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0fe0dad4-807f-4c38-b76f-06f87cbdf53b', '8d4fc519-7375-432c-8b6a-6cf000e9f287');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('778941c2-a888-4722-9272-5b511e73b9b1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mere Mehboob Qayamat Hogi', 'Mere (Em)Mehboob Qaya(D)mat Hogi
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('778941c2-a888-4722-9272-5b511e73b9b1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mere Mehboob Qayamat Hogi', 'Mere (Em)Mehboob Qaya(D)mat Hogi
 Aj Rus(C)waa Teri Galli(D)yon Mein Moha(Em)bbat Hogi
 Meri Nazr(Em)ein To Gila(D)Krti Hai
 Tere Dil(C) Ko Bhi Sanam(D)Tujh Se Shikaa(Em)yat Hogi
@@ -15722,7 +15722,7 @@ https://tabs.ultimate-guitar.com/tab/kishore_kumar/mere_mahboob_qayamat_hogi_cho
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7b718f48-4b35-46fe-9c4f-0161ee3ba0d2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '778941c2-a888-4722-9272-5b511e73b9b1', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('df503e6d-036b-4f61-8fe9-b7a9a8b30e1b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '778941c2-a888-4722-9272-5b511e73b9b1', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('40da146f-7703-48c3-b08f-4dbdd3769d1f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '778941c2-a888-4722-9272-5b511e73b9b1', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('a874d864-e570-4d28-8bbd-a87b4b169e6f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aadat - Jal', '(Am) Na jane kabse
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('a874d864-e570-4d28-8bbd-a87b4b169e6f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aadat - Jal', '(Am) Na jane kabse
 Umeedein kuch (F) baaki hai
 Mujhe Phir Bhi Teri (Am) Yaad
 Kyun (F) Aati Hai
@@ -15779,11 +15779,11 @@ Aaaaa Ooooooooo
 Ab To (Am) Aadat Si Hai Mujh (G) Ko (F)', 'Jal', 'Aadat', 2004, 'Capo - 4th Fret', 'https://wrytin.com/rahulpandey/aadat-chords-jal-jeldiljp', FALSE, '2022-12-19T15:54:07.913000+00:00', '2022-12-19T15:54:47.557000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7c5eeb8c-0098-4f90-aafd-d944422d987e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a874d864-e570-4d28-8bbd-a87b4b169e6f', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c8db27cf-3531-48a6-856c-526f84359b37', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a874d864-e570-4d28-8bbd-a87b4b169e6f', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('71acde38-83fe-414d-a06c-f6989ab83ffc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Naam hai tera (Aap ka Surroor)', '', 'Himesh Reshammiya', 'Aap Kaa Surroor', 2006, NULL, 'https://www.youtube.com/watch?v=Q9dbNre_yyk', FALSE, '2018-08-05T06:23:04.213000+00:00', '2018-08-05T06:23:11.592000+00:00');
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('71acde38-83fe-414d-a06c-f6989ab83ffc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Naam hai tera (Aap ka Surroor)', '', 'Himesh Reshammiya', 'Aap Kaa Surroor', 2006, NULL, 'https://www.youtube.com/watch?v=Q9dbNre_yyk', FALSE, '2018-08-05T06:23:04.213000+00:00', '2018-08-05T06:23:11.592000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5e99f021-250d-4cb8-8b91-ca7d59fe6387', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '71acde38-83fe-414d-a06c-f6989ab83ffc', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('91f266be-0ba8-410a-872b-3a469e04f818', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '71acde38-83fe-414d-a06c-f6989ab83ffc', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('30212359-288e-4904-9944-6dbadbb121d3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '71acde38-83fe-414d-a06c-f6989ab83ffc', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('f74db73c-11bf-4378-9281-dc0efbfef5c0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jan Gan Man', 'jan gaN man adhinaayak jay he 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('f74db73c-11bf-4378-9281-dc0efbfef5c0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jan Gan Man', 'jan gaN man adhinaayak jay he 
 e-0--2--4-4-4-4-4--4-4-4--4-4--2--4--5--
 bhaarat bhaagy vidhaataa 
 e-4--4-4----2--2-2-----2-0-
@@ -15827,7 +15827,7 @@ e-0---2---4----2-4-5--', 'Rabindranath Tagore', 'National Anthem of India', 1911
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f908b5a8-8af7-4bec-b899-a9e01199b03a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f74db73c-11bf-4378-9281-dc0efbfef5c0', 'ae6a7dff-8c54-4846-bf93-deb177ecbb68');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('0375b024-00c0-403c-92c5-8045d5624e74', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f74db73c-11bf-4378-9281-dc0efbfef5c0', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4895a75c-124e-4a26-8070-c88f204bb91f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f74db73c-11bf-4378-9281-dc0efbfef5c0', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('87ab8d80-a74d-4e6c-b081-db9bbb7a17f9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ek Din Teri Rahon Me', 'Intro
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('87ab8d80-a74d-4e6c-b081-db9bbb7a17f9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ek Din Teri Rahon Me', 'Intro
 e-----------------------------------------------------------
 B-----6-5-6-6-6-5-6----------5----5-5-5-----5--
 G---------------------------------------7----------7----
@@ -15845,7 +15845,7 @@ D--7-------------------------------------------------', 'Zubeen Garg', 'Naqaab',
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c77e50e8-a51e-4a85-8018-8aaa418f146b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '87ab8d80-a74d-4e6c-b081-db9bbb7a17f9', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('0ae0efae-7d05-425c-a828-27bd4e09258d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '87ab8d80-a74d-4e6c-b081-db9bbb7a17f9', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('aed21192-6cb3-4c40-9ffb-79c26bdd6993', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '87ab8d80-a74d-4e6c-b081-db9bbb7a17f9', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('f986c477-0476-40f5-9023-75f2e2198de0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Soch (Hardy Sandhu)', 'Hmm Hmm Hmm Hmmm
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('f986c477-0476-40f5-9023-75f2e2198de0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Soch (Hardy Sandhu)', 'Hmm Hmm Hmm Hmmm
 G-9--8---9/11---9---------------------------------|
 D----------------------------------------------------|
 Hoo Hoo hooo
@@ -15904,7 +15904,7 @@ http://rockonguitar247.blogspot.in/2014/01/soch-guitar-tabs-hardy-sandhu-punjabi
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1f331af7-d702-44e5-b14e-b12f9d65ed00', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f986c477-0476-40f5-9023-75f2e2198de0', 'f38a575b-3040-4496-8494-78d603e260b4');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('53ce32d3-103b-4a12-bcb4-d29245e20fe0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f986c477-0476-40f5-9023-75f2e2198de0', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e3367731-9ebd-4381-be83-4f9c98d26592', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f986c477-0476-40f5-9023-75f2e2198de0', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('87deafa3-7172-415c-9161-53e44f833caf', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Perfect - Ed Sheeran', 'I found a love for me
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('87deafa3-7172-415c-9161-53e44f833caf', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Perfect - Ed Sheeran', 'I found a love for me
 ```e | - - - - - - - - - - - - - - - -
 B | - - - - - - - - - -1- - - -1-  
 G | - - - - 1-1 - - - - -3-1- - - 
@@ -16068,7 +16068,7 @@ I don''t deserve this
 You look perfect tonight', 'Ed Sheeran', '÷ (Divide)', 2017, NULL, 'https://www.youtube.com/watch?v=Y5KwhGJntf4', FALSE, '2018-06-23T11:46:37.203000+00:00', '2018-06-27T04:05:40.147000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1b71ec4f-041d-4ffa-a702-c6debd6bddde', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '87deafa3-7172-415c-9161-53e44f833caf', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f2d17669-dc24-44ac-ad45-a735661f95a6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '87deafa3-7172-415c-9161-53e44f833caf', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('9afa6de7-e6fc-41f4-be89-19233f52d318', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'O O Jaane Jaana', '=========Starting Tune==============
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('9afa6de7-e6fc-41f4-be89-19233f52d318', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'O O Jaane Jaana', '=========Starting Tune==============
 ```E|-----0--0--
 B|------3--3-
 G|-1h2-2-2-----
@@ -16119,7 +16119,7 @@ Pyaar Mein Ek Din  Meri Jaan Tujhe Hai Paana', 'Kamaal Khan', 'Pyaar Kiya To Dar
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('68944649-b57e-4154-a96b-00621dec0c11', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9afa6de7-e6fc-41f4-be89-19233f52d318', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('37e69957-0095-495b-9d16-27ab3d0cb888', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9afa6de7-e6fc-41f4-be89-19233f52d318', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('98042eba-4756-4efc-b519-684f48a4e5eb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9afa6de7-e6fc-41f4-be89-19233f52d318', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('fdebf52f-4332-4448-be81-0d5b77727600', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Khairiyat', 'Intro Music:
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('fdebf52f-4332-4448-be81-0d5b77727600', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Khairiyat', 'Intro Music:
 [Am] [Am] [G] [F] [Two Times]
 
 Chorus
@@ -16192,7 +16192,7 @@ D-Chuck  D  U-Chuck', 'https://rewindcaps.com/khairiyat-chords/', FALSE, '2019-0
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9eba13fc-cac1-42ea-a8f5-0b0e7214db0b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fdebf52f-4332-4448-be81-0d5b77727600', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e4267f3c-6db1-4021-a3e4-644d463ac8fb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fdebf52f-4332-4448-be81-0d5b77727600', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('68cf28d4-ac4f-4e78-b96b-1f69b0d1c41b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fdebf52f-4332-4448-be81-0d5b77727600', '8d4fc519-7375-432c-8b6a-6cf000e9f287');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('dbdbe12e-655f-4d14-b07c-70bec2adaa3b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jitni Dafa', 'Intro
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('dbdbe12e-655f-4d14-b07c-70bec2adaa3b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jitni Dafa', 'Intro
 E-9-8-9-11-9-8------------9-8-9-11-9-8-----
 B---------------------11---------------------------11---
 
@@ -16224,7 +16224,7 @@ Chords used : Am, Em, G, C, F', 'https://www.youtube.com/watch?v=klo4EnLJK-w', F
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('99e1f2b5-4764-40f5-bdb5-f4005cbbde8c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'dbdbe12e-655f-4d14-b07c-70bec2adaa3b', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('bd108fd5-1ab7-4ade-bc4f-2763d187bd23', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'dbdbe12e-655f-4d14-b07c-70bec2adaa3b', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('33e46ab2-0299-44bc-a025-e6529ccb39bd', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'dbdbe12e-655f-4d14-b07c-70bec2adaa3b', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('58f18a83-67d4-4683-b26f-4ea16a6b32f1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dhuaan - Fugly', 'For F#m you can use A
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('58f18a83-67d4-4683-b26f-4ea16a6b32f1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dhuaan - Fugly', 'For F#m you can use A
 
 =========FINGERSTYLE (4-3-1-2)========
 (A)....(A)....(A)....(A)
@@ -16267,7 +16267,7 @@ Strumming : D D DUDU DU', NULL, FALSE, '2022-02-17T13:46:29.189000+00:00', '2022
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('64be6792-0a1d-4daa-b6ae-a032f98df4fd', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '58f18a83-67d4-4683-b26f-4ea16a6b32f1', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('538f8e91-8bf9-4a8e-a5fb-8d753f2dc3de', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '58f18a83-67d4-4683-b26f-4ea16a6b32f1', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('136bcf75-6528-4137-92e2-35f7adeb00c1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '58f18a83-67d4-4683-b26f-4ea16a6b32f1', '8d4fc519-7375-432c-8b6a-6cf000e9f287');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('ea562c24-76f9-4890-ac3e-d5685c35fa44', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mann Jaage - Bittoo Boss', '(Am) Mann jaage saari raat (F)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('ea562c24-76f9-4890-ac3e-d5685c35fa44', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mann Jaage - Bittoo Boss', '(Am) Mann jaage saari raat (F)
 Mera (Am) dewaana
 (Am) Mann maane na ye baat (F)
 Ki woh tha (Am) begaana
@@ -16358,7 +16358,7 @@ Deh (G) gaya hai bikhar ke', 'Shahid Mallya', 'Bittoo Boss', 2012, 'Capo at 5
 D UUD UUD DU', 'https://wrytin.com/manishchauhan/mann-jaage-chords-bittoo-boss-jg9nyu43', FALSE, '2019-05-09T02:27:28.590000+00:00', '2019-05-18T07:53:37.964000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('aa9280dd-c7be-41f7-a301-80ec342d0778', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ea562c24-76f9-4890-ac3e-d5685c35fa44', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6e1b564e-13ab-48c0-9d20-1ff96060634e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ea562c24-76f9-4890-ac3e-d5685c35fa44', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('7828c149-435c-4166-bd7b-b2c7ba80ac7c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Asal Mein - Darshan Raval', 'INTRO (without capo)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('7828c149-435c-4166-bd7b-b2c7ba80ac7c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Asal Mein - Darshan Raval', 'INTRO (without capo)
 ```e | -4 -4-3-4- 4/8 -6-8 -6h8 - 
 ```
 
@@ -16420,7 +16420,7 @@ Chords used : G, C, Em, D, Bm, Cm', 'https://www.youtube.com/watch?v=kvbuoKPUMSQ
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('73d39e1a-de09-4d34-a439-2acd64f1ab28', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7828c149-435c-4166-bd7b-b2c7ba80ac7c', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('66a29ba0-aebd-41a9-a263-85f5ce05ea2a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7828c149-435c-4166-bd7b-b2c7ba80ac7c', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2f36c57e-2d09-44c5-ba72-6e91ca967327', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7828c149-435c-4166-bd7b-b2c7ba80ac7c', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('6975bf62-069b-44b6-8145-548d13fd6a6d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tere SIva - Delhi Belly', 'huuu (D ) huuhuu [C] 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('6975bf62-069b-44b6-8145-548d13fd6a6d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tere SIva - Delhi Belly', 'huuu (D ) huuhuu [C] 
 huuu (D ) huuhuu [Dsus2] ]x2 
 
 ye hai (D ) dhuaan [C] 
@@ -16456,7 +16456,7 @@ tera [D] nasha', 'Ram Sampath, Jigar Saraiya', 'Delhi Belly', 2011, 'Strum : DD 
 Chords used : D, C, G, Em', 'https://www.youtube.com/watch?v=Vlkz-FJvMZE', FALSE, '2018-10-26T02:16:33.143000+00:00', '2019-04-03T13:15:34.051000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ac91d78f-060f-4ea3-b483-0d1a434b5ea5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6975bf62-069b-44b6-8145-548d13fd6a6d', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1c7c58c4-6d49-4280-bcad-4bed35891d1c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6975bf62-069b-44b6-8145-548d13fd6a6d', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('85183e66-781a-4dc2-8c45-92fa080ff025', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Labon Ko - KK', '[Para 1]
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('85183e66-781a-4dc2-8c45-92fa080ff025', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Labon Ko - KK', '[Para 1]
 (Am) Labonn ko la(G)bon pe sajao(F)o
 (Am) Kyaa hoo tumm (Am) mujhey abb bata(F)ao
 (E) Toddh doo khu(F)dd koo tumm
@@ -16503,7 +16503,7 @@ Strumming : D UU D UU D DU
 Chords used : Am, G, F, E', 'https://www.youtube.com/watch?v=Gfs8ULN-F54', FALSE, '2023-07-29T14:48:44.558000+00:00', '2023-07-29T14:50:33.350000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1019cf1a-7e46-4b4d-ad3c-04d94d4cf504', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '85183e66-781a-4dc2-8c45-92fa080ff025', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4bdcd3ff-77b2-405a-aa5c-c430f856fabf', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '85183e66-781a-4dc2-8c45-92fa080ff025', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('e292face-620f-4c5a-a9a9-59ddaa7043de', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Phir Aur Kya Chahiye - Zara Hatke Zara Bachke', '[Intro]
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('e292face-620f-4c5a-a9a9-59ddaa7043de', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Phir Aur Kya Chahiye - Zara Hatke Zara Bachke', '[Intro]
 [Am]Badle tere maahi
 [Am]Laa ke jo koi saari
 [Am]Duniya bhi [Dm]de de aga [F]toh
@@ -16549,7 +16549,7 @@ Strumming :
 Chords used : Am, Dm, F, G', NULL, FALSE, '2023-07-30T01:30:50.860000+00:00', '2023-07-30T01:33:06.176000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7c27f900-e25c-431a-9254-41c6bfdba091', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e292face-620f-4c5a-a9a9-59ddaa7043de', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('67bb8be4-d284-4aad-871f-f880db49fba4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e292face-620f-4c5a-a9a9-59ddaa7043de', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('01c48513-6660-49a6-9c2b-9cb49e593911', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Do Dil Mil Rahe Hain', '```e | - - - - - - - - - - - - - - - - -  - 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('01c48513-6660-49a6-9c2b-9cb49e593911', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Do Dil Mil Rahe Hain', '```e | - - - - - - - - - - - - - - - - -  - 
 B | - - - - - - - - - - - - - - - - - -
 G|-----0-1-0----0-
 D|-0-1-3--------3---
@@ -16662,7 +16662,7 @@ Asar Chupke Chupke
 Do Dil Mil Rahe Hain....', 'Kumar Sanu', 'Pardes', 1997, NULL, NULL, FALSE, '2017-10-26T16:08:12.001000+00:00', '2017-10-27T05:28:50.044000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('07f0aca6-5abd-4745-a42b-d957db8b895c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '01c48513-6660-49a6-9c2b-9cb49e593911', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5c3583db-81e5-499f-a019-b8e127b2c855', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '01c48513-6660-49a6-9c2b-9cb49e593911', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('a97de659-21c7-4ee0-b8ea-c7c0eaf84b54', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Keh doon tumhe', 'Socha hai yeh ke tumhe rasta bhulaye
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('a97de659-21c7-4ee0-b8ea-c7c0eaf84b54', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Keh doon tumhe', 'Socha hai yeh ke tumhe rasta bhulaye
 ```e | - - - - - - - - - - - - - - - - - - - - - - - - - - - --
 B | -10/11-11--10-10-8--8-10 - - - - - - 8-8-8 - -
 G | - - - - - - - - - - - - - - - - - - - - - 10-10- - - - - - -
@@ -16736,7 +16736,7 @@ Hota nahi hai jo hua hai abhi abhi
 (Keh doon tumhe)', 'Kishore Kumar, Asha Bhosle', 'Deewaar', 1975, NULL, NULL, FALSE, '2018-01-13T11:59:35.102000+00:00', '2019-04-04T04:09:23.952000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a1b36988-d535-4ecb-980c-55c9f56efd46', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a97de659-21c7-4ee0-b8ea-c7c0eaf84b54', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c56d70a1-a6ed-43f8-ad93-905000ddf160', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a97de659-21c7-4ee0-b8ea-c7c0eaf84b54', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('f5310b16-fde7-463f-89b1-0fba3f17b112', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hum Honge Kamyab Ek Din', 'Hum honge Kamyab
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('f5310b16-fde7-463f-89b1-0fba3f17b112', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hum Honge Kamyab Ek Din', 'Hum honge Kamyab
 ```E|-----------------------------------------------------
 B|--5--6---6/8--8---8/10----10--8\-6\5--
 ```
@@ -16775,7 +16775,7 @@ G|-----9--10-10/12-12----5----9/10--9-----5/7----7--5--
 ```', 'Girija Kumar Mathur (Hindi translation)', 'Traditional', 2004, NULL, 'https://www.youtube.com/watch?v=-OCkDrpQCEQ&feature=youtu.be', FALSE, '2020-04-19T06:32:21.887000+00:00', '2020-04-19T06:48:16.571000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('fd071d7f-c1d1-48e0-8ea1-b1e62c98648b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f5310b16-fde7-463f-89b1-0fba3f17b112', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('dda4f0de-f7b8-47ed-ba7d-2681ad73b505', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f5310b16-fde7-463f-89b1-0fba3f17b112', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('60fd8868-b84a-46a3-8d61-14174d468f79', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Gulabi Aankhein', 'Gulabi Aankhen...... Jo Teri dekhi,
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('60fd8868-b84a-46a3-8d61-14174d468f79', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Gulabi Aankhein', 'Gulabi Aankhen...... Jo Teri dekhi,
 e - - - - - - - - 8 - 8 - - - - - 8 - 7 - 8 - 10 - 7 - 
 B - 5 - 5 - 5 - - - - - - - - - - - - - - - - - - - - -
 Sharabi Ye Dil .......Ho Gaya,
@@ -16850,7 +16850,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('06805116-fb
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('136a7a03-6df9-4681-82d5-260df756091e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '60fd8868-b84a-46a3-8d61-14174d468f79', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('45731417-1535-45bd-ab59-49c3cb3b2800', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '60fd8868-b84a-46a3-8d61-14174d468f79', 'f6f1fa22-4ebb-4dfc-8a00-65f2e520dc91');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('70393d08-65ec-4b37-be2c-1e6359d164f6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '60fd8868-b84a-46a3-8d61-14174d468f79', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('820cccce-8698-4434-9ddb-d9e19729eca2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Raja Ko Rani Se Pyaar Ho Gaya', '```E |--5-8-7-5-8-7-------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('820cccce-8698-4434-9ddb-d9e19729eca2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Raja Ko Rani Se Pyaar Ho Gaya', '```E |--5-8-7-5-8-7-------
 B |-5--------6-8-6-5---
 G |------------
 ```
@@ -16924,7 +16924,7 @@ Dil Jigar Dono Ghaayal Hue
 Teere Nazar Dil Ke Paar Ho Gaya', 'Udit Narayan, Alka Yagnik', 'Akele Hum Akele Tum', 1995, NULL, NULL, FALSE, '2018-01-14T10:29:37.413000+00:00', '2018-01-14T10:55:36.870000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('18f3fdd6-0b60-4612-b85b-0d4aa80a02b9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '820cccce-8698-4434-9ddb-d9e19729eca2', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c7b59e79-15fe-48f1-853e-9992014d3d5a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '820cccce-8698-4434-9ddb-d9e19729eca2', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('d4130063-ca20-4898-aadf-f307585a6eb0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Zinda - Strings - Ye Hai Meri Kahaani', '(A) Yeh hai meri ka(Em)hani
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('d4130063-ca20-4898-aadf-f307585a6eb0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Zinda - Strings - Ye Hai Meri Kahaani', '(A) Yeh hai meri ka(Em)hani
 (A) Khamosh zinda(Em)gani
 (D) Sannata keh (A) raha hai
 (D) Kyun zulm seh (A) raha hai
@@ -16959,12 +16959,12 @@ Strumming : D D UUD D DU
 Chords used : A, Em, D', 'https://wrytin.com/mirayajain/zinda-chords-strings-jhsogmiz', FALSE, '2023-07-30T01:40:19.618000+00:00', '2023-07-30T01:42:04.145000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('84a50f86-7925-432c-963f-f71b2b345f3b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd4130063-ca20-4898-aadf-f307585a6eb0', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f7b116c0-6422-4cc6-9bee-9ff73f43361f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd4130063-ca20-4898-aadf-f307585a6eb0', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('63f2010d-95e0-4a3c-952e-478da276df09', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Roja Jaaneman - Kadhal Rojave', '', 'S. P. Balasubrahmanyam', 'Roja', 1992, NULL, 'https://musicianself.com/kadhal/', FALSE, '2020-12-21T12:02:09.331000+00:00', '2020-12-21T12:03:02.250000+00:00');
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('63f2010d-95e0-4a3c-952e-478da276df09', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Roja Jaaneman - Kadhal Rojave', '', 'S. P. Balasubrahmanyam', 'Roja', 1992, NULL, 'https://musicianself.com/kadhal/', FALSE, '2020-12-21T12:02:09.331000+00:00', '2020-12-21T12:03:02.250000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('fe30e48b-1236-4201-bb22-00b6d68fe1b7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '63f2010d-95e0-4a3c-952e-478da276df09', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7bfa461f-307e-4dbf-85de-258a9b6f7416', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '63f2010d-95e0-4a3c-952e-478da276df09', '74d4c762-17cd-4377-b23a-52bf90f64c92');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2ae0813d-e780-4c09-8ded-f4bcdbded911', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '63f2010d-95e0-4a3c-952e-478da276df09', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6add65b1-4bab-4ae1-9f63-94128d6cf8e3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '63f2010d-95e0-4a3c-952e-478da276df09', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('b58250bd-d970-4186-86c7-d94835c44231', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Don Theme', 'e-12------10------------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('b58250bd-d970-4186-86c7-d94835c44231', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Don Theme', 'e-12------10------------------
 B---12-13---10-11-------------
 G------------------10-9-------
 e-12-------10--------15-13-12--
@@ -16972,7 +16972,7 @@ B---12-13-----10-11------------
 G------------------------------', 'Shankar-Ehsaan-Loy', 'Don', 2006, NULL, NULL, FALSE, '2017-11-08T03:05:00.355000+00:00', '2017-11-08T03:20:03.794000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('780604c8-5208-46e7-9978-423abfcf5092', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b58250bd-d970-4186-86c7-d94835c44231', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1d49166f-f0f9-47f4-86fb-584739d26c10', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b58250bd-d970-4186-86c7-d94835c44231', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('2e1ab1ae-0756-4bcf-af0a-e8d842f4a38b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tum Hi Ho Mata', 'Tumhi Ho Mata, Pita Tumhi Ho
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('2e1ab1ae-0756-4bcf-af0a-e8d842f4a38b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tum Hi Ho Mata', 'Tumhi Ho Mata, Pita Tumhi Ho
 ```E|------------------------------------
 B|-----1---0-1-0---------------------
 G|--------------------0-2---0-------
@@ -17040,7 +17040,7 @@ A|----3-----------------------------
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3f738685-e5a6-4604-a64c-f408f1cf7400', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2e1ab1ae-0756-4bcf-af0a-e8d842f4a38b', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('968049a5-14b2-455f-afb2-815d0f883ae3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2e1ab1ae-0756-4bcf-af0a-e8d842f4a38b', '6a3e1159-3e7b-4145-b202-58429f143d25');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('731c6a10-397a-4994-a0b7-a9094c16dfbe', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2e1ab1ae-0756-4bcf-af0a-e8d842f4a38b', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('32fd2747-d67e-4a68-afd2-eb47add60159', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chura Liya Hai Tumne Jo Dil Ko', 'TBD  from link
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('32fd2747-d67e-4a68-afd2-eb47add60159', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chura Liya Hai Tumne Jo Dil Ko', 'TBD  from link
 
 
 
@@ -17102,7 +17102,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('21943798-48
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ad4a3efe-2b34-4849-b8be-85b6e08c8931', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '32fd2747-d67e-4a68-afd2-eb47add60159', 'f6f1fa22-4ebb-4dfc-8a00-65f2e520dc91');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('defb4063-ad78-46eb-9c3f-cbbe32bdb79a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '32fd2747-d67e-4a68-afd2-eb47add60159', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('dcc1722c-6f66-439a-b203-749609ff7db5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '32fd2747-d67e-4a68-afd2-eb47add60159', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('0962a784-85de-440e-9bf0-b2efc5121e36', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4 chords 9 Best Bollywood songs', 'Pani da rang		[D UUD UUD DU]
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('0962a784-85de-440e-9bf0-b2efc5121e36', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4 chords 9 Best Bollywood songs', 'Pani da rang		[D UUD UUD DU]
 (C D Em Em Em)
 Em	D	Em	D	C	Em	C	Em
 
@@ -17205,7 +17205,7 @@ D D UUD DDU', 'https://www.youtube.com/watch?v=rv5EWWT_Faw', FALSE, '2018-11-15T
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d5a4f82d-755b-4288-8401-c496c5850be4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0962a784-85de-440e-9bf0-b2efc5121e36', '07483aae-aaf2-498a-ad00-7abd0a0d46c3');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f48fa486-975e-4fb3-a4fb-d2921f959e41', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0962a784-85de-440e-9bf0-b2efc5121e36', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6ec692ae-c1d1-46ee-9967-3b0c106a991c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0962a784-85de-440e-9bf0-b2efc5121e36', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('e9fccc83-5533-4558-974e-a0b6d431521e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Saibo - Shor in The City', 'E-----------------------------------------------------------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('e9fccc83-5533-4558-974e-a0b6d431521e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Saibo - Shor in The City', 'E-----------------------------------------------------------------
 B--------7----7-10-7---------7----7-10-7---------------------------------
 G--9-7-9--------------9-7-9---------------9-7----9----9-9-11--9-7---7---------
 D-------------------------------------------------9-------------------9-----9--------
@@ -17213,7 +17213,7 @@ A-----------------------------------------------------------------
 E------------------------------------------------------------------', 'Shreya Ghoshal, Tochi Raina', 'Shor in the City', 2011, NULL, 'https://www.indianguitartabs.com/chords/threads/requesting-saibo-tabs-shor-in-the-city.47963/', FALSE, '2018-02-08T15:27:34.117000+00:00', '2018-02-13T02:20:56.862000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9013a8d2-6799-4e31-8255-e3ed100cc08d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e9fccc83-5533-4558-974e-a0b6d431521e', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4a701235-9008-418c-872f-b0828f1be1bb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e9fccc83-5533-4558-974e-a0b6d431521e', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('6dd177c1-fa0e-439a-a271-668ff63103d8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jeena Jeena (Badlapur)', 'e: 5-6----3-5----1-3--5-6----8-5-3-1 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('6dd177c1-fa0e-439a-a271-668ff63103d8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jeena Jeena (Badlapur)', 'e: 5-6----3-5----1-3--5-6----8-5-3-1 
 [Intro..]
 e: 5-6----3-5----1-3--5-6----8-5-3-1 
 [Intro..]
@@ -17256,7 +17256,7 @@ e: 5--5--6--8--8--10--8--6--5--3
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('133fef55-7da6-4bfe-925e-c49cf443c57a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6dd177c1-fa0e-439a-a271-668ff63103d8', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7dff5b2a-0ea0-4563-8839-cf67473a6946', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6dd177c1-fa0e-439a-a271-668ff63103d8', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('bb3f592e-a214-49ae-ab96-8b2a1ebda296', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6dd177c1-fa0e-439a-a271-668ff63103d8', '484fde0b-53ea-4d62-82d9-dff38182c04c');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('a37bb2d0-6561-4f36-9968-0591b45190f5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Baatein Kuch Ankahee Si', '```e | - - - - - - - - - - - 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('a37bb2d0-6561-4f36-9968-0591b45190f5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Baatein Kuch Ankahee Si', '```e | - - - - - - - - - - - 
 B|-1-1-0-1-0---
 G|------2-2-
 ```
@@ -17293,7 +17293,7 @@ B|---3--3-1-
 Shaayad Yahi Hai Pyaar…', 'Adnan Sami', 'Life in a... Metro', 2007, NULL, NULL, FALSE, '2017-11-01T04:35:19.580000+00:00', '2017-11-01T05:40:23.220000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('92cca587-1773-432e-9d25-c63bd6baefdb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a37bb2d0-6561-4f36-9968-0591b45190f5', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('0f506e34-452b-4408-b91b-bb9b7fadc3a7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a37bb2d0-6561-4f36-9968-0591b45190f5', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('19d7f148-6095-463e-83f9-70e9d9634108', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'All of me', '```e | - 0 - 0 - 0 - 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('19d7f148-6095-463e-83f9-70e9d9634108', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'All of me', '```e | - 0 - 0 - 0 - 
 ```
 
 ```e | - 1 - 1 - 1 - 
@@ -17310,7 +17310,7 @@ INSERT INTO public.notes (id, user_id, title, content, artist, album, release_ye
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('76e878bb-a9ff-43f3-801f-95e0db0273c4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '19d7f148-6095-463e-83f9-70e9d9634108', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('445f809f-da68-4506-8d81-800eba6c5cba', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '19d7f148-6095-463e-83f9-70e9d9634108', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d0372e8c-c0a8-4736-be00-af1e4eca3e03', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '19d7f148-6095-463e-83f9-70e9d9634108', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('ff2127ca-78d0-40fd-a386-3ec459614992', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tera Zikr - Darshan Raval', '===========FINGERSTYLE===============
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('ff2127ca-78d0-40fd-a386-3ec459614992', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tera Zikr - Darshan Raval', '===========FINGERSTYLE===============
 A(Am)bhi abhi to mi(G)le the
 Phir ju(F)da ho ga(G)ye
 Kya (Am) thi meri kha(G)taa
@@ -17344,7 +17344,7 @@ Tum fari(F)yaad karo(G)ge.................................(x2)', 'Darshan Raval'
 Chords used : Am, G, F, Em', 'https://tabs.ultimate-guitar.com/tab/darshan-raval/tera-zikr-chords-2331659', FALSE, '2020-03-20T13:15:34.372000+00:00', '2020-04-07T03:08:46.799000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('04d51888-8811-4d5c-b5dd-d7382bda8097', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ff2127ca-78d0-40fd-a386-3ec459614992', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9d7e9219-9276-4920-86b7-ba1a69ec928b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ff2127ca-78d0-40fd-a386-3ec459614992', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('5ff6e262-5954-4f93-b052-04a2f10e31af', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aabhi ja aa bhi ja', '(Am) Aabhi ja aabhi ja (F)hm hm hm hm (Am) aabhija
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('5ff6e262-5954-4f93-b052-04a2f10e31af', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aabhi ja aa bhi ja', '(Am) Aabhi ja aabhi ja (F)hm hm hm hm (Am) aabhija
 (Am) Na snata na sata (F)hm hm hm hm (Am) aabhija
 
 (Am) (F) (G) (E)
@@ -17401,7 +17401,7 @@ D D UUD DU
 Chords used : Am, F, G, E', 'https://tabs.ultimate-guitar.com/tab/aagman/aa_bhi_ja_mere_do_bacho_ki_maa_chords_1081826', FALSE, '2018-12-29T09:11:45.994000+00:00', '2019-05-01T13:11:33.983000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('31fd0f06-0179-4830-bb31-9c690002be02', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5ff6e262-5954-4f93-b052-04a2f10e31af', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ddaeb22d-6072-4f18-8ab6-42d9d7b1d799', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5ff6e262-5954-4f93-b052-04a2f10e31af', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('09ecd1a6-374a-4242-9213-e7f3b391c33c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '17 Hit ARIJIT SINGH Songs MASHUP', '(Am)Toota hua (G)saaz hoon main
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('09ecd1a6-374a-4242-9213-e7f3b391c33c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '17 Hit ARIJIT SINGH Songs MASHUP', '(Am)Toota hua (G)saaz hoon main
 (Am)Khud se hi naa(G)raaz hoon main
 (Am)Seene mein jo kahin (G)pe dabi hai
 (Am)Aisi koi aa(G)waaz hoon main
@@ -17609,7 +17609,7 @@ Chords used : Am, F, G', 'https://www.youtube.com/watch?v=oZR-fmTPUsg', FALSE, '
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e97973d6-c7ef-4dc0-8cf5-4e0b0f4c79f9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '09ecd1a6-374a-4242-9213-e7f3b391c33c', '07483aae-aaf2-498a-ad00-7abd0a0d46c3');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('50c264bf-d1e6-4962-a5fa-55e699730bac', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '09ecd1a6-374a-4242-9213-e7f3b391c33c', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4cdb4d98-1aaf-4b4c-8682-39eead922967', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '09ecd1a6-374a-4242-9213-e7f3b391c33c', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('0ac6dd8c-8a49-4cbe-8717-1f0862c0e4fc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hum Mar Jayenge - Aashiqui 2', '(G)Apni aankhen (Em)khaali karde
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('0ac6dd8c-8a49-4cbe-8717-1f0862c0e4fc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hum Mar Jayenge - Aashiqui 2', '(G)Apni aankhen (Em)khaali karde
 (Am)Kash tu meri (G)aankhen bhar de
 (C)Kash tu meri (G)aankhen bhar de.....
 
@@ -17662,7 +17662,7 @@ D Dd U Chuck
 Chords used : G, Em, Am, C, D', 'https://tabs.ultimate-guitar.com/tab/arijit-singh/hum-mar-jayenge-chords-3111587', FALSE, '2020-09-20T05:43:52.855000+00:00', '2020-09-22T08:15:33.294000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('dbd91c15-e6c9-4077-b15e-8128d0649c3d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0ac6dd8c-8a49-4cbe-8717-1f0862c0e4fc', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f1d79fcf-43e0-4c2e-8818-de35b7960c8e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0ac6dd8c-8a49-4cbe-8717-1f0862c0e4fc', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('60d31418-da60-4691-b433-268357070b22', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mumma - Dasvidaniya', '(D)Maa, (G)meri (D)maa, (G)pyari (D)maa,  (G)mam(D)maa
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('60d31418-da60-4691-b433-268357070b22', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mumma - Dasvidaniya', '(D)Maa, (G)meri (D)maa, (G)pyari (D)maa,  (G)mam(D)maa
 Ho o (D)Maa, (G)meri (D)maa, (G)pyari (D)maa,  (G)mam(D)maa
 
 (D)Haatho ki lakirein badal (G)jayengi
@@ -17702,12 +17702,12 @@ D U Chuck  D U Chuck  D DU
 Chords used : D, G, A', 'https://tabs.ultimate-guitar.com/tab/kailash-kher/mumma-chords-1142403', FALSE, '2020-09-20T08:21:40.852000+00:00', '2020-09-21T13:13:05.781000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('aaa9bfe8-2074-4f41-90a3-b88009df5864', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '60d31418-da60-4691-b433-268357070b22', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('de5182cf-db9f-4833-8568-ef60d600e747', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '60d31418-da60-4691-b433-268357070b22', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('ea0e1922-605a-41ec-ae2c-5890f008006b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mera Jeevan Kora Kaagaz', '', 'Kishore Kumar', 'Kora Kagaz', 1974, 'Ddd DUDU
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('ea0e1922-605a-41ec-ae2c-5890f008006b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mera Jeevan Kora Kaagaz', '', 'Kishore Kumar', 'Kora Kagaz', 1974, 'Ddd DUDU
 Capo at 1', 'https://tabs.ultimate-guitar.com/tab/kishore_kumar/mera_jeevan_kora_kagaz_chords_1829055', FALSE, '2019-04-23T04:25:13.452000+00:00', '2019-04-23T04:26:33.998000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4f8eceff-8f43-4a57-b26c-5aab664731ba', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ea0e1922-605a-41ec-ae2c-5890f008006b', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('eb8762c2-c9c8-42ad-84ba-c72797228e3b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ea0e1922-605a-41ec-ae2c-5890f008006b', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1ddcc3a7-166d-4cb3-9711-cc7a799f389a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ea0e1922-605a-41ec-ae2c-5890f008006b', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('1283d48e-380c-4381-96e1-d4081a65ff70', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'My Heart Will Go On (Titanic)', '```e | -0-2-4 - 2-0-2- 2/7- - 5-4-0- - - - 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('1283d48e-380c-4381-96e1-d4081a65ff70', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'My Heart Will Go On (Titanic)', '```e | -0-2-4 - 2-0-2- 2/7- - 5-4-0- - - - 
 B | - - - - - - - - - - - - - - - - - - - - - 2-0- 
 ```
 
@@ -17804,7 +17804,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7d2147d2-95
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9f213c2b-0022-4e14-9f87-22a503a72585', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '1283d48e-380c-4381-96e1-d4081a65ff70', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e8da4b66-9cb7-4d39-8c5d-baba6a4a9fac', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '1283d48e-380c-4381-96e1-d4081a65ff70', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('011fe9af-04f9-45f4-a5dc-00fe1be96fa6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '1283d48e-380c-4381-96e1-d4081a65ff70', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('1ac99352-69d7-42c9-b757-30d1997e432d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jee Le Zara - Talaash', '```B|-1-1--0-0------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('1ac99352-69d7-42c9-b757-30d1997e432d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jee Le Zara - Talaash', '```B|-1-1--0-0------
 G|-2-2-1-1---2-2-2-2-
 ```
 STARTING MELODY 
@@ -17910,7 +17910,7 @@ G|-2-2---1-1---2-2-2-2-
 IN BETWEEN MELODY', 'Vishal Dadlani', 'Talaash', 2012, NULL, 'http://tabnchord.blogspot.com/2013/04/jee-le-zara-guitar-tab-talaash.html', FALSE, '2019-09-20T02:25:46.555000+00:00', '2019-11-02T08:13:31.007000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('80f9f46c-91da-4385-9a0a-1c3ea6db1146', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '1ac99352-69d7-42c9-b757-30d1997e432d', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('86e484db-e89f-45e2-8ec5-f2f1803d56d6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '1ac99352-69d7-42c9-b757-30d1997e432d', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('9b9751ec-cc6e-4ec2-83e3-7ae5a98308fa', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tu Kuja Mann Kuja', '[Intro]
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('9b9751ec-cc6e-4ec2-83e3-7ae5a98308fa', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tu Kuja Mann Kuja', '[Intro]
 (Em)Ya Nabi. (C)Ya Nabi
 (B7)Salu Alaihi (Cm)Wa Aalihi
 
@@ -18037,7 +18037,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d849c3e4-bc
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('77e82aec-ab2c-456d-8948-680476f9da8f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9b9751ec-cc6e-4ec2-83e3-7ae5a98308fa', '1b68ed29-a956-4b7e-a109-7c9980c75b64');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a878e638-fe50-4157-98dd-5f918d3ea2bc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9b9751ec-cc6e-4ec2-83e3-7ae5a98308fa', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a289a572-76aa-4912-b98c-280d7f89a121', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9b9751ec-cc6e-4ec2-83e3-7ae5a98308fa', '6a3e1159-3e7b-4145-b202-58429f143d25');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('cbeaead4-1912-4270-8ccf-a97bea352fab', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Pehli Nazar Mein', 'Intro (https://youtu.be/0U8jmjSQHSo?t=204)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('cbeaead4-1912-4270-8ccf-a97bea352fab', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Pehli Nazar Mein', 'Intro (https://youtu.be/0U8jmjSQHSo?t=204)
 ```E|--9-----12--------------------------------
 B|--------------12----9---9h10---10----
 ```
@@ -18106,7 +18106,7 @@ D DU UDU', 'https://wrytin.com/priyankayadav/pehli-nazar-mein-chords-atif-aslam-
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('bab29b3d-6b9a-47b2-afe4-589edbf1ca4a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'cbeaead4-1912-4270-8ccf-a97bea352fab', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('197c9992-c5b3-45ed-882b-b6afd77a9e5f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'cbeaead4-1912-4270-8ccf-a97bea352fab', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b8f4bf13-6e08-4d62-8411-8e17bd3c715a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'cbeaead4-1912-4270-8ccf-a97bea352fab', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('de10e1b1-2225-42e0-a06a-aa4b3c4cbb77', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Neele Neele Ambar Pe', 'Am, G, F, Dm, E
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('de10e1b1-2225-42e0-a06a-aa4b3c4cbb77', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Neele Neele Ambar Pe', 'Am, G, F, Dm, E
 
 [Am]Neele neele [G]ambar par, [Am]chaand jab aaye
 [Am]pyaar barsaaye, [G]humko [Am]tarsaaye
@@ -18156,7 +18156,7 @@ Strum : D DU UDU   https://youtu.be/UjchT8-Frcw?t=47
 Chords used : Am, G, F, Dm, E', 'https://rewindcaps.com/neele-neele-ambar-par-chords/', FALSE, '2018-11-16T15:54:57.367000+00:00', '2018-11-17T11:09:09.051000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4590d724-f4da-4bfb-b49f-b6470f7b89ef', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'de10e1b1-2225-42e0-a06a-aa4b3c4cbb77', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1d9d2715-4d16-4756-9e77-9b441b50fe1f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'de10e1b1-2225-42e0-a06a-aa4b3c4cbb77', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('d112ab71-331b-4be1-b807-0f35cfd152ce', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ye shaam mastaanee', '(G)Ye shaam mastaanee, mada(Em)hosh kiye(G) jaaye
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('d112ab71-331b-4be1-b807-0f35cfd152ce', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ye shaam mastaanee', '(G)Ye shaam mastaanee, mada(Em)hosh kiye(G) jaaye
 mujhe dor koee khi(C)nche, teree (D)orr liye jaa(G)ye
 (G)Ye shaam mastaanee, mada(Em)hosh kiye(G) jaaye
 mujhe dor koee khi(C)nche, teree (D)orr liye jaa(G)ye
@@ -18180,7 +18180,7 @@ mujhe dor koee khi(C)nche, teree (D)orr liye jaa(G)ye
 mujhe dor koee khi(C)nche, teree (D)orr liye jaa(G)ye', 'Kishore Kumar', 'Kati Patang', 1971, 'D DU UDU', 'http://tabandchord.com/2013/08/yeh-shaam-mastani-guitar-chords-kishore-kumar/', FALSE, '2018-11-16T18:43:54.070000+00:00', '2018-11-16T18:47:38.705000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b71cf6a8-4fcc-44f9-bcc1-fc61000bda02', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd112ab71-331b-4be1-b807-0f35cfd152ce', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('59077617-51ed-439c-98fa-a2969aaf36db', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd112ab71-331b-4be1-b807-0f35cfd152ce', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('a5e44b04-6fd0-417f-9b49-4160ba03c42f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Pyar Hua Iqraar Hua Hai', 'Pyar Hua Iqraar Hua Hai
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('a5e44b04-6fd0-417f-9b49-4160ba03c42f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Pyar Hua Iqraar Hua Hai', 'Pyar Hua Iqraar Hua Hai
 e ----------------------------------
 B----------------------------------
 G----------------------------------
@@ -18204,7 +18204,7 @@ G--7p5----------5-------5-7--
 D------8-7-7---7--8---8------', 'Lata Mangeshkar, Manna Dey', 'Shree 420', 1955, NULL, NULL, FALSE, '2018-01-14T07:26:26.103000+00:00', '2018-01-14T08:22:01.247000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b0e0dce6-045e-413d-a354-d120d03c32ca', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a5e44b04-6fd0-417f-9b49-4160ba03c42f', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d4e60c6c-c5b4-4b9c-bb75-aaa348c6e2a6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a5e44b04-6fd0-417f-9b49-4160ba03c42f', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('01ff82e5-a726-4362-a039-40fad96c7192', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Pehla Nasha (Intro)', 'E---5--5--8--8--------8--5--3--3--8--8--------1--1--3--5----------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('01ff82e5-a726-4362-a039-40fad96c7192', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Pehla Nasha (Intro)', 'E---5--5--8--8--------8--5--3--3--8--8--------1--1--3--5----------------
 B---------------------------------------------------------------1--3----
                                                                      
 E------------1--------------------------1-------------------------------
@@ -18226,12 +18226,12 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('71e06457-b1
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('cd5d33f0-db04-434d-a14b-d911dfbc8d19', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '01ff82e5-a726-4362-a039-40fad96c7192', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9702b0e9-1cd9-4a2c-bd57-97dd70557d38', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '01ff82e5-a726-4362-a039-40fad96c7192', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('bdf170a5-df45-4c1f-9d37-a40dd4c9c632', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '01ff82e5-a726-4362-a039-40fad96c7192', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('768224e5-e4e3-452d-95d0-ab8c4587c9b3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Lakshya - Victory Theme', 'E-7--8-7-5----5--7---8-7-5--10----
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('768224e5-e4e3-452d-95d0-ab8c4587c9b3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Lakshya - Victory Theme', 'E-7--8-7-5----5--7---8-7-5--10----
 B-----------8--------------------
 E--10-12-13--12-10-8---10-12-10-', 'Shankar-Ehsaan-Loy', 'Lakshya', 2004, NULL, NULL, FALSE, '2018-02-04T00:30:23.073000+00:00', '2018-02-04T00:30:59.351000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b3d06843-9470-45e8-8eea-161a90a984ed', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '768224e5-e4e3-452d-95d0-ab8c4587c9b3', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6e484f4e-2166-41bd-a583-8d65bd8929a8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '768224e5-e4e3-452d-95d0-ab8c4587c9b3', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('652219ad-cb9c-4120-99d5-74b6e0882f9c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Main Duniya Bhula Dunga', 'Main (Am)Duniya Bhula Dunga(G) Teri (Am)Chahat Mein  ............x2
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('652219ad-cb9c-4120-99d5-74b6e0882f9c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Main Duniya Bhula Dunga', 'Main (Am)Duniya Bhula Dunga(G) Teri (Am)Chahat Mein  ............x2
 (C)O Dushman Zamaana Mujhe Na Bhulaana
 Main Khud Ko Mi(Am)taa Dun(E)ga Teri (Am)Chahat Mein
 
@@ -18270,7 +18270,7 @@ Main (Am)Duniya Bhula Dunga(G) Teri (Am)Chahat Mein
 (G)Teri (Am)Chahat Mein Haan (G)Teri (Am)Chahat Mein...', 'Kumar Sanu, Anuradha Paudwal', 'Aashiqui', 1990, 'Strum - D DUDU (https://www.youtube.com/watch?v=eWAeJSHdHzQ)', 'https://freegchords.blogspot.com/2015/08/main-duniya-bhula-dunga-guitar-chords.html', FALSE, '2019-04-11T04:58:05.649000+00:00', '2019-04-17T06:34:22.743000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f98e7aa4-e952-41ad-9ce4-8c18f7e59416', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '652219ad-cb9c-4120-99d5-74b6e0882f9c', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3dec7708-26ea-4e58-85a4-5c94ebb13a25', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '652219ad-cb9c-4120-99d5-74b6e0882f9c', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('434ae477-d5d1-47f4-ad73-593af8221838', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mann Mera', 'Saari (Am)Raat Aahein Bharta...
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('434ae477-d5d1-47f4-ad73-593af8221838', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mann Mera', 'Saari (Am)Raat Aahein Bharta...
 (G) Pal Pal Yaadon Me Marta
 (F) Maane Na Meri Mann Me(G)ra...
 
@@ -18327,7 +18327,7 @@ D UUD UUD (DU)
 Chords used : Am, G, F', 'https://www.youtube.com/watch?v=Uo0sBQS1to8', FALSE, '2018-12-19T16:06:34.188000+00:00', '2019-01-12T02:41:24.920000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('16343953-0ef2-44fd-b7bd-956c41dd3d43', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '434ae477-d5d1-47f4-ad73-593af8221838', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('76f27303-4bc9-47b3-87e5-25ab85bf85b8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '434ae477-d5d1-47f4-ad73-593af8221838', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('c1583fcb-c583-4fc5-85fc-c8cfe696f61c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ajeeb Daastan Hai Yeh', 'E----9-7---9---7----------------------9--7----9---7-------------------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('c1583fcb-c583-4fc5-85fc-c8cfe696f61c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ajeeb Daastan Hai Yeh', 'E----9-7---9---7----------------------9--7----9---7-------------------------
 B------------------9--7--------9---------------------9---7---------7--------
 G--------------------------9-----------------------------------9------------
 A jee b daa s tan hai yeh ka haan shu ru ka haan kha tam
@@ -18353,7 +18353,7 @@ G----4------4----4---4------4----4------------------------------------------
 D---------------------------------------------------------------------------', 'Lata Mangeshkar', 'Dil Apna Aur Preet Parai', 1960, NULL, NULL, FALSE, '2018-01-14T11:02:43.316000+00:00', '2018-01-15T09:06:14.099000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d2d0e2db-65e2-493c-a381-e145c95e2bff', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c1583fcb-c583-4fc5-85fc-c8cfe696f61c', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('21774d4c-7425-4e3c-8d46-b1d704ca4142', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c1583fcb-c583-4fc5-85fc-c8cfe696f61c', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('453ffa02-e4f3-470c-a56e-bdafad2034ea', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bholenath 2 (The Destroyer)', 'Main Bhola Tandav Karya Karu
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('453ffa02-e4f3-470c-a56e-bdafad2034ea', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bholenath 2 (The Destroyer)', 'Main Bhola Tandav Karya Karu
 Jad Chho Aajawe Se
 Main Raakh Ghol Ke Piya Karu
 Jad Chho Aajawe Se
@@ -18454,7 +18454,7 @@ Chords : Em D C D  -> keep repeating this', NULL, FALSE, '2025-09-12T14:23:44.66
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a8f08aff-87b6-4e1b-9169-150970722b35', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '453ffa02-e4f3-470c-a56e-bdafad2034ea', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('fb6b93c3-d941-4f9c-85da-f2b1daa2c2fd', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '453ffa02-e4f3-470c-a56e-bdafad2034ea', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5aef33bb-daf2-4f7b-ac53-378e9c034547', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '453ffa02-e4f3-470c-a56e-bdafad2034ea', '6a3e1159-3e7b-4145-b202-58429f143d25');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('846a7898-dbe8-4ca3-aade-be47c6026a8d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ishq - Lost Found', 'Intro - Em, D, C, D
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('846a7898-dbe8-4ca3-aade-be47c6026a8d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ishq - Lost Found', 'Intro - Em, D, C, D
 
 Main (Em)aa likkhoon tu (D)aa jaaye
 Main (C)baith likkhoon tu (D)aa baithe
@@ -18485,7 +18485,7 @@ Main (C)ishq likhoon tujhe (D)ho jaaye
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a5d86b0d-a9f3-46a5-bd0d-14b329a64c29', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '846a7898-dbe8-4ca3-aade-be47c6026a8d', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ccf422eb-449c-4e1d-8f47-2b95eb6f386b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '846a7898-dbe8-4ca3-aade-be47c6026a8d', '1b68ed29-a956-4b7e-a109-7c9980c75b64');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('89f17678-8b10-4100-ab63-2d46f16a4be8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '846a7898-dbe8-4ca3-aade-be47c6026a8d', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('755cb6ce-ba65-4913-aa0a-0265594f6d57', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bol Do Na Zara', '(Am) Itni mohabbat (F) karo na
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('755cb6ce-ba65-4913-aa0a-0265594f6d57', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bol Do Na Zara', '(Am) Itni mohabbat (F) karo na
 Main (Dm) doob na jaaun (G) kahin
 (Am) Waapas kinaare pe (F) aana
 Main (Dm) bhool na jaaun (G) kahin
@@ -18547,7 +18547,7 @@ Strumming : D DUDU', 'https://www.youtube.com/watch?v=zK8YsTuROaI
 https://wrytin.com/sarveshdutta/bol-do-na-zara-chords-azhar-armaan-malik-jexr6qvb', FALSE, '2023-07-30T01:49:12.914000+00:00', '2023-07-30T01:51:06.965000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9b189275-a2a8-45bf-a9b3-34210f27d774', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '755cb6ce-ba65-4913-aa0a-0265594f6d57', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9efe2d77-b982-4d3f-b37f-6735188a27ae', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '755cb6ce-ba65-4913-aa0a-0265594f6d57', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('eade6619-e484-4a9f-a08f-26804a35af0f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dil Hai Ke Maanta Nahi', '```e | -  - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('eade6619-e484-4a9f-a08f-26804a35af0f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dil Hai Ke Maanta Nahi', '```e | -  - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 B | - 7 s10s7 - 7s3-  - 3 - 3s5-5- - - - - - 3 - - 
 G | - - - - - - - - - - - - - - - - - - - -5s2 - 2 - - - 
 ```
@@ -18568,7 +18568,7 @@ G | - - - - - - - - - - - - - - - - - - - - - 5 - - - - -
 ```', 'Kumar Sanu, Anuradha Paudwal', 'Dil Hai Ke Manta Nahin', 1991, NULL, NULL, FALSE, '2017-10-27T06:26:38.581000+00:00', '2018-01-17T15:15:43.948000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('947d559a-6100-43e9-a54c-c7490446e636', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'eade6619-e484-4a9f-a08f-26804a35af0f', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3e1d2fb5-d77c-4a60-b83e-5e70c0779728', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'eade6619-e484-4a9f-a08f-26804a35af0f', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('5aeaeac2-cab3-4c4f-83c2-2ef7c5299f77', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dekhte Dekhte (Sochta Hoon)', 'Rajj ke rulaaya, Rajj ke hansaya
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('5aeaeac2-cab3-4c4f-83c2-2ef7c5299f77', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dekhte Dekhte (Sochta Hoon)', 'Rajj ke rulaaya, Rajj ke hansaya
 ```e | - - - - - - - - - - - - - - - - - - - - - - - - -
 B | - - - - - - - - - - - - - - - - - - - - - - - - -
 G | -4-7-6-4 - -4 - - -4-7-6-4 - -4  - - - 
@@ -18664,7 +18664,7 @@ B | -7-7-9-10-10-10- 10/12 - - 14-14-9-10- - 10-9-7 -
 ```', 'Atif Aslam', 'Batti Gul Meter Chalu', 2018, NULL, 'https://www.youtube.com/watch?v=AMbqqHgfplc', FALSE, '2018-09-23T13:05:53.335000+00:00', '2019-04-30T07:19:26.219000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d5168cd9-a1b4-419a-893e-96269b86d49d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5aeaeac2-cab3-4c4f-83c2-2ef7c5299f77', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('97c5fdee-face-462a-b338-9665c44129c0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5aeaeac2-cab3-4c4f-83c2-2ef7c5299f77', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('73b6ddf0-ba58-47ec-a6dc-030855a7818e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Nee Partha Vizhigal', '[[Music]]
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('73b6ddf0-ba58-47ec-a6dc-030855a7818e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Nee Partha Vizhigal', '[[Music]]
 e---5-8-5-8-7--------5-8-10--8--7---
 B---------------------8----------------------
 e---5-8-5-8-7--------5-------5--------
@@ -18792,7 +18792,7 @@ e-5-8-5-8----7---------5------5----------
 B-----------------8---------5--5-------------', 'Vijay Yesudas, Shweta Mohan', '3', 2012, NULL, NULL, FALSE, '2017-11-08T17:23:28.997000+00:00', '2019-03-06T02:56:36.605000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('679595a6-b3ef-41f6-a3fa-829c318d6b78', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '73b6ddf0-ba58-47ec-a6dc-030855a7818e', '74d4c762-17cd-4377-b23a-52bf90f64c92');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('0d1f12e6-c883-4525-9d2e-7889acb2557b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '73b6ddf0-ba58-47ec-a6dc-030855a7818e', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('dc402117-5085-4898-8a7c-2491af3a2af5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Lut Gaye - Aankh Uthi', 'Intro
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('dc402117-5085-4898-8a7c-2491af3a2af5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Lut Gaye - Aankh Uthi', 'Intro
 ```E|-----------------------------------------------------------------------------
 B|----------------------------------5--6--5-----------------------------------5--6--5--------
 G|--5--7--7--7--5--7--7--7------------7--5--7--7--7--5--7--7--7------------7-----
@@ -18880,7 +18880,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('381822a0-84
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('76f8bf85-2c4a-496a-b804-704c76e2aa01', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'dc402117-5085-4898-8a7c-2491af3a2af5', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c8520c75-f36f-42ee-8c10-f12cc95bb053', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'dc402117-5085-4898-8a7c-2491af3a2af5', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('df1a2c0b-0103-4a77-a154-55c89d379e1b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'dc402117-5085-4898-8a7c-2491af3a2af5', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('4d1f049b-6060-424c-bc62-bdc385816bde', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bin Tere (Reprise) - I Hate Luv Storys', '```E |--------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('4d1f049b-6060-424c-bc62-bdc385816bde', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bin Tere (Reprise) - I Hate Luv Storys', '```E |--------------
 B |---3-5-6-5-3-------
 G |-4-5-------5------
 D |---------------
@@ -18976,7 +18976,7 @@ Bin tere bin tere bin tere…
 Koyi khalish hai hawaao mein bin tere… (2)', 'Shekhar Ravjiani', 'I Hate Luv Storys', 2010, NULL, NULL, FALSE, '2018-08-24T01:52:46.138000+00:00', '2018-08-24T01:53:06.637000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('007b3f64-4412-432f-97c7-0e0209e60ec6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4d1f049b-6060-424c-bc62-bdc385816bde', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5d99b039-6ac4-421e-8c97-bdb919d2dfb6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4d1f049b-6060-424c-bc62-bdc385816bde', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('eba31660-7114-4059-b2cb-6e03590b9463', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Main Hoon Na', 'Whistle Music Line 1
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('eba31660-7114-4059-b2cb-6e03590b9463', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Main Hoon Na', 'Whistle Music Line 1
 ```G|-7/9--7-5-4-----------------4-----------------------|
 D|---------------7----7--5-7------7-------------------|
 A|------------------7-----------------------------------|
@@ -19067,7 +19067,7 @@ A|-------------------8-8---------------------------------|
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('87160140-01ab-483d-aebe-fc3949c5490b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'eba31660-7114-4059-b2cb-6e03590b9463', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('93f3084f-46e5-44da-bb1a-8239065da3c8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'eba31660-7114-4059-b2cb-6e03590b9463', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b19e7b36-7f7a-4cfc-8c4b-b42c5f0b3e79', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'eba31660-7114-4059-b2cb-6e03590b9463', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('67bc8ed4-afbd-4901-a142-3f73d2b8ae72', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Atif Aslam Gima Music Awards 2015', '(G)Shining in the sailing sun like a (Em)pearl upon the ocean
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('67bc8ed4-afbd-4901-a142-3f73d2b8ae72', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Atif Aslam Gima Music Awards 2015', '(G)Shining in the sailing sun like a (Em)pearl upon the ocean
 come (C)feel me  hoo (D)feel me   ..........x2    
 
 (G)Waise to mann mera, (Em)pehli bhi raaton mein (C)
@@ -19170,7 +19170,7 @@ Chords used : G, Em, C, D', 'https://www.youtube.com/watch?v=XtQnRPFGKIE', FALSE
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d3b00661-f732-4901-a9f1-bd963ebf6ea9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '67bc8ed4-afbd-4901-a142-3f73d2b8ae72', '07483aae-aaf2-498a-ad00-7abd0a0d46c3');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4b166c21-16ee-4318-9292-54eafa457b24', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '67bc8ed4-afbd-4901-a142-3f73d2b8ae72', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('536950d7-7017-423f-939b-0d5c54d2c7ab', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '67bc8ed4-afbd-4901-a142-3f73d2b8ae72', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('0e91eb86-0130-40d6-a5de-c89433ed7931', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ghunghroo - War', 'TBD : ADJUST BELOW NOTES FOR CAPO
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('0e91eb86-0130-40d6-a5de-c89433ed7931', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ghunghroo - War', 'TBD : ADJUST BELOW NOTES FOR CAPO
 
 (F#m)Kyun lamhe (C#m)kharab karein
 (A)Aa ghalti (E)behisab karein
@@ -19198,7 +19198,7 @@ https://www.youtube.com/watch?v=OqQNS_rqXs0', FALSE, '2019-10-16T02:54:30.371000
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8d3b8e24-c83f-438a-a889-d79d9245c534', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0e91eb86-0130-40d6-a5de-c89433ed7931', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ec9b179a-8ba2-4ff4-b232-055aec3002b8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0e91eb86-0130-40d6-a5de-c89433ed7931', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ec45435d-b4a0-4d99-8506-72222474e64e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0e91eb86-0130-40d6-a5de-c89433ed7931', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('393cd6c5-f10e-439b-acec-f3cf60b00f16', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kesariya', '[Intro]
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('393cd6c5-f10e-439b-acec-f3cf60b00f16', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kesariya', '[Intro]
 ```e | -0- -0- -0- - - - - - - - - - - - - - -3- - -3- - - -  
 B | - -1- -1 - -1- - - 1 - -3- - - 3 - - - 3 - - -3- - 
 G | - - - - - - - - - -0 - -0- - -0- - - - - - - - - - - - -
@@ -19267,7 +19267,7 @@ https://rewindcaps.com/kesariya-guitar-chords/', FALSE, '2022-11-21T15:17:48.896
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('240c34ca-563d-45d9-b6f6-a7d57295e453', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '393cd6c5-f10e-439b-acec-f3cf60b00f16', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9e3af65d-05e3-409f-be3c-670f44354e4b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '393cd6c5-f10e-439b-acec-f3cf60b00f16', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('58814346-47b9-44d4-8914-eec9065b60d6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '393cd6c5-f10e-439b-acec-f3cf60b00f16', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('094acace-5b22-45e3-8874-0a5f0d84d12e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Duniya - Luka Chuppi', '```e|--------1------1------1--------------------|
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('094acace-5b22-45e3-8874-0a5f0d84d12e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Duniya - Luka Chuppi', '```e|--------1------1------1--------------------|
 B|----------------------------------3--2--------|
 G|------0------0------0-------5--------------|
 D|----1--------------------------------------|
@@ -19331,7 +19331,7 @@ Chords used : Em, D, C, Am, Bm', 'https://www.youtube.com/watch?v=8TG713zjMyk', 
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b6f65c29-a55d-4338-b942-0d0642ea1036', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '094acace-5b22-45e3-8874-0a5f0d84d12e', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('18b34dd3-6c73-41cb-9175-1af7b3333517', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '094acace-5b22-45e3-8874-0a5f0d84d12e', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('97e8552b-56b9-44c9-b4ce-b4f233388d22', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '094acace-5b22-45e3-8874-0a5f0d84d12e', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('17d58d1a-93a6-4cf8-91fc-41c8a83d2bd4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Cheap Thrills', 'Come on, come on, turn the radio on
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('17d58d1a-93a6-4cf8-91fc-41c8a83d2bd4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Cheap Thrills', 'Come on, come on, turn the radio on
 ```e | - - - - - - - - - - - - - - - - - - - -
 B | - - - - - - - - - - - - - - - - - - - -
 G | - - - - - - - - - - - - - -11-11-11 -
@@ -19412,7 +19412,7 @@ Gotta paint my nails, put my high heels on
 It''s Saturday and I won''t be long', 'Sia', 'This Is Acting', 2016, NULL, NULL, FALSE, '2018-02-04T14:44:48.477000+00:00', '2018-02-04T16:46:55.302000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('70c08995-8309-40f1-a73e-e31ddc53e65f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '17d58d1a-93a6-4cf8-91fc-41c8a83d2bd4', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1fa38861-f288-4282-bbb3-90ab87a05138', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '17d58d1a-93a6-4cf8-91fc-41c8a83d2bd4', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('d72bb827-0849-4470-8734-254dcbdfef48', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Emptiness by Gajendra Verma - Easy', 'Hold like this (|| = Capo; I = Index; M = Middle; R = Ring; P = Pinky)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('d72bb827-0849-4470-8734-254dcbdfef48', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Emptiness by Gajendra Verma - Easy', 'Hold like this (|| = Capo; I = Index; M = Middle; R = Ring; P = Pinky)
 ```e | - - - || - - I - - - - - -
 B | - - - || - - - -      P - - - -
 G | - - - || - - -  M  R - - - -
@@ -19484,7 +19484,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('00b5eab2-dc
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('cbed461d-0c24-4ee6-861c-b81a71cbd3b5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd72bb827-0849-4470-8734-254dcbdfef48', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ad26cd59-9254-4bc4-aa33-045b40aed30c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd72bb827-0849-4470-8734-254dcbdfef48', '375ee2c2-3bd4-473f-afd0-87ef7a38f19a');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9c1937c1-441f-42d7-8e16-e985b201363d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd72bb827-0849-4470-8734-254dcbdfef48', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('06f41450-7f14-4625-8b65-59f550346da9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Main Tenu Samjhawan Ki', '(D)Nai jeena, tere baajo       |
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('06f41450-7f14-4625-8b65-59f550346da9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Main Tenu Samjhawan Ki', '(D)Nai jeena, tere baajo       |
 (D)Nai jeena, nai jeena         |........x2
 
 Mein tenu sam(A)jhawan ki(D)       |
@@ -19544,7 +19544,7 @@ D Chuck U    U  Chuck U', 'https://tabs.ultimate-guitar.com/tab/rahat_fateh_ali_
 https://www.youtube.com/watch?v=jzbZhpxxSvI', FALSE, '2019-03-14T03:24:14.903000+00:00', '2019-04-18T13:43:45.724000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ea5b4276-5870-4ce2-972c-35eb2c2abcc3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '06f41450-7f14-4625-8b65-59f550346da9', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6471b752-4f7f-4923-ae24-7ab64489ce2a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '06f41450-7f14-4625-8b65-59f550346da9', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('397a50df-34c7-4e3e-b0c5-af7959f90c89', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dard-e-dil', '(G)Darde Dil Darde (D)Jigar 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('397a50df-34c7-4e3e-b0c5-af7959f90c89', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dard-e-dil', '(G)Darde Dil Darde (D)Jigar 
 Dil Me Jagaya Aap(G)ne        x2
 (G)Pehle Toh (C)Mai (Am)Shayar Tha   x2
 (D)Aasheek Banaya Aap(G)ne
@@ -19570,7 +19570,7 @@ Darde Dil..', 'Mohammed Rafi', 'Karz', 1980, 'D D UUDUD (DU)
 Chords used : G, D, C, Em, Am, Bm', 'https://www.youtube.com/watch?v=BLSD2pW6eXU', FALSE, '2018-11-04T14:16:47.395000+00:00', '2018-11-09T02:06:15.892000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5d619c6a-eb70-480e-ad87-5318bb0b3197', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '397a50df-34c7-4e3e-b0c5-af7959f90c89', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('44eeaf9a-105a-4f85-b8cb-c4c9baf77131', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '397a50df-34c7-4e3e-b0c5-af7959f90c89', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('86b95058-6420-43dd-93eb-1f516c2a814e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Rim Jhim Gire Sawan - Papon', '(Am)  (Dm)   (G)   (Am)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('86b95058-6420-43dd-93eb-1f516c2a814e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Rim Jhim Gire Sawan - Papon', '(Am)  (Dm)   (G)   (Am)
 
 (Am)Rim jhim gire sawan
 Sulag sulag(Dm) jaaye man
@@ -19609,7 +19609,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f5fd5ca4-5a
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('fc2ea1bc-9606-4c18-aefb-0acc90bba273', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '86b95058-6420-43dd-93eb-1f516c2a814e', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('63e79525-c0ff-461a-ae08-96874688509e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '86b95058-6420-43dd-93eb-1f516c2a814e', 'f22d1b82-b224-4a44-a581-b5c25015af54');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('86019c67-c2cd-425c-b010-21492edf0937', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '86b95058-6420-43dd-93eb-1f516c2a814e', '8d4fc519-7375-432c-8b6a-6cf000e9f287');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('e7473a2b-7fff-46ab-8fc6-13ebf9607341', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tum Se - Jalebi', 'Tere (F)naam se hi (G)roshan mera hai (Am)jahaan
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('e7473a2b-7fff-46ab-8fc6-13ebf9607341', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tum Se - Jalebi', 'Tere (F)naam se hi (G)roshan mera hai (Am)jahaan
 Tere (F)sath se hi (G)raatein meri hain (Am)subah
 
 E----------------5-----------------5-----3--
@@ -19657,7 +19657,7 @@ Rhythm - D D UUDUD DU', 'https://www.youtube.com/watch?v=BwWttPo_gWQ', FALSE, '2
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8e3776d0-3d80-402e-b7c3-8e486807303e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e7473a2b-7fff-46ab-8fc6-13ebf9607341', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('75c937f0-0b0f-4fe4-ac6e-fb2ac8b131c8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e7473a2b-7fff-46ab-8fc6-13ebf9607341', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('eb1d7367-0854-426b-9733-3f78492a2a3f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e7473a2b-7fff-46ab-8fc6-13ebf9607341', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('68050caf-936e-488d-bd3c-3e8757224883', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'O Mere DIl Ke Chain', 'O Me(Am)re Dil Ke (Am)Chain
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('68050caf-936e-488d-bd3c-3e8757224883', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'O Mere DIl Ke Chain', 'O Me(Am)re Dil Ke (Am)Chain
 O Mere Dil Ke Chain(G) [Stop Strumming]
 Chain Aaye Mere (G)Dil Ko (G)Dua Kiji(Am)ye
 O Me(Am)re Dil Ke (Am)Chain (G) [Stop strumming]
@@ -19707,13 +19707,13 @@ O Me(Am)re …', 'Kishore Kumar', 'Mere Jeevan Saathi', 1972, 'D D UUD DU
 Chords used : Am, G, F, C', 'http://tabandchord.com/2013/01/o-mere-dil-ke-chain-guitar-chords-kishor-kumar/', FALSE, '2018-11-16T18:53:47.297000+00:00', '2019-01-05T03:47:42.049000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('99c63652-3431-465e-94be-cb7a7a9d7f0a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '68050caf-936e-488d-bd3c-3e8757224883', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('61096582-5bd6-4f91-bee4-73066d4623da', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '68050caf-936e-488d-bd3c-3e8757224883', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('a66cfe27-e298-4436-9df6-ce689ae33a01', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hare Krishna Mantra', '```D|--8--10---11-11-----10--8---10-10-----8--6---8-8-----8--10---6-6-
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('a66cfe27-e298-4436-9df6-ce689ae33a01', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hare Krishna Mantra', '```D|--8--10---11-11-----10--8---10-10-----8--6---8-8-----8--10---6-6-
 D|--8--10---11-11-----10--8---10-10-----8--6---8-8-----8--10---6-6--
 ```', 'Traditional', 'Traditional', 2001, NULL, NULL, FALSE, '2017-10-09T12:43:23.249000+00:00', '2017-12-14T14:07:51.632000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ee036898-1dfb-4d5f-bb0f-7c37c8455513', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a66cfe27-e298-4436-9df6-ce689ae33a01', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b2403b5d-ac9d-4812-b053-ec4d1c537b37', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a66cfe27-e298-4436-9df6-ce689ae33a01', '6a3e1159-3e7b-4145-b202-58429f143d25');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5a738827-7ea6-4efa-9a8c-1fd8ddabfc55', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a66cfe27-e298-4436-9df6-ce689ae33a01', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('a1d555c9-5dad-4faa-85ce-c3fb972b314d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bas Ek Dhadak', 'INTRO (Fingerstyle)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('a1d555c9-5dad-4faa-85ce-c3fb972b314d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bas Ek Dhadak', 'INTRO (Fingerstyle)
 (Am)
 
 VERSE (Fingerstyle)
@@ -19774,7 +19774,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e80a142c-97
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e3f84878-43dd-4870-ac32-28b8ba1f37d7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a1d555c9-5dad-4faa-85ce-c3fb972b314d', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e34dce40-3e82-4629-a94e-e931e4a407b8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a1d555c9-5dad-4faa-85ce-c3fb972b314d', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f77f5cb2-dca6-472e-86fa-eba2707aac49', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a1d555c9-5dad-4faa-85ce-c3fb972b314d', '8d4fc519-7375-432c-8b6a-6cf000e9f287');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('66a4366a-bb02-4070-ba3b-b8207568dbb4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Teri Deewani', '(Em) Preet ki lath mohe aaisi laagi
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('66a4366a-bb02-4070-ba3b-b8207568dbb4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Teri Deewani', '(Em) Preet ki lath mohe aaisi laagi
 (C) ho gayi main (Em) matwaali
 bal bal (D) jaaun apane piya (C) ko
 he main (Em) jaaun vaari vaari
@@ -19821,7 +19821,7 @@ teri (D)deewani (C) deewani (Em)', 'Kailash Kher', 'Kailasa', 2006, 'Strumming :
 Chords used : Em, D, C', 'https://www.youtube.com/watch?v=J_rbhSGW7_w', FALSE, '2018-10-15T15:51:23.939000+00:00', '2018-10-16T02:03:39.312000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('33160e13-577c-46e5-9f68-6f05ddc464cc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '66a4366a-bb02-4070-ba3b-b8207568dbb4', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('225b5390-a43f-4473-bd2f-08f343876715', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '66a4366a-bb02-4070-ba3b-b8207568dbb4', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('651f778c-2464-4139-9c4f-7d18cef58eb5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Luka Chuppi', 'Luka Chuppi Bahut Huyi
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('651f778c-2464-4139-9c4f-7d18cef58eb5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Luka Chuppi', 'Luka Chuppi Bahut Huyi
 ```e|-------------------------------
 B|--9-9-9-10-----9-9-9-10----
 ```
@@ -19957,7 +19957,7 @@ G|--9-8-9---
 ```', 'A. R. Rahman, Lata Mangeshkar', 'Rang De Basanti', 2006, NULL, NULL, FALSE, '2017-11-12T03:18:40.644000+00:00', '2018-09-23T14:52:46.508000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5acb68ba-20b8-46d9-8049-4fc3b21f7d49', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '651f778c-2464-4139-9c4f-7d18cef58eb5', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5986edf3-39a9-45af-b362-f4f59a13724f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '651f778c-2464-4139-9c4f-7d18cef58eb5', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('cbf6074e-1c62-4ebf-89d2-d234f43c4583', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tu Bhi Sataya Jayega - Vishal Mishra', '=========PLUCKING (D D U   D D U   D U)========
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('cbf6074e-1c62-4ebf-89d2-d234f43c4583', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tu Bhi Sataya Jayega - Vishal Mishra', '=========PLUCKING (D D U   D D U   D U)========
 (Em)....(Em)...
 (Em) Toda jayega tu bhi toda jayega
 (Em) Meri tarah tu bhi chhoda jayega
@@ -20028,7 +20028,7 @@ Chords used : Em, C, D, Bm, Am, G', 'https://www.youtube.com/watch?v=rrMuokqxF5A
 https://www.musicallytech.com/tu-bhi-sataya-jayega-chords-by-vishal-mishra/', FALSE, '2022-03-02T00:34:30.590000+00:00', '2022-03-02T00:44:06.925000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('63e29a06-781a-4bb0-836d-b66a91c930ff', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'cbf6074e-1c62-4ebf-89d2-d234f43c4583', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d4a4c6ad-9a79-4f5d-95e5-4b34fb97fddc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'cbf6074e-1c62-4ebf-89d2-d234f43c4583', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('0018bf1c-a58a-4d7c-af37-0cf969521a32', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bhula Do', '(Am)Wo kaisy (G)subha thi
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('0018bf1c-a58a-4d7c-af37-0cf969521a32', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bhula Do', '(Am)Wo kaisy (G)subha thi
 (F)Khushiyoun ka tha sa(E)far
 (Am)Sab yaaar
 (G)Sang thay (F)koi thi na (E)fiker
@@ -20053,7 +20053,7 @@ Am G F E', 'Mustafa Zahid', 'Aashiqui 2', 2013, 'D UUD UUD (DU)
 Chords used : Am, G, F, E', 'https://tabs.ultimate-guitar.com/tab/raeth/bhulado_chords_425362', FALSE, '2019-01-10T02:53:09.296000+00:00', '2019-01-13T10:53:11.835000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b24f503c-f638-42ec-8773-d2914ce476f8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0018bf1c-a58a-4d7c-af37-0cf969521a32', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('73895cd5-a38b-4f42-89bd-b02db17a3c03', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0018bf1c-a58a-4d7c-af37-0cf969521a32', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('b1640e6c-dab8-453d-8c0f-bb8b4a29a01b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ae Malik Tere Bande Hum', '```E|--5-5-5-4-1-2-4--
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('b1640e6c-dab8-453d-8c0f-bb8b4a29a01b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ae Malik Tere Bande Hum', '```E|--5-5-5-4-1-2-4--
 B|-2----------
 ```
 Ae Maalik Tere Bande Hum
@@ -20096,7 +20096,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6d6b26d6-73
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f0dade93-3d2e-472e-8a06-c330aa6c5ef6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b1640e6c-dab8-453d-8c0f-bb8b4a29a01b', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d29e1e94-694e-4643-a156-3324d303fa7f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b1640e6c-dab8-453d-8c0f-bb8b4a29a01b', '6a3e1159-3e7b-4145-b202-58429f143d25');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('79c00c96-2262-40e2-b650-d50ff992e036', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b1640e6c-dab8-453d-8c0f-bb8b4a29a01b', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('96701481-73c4-4f5b-9d43-6b2e8b13ba13', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Raabta - Agent Vinod', '[Intro] 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('96701481-73c4-4f5b-9d43-6b2e8b13ba13', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Raabta - Agent Vinod', '[Intro] 
 ```e|---7-8-7-------7-8-7------7-8-7-----1212-1010-88-77-8-----|
 B|-8-----------8-------------8-------------------------------------------------|
 ```
@@ -20168,7 +20168,7 @@ Chords used : C, F, Am, G, Dm', 'https://tabs.ultimate-guitar.com/tab/arijit_sin
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7b20b340-df24-49ea-9e50-2ccb5795f02d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '96701481-73c4-4f5b-9d43-6b2e8b13ba13', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('71278f34-cfd9-4b44-8497-260a08d29a1c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '96701481-73c4-4f5b-9d43-6b2e8b13ba13', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9373ad90-9614-4d2c-915a-f88897e174fe', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '96701481-73c4-4f5b-9d43-6b2e8b13ba13', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('7d4779ff-fcb0-4139-9758-18998f952705', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Duniya/Khaab - Akhil', '```E|-----------------------------------------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('7d4779ff-fcb0-4139-9758-18998f952705', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Duniya/Khaab - Akhil', '```E|-----------------------------------------------
 B|--11-10-11-10-11---------------------10---------------10-
 G|----------------------------10-10-10-12----12-12-10-----
 ```
@@ -20288,7 +20288,7 @@ B|-------13---------------13-11-10-11-
 http://www.fxmusic.in/2019/03/duniya-lukka-chuppi-guitar-tabs-by.html', FALSE, '2019-03-30T08:39:20.672000+00:00', '2019-09-20T01:44:06.489000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ae3aea5a-6d5c-4c3e-b0b5-6fe0d51f6b70', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7d4779ff-fcb0-4139-9758-18998f952705', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6b6aae34-6152-4f42-a396-a2fc6c550be7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7d4779ff-fcb0-4139-9758-18998f952705', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('656958e4-71ec-47c2-913f-60e0a8c919b8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dilbar mere', '===========
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('656958e4-71ec-47c2-913f-60e0a8c919b8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dilbar mere', '===========
 INTRO....
 ===========
 hai......la la  la la la la    laaaaaaaaa
@@ -20365,7 +20365,7 @@ this part is very fast in above line  [[--7-9-9s10-10--]]
 Dilbar Mere  Kab Tak Mujhe ...', 'Kishore Kumar, Anette Pinto', 'Satte Pe Satta', 1982, NULL, 'https://www.youtube.com/watch?time_continue=20&v=MVlzx_ICu40', FALSE, '2017-11-08T14:23:05.824000+00:00', '2019-01-08T14:29:02.568000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('87d453c1-5289-4cd5-9f9c-0df6d44bc786', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '656958e4-71ec-47c2-913f-60e0a8c919b8', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('cc472cec-7755-455d-8bb5-157dbe3d56ab', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '656958e4-71ec-47c2-913f-60e0a8c919b8', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('9f8438c1-289f-4c2e-b96f-0a8b6ad36a09', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bachana - Bilal Khan', 'Tanhai ke safar main
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('9f8438c1-289f-4c2e-b96f-0a8b6ad36a09', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bachana - Bilal Khan', 'Tanhai ke safar main
 Chalna sabar se
 Koi na nazar main han
 Jab khwab humain chor jayen
@@ -20408,7 +20408,7 @@ Bachana mujhe bachana', 'Bilal Khan', 'Umeed', 2009, 'Tuning - Half Step Down
 Strum - see video https://youtu.be/O-gI6gTiIno?t=346', 'https://www.youtube.com/watch?v=O-gI6gTiIno', FALSE, '2020-10-13T15:37:45.747000+00:00', '2020-10-13T15:40:01.877000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e14b1045-eb6f-4bc9-b0b9-966536dcafa1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9f8438c1-289f-4c2e-b96f-0a8b6ad36a09', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e71ad643-09b5-4224-b710-281d555f9d76', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '9f8438c1-289f-4c2e-b96f-0a8b6ad36a09', '375ee2c2-3bd4-473f-afd0-87ef7a38f19a');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('7cc3c845-cdac-4592-8a85-96b25429dd53', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Iktara', '```E |-2-2-2-3-2-3--0----0--
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('7cc3c845-cdac-4592-8a85-96b25429dd53', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Iktara', '```E |-2-2-2-3-2-3--0----0--
 B |-------3----3-
 ```
 O Re Manwa Tu To Bawra Hai
@@ -20610,7 +20610,7 @@ Goonja Sa Hai Koi Ektara Iktara
 Goonja Sa Hai Koi Ektara', 'Kavita Seth, Amitabh Bhattacharya', 'Wake Up Sid', 2009, NULL, NULL, FALSE, '2017-11-03T16:18:38.976000+00:00', '2017-11-04T07:06:05.989000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('159f3fb3-a0d5-4d79-bac1-9ca25ac986b4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7cc3c845-cdac-4592-8a85-96b25429dd53', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c8eb8c51-e904-48ad-a4ee-dfe2e6384b83', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7cc3c845-cdac-4592-8a85-96b25429dd53', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('f7af4bd7-33fc-4575-94bd-cc1a61eb717b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Enna sona', '```e|-----------1------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('f7af4bd7-33fc-4575-94bd-cc1a61eb717b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Enna sona', '```e|-----------1------
 B|--3-1\3-3-3--1-3---4-3-1-3-
 G|-0---------------
 ```
@@ -20762,7 +20762,7 @@ Enna sona o…
 Rest are same as above', 'Arijit Singh', 'OK Jaanu', 2017, NULL, 'https://www.youtube.com/watch?v=tCAuBmVyAEQ', FALSE, '2017-11-12T04:40:26.811000+00:00', '2018-10-14T10:44:15.094000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e3348766-1019-4908-be7b-4736cca8ccf1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f7af4bd7-33fc-4575-94bd-cc1a61eb717b', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e49990ee-accd-478e-a304-ed9705ccf349', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f7af4bd7-33fc-4575-94bd-cc1a61eb717b', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('ccc7f383-3731-4713-a2bc-feae9c3326f9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hero Theme', '```e|--5-7-5-7-5---------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('ccc7f383-3731-4713-a2bc-feae9c3326f9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hero Theme', '```e|--5-7-5-7-5---------
 B|------6---6--5---
 G|-7-------7-----7-
 ```
@@ -20781,7 +20781,7 @@ B|----------6-
 ```', 'Laxmikant-Pyarelal', 'Hero', 1983, NULL, NULL, FALSE, '2017-10-24T14:44:04.341000+00:00', '2017-10-24T14:50:21.104000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b41613f4-7467-45a0-95ca-c06e414703e6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ccc7f383-3731-4713-a2bc-feae9c3326f9', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6186ec38-60eb-4331-9423-0213814a9980', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ccc7f383-3731-4713-a2bc-feae9c3326f9', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('7c3dbac5-ac1d-4da6-9e1c-95b5d6737b46', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bheegey Hont Tere', '9-9-7-7-5-5
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('7c3dbac5-ac1d-4da6-9e1c-95b5d6737b46', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bheegey Hont Tere', '9-9-7-7-5-5
 
 9-7-7-5-5
 
@@ -20801,7 +20801,7 @@ INSERT INTO public.notes (id, user_id, title, content, artist, album, release_ye
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('78effcbf-2bdf-4fff-9441-510baa355242', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7c3dbac5-ac1d-4da6-9e1c-95b5d6737b46', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ea55947f-d931-4109-b9e1-1965d4c5083f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7c3dbac5-ac1d-4da6-9e1c-95b5d6737b46', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('af7afdc4-a86a-4652-9708-dc02e94b3a77', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7c3dbac5-ac1d-4da6-9e1c-95b5d6737b46', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('27db47ef-186d-4f3e-94b7-813421f14b76', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Old Songs Mashup', '1. Hothon se chulo tum
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('27db47ef-186d-4f3e-94b7-813421f14b76', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Old Songs Mashup', '1. Hothon se chulo tum
 2. Kahin door jab din dhal jaye
 3. Kya hua tera vaada
 4. Pyar deewana hota hai
@@ -20810,7 +20810,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('903217c4-cf
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b933c182-290b-45a1-bfb3-6d7c033ef51a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '27db47ef-186d-4f3e-94b7-813421f14b76', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3e521c4d-9ed1-4237-8ce9-bc557be95129', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '27db47ef-186d-4f3e-94b7-813421f14b76', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('75640e4b-4522-4bad-9961-0479698bfbac', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '27db47ef-186d-4f3e-94b7-813421f14b76', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('601c6063-abc1-4da0-9b99-f28cee6a698f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Zara Tasveer Se Tu - Meri Mehbooba', 'Kisi Roz Tumse Mulaakat Hogi
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('601c6063-abc1-4da0-9b99-f28cee6a698f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Zara Tasveer Se Tu - Meri Mehbooba', 'Kisi Roz Tumse Mulaakat Hogi
 ```e | - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 B | - - -10-13-12-10-12- - - - 9-12-10-9-10 - 
 G | -9- - - - - - - - - - - - - - 9 - - - - - - - - - - 
@@ -20872,16 +20872,16 @@ B | -9-9-9-12-10 -
 ```', 'Kumar Sanu, Alka Yagnik', 'Pardes', 1997, NULL, 'https://www.youtube.com/watch?v=73JVGNOBj0s', FALSE, '2018-02-03T15:59:53.615000+00:00', '2019-01-20T10:32:09.187000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8787f9a4-3764-4c2f-affe-b7dcc849caee', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '601c6063-abc1-4da0-9b99-f28cee6a698f', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('0819360d-a7da-4a92-aa30-02a7c3d1d88e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '601c6063-abc1-4da0-9b99-f28cee6a698f', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('167756ab-e2b4-4aa9-bbf5-281f20c895e7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Permanent Roommates', '', 'Vaibhav Bundhoo', 'TVF''s Permanent Roommates', 2014, NULL, 'https://www.youtube.com/watch?v=WNBqa_tLQAI', FALSE, '2021-02-21T10:33:33.690000+00:00', '2021-02-21T10:33:40.909000+00:00');
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('167756ab-e2b4-4aa9-bbf5-281f20c895e7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Permanent Roommates', '', 'Vaibhav Bundhoo', 'TVF''s Permanent Roommates', 2014, NULL, 'https://www.youtube.com/watch?v=WNBqa_tLQAI', FALSE, '2021-02-21T10:33:33.690000+00:00', '2021-02-21T10:33:40.909000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8b687d12-c75b-4bf7-9446-bf445d972e8c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '167756ab-e2b4-4aa9-bbf5-281f20c895e7', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c4afc1a9-8c75-4d5b-b7af-9945fde8f2c9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '167756ab-e2b4-4aa9-bbf5-281f20c895e7', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('fe5bb7d2-9049-495b-90e0-19bfd4ce50a2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '167756ab-e2b4-4aa9-bbf5-281f20c895e7', '375ee2c2-3bd4-473f-afd0-87ef7a38f19a');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d1d6e67f-c19f-401b-b4b8-e285436df940', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '167756ab-e2b4-4aa9-bbf5-281f20c895e7', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('3edb8972-c84f-4048-853f-4b042d3b0e80', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Whataya Want From Me Tab - Adam Lamber', 'e	 10 10 x x  9   14 14 14 14 7 7    14 14 14 14 7 7     
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('3edb8972-c84f-4048-853f-4b042d3b0e80', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Whataya Want From Me Tab - Adam Lamber', 'e	 10 10 x x  9   14 14 14 14 7 7    14 14 14 14 7 7     
 B	 12 12 x x  10  15 15 15 15 8 8    15 15 15 15 8 8', 'Adam Lambert', 'For Your Entertainment', 2009, NULL, NULL, FALSE, '2018-08-16T02:31:16.187000+00:00', '2018-08-16T02:31:50.530000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f9368c71-948d-4230-aef9-96527f16576b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '3edb8972-c84f-4048-853f-4b042d3b0e80', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e0fee6ed-ec64-4b3f-bad0-bcc04cbef201', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '3edb8972-c84f-4048-853f-4b042d3b0e80', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('78060c52-76fc-42b5-a886-675583c8d5a8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jo Bhi Main - Rockstar', 'e---------0-----------------------------------------|
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('78060c52-76fc-42b5-a886-675583c8d5a8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jo Bhi Main - Rockstar', 'e---------0-----------------------------------------|
 B----------------3----------------------------------|
 G------------0--------------------2----------------|
 D-----2------------------4h5-------4p0-------|
@@ -20908,7 +20908,7 @@ E--0------------------------------------------------|
 https://www.youtube.com/watch?v=YbFK3u89jJ4', FALSE, '2019-07-24T03:19:03.417000+00:00', '2019-07-24T03:24:50.482000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('eef21d86-411f-4cc5-a423-58354c231b60', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '78060c52-76fc-42b5-a886-675583c8d5a8', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d6138661-ec5f-46aa-bdea-cfc1301d44ce', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '78060c52-76fc-42b5-a886-675583c8d5a8', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('4bca8f38-35c6-420a-b733-9005037bf04e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Piya Ghar Aavenge', '(Em)Chok Puravo (Em)mati rangavo
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('4bca8f38-35c6-420a-b733-9005037bf04e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Piya Ghar Aavenge', '(Em)Chok Puravo (Em)mati rangavo
 (D)Aaj me(Am)re piya (Em)ghar aavenge
 
 (Em)Khabar sunau jo (Em)khushire batau jo
@@ -20941,7 +20941,7 @@ Chorus:
 Chords used : Em, D, G, A, Am', NULL, FALSE, '2019-09-22T15:37:26.993000+00:00', '2020-08-15T10:57:19.393000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c8e73bec-5892-4605-bca4-33ff26a6fbb6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4bca8f38-35c6-420a-b733-9005037bf04e', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6889c8e4-19cf-4b26-bb85-f14a4293188d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4bca8f38-35c6-420a-b733-9005037bf04e', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('6104edb5-2acd-4286-acdc-aa22f545e0fe', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Na Jaane Mere Dil Ko Kya', 'E--3-5-3-3-6-5-3-3-5-6-8-5
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('6104edb5-2acd-4286-acdc-aa22f545e0fe', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Na Jaane Mere Dil Ko Kya', 'E--3-5-3-3-6-5-3-3-5-6-8-5
 B--3----------
 E--2-5-3-2-5-3-2-5-6-6-3
 B--3-----------
@@ -21040,7 +21040,7 @@ B--3', 'Lata Mangeshkar, Udit Narayan', 'Dilwale Dulhania Le Jayenge', 1995, NUL
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('cc396212-629c-4d90-ab45-eefe112fb4fd', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6104edb5-2acd-4286-acdc-aa22f545e0fe', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('726541e8-3d4f-4579-b3df-348851670cee', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6104edb5-2acd-4286-acdc-aa22f545e0fe', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('64ed5aeb-40ec-49d8-babb-f2c6e9b72d0e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6104edb5-2acd-4286-acdc-aa22f545e0fe', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('bc82f7bd-231f-4a1e-a442-795782333eff', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Happy birthday to you', '```B|-------1-0-
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('bc82f7bd-231f-4a1e-a442-795782333eff', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Happy birthday to you', '```B|-------1-0-
 G|-0-0-2-0---
 ```
 
@@ -21074,7 +21074,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c5ebd968-ff
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('64536d02-0737-4b68-8ec0-a7fecc40e3fc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'bc82f7bd-231f-4a1e-a442-795782333eff', 'f6f1fa22-4ebb-4dfc-8a00-65f2e520dc91');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c4e448d9-853a-4fd6-ba54-be527e0bfc8c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'bc82f7bd-231f-4a1e-a442-795782333eff', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ac29c356-ca7d-4773-866a-2358f14f93b1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'bc82f7bd-231f-4a1e-a442-795782333eff', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('79b25f2e-adae-4c98-98c3-ddb6b8ef4c94', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Siddharth Slathia - 20 Songs on One Chord', '*  means some line has to be repeated
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('79b25f2e-adae-4c98-98c3-ddb6b8ef4c94', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Siddharth Slathia - 20 Songs on One Chord', '*  means some line has to be repeated
 
 *Bekarar karke hame yu naa jayiye...(2)
 Ek ladki bheegi bhagi si....(5)
@@ -21216,7 +21216,7 @@ Chords used : Em', 'https://www.youtube.com/watch?v=CwwLim5sx0E', FALSE, '2019-1
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d43e0d45-34ca-4929-a6a0-a1641fddc0b1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '79b25f2e-adae-4c98-98c3-ddb6b8ef4c94', '07483aae-aaf2-498a-ad00-7abd0a0d46c3');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9387c66b-3029-4278-86ba-b90fcc833d6a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '79b25f2e-adae-4c98-98c3-ddb6b8ef4c94', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('968d5a44-7de9-4514-b601-062fedda667c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '79b25f2e-adae-4c98-98c3-ddb6b8ef4c94', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('0a4f9ae2-aed5-421f-885f-06623c2d99c2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dhun - Saiyaara', 'INTRO (FINGERSTYLE)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('0a4f9ae2-aed5-421f-885f-06623c2d99c2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dhun - Saiyaara', 'INTRO (FINGERSTYLE)
 
 (tabs without capo)
 ```e | - - -3 - 6-5 - 6-5 - 6-5 - - - - - - - - - - - - - - - - -
@@ -21290,7 +21290,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b93d32a1-a7
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('67d51c7e-70fe-44e8-a554-c199ee0c9cd9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0a4f9ae2-aed5-421f-885f-06623c2d99c2', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('52e04ea0-844b-45ca-a8cd-40794c892101', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0a4f9ae2-aed5-421f-885f-06623c2d99c2', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('179f669c-f7cb-445e-b9cb-10c7e42c67dd', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0a4f9ae2-aed5-421f-885f-06623c2d99c2', '8d4fc519-7375-432c-8b6a-6cf000e9f287');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('eb8cba06-2884-498b-b1ac-384ba3eb17b0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Meri Bheegi Bheegi Si (Anamika)', '```E|-----------------------------------------------------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('eb8cba06-2884-498b-b1ac-384ba3eb17b0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Meri Bheegi Bheegi Si (Anamika)', '```E|-----------------------------------------------------------
 B|----------11--11--11--11--11-------------11----------------
 G|--10--11-------------------------10--11------11--10--8--8--
 D|-----------------------------------------------------------
@@ -21372,7 +21372,7 @@ G|--10--11------11--10--8----8--8--10--11--10--
 जले मन तेरा... ..', 'Kishore Kumar', 'Anamika', 1973, NULL, NULL, FALSE, '2017-11-11T13:12:20.614000+00:00', '2019-01-08T14:24:56.742000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('37b3163a-6df1-46ac-b21b-2354d585a0d9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'eb8cba06-2884-498b-b1ac-384ba3eb17b0', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('26f96301-977d-4671-bbda-aa1f88c1c66e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'eb8cba06-2884-498b-b1ac-384ba3eb17b0', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('36d79000-e4c8-413b-b248-863b2c17a2c4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Zamaana Lage - Metro In Dino', 'Tumhare (G)Shehar Ka Mau(G)sam
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('36d79000-e4c8-413b-b248-863b2c17a2c4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Zamaana Lage - Metro In Dino', 'Tumhare (G)Shehar Ka Mau(G)sam
 Bada Su(Em)haanaa La(Am)ge
 Main Ek (G)Shaam Chura (G)Loon
 Agar Bu(Cmaj7)ra Naa La(Am)ge
@@ -21418,7 +21418,7 @@ Strum - D DU UDU or D DD DDDU or D D UUD D DU', 'https://chordsfactory.com/zamaa
 https://www.youtube.com/watch?v=zdOhGhDcSUQ', FALSE, '2025-07-20T07:03:58.678000+00:00', '2025-07-20T07:04:34.992000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a524e193-2bdf-4846-b78d-255644725da7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '36d79000-e4c8-413b-b248-863b2c17a2c4', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('79bfc2e7-4386-41cc-b6be-8737072033a5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '36d79000-e4c8-413b-b248-863b2c17a2c4', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('db271318-f68c-463e-b042-0ff9c6c0b819', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aaoge Jab Tum Ho Sajna', 'Aaoge (D)Jab Tum (A)Saajna
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('db271318-f68c-463e-b042-0ff9c6c0b819', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aaoge Jab Tum Ho Sajna', 'Aaoge (D)Jab Tum (A)Saajna
 Aaoge (D)Jab Tum (A)Saajna
 (Em) Angana Phool Khi(D)lege
 Barsega (Em)Saawan, Barsega (A)Saawan
@@ -21453,7 +21453,7 @@ D DU UDU
 Chords used : D, A, G, Em', 'https://www.youtube.com/watch?v=un2VehsMrdA', FALSE, '2019-01-30T14:52:56.862000+00:00', '2019-01-30T16:05:01.711000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('dd0dd926-8fef-47a4-b96f-27d9297aca5c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'db271318-f68c-463e-b042-0ff9c6c0b819', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b5d95cf0-97f8-4a7d-a9a3-4ff15ae89488', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'db271318-f68c-463e-b042-0ff9c6c0b819', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('b27e7721-c4d1-400d-8901-c6202a695167', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dil Mein Ho Tum', 'INTRO (Without Capo)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('b27e7721-c4d1-400d-8901-c6202a695167', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dil Mein Ho Tum', 'INTRO (Without Capo)
 ```e | - - -7-6-4 - - - -9-7-6 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 B | -4 - - - - - - -7 - - - - - - - - - - -9-7-5 - - - - - - - - - - - - -8-9-11 -
 G | - - - - - - - - - - - - - - - - - - -4 - - - - - - - 4-6-6/8- - - 8- - - - - - - 
@@ -21533,7 +21533,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6f18dbd7-bf
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('fb5d70ad-5d91-4afb-9d6f-966e48a26955', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b27e7721-c4d1-400d-8901-c6202a695167', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('05f0f813-ec2f-4092-924b-b1321cdbf5a5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b27e7721-c4d1-400d-8901-c6202a695167', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('12c83c1b-e498-4b58-8739-04fc33fb95ce', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b27e7721-c4d1-400d-8901-c6202a695167', '8d4fc519-7375-432c-8b6a-6cf000e9f287');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('aee85d12-74f3-493a-aa81-0895fe55b654', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'O Hansini', 'Em...Em....
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('aee85d12-74f3-493a-aa81-0895fe55b654', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'O Hansini', 'Em...Em....
 
 Oh (Em)Hansini Meri (E)Hansini, 
 Kahan Ud (A)Chali
@@ -21575,7 +21575,7 @@ D DU UDU
 Chords used : Em, E, A, D, G', 'https://www.youtube.com/watch?v=kKhGsUgU3RI', FALSE, '2018-11-03T12:38:39.177000+00:00', '2018-11-03T13:35:17.747000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7903411c-d73d-4e2d-8cf4-53b9913d471e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'aee85d12-74f3-493a-aa81-0895fe55b654', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('dff3d2d6-1d84-4564-a203-d858b2f6cf07', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'aee85d12-74f3-493a-aa81-0895fe55b654', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('ccee2d50-e8f7-44ea-8920-3194c3672093', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Photo - Luka Chuppi', 'Main dekhun teri photo
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('ccee2d50-e8f7-44ea-8920-3194c3672093', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Photo - Luka Chuppi', 'Main dekhun teri photo
 Sau sau baar kude
 Main dekhun teri photo
 Sau sau baar kude
@@ -21625,7 +21625,7 @@ D U Chuck D D Chuck
 Chords used : Am, F, G, Em', 'https://www.youtube.com/watch?v=aeFWPMfTxEg', FALSE, '2019-05-06T04:46:14.022000+00:00', '2019-05-06T04:51:49.380000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f311d2b6-678e-4242-9a9e-bba69b3b0311', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ccee2d50-e8f7-44ea-8920-3194c3672093', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4a7eefec-5ff5-421d-b26d-ad8ce95b5d1a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ccee2d50-e8f7-44ea-8920-3194c3672093', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('bb196313-bf5b-4293-958e-d61cae3204ca', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Te Amo', 'INTRO
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('bb196313-bf5b-4293-958e-d61cae3204ca', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Te Amo', 'INTRO
 ```E |----14----12-------14------9-
 B |-12-12----12-----12-12------12----
 ```
@@ -21750,7 +21750,7 @@ Tere hazaron roop hai', 'Ash King, Sunidhi Chauhan', 'Dum Maaro Dum', 2011, NULL
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9f751d1e-c9b2-4ccc-96c4-8b39dd41e7ad', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'bb196313-bf5b-4293-958e-d61cae3204ca', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4062c398-50d8-46fe-9daa-cc3f19c5dd93', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'bb196313-bf5b-4293-958e-d61cae3204ca', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('bf4a08bb-45bc-4817-af47-0d121c69f9dd', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'bb196313-bf5b-4293-958e-d61cae3204ca', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('7de6fff8-860c-4fa3-8a6b-a541a4761c73', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Wada Karo', '```e|---------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('7de6fff8-860c-4fa3-8a6b-a541a4761c73', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Wada Karo', '```e|---------------
 B|----3--1---------
 G|--0-3--3--2-3-0-2---2-
 D|-0-----------3-3--
@@ -21824,7 +21824,7 @@ D|-3-1-1--1-0-0---
 Jahan Tum Ho, Vahan Main Bhi Hoon', 'Kishore Kumar, Lata Mangeshkar', 'Aa Gale Lag Jaa', 1973, NULL, 'http://tabandchord.com/2013/12/wada-karo-tabs-kishore-kumar/', FALSE, '2018-08-27T01:56:32.038000+00:00', '2018-10-01T17:01:50.561000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6a0e1bb2-69e7-4ad4-a5a0-a502dc21081c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7de6fff8-860c-4fa3-8a6b-a541a4761c73', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('914d4921-01ec-45a9-95fe-efdd2e02ad31', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7de6fff8-860c-4fa3-8a6b-a541a4761c73', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('61134718-af30-42d7-9c22-1cd8778e6c91', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Pee Loon', '```e | - 11-8----- - -8-9-8--- - - - - - - - - -9-8-8-
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('61134718-af30-42d7-9c22-1cd8778e6c91', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Pee Loon', '```e | - 11-8----- - -8-9-8--- - - - - - - - - -9-8-8-
 B | - - - - - -- 11----- - - 11-9--9-9-9---- - - - - 
 ```
 Pee Loon Tere Neelay Neelay Nainon Se Shabnam
@@ -21882,11 +21882,11 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('62985782-7b
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d32acd4b-a0aa-4eba-84c7-6188322cbf3d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '61134718-af30-42d7-9c22-1cd8778e6c91', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('298d5b05-f75f-469c-a853-b16571b47032', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '61134718-af30-42d7-9c22-1cd8778e6c91', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('caee9365-44b1-425b-bdcc-bf537f506612', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '61134718-af30-42d7-9c22-1cd8778e6c91', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('164b86d7-1c59-4c61-b221-b0ac24b23c39', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Humko Sirf Tumse Pyaar Hai', '', 'Kumar Sanu, Alka Yagnik', 'Barsaat', 1995, NULL, 'https://www.youtube.com/watch?v=pZUpNzkJ8Aw', FALSE, '2020-05-10T03:23:45.709000+00:00', '2020-05-10T03:23:59.852000+00:00');
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('164b86d7-1c59-4c61-b221-b0ac24b23c39', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Humko Sirf Tumse Pyaar Hai', '', 'Kumar Sanu, Alka Yagnik', 'Barsaat', 1995, NULL, 'https://www.youtube.com/watch?v=pZUpNzkJ8Aw', FALSE, '2020-05-10T03:23:45.709000+00:00', '2020-05-10T03:23:59.852000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('47476ec8-53a8-49ff-9f0a-52c7adfe94a6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '164b86d7-1c59-4c61-b221-b0ac24b23c39', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('659924e0-4fd3-4ec7-a85e-e158c4b55e28', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '164b86d7-1c59-4c61-b221-b0ac24b23c39', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('80832c32-20d0-4c47-8791-36c217c05378', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '164b86d7-1c59-4c61-b221-b0ac24b23c39', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('a663713d-9dbb-4c3c-b56c-cbabe794b179', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chal Ghar Chalein', 'INTRO (with Capo)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('a663713d-9dbb-4c3c-b56c-cbabe794b179', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chal Ghar Chalein', 'INTRO (with Capo)
 ```e | - - - 3-5-2- - 2-0-3-2- - - 3-2- - - - - - - - - 2 - - - - - - - -
 B | - - - - - - - - - - - - - - - - - - - - - -3-3/5 - - 3- - -3-5-5-0 -
 G | -4- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -21928,7 +21928,7 @@ Chords used : Em, D, C, Am, Bm, E', 'https://www.youtube.com/watch?v=SkX3saTNEUk
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5d88a056-acc7-4b69-920a-813e1b490fc9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a663713d-9dbb-4c3c-b56c-cbabe794b179', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e73c591f-6d1f-4568-8b24-f8730d9611e6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a663713d-9dbb-4c3c-b56c-cbabe794b179', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('89b3f833-3c23-42f7-b44c-bab064022f0c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a663713d-9dbb-4c3c-b56c-cbabe794b179', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('a9c29e60-2dbb-40fc-a0ef-6c0164f3d248', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Madari - Coke Studio', 'INTRO
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('a9c29e60-2dbb-40fc-a0ef-6c0164f3d248', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Madari - Coke Studio', 'INTRO
 e --3-3-5-5/6-3-5------3-3-5-5/6-3-5--|
 e --6-6-8-8-8-5-6------8/10-10-10-8-8-6-5--|', 'Vishal Dadlani, Clinton Cerejo', 'Coke Studio @ MTV Season 2', 2012, 'Capo at 3
 D D UUD DUDU    OR    D D UUD D(DU)', 'https://tabs.ultimate-guitar.com/tab/clinton_cerejo/madari_chords_1242129
@@ -21937,7 +21937,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('efa5bfde-e3
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('613b9ae7-e427-4d2a-b527-634c9cc29127', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a9c29e60-2dbb-40fc-a0ef-6c0164f3d248', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ec34f608-bb49-4f3a-a343-2f0cc152f88a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a9c29e60-2dbb-40fc-a0ef-6c0164f3d248', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5857f134-2eb7-470a-94f0-c27c184e9e84', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a9c29e60-2dbb-40fc-a0ef-6c0164f3d248', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('e0bccb65-cc67-438c-b01f-1e087601161b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Lo Safar - Baaghi 2', '(Em) Tumne jo hai maanga toh
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('e0bccb65-cc67-438c-b01f-1e087601161b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Lo Safar - Baaghi 2', '(Em) Tumne jo hai maanga toh
 Dil ye haazir (C) ho gaya
 (Bm) Tumko maana manzil aur
 Musafir (C) ho gaya (D)
@@ -21986,7 +21986,7 @@ Chords used : Em, C, D, G, Bm', 'https://www.youtube.com/watch?v=uhdMNfsaoWI', F
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2740b14d-fae9-4aab-8379-734bf8a9031f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e0bccb65-cc67-438c-b01f-1e087601161b', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2a3b24a8-5ba1-4aaf-aa99-dcce9e03d00b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e0bccb65-cc67-438c-b01f-1e087601161b', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a8e8c51c-4fb7-4eca-a6a0-4d0249742ebc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e0bccb65-cc67-438c-b01f-1e087601161b', '8d4fc519-7375-432c-8b6a-6cf000e9f287');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('cdbfc23d-47d5-4fdd-9334-3bea63f6f15b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tau Kia Huwa - Nescafe Basement', '[Intro]
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('cdbfc23d-47d5-4fdd-9334-3bea63f6f15b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tau Kia Huwa - Nescafe Basement', '[Intro]
 Bm A G A
 
 [Verse 1]
@@ -22033,7 +22033,7 @@ Bm A G A', 'Justin Bibis', 'Nescafe Basement Season 4', 2016, 'D D UUD D (DU)
 Chords used : Bm, G, A', 'https://tabs.ultimate-guitar.com/tab/asfar-hussain/tau-kia-huwa-chords-2439167', FALSE, '2022-03-17T10:46:18.199000+00:00', '2022-03-17T10:48:19.377000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('eb961db5-a81b-4673-b2c6-9d6a20011ae9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'cdbfc23d-47d5-4fdd-9334-3bea63f6f15b', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1c615cf2-c9b3-435f-8c8d-8f7629d29f96', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'cdbfc23d-47d5-4fdd-9334-3bea63f6f15b', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('fe4bb603-1459-4b49-895c-2b980c820690', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Duur - Strings', '(Intro)G....G....
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('fe4bb603-1459-4b49-895c-2b980c820690', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Duur - Strings', '(Intro)G....G....
 
 (G)Duuuur Duuuuu(C)u(Am)uuu(G)r
 (G)Duuuur Duuuuu(C)u(Am)uuu(G)r
@@ -22080,7 +22080,7 @@ Saaj(C)naaaa(D)aaa
 Chords used : G, C, Am, D, Em', 'https://youtu.be/OPIRw6VS1-I', FALSE, '2018-11-01T14:00:11.935000+00:00', '2018-11-03T12:12:47.542000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e8dfee1e-ca5f-4402-b423-43b0a96295c8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fe4bb603-1459-4b49-895c-2b980c820690', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6d84e254-aabe-46a3-b728-6566c47fa142', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fe4bb603-1459-4b49-895c-2b980c820690', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('be7f6da3-e70f-4ec9-a188-c466dae8afa7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tum Hi Ho', 'Intro
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('be7f6da3-e70f-4ec9-a188-c466dae8afa7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tum Hi Ho', 'Intro
 ```e | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 B | - - - - - 1 - 1 - - - 2 - - - - - - - - - - - - - - - - 
 G | - - - 1 - - - - - - - - - 1 - 3 - 0 - - - - - - - - - - 
@@ -22156,7 +22156,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('34acc9dc-23
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6ae6e346-52f5-4e7b-9eeb-997fa2d1f553', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'be7f6da3-e70f-4ec9-a188-c466dae8afa7', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('304095bc-b5c5-439f-8ac1-da2a3db594a9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'be7f6da3-e70f-4ec9-a188-c466dae8afa7', '375ee2c2-3bd4-473f-afd0-87ef7a38f19a');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('32c17b72-859b-4f72-a7c8-7f5cc26ea474', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'be7f6da3-e70f-4ec9-a188-c466dae8afa7', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('c8cc2bce-66ac-4163-8d76-9c4d2f3c1593', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Give Me Some Sunshine', '(C) Sari umra (G) hum, mar (C) mar ke jee li(G)ye
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('c8cc2bce-66ac-4163-8d76-9c4d2f3c1593', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Give Me Some Sunshine', '(C) Sari umra (G) hum, mar (C) mar ke jee li(G)ye
 Ek (C) pal to ab hu(G)me jee(F)ne do, jeene (G) do
 (C) Sari umra (G) hum, mar (C) mar ke jee li(G)ye
 Ek (C) pal to ab hu(G)me jee(F)ne do, jeene (G) do
@@ -22206,7 +22206,7 @@ I wanna (F) grow up once a(G)gain
 (C) Na na (G) na na na na (F) na na (G) na na', 'Suraj Jagan, Sharman Joshi', '3 Idiots', 2009, 'Strumming : D D UUD D (DU)', 'https://wrytin.com/mirayajain/give-me-some-sunshine-chords-3-idiots-jfcjp43l', FALSE, '2022-05-09T15:36:00.605000+00:00', '2022-05-09T15:37:18.693000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a75825c3-a43b-4730-8b37-bac9e64c4e22', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c8cc2bce-66ac-4163-8d76-9c4d2f3c1593', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ccae5f28-583a-4745-9da5-764a45b6b693', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c8cc2bce-66ac-4163-8d76-9c4d2f3c1593', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('f88dc696-6d74-4f49-86e5-3b3b05b13b27', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'O Saathi re', '```E|-----------------------------------------------------|
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('f88dc696-6d74-4f49-86e5-3b3b05b13b27', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'O Saathi re', '```E|-----------------------------------------------------|
 B|-----7---9---10--9h---9--9---7--9---9---11--9--7----|
 G|-8----------------------------------------------------8--|
 ```
@@ -22244,7 +22244,7 @@ B|----9--9---7--9---9---11---9--7-7--------------------|
 tere bina bhi kya jeena', 'Kishore Kumar', 'Muqaddar Ka Sikandar', 1978, NULL, NULL, FALSE, '2018-01-23T14:41:45.670000+00:00', '2018-01-25T05:28:53.639000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('7e7c92a7-cfc7-4518-9fa4-bde6aa3bda59', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f88dc696-6d74-4f49-86e5-3b3b05b13b27', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f3625727-a46e-4c28-94e1-ff109ab44701', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'f88dc696-6d74-4f49-86e5-3b3b05b13b27', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('10257419-170b-46d9-91c3-b988ce1a63f1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Naagin tune (The Lady Cobra)', '```E|--0--0--2--5--5--4--2--0--
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('10257419-170b-46d9-91c3-b988ce1a63f1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Naagin tune (The Lady Cobra)', '```E|--0--0--2--5--5--4--2--0--
 ```
 
 ```E|--0--0--2--5--5--4--2--0--
@@ -22310,7 +22310,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6ea12040-78
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('cac0b2e0-1bc1-46b7-9655-72e094fcd6f6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '10257419-170b-46d9-91c3-b988ce1a63f1', 'f6f1fa22-4ebb-4dfc-8a00-65f2e520dc91');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('68cfc673-dd4b-4fea-a42d-39d6d6248708', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '10257419-170b-46d9-91c3-b988ce1a63f1', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('0d824fdb-9d07-466d-a469-ade7ecee1dc1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '10257419-170b-46d9-91c3-b988ce1a63f1', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('18bf0adc-d12a-4810-a3be-dff273c25fa1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Baatein Ye Kabhi Na', '```E |--12-11-9-7-9----------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('18bf0adc-d12a-4810-a3be-dff273c25fa1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Baatein Ye Kabhi Na', '```E |--12-11-9-7-9----------
 B |-9--------9-10/12-10-9-7-
 ```
 Baatein ye kabhi na tu bhulna
@@ -22381,7 +22381,7 @@ B |----------12---10-12-10-9-
 Kaise kare hum usko bayaan', 'Arijit Singh', 'Khamoshiyan', 2015, NULL, 'http://msworldsite.com/baatein-ye-kabhi-na-guitar-tabs-lead-khamoshiyan/', FALSE, '2018-09-20T14:47:01.908000+00:00', '2019-04-22T02:23:06.689000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d878a273-d6bc-4b99-bef2-277365458482', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '18bf0adc-d12a-4810-a3be-dff273c25fa1', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ca0e89b7-9cf8-46b8-82a4-4c0590968004', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '18bf0adc-d12a-4810-a3be-dff273c25fa1', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('3144ae3f-70d5-4484-a5ed-97e747dd58b3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Teri meri (bodyguard)', '2 9 7 9 5 7 9 5
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('3144ae3f-70d5-4484-a5ed-97e747dd58b3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Teri meri (bodyguard)', '2 9 7 9 5 7 9 5
 
 7 9 7 5 4 2 4 2 0
 
@@ -22411,7 +22411,7 @@ INSERT INTO public.notes (id, user_id, title, content, artist, album, release_ye
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f6545ae9-3ccb-43af-b177-a1d713a1154f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '3144ae3f-70d5-4484-a5ed-97e747dd58b3', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ca017599-1c7a-4a23-9d75-f62207d2228f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '3144ae3f-70d5-4484-a5ed-97e747dd58b3', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c1e303ef-5ee4-433a-aea7-3abd92880ea4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '3144ae3f-70d5-4484-a5ed-97e747dd58b3', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('0a72f0de-85c6-4763-a712-a13f4a9cac7e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Paravashanadenu (Kannada)', 'Paravashanadenu           Ariyuva munnave
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('0a72f0de-85c6-4763-a712-a13f4a9cac7e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Paravashanadenu (Kannada)', 'Paravashanadenu           Ariyuva munnave
 e :   -------------------9--9--     ---------------------8--8--
 B :   9--7-----7--9-----------     --9--7-----7--9----------
 G :   -------9------------------    ---------9-----------------
@@ -22437,7 +22437,7 @@ B : ---------7------        ----10--9--7--9--10--9--
 G : -8--9-----------       -------------------------------', 'Sonu Nigam, Shreya Ghoshal', 'Paramathma', 2011, NULL, NULL, FALSE, '2017-12-23T14:21:36.499000+00:00', '2018-04-28T08:29:49.032000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9b7e0bb8-f034-4952-acb6-d2079c842a0c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0a72f0de-85c6-4763-a712-a13f4a9cac7e', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ee318209-d8c3-4c88-8668-6a139cd86070', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0a72f0de-85c6-4763-a712-a13f4a9cac7e', 'bfb29683-c6ea-4f7b-affc-5fe459c721bd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('5f52193d-db78-4d66-83cf-16c96e3af5b0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Barbaad - Saiyaara', 'Tujhse (Em)door main ek hi wa(Dadd11)jah ke liye hoon
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('5f52193d-db78-4d66-83cf-16c96e3af5b0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Barbaad - Saiyaara', 'Tujhse (Em)door main ek hi wa(Dadd11)jah ke liye hoon
 (Am7)Kamzor ho jaata (Cmaj7)hoon main
 Tujhse (Em)door main ek hi wa(D)jah ke liye hoon
 (Am7)Aawara ban jaata (Cmaj7)hoon main
@@ -22475,7 +22475,7 @@ Strumming - D UUD UUD DU
 Chords used : Em, D, Am, C', NULL, FALSE, '2025-07-13T14:34:36.545000+00:00', '2025-07-13T14:35:58.613000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f0e4c165-13ad-47fc-a8d9-d9600c50d947', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5f52193d-db78-4d66-83cf-16c96e3af5b0', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ce1ee0c5-328b-4221-920f-1f51d48f9d18', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '5f52193d-db78-4d66-83cf-16c96e3af5b0', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('d6541bc6-07ef-4076-b42b-d31ef793d4ad', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'chalte chalte yunhi ruk jaata hu main', 'chalte chalte yunhi
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('d6541bc6-07ef-4076-b42b-d31ef793d4ad', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'chalte chalte yunhi ruk jaata hu main', 'chalte chalte yunhi
 e-3-2--0-0-0-----------------------
 B-----3------------------------------
 ruk jaata hoon main
@@ -22513,7 +22513,7 @@ haan yehi pyar hai
 e-3-2-5-0-0-0-------', 'Udbhav, Manohar Shetty, Ishaan, Shweta Pandit, Sonali Bhatawdekar, Pritha Mazumdar', 'Mohabbatein', 2000, NULL, NULL, FALSE, '2017-11-08T03:23:51.663000+00:00', '2017-11-08T03:27:50.576000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c49e4a29-8297-470a-9f86-b8067b19cc8e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd6541bc6-07ef-4076-b42b-d31ef793d4ad', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b480c115-fac0-448a-bc7d-c6e029ddd896', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'd6541bc6-07ef-4076-b42b-d31ef793d4ad', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('595c08da-6b8d-43e3-8971-d2f24949e290', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kalle Kalle', '=========FINGERSTYLE (4-3-1-slap)========
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('595c08da-6b8d-43e3-8971-d2f24949e290', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kalle Kalle', '=========FINGERSTYLE (4-3-1-slap)========
 F F C C
 F F C C
 
@@ -22586,7 +22586,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b0377609-29
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a80e4f87-2959-4a17-96fc-61b899be1161', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '595c08da-6b8d-43e3-8971-d2f24949e290', 'f38a575b-3040-4496-8494-78d603e260b4');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4d34ca66-b510-4bf3-b9c6-e30aba0799e4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '595c08da-6b8d-43e3-8971-d2f24949e290', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f87095ef-eb84-4016-b1a6-968991547b5c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '595c08da-6b8d-43e3-8971-d2f24949e290', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('413a5615-ea03-438f-ba25-71451572d702', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aaj bhi - Vishal Mishra', 'Intro - with capo (https://www.youtube.com/watch?v=JjGyO5S6utU)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('413a5615-ea03-438f-ba25-71451572d702', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aaj bhi - Vishal Mishra', 'Intro - with capo (https://www.youtube.com/watch?v=JjGyO5S6utU)
 ```e | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 0-0 - - 
 B | -1- 1 - - 0-0- - - - - - - - - - - - - - - -1 - 3- - - - - - - - 
 G | - - - - - - - - -- - -2-2 - - -0-2-0-2- - - - - - - - - - - - -
@@ -22648,7 +22648,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('cedb2b4f-95
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f2146252-8b1b-499c-9d07-17b21bdd7bcd', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '413a5615-ea03-438f-ba25-71451572d702', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('cb93528d-f514-484d-b628-4cdfa105166c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '413a5615-ea03-438f-ba25-71451572d702', '375ee2c2-3bd4-473f-afd0-87ef7a38f19a');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('447704cc-527a-42ee-901b-2a01ca2c40c8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '413a5615-ea03-438f-ba25-71451572d702', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('6a59767b-ceec-468c-9052-40edf0e3898a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Summer of 69', '```e | - 0 - 2 - 3 - 2 - 0 - 2 -
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('6a59767b-ceec-468c-9052-40edf0e3898a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Summer of 69', '```e | - 0 - 2 - 3 - 2 - 0 - 2 -
 ```
 
 
@@ -22664,7 +22664,7 @@ G|--9-----------9------|--4--6--7--6--4--6--
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('509ae074-4b2b-484e-ac0d-fef1d0340cda', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6a59767b-ceec-468c-9052-40edf0e3898a', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('393aa091-0b75-4d85-bdaa-a334631147b7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6a59767b-ceec-468c-9052-40edf0e3898a', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3d9b8d32-f0b3-409a-b3ad-6c33bdb88fb8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6a59767b-ceec-468c-9052-40edf0e3898a', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('2cf10a68-33aa-4541-b2fa-7a12777e871e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Fullmetal Alchemist - Brothers', '```e|--13--12--13--12--10-------------------------------|
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('2cf10a68-33aa-4541-b2fa-7a12777e871e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Fullmetal Alchemist - Brothers', '```e|--13--12--13--12--10-------------------------------|
 B|-------------------------------13--10--------13--10--|
 G|-------------------------------------------12--------------|
 ```
@@ -22705,7 +22705,7 @@ G|---------------------10--9--7--|
 ```', 'Michiru Oshima', 'Fullmetal Alchemist Original Soundtrack 1', 2004, NULL, 'https://tabs.ultimate-guitar.com/tab/misc_cartoons/fullmetal_alchemist_-_brothers_tabs_756559', FALSE, '2019-03-19T05:20:22.618000+00:00', '2025-09-12T14:52:16.861000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('208bd2a1-423c-486f-99ae-4277b00f0a9b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2cf10a68-33aa-4541-b2fa-7a12777e871e', '19e5627d-a2b0-4d3f-9425-eb88225bd761');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('528f1cac-ec9c-48fe-873f-af597874fe1d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2cf10a68-33aa-4541-b2fa-7a12777e871e', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('cc1a22b4-f13e-4ff6-8de7-987cfc8c352f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Qayde Se - Metro In Dino', '(G)Dil jala ke mus (D)kurane 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('cc1a22b4-f13e-4ff6-8de7-987cfc8c352f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Qayde Se - Metro In Dino', '(G)Dil jala ke mus (D)kurane 
 ki jo (A)aadat hui hai (G)mujhe  
 (G)Lag raha hai (D)qayde se 
 ab moha(A)bbat hui hai (G)mujhe  ....x2 
@@ -22756,7 +22756,7 @@ https://www.youtube.com/watch?v=yZNfX9Dxac0', FALSE, '2025-07-16T01:57:10.613000
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('42bf0d26-47f9-49ec-98f0-dba629537ce8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'cc1a22b4-f13e-4ff6-8de7-987cfc8c352f', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f65aea34-9e2a-47dd-8c3a-2b448e8ca044', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'cc1a22b4-f13e-4ff6-8de7-987cfc8c352f', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e4a6d446-f45f-4ce2-8fd2-73640b9464a9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'cc1a22b4-f13e-4ff6-8de7-987cfc8c352f', '8d4fc519-7375-432c-8b6a-6cf000e9f287');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('4c80ae7b-300e-40b0-a0a7-12241ee5f928', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tu hi re (Uyire) - Bombay (D, Dsus2, G, Gm, Bm)', 'Intro
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('4c80ae7b-300e-40b0-a0a7-12241ee5f928', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tu hi re (Uyire) - Bombay (D, Dsus2, G, Gm, Bm)', 'Intro
 ```E|-----------------------------------------------------------------------------------------
 B|-----------------------------------------------------------------------------------------
 G|-----------------------------------------------5/8-----5-----------------------------------------
@@ -22805,7 +22805,7 @@ Yu Hi [G] Tadpa Na [D] Tu Mujh [G] ko', 'Hariharan, Kavita Krishnamurthy', 'Bomb
 https://tabs.ultimate-guitar.com/tab/a-r-rahman/tu-hi-re-chords-1154783', FALSE, '2021-02-21T09:29:27.297000+00:00', '2021-03-14T12:08:40.455000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d672a705-00cf-409f-94e9-6cb406e75f63', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4c80ae7b-300e-40b0-a0a7-12241ee5f928', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('642b5802-b195-47d0-b188-a3bc189280bc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4c80ae7b-300e-40b0-a0a7-12241ee5f928', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('0ec99c45-0b4c-46ae-ab1b-f287c7451f3d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tu hi re (Uyire) - Bombay', 'Intro
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('0ec99c45-0b4c-46ae-ab1b-f287c7451f3d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tu hi re (Uyire) - Bombay', 'Intro
 ```E|---------------------------------------------------------------------------------
 B|---------------------------------------------------------------------------------
 G|----------------------------------5/8---5------------------------
@@ -22926,7 +22926,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8240e05e-4e
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f46d9bc4-077c-4e4e-8196-264531743348', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0ec99c45-0b4c-46ae-ab1b-f287c7451f3d', '74d4c762-17cd-4377-b23a-52bf90f64c92');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('0c643494-c45d-4d61-8eae-4369fb2155a2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0ec99c45-0b4c-46ae-ab1b-f287c7451f3d', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3d6577b0-fec4-4e51-a244-5f0f1b660d5a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0ec99c45-0b4c-46ae-ab1b-f287c7451f3d', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('0570bbf0-72db-4f3f-94c2-3d20736037ec', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Blank Template', '```e | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('0570bbf0-72db-4f3f-94c2-3d20736037ec', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Blank Template', '```e | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 B | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 G | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 D | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -22951,7 +22951,7 @@ http://tabandchord.com/2013/08/jaane-jaan-dhoondta-phir-raha-chords-kishore-kuma
 https://tabs.ultimate-guitar.com/tab/kishore_kumar/dil_kya_kare_chords_1877563
 https://tabs.ultimate-guitar.com/tab/kishore_kumar/hum_bewafa_hargiz_na_the_chords_1227545
 https://www.quora.com/Which-are-some-easy-popular-old-Hindi-songs-to-play-on-Guitar-using-open-chords', TRUE, '2017-10-07T04:03:40.832000+00:00', '2019-04-05T12:16:55.920000+00:00');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('3a91c1f6-d8e9-449a-9336-3dca021d51f2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Achyutam Keshavam', '(C)Achyutam Keshavam (G)Krishna Damodaram
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('3a91c1f6-d8e9-449a-9336-3dca021d51f2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Achyutam Keshavam', '(C)Achyutam Keshavam (G)Krishna Damodaram
  (F)Rama Naray(G)nam Jana(C)ki Vallabham........x2 
 (C)Kaun Kehta Hai Bhagvan (G)Aate Nahi 
 (F)Tum Meera (G)Ke Jaise (C)Bulate Nahi
@@ -22987,11 +22987,11 @@ D DU UDU', 'https://www.youtube.com/watch?v=OsOpO4T2uF4', FALSE, '2020-04-28T01:
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('68079e51-211f-4aab-89f9-0951faf46518', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '3a91c1f6-d8e9-449a-9336-3dca021d51f2', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('19e9cc76-920d-468a-b653-b03185c1acfe', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '3a91c1f6-d8e9-449a-9336-3dca021d51f2', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('caac9b36-333a-4f7f-8441-4384c78128b8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '3a91c1f6-d8e9-449a-9336-3dca021d51f2', '6a3e1159-3e7b-4145-b202-58429f143d25');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('4f58b748-ee82-467a-acf5-244d074fd6a9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Abhi Mujh Mein Kahin', '', 'Sonu Nigam', 'Agneepath', 2012, NULL, 'https://www.youtube.com/watch?v=fTiwRxe-bkM', FALSE, '2018-09-04T16:03:51.738000+00:00', '2018-09-04T16:03:57.846000+00:00');
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('4f58b748-ee82-467a-acf5-244d074fd6a9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Abhi Mujh Mein Kahin', '', 'Sonu Nigam', 'Agneepath', 2012, NULL, 'https://www.youtube.com/watch?v=fTiwRxe-bkM', FALSE, '2018-09-04T16:03:51.738000+00:00', '2018-09-04T16:03:57.846000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5a8295ec-1002-42c9-9757-da5033df01f1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4f58b748-ee82-467a-acf5-244d074fd6a9', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('93f87a48-0530-4e3e-bc94-02cff1027bae', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4f58b748-ee82-467a-acf5-244d074fd6a9', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a651d8c3-de0a-4fe8-8a78-7f43433d0d66', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4f58b748-ee82-467a-acf5-244d074fd6a9', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('05bf6652-6f09-4513-bee7-a265f9826ff7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Channa Mereya', '```E |-8-10-12-12-12-
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('05bf6652-6f09-4513-bee7-a265f9826ff7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Channa Mereya', '```E |-8-10-12-12-12-
 ```
 Accha chalta hoon
 
@@ -23118,11 +23118,11 @@ B |-12----------
 O piya.. (x2)', 'Arijit Singh', 'Ae Dil Hai Mushkil', 2016, NULL, 'http://msworldsite.com/channa-mereya-guitar-tabs-lead-ae-dil-hai-mushkil-arijit-singh/', FALSE, '2018-09-20T14:45:37.233000+00:00', '2018-10-01T03:07:27.599000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('22e191a3-5f24-4572-94d6-fe6a49e020f9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '05bf6652-6f09-4513-bee7-a265f9826ff7', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('0caf4ba0-c028-4664-bd40-f46aea677534', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '05bf6652-6f09-4513-bee7-a265f9826ff7', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('499a5950-53a9-4eda-82f5-feb86c4e04fa', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Wake me up When September Ends - Green Day', '', 'Green Day', 'American Idiot', 2004, NULL, 'https://www.youtube.com/watch?v=v_8IeJepuDg', FALSE, '2018-10-13T10:01:03.510000+00:00', '2018-10-13T10:01:18.363000+00:00');
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('499a5950-53a9-4eda-82f5-feb86c4e04fa', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Wake me up When September Ends - Green Day', '', 'Green Day', 'American Idiot', 2004, NULL, 'https://www.youtube.com/watch?v=v_8IeJepuDg', FALSE, '2018-10-13T10:01:03.510000+00:00', '2018-10-13T10:01:18.363000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ac1424fb-0cc5-4aaf-8f84-cd9154483d5f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '499a5950-53a9-4eda-82f5-feb86c4e04fa', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c82445c2-5fb7-475a-8ca1-cfa97e971c5d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '499a5950-53a9-4eda-82f5-feb86c4e04fa', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('301ac66f-85d4-4bd6-8960-9e98f0d35787', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '499a5950-53a9-4eda-82f5-feb86c4e04fa', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('65df24f2-02dd-4766-8a34-c1a1338571db', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chahun Main Ya Na - Aashiqui 2', 'INTRO : https://youtu.be/rGLPjnsJB5o
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('65df24f2-02dd-4766-8a34-c1a1338571db', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chahun Main Ya Na - Aashiqui 2', 'INTRO : https://youtu.be/rGLPjnsJB5o
 Hold Am                                                  => 5, 4, 3, 1
 Am + [3rd fret, 2nd string]                     => 5, 4, 2
 Am  (in second 3, lift ring finger)          => 5, 4, 2 (pull off), 3, 3, 3
@@ -23205,7 +23205,7 @@ Chords used : Am, G, F, Em, E', 'https://www.youtube.com/watch?v=rGLPjnsJB5o', F
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('34feae67-22e3-41c4-8caf-313334303e2c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '65df24f2-02dd-4766-8a34-c1a1338571db', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('cf03a058-617e-4aa7-8838-b7cad5055e25', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '65df24f2-02dd-4766-8a34-c1a1338571db', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('96f324d8-6cf7-42d5-b20f-3e6079510b6e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '65df24f2-02dd-4766-8a34-c1a1338571db', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('607a12f0-eb53-4fbd-9e67-7bfac06c5bf8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ek ladki ko dekha to', 'Intro Tabs (Starting of the song) :
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('607a12f0-eb53-4fbd-9e67-7bfac06c5bf8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Ek ladki ko dekha to', 'Intro Tabs (Starting of the song) :
 ```E |-----8-------
 B |--11----11-11----
 G |10-----------
@@ -23362,7 +23362,7 @@ Ho ek ladki ko dekha to aisa laga', 'Kumar Sanu', '1942: A Love Story', 1994, NU
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('477d3749-64ff-4be9-9f39-b27d9dd29cba', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '607a12f0-eb53-4fbd-9e67-7bfac06c5bf8', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('07119dc5-17ba-4692-a592-da37d841f45a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '607a12f0-eb53-4fbd-9e67-7bfac06c5bf8', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('92750066-bae0-45d8-9a7b-b88d303e852f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '607a12f0-eb53-4fbd-9e67-7bfac06c5bf8', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('cd12286d-632f-4443-9c64-c71dcf175a45', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tum Hardafa Ho', '=======Ddd Ddd D=========
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('cd12286d-632f-4443-9c64-c71dcf175a45', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tum Hardafa Ho', '=======Ddd Ddd D=========
 (Am)Tum naya (F)ehsaas ho, (Am)Jannati (F)barsaat ho
 
 Am.....F.....
@@ -23410,12 +23410,12 @@ Ddd Ddd D  (Starting Part)
 D UUD UUD DU  (Later Part)', 'https://www.youtube.com/watch?v=cgpR2t9ys-E', FALSE, '2019-01-27T15:48:12.193000+00:00', '2019-02-15T02:03:30.365000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('15d28ca4-b7f8-4e93-9e89-c497ddf6af4a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'cd12286d-632f-4443-9c64-c71dcf175a45', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('bcfd3dce-1d55-4f80-ab4e-bb655e52ef23', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'cd12286d-632f-4443-9c64-c71dcf175a45', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('25810410-919b-4829-bf60-bbc427a9420f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hum Bewafa Hargiz Na The', '', 'Kishore Kumar', 'Shalimar', 1978, 'Capo at 2
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('25810410-919b-4829-bf60-bbc427a9420f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hum Bewafa Hargiz Na The', '', 'Kishore Kumar', 'Shalimar', 1978, 'Capo at 2
 D Chuck U    U Chuck U                       (https://youtu.be/--ChQzBsU_0?t=59)', 'https://tabs.ultimate-guitar.com/tab/kishore_kumar/hum_bewafa_hargiz_na_the_chords_1227545', FALSE, '2019-04-23T13:47:20.345000+00:00', '2019-04-23T14:40:53.076000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('19761642-d621-435f-ac35-cfc61ab556ac', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '25810410-919b-4829-bf60-bbc427a9420f', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('00dd96c8-e5d6-4116-a443-6d70ac7f4299', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '25810410-919b-4829-bf60-bbc427a9420f', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('18b41862-93fe-49a2-8f8b-a85af3543ba8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '25810410-919b-4829-bf60-bbc427a9420f', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('0c45408d-d365-402e-9277-ad532c1bbb0f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Californication - RHCP', '```e | - - - - - - - - - - - - - - - - - - - - - - - - - - -
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('0c45408d-d365-402e-9277-ad532c1bbb0f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Californication - RHCP', '```e | - - - - - - - - - - - - - - - - - - - - - - - - - - -
 B | - - - - - - - 0 - 1 - - - - - - - - - - - - - - - - 
 G | - - - - - - - - - - - - - - - - - - - - - - 0 - 2 - 
 D | - - - 2 - - - - - - - - - - - - - - - - - - - - - - 
@@ -23429,11 +23429,11 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ac73ee40-37
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d6659eee-1eb9-432d-86e0-3e7f006b0c04', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0c45408d-d365-402e-9277-ad532c1bbb0f', 'f6f1fa22-4ebb-4dfc-8a00-65f2e520dc91');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1612b906-0770-4c3c-ab3c-4affb2531eed', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0c45408d-d365-402e-9277-ad532c1bbb0f', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('1a5d701b-ba26-4da1-aebf-7289d834d6d2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0c45408d-d365-402e-9277-ad532c1bbb0f', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('7453bc27-f76d-4ec4-8ed5-5cd6470078ee', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aankh Hai Bhari Bhari', '', 'Kumar Sanu', 'Tum Se Achcha Kaun Hai', 2002, NULL, 'https://www.youtube.com/watch?v=wWjZ6xCHJP8', FALSE, '2018-09-04T16:11:33.249000+00:00', '2018-09-04T16:11:38.189000+00:00');
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('7453bc27-f76d-4ec4-8ed5-5cd6470078ee', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Aankh Hai Bhari Bhari', '', 'Kumar Sanu', 'Tum Se Achcha Kaun Hai', 2002, NULL, 'https://www.youtube.com/watch?v=wWjZ6xCHJP8', FALSE, '2018-09-04T16:11:33.249000+00:00', '2018-09-04T16:11:38.189000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('107d44b0-e090-4db6-a451-133ea558fd26', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7453bc27-f76d-4ec4-8ed5-5cd6470078ee', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('264a9c70-07c5-4e0f-ae41-b35f8bfa5630', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7453bc27-f76d-4ec4-8ed5-5cd6470078ee', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('19a70fb8-42ba-4ac6-97e9-58989bab27ad', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7453bc27-f76d-4ec4-8ed5-5cd6470078ee', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('094cc030-13dc-4e19-8e72-e405f9b45abc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Agar Tum Mil Jao', '```E |---------------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('094cc030-13dc-4e19-8e72-e405f9b45abc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Agar Tum Mil Jao', '```E |---------------
 B |-5-5-7-5h7-----5-7-----
 G |--------7--------
 D |---------------
@@ -23455,7 +23455,7 @@ D |---------------------------
 Tumhe Paakar Zamane Bhar Se Rishta Tod Denge Hum', 'Shreya Ghoshal', 'Zeher', 2005, NULL, NULL, FALSE, '2017-11-03T16:30:20.633000+00:00', '2017-11-03T16:36:24.943000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5075b94a-d273-4541-b624-abd373f00a58', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '094cc030-13dc-4e19-8e72-e405f9b45abc', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5d88e2b2-fcce-42a0-b8d8-7845938ec121', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '094cc030-13dc-4e19-8e72-e405f9b45abc', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('a3f7ebf4-4c9a-4c08-8653-ea2ae181199b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dil Ibaadat', '........Am...........................................................F...................................
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('a3f7ebf4-4c9a-4c08-8653-ea2ae181199b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Dil Ibaadat', '........Am...........................................................F...................................
 ```e | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -8 - 10- - - - - - - - - - - - - - - - - - 
 B | - - - - -5-6-8- -8/10 - 8 - 8h10 - 8 - 8h10 - - - - - - 6h8 - 6 - 6h8 - 6 - 5- -
 G | - 5/7 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -23525,12 +23525,12 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2a01ac7c-70
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('29c61d29-75b5-4c33-a92d-b056492143e7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a3f7ebf4-4c9a-4c08-8653-ea2ae181199b', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('d5bca02a-5266-4f57-9fc0-c20b6d0aa8f1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a3f7ebf4-4c9a-4c08-8653-ea2ae181199b', '375ee2c2-3bd4-473f-afd0-87ef7a38f19a');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('275fdce1-7e94-4b5d-97cd-f2991d4d914a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'a3f7ebf4-4c9a-4c08-8653-ea2ae181199b', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('0c14fc3c-d1bc-4bc7-9d4f-da27787e5ee9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mujhe Raat Din', '', 'Sonu Nigam', 'Sangharsh', 1999, 'Capo at 3
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('0c14fc3c-d1bc-4bc7-9d4f-da27787e5ee9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mujhe Raat Din', '', 'Sonu Nigam', 'Sangharsh', 1999, 'Capo at 3
 Strumming - Ddd   https://www.youtube.com/watch?v=-O-TVjhokpc', 'https://tabs.ultimate-guitar.com/tab/sonu-nigam/mujhe-raat-din-sangharsh-chords-3310823', FALSE, '2020-10-19T16:50:24.226000+00:00', '2020-10-19T16:50:58.587000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c15b44b4-522d-4520-bf22-a2df4fbc60df', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0c14fc3c-d1bc-4bc7-9d4f-da27787e5ee9', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('c403f9f6-f572-4a3c-a3f0-9b24792d4f64', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0c14fc3c-d1bc-4bc7-9d4f-da27787e5ee9', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4a1ffdaf-1405-4939-b787-138921875349', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0c14fc3c-d1bc-4bc7-9d4f-da27787e5ee9', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('4148806a-cd9f-488c-ac41-d270d209c8e0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chhod Diya - Arijit Singh (Bazaar) (Am, G, F, Em)', 'INTRO
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('4148806a-cd9f-488c-ac41-d270d209c8e0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chhod Diya - Arijit Singh (Bazaar) (Am, G, F, Em)', 'INTRO
 ```e | - - - 6- -8/9- 9 - - 9/11- 9- 8h9p8 - -6 -
 B | - 6- - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ```
@@ -23584,7 +23584,7 @@ D Chuck U    U Chuck U', 'https://www.youtube.com/watch?v=g9qoT2INVxg', FALSE, '
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('175662cd-2e50-495d-9dd7-8a38f764df65', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4148806a-cd9f-488c-ac41-d270d209c8e0', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5dc46cc5-a756-402d-8fdf-ee90ba7c2ece', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4148806a-cd9f-488c-ac41-d270d209c8e0', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('309fc350-5f73-4707-a11c-da10e32fc718', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '4148806a-cd9f-488c-ac41-d270d209c8e0', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('0c0bd4ba-8238-4be2-82c9-dd2a0bc5ee47', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mere Rashke Qamar', '=========Rahat Fateh Ali Khan========
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('0c0bd4ba-8238-4be2-82c9-dd2a0bc5ee47', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Mere Rashke Qamar', '=========Rahat Fateh Ali Khan========
 
 Aise (Am)lehra ke tu ruba(F)roo aa gayi...................x2
 Dhadka(G)ne betahasha ta(F)dapane lagin..............x2
@@ -23663,7 +23663,7 @@ D UUD UUD DU
 Chords used : Am, G, F', 'https://www.youtube.com/watch?v=D2xbfk3Jaao', FALSE, '2019-01-27T07:35:35.580000+00:00', '2019-01-30T03:23:49.792000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('12e879e4-982f-4138-86e6-0379f4c3f7da', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0c0bd4ba-8238-4be2-82c9-dd2a0bc5ee47', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ec1467f3-6629-43d7-b7cd-bbd6adb7c48f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '0c0bd4ba-8238-4be2-82c9-dd2a0bc5ee47', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('6f57211d-2001-4c00-94a7-18a2c59983e8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bheegi Bheegi Raaton Mein', '```E|-----------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('6f57211d-2001-4c00-94a7-18a2c59983e8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bheegi Bheegi Raaton Mein', '```E|-----------
 B|-3-1-1-3--3-1-1-3-
 ```
 Bheegi bheegi raaton mein
@@ -23759,7 +23759,7 @@ Mere badan ko bhigo ke mujhe
 Ched rahe ho, chhed rahe ho', 'Kishore Kumar, Lata Mangeshkar', 'Ajanabee', 1974, NULL, 'http://tabandchord.com/2012/11/bheegi-bheegi-raaton-mein-guitar-tab-ajnabee/', FALSE, '2018-09-04T02:17:49.420000+00:00', '2018-10-01T14:51:11.405000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8ff5d4fb-cab7-4d35-8f88-e75c3827eb62', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6f57211d-2001-4c00-94a7-18a2c59983e8', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ca921700-1c15-4ca5-ae9a-e46e09f714a8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '6f57211d-2001-4c00-94a7-18a2c59983e8', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('fdcad012-c722-41f9-a5a9-d4a0a5dc4644', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Husn - Anuv Jain', '(F) (C)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('fdcad012-c722-41f9-a5a9-d4a0a5dc4644', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Husn - Anuv Jain', '(F) (C)
 (E7)Aaaa (Am)Aaaa(G)
 
 (F)Dekho Dekho Kaisi baatein yahan ki
@@ -23835,7 +23835,7 @@ Strumming - D D UDUD UDU
 Chords used : F, C, E7, Am, G', 'https://www.youtube.com/watch?v=-PDlnmb72tg', FALSE, '2024-01-20T04:14:00.328000+00:00', '2024-01-20T04:22:05.315000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('03798372-0872-4f4e-9a58-c83af6a62b10', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fdcad012-c722-41f9-a5a9-d4a0a5dc4644', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('455c407d-4a6e-442e-9407-10a6daaceb7e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fdcad012-c722-41f9-a5a9-d4a0a5dc4644', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('adec0773-d188-4db5-b263-21e3efc01be9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chehraa hai ya chaand khila', 'E--0----------0-------------0------------0---------------0-1-0---0-1-0---0-1-0-1-0-1-0- 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('adec0773-d188-4db5-b263-21e3efc01be9', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Chehraa hai ya chaand khila', 'E--0----------0-------------0------------0---------------0-1-0---0-1-0---0-1-0-1-0-1-0- 
 B----1-0--------1-0----------1-0---------1-0----------------------------------------------------
 G----------2-----------2-------------2------------2------------------------------------------------
 Mukhda
@@ -23865,7 +23865,7 @@ D--2-------------------------------
  Yeh to bata tera naam hai kya', 'Kishore Kumar', 'Saagar', 1985, NULL, NULL, FALSE, '2017-11-09T02:35:48.568000+00:00', '2018-11-16T15:41:01.010000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8eace903-5fcd-4c24-afcb-4f84cb9c7088', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'adec0773-d188-4db5-b263-21e3efc01be9', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ff9687b1-908e-46ee-9983-f63900a1d029', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'adec0773-d188-4db5-b263-21e3efc01be9', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('1a579d01-e2a8-435c-ac37-459bb584bbe0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Let Her Go - Passenger', 'Fingerstyle : 5 3 2 3 1 2 3 2
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('1a579d01-e2a8-435c-ac37-459bb584bbe0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Let Her Go - Passenger', 'Fingerstyle : 5 3 2 3 1 2 3 2
 Strum : D D UDUDU D DU
 
 ```e | - - -0 - - - - - - - - - - - - - 0- -
@@ -23960,7 +23960,7 @@ Chords used : F, C, G, Am, Em', 'https://tabs.ultimate-guitar.com/tab/passenger/
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6f2f77ce-f267-4504-933b-62443636ae27', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '1a579d01-e2a8-435c-ac37-459bb584bbe0', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('bd8d9cc7-7a2d-4f65-9e71-cd7ba1121f8c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '1a579d01-e2a8-435c-ac37-459bb584bbe0', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('713a27f5-099c-4ef2-9e63-6358634d35ee', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '1a579d01-e2a8-435c-ac37-459bb584bbe0', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('3aadbc0b-a826-4b39-8a9a-37756f7cc5ce', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tujhe Kitna Chahne Lage - Kabir Singh', 'TBD : Sync notes with video
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('3aadbc0b-a826-4b39-8a9a-37756f7cc5ce', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tujhe Kitna Chahne Lage - Kabir Singh', 'TBD : Sync notes with video
 
 =======FINGERSTYLE===========
 Dil ka (G)dariya beh hi (Em)gaya
@@ -23993,7 +23993,7 @@ D D UUDUD DU', 'https://www.youtube.com/watch?v=-qgPY7dHDJQ', FALSE, '2019-06-13
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3cdbbe1e-a6f2-4dd4-9dd1-ad09f8e9aab7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '3aadbc0b-a826-4b39-8a9a-37756f7cc5ce', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('24fa7c4f-c55d-42ae-b6ac-79e6455d3e03', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '3aadbc0b-a826-4b39-8a9a-37756f7cc5ce', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('0136829b-13ae-4345-b67f-9f2e9c7b18a8', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '3aadbc0b-a826-4b39-8a9a-37756f7cc5ce', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('dd962b92-f117-418d-b55f-fbf6bd8a1bd2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bahut Pyar Karte Hain Tumko Sanam', 'Bahut pyaar karte hain tumko sanam
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('dd962b92-f117-418d-b55f-fbf6bd8a1bd2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Bahut Pyar Karte Hain Tumko Sanam', 'Bahut pyaar karte hain tumko sanam
 ```e | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 B | - - -5-5-7-5-7-10-8-10-7 - - - - - - - - - -7-5-5 -
 G | -4- - - - - - - - - - - - - - - - 9-7/5--5-7 - - - - - - 
@@ -24020,7 +24020,7 @@ Bahut pyaar karte hain tumko sanam
 Bahut pyaar karte hain tumko sanam', 'Anuradha Paudwal', 'Saajan', 1991, NULL, 'https://www.youtube.com/watch?v=HcL6Ldl0PQQ', FALSE, '2018-02-05T11:50:22.307000+00:00', '2018-02-05T16:30:43.704000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('83affbbc-a5b2-446a-8f5e-c4d30eb6ef7e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'dd962b92-f117-418d-b55f-fbf6bd8a1bd2', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('78a1cd4d-428e-4cd1-93fd-0c5a39515aaa', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'dd962b92-f117-418d-b55f-fbf6bd8a1bd2', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('c879a3f3-646e-4740-9a5e-d724c3b19f25', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kuch tum socho', 'F................................................
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('c879a3f3-646e-4740-9a5e-d724c3b19f25', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kuch tum socho', 'F................................................
 Kuch tum socho kuch hum soche
 C.......................................F....
 Fir khushi ka ye mausam aaye
@@ -24051,7 +24051,7 @@ Same for the 2nd stanza', 'Sonu Nigam, Alka Yagnik', 'Deewana', 1999, 'Strum : D
 Chords used : F, C, G, Bb', 'https://www.dailymotion.com/video/x24m7cm', FALSE, '2018-10-23T00:50:18.765000+00:00', '2019-04-03T13:17:17.689000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('13a15748-6fcb-44a6-b2a1-394dccae4d66', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c879a3f3-646e-4740-9a5e-d724c3b19f25', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('64c9a341-387a-4ad7-b4a3-01fd9eb6d791', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c879a3f3-646e-4740-9a5e-d724c3b19f25', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('b2d1fb23-5c3f-40be-b317-cda1dd80803c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Batein Kuchh Ankahee Si', '(A)Baatein kuchh anka(F#m)hee si, kuchh ansu(D)ni si hone la(E)gi
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('b2d1fb23-5c3f-40be-b317-cda1dd80803c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Batein Kuchh Ankahee Si', '(A)Baatein kuchh anka(F#m)hee si, kuchh ansu(D)ni si hone la(E)gi
 (A)Kaabu dil pe ra(F#m)ha na, hasti ha(D)maari khone la(E)gi
 (A)wo wo o o (D)o o o
 (A)wo wo o o (E)o o o
@@ -24081,7 +24081,7 @@ Batein Kuchh Ankahee Si...', 'Adnan Sami', 'Life in a... Metro', 2007, 'D DU UDU
 Chords used : A, F#m, D, E, Bm', 'https://tabs.ultimate-guitar.com/tab/misc_soundtrack/life_in_a_metro_-_batein_kuchh_ankahee_si_chords_543668', FALSE, '2018-11-11T04:27:59.233000+00:00', '2018-11-15T15:44:59.083000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('55e46720-a28b-4ee1-b93d-be55f7ac0ad7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b2d1fb23-5c3f-40be-b317-cda1dd80803c', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('3d69eb37-3fea-4bbf-bff5-8fa206d2bb98', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'b2d1fb23-5c3f-40be-b317-cda1dd80803c', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('8eceabc5-c13c-458f-94ff-cfc1d8cf4399', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'O O Jaane Jaana (Intro)', '```e | - - - - - - - - - - - 12 - 10 - 10 - - - - 
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('8eceabc5-c13c-458f-94ff-cfc1d8cf4399', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'O O Jaane Jaana (Intro)', '```e | - - - - - - - - - - - 12 - 10 - 10 - - - - 
 B | - 3/10 - 10-10 - - - - - - - - - - 13 - - 
 ```
 
@@ -24101,7 +24101,7 @@ B | - 10 - 10-10 - - - - - - - - - 13 - - - 12 - 13 - 10 -
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4f5454ad-07d1-4877-b3fc-515e1ed9d0d4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '8eceabc5-c13c-458f-94ff-cfc1d8cf4399', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('978c8cc1-a587-4740-a0e1-272d2105fb6d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '8eceabc5-c13c-458f-94ff-cfc1d8cf4399', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('0aa65792-f4b2-4487-974d-229add2fbbc4', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '8eceabc5-c13c-458f-94ff-cfc1d8cf4399', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('7197b3e6-6aeb-4ae3-af48-41742fdd2bcb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Likhe jo khat tujhe', 'TBD from video
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('7197b3e6-6aeb-4ae3-af48-41742fdd2bcb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Likhe jo khat tujhe', 'TBD from video
 
 [Am]Likhe jo khat tujhe    
 [Am]Woh teri yaad mein   
@@ -24143,7 +24143,7 @@ Chords used : Am, F, G', 'https://www.youtube.com/watch?v=sORTW4-zMl8', FALSE, '
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a1087296-7ce7-4fa3-8f57-4373c141c9bd', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7197b3e6-6aeb-4ae3-af48-41742fdd2bcb', 'ca29fa62-24fc-4ecb-808c-f795c7122529');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('fac13b70-9d56-4425-83e4-de5e1fded4ce', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7197b3e6-6aeb-4ae3-af48-41742fdd2bcb', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e7851dbe-3fc5-4402-a6d5-a4716cad742b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7197b3e6-6aeb-4ae3-af48-41742fdd2bcb', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('ee0cea56-c016-4e8f-870c-9ecdf3f680cf', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Humko Hamise Churalo', 'Humko humise chura lo
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('ee0cea56-c016-4e8f-870c-9ecdf3f680cf', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Humko Hamise Churalo', 'Humko humise chura lo
 2-9-7-9-7-5-7-4
 
 Dil mein kahin tum chupa lo
@@ -24164,7 +24164,7 @@ Paas aao gale se laga lo
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2da9906d-efa8-4c33-88d8-4ab03ceb654b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ee0cea56-c016-4e8f-870c-9ecdf3f680cf', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('4e360c46-76b0-4928-9b01-0c33d6251e68', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ee0cea56-c016-4e8f-870c-9ecdf3f680cf', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('5f2762ad-edf0-4b26-a638-d7c62a01e5a0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ee0cea56-c016-4e8f-870c-9ecdf3f680cf', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('ff7e07d6-7ac5-4187-8ee8-868f5b48345d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Castle of Glass', 'Intro
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('ff7e07d6-7ac5-4187-8ee8-868f5b48345d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Castle of Glass', 'Intro
 ```A|-4-4-6-7-6-4-2-2-4-------
 E|-----------------------2-2-4-
 ```
@@ -24232,7 +24232,7 @@ B - - - 4 - 2 - 2 -', 'Linkin Park', 'Living Things', 2012, NULL, NULL, FALSE, '
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f4f1aec6-6227-4410-87a4-63c4897332d0', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ff7e07d6-7ac5-4187-8ee8-868f5b48345d', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('957b0a22-78dd-4862-a8c7-c4de9067c4b3', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ff7e07d6-7ac5-4187-8ee8-868f5b48345d', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ca7bd8e4-c47f-4fbb-b978-87fdb512b408', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'ff7e07d6-7ac5-4187-8ee8-868f5b48345d', 'eebbc269-be1f-43e9-a641-4b2e91a39ff4');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('514d4647-fa86-4d83-935d-9217d8ce2782', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Teri Jhuki Nazar', 'Chaahe (G) kuch na kehna, Bhale chup tu rehna
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('514d4647-fa86-4d83-935d-9217d8ce2782', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Teri Jhuki Nazar', 'Chaahe (G) kuch na kehna, Bhale chup tu rehna
 Mujhe (D) hai pata, Tere (G) pyaar ka
 (G) Khamosh chehra, Aankhon pe pehra
 Khud (D) hai gawaah, Tere (D) pyaar ka
@@ -24272,7 +24272,7 @@ Mujhe (Bm) keh rahi hai ye (D) dastaan', 'Shafqat Amanat Ali', 'Murder 3', 2013,
 Strumming : D D DUDU DU', 'https://www.youtube.com/watch?v=5xILOpK1gWE', FALSE, '2022-02-09T01:28:24.068000+00:00', '2022-02-09T01:29:36.182000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('829adfd6-4032-4de0-afcf-439a822187dd', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '514d4647-fa86-4d83-935d-9217d8ce2782', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('98cdb970-de46-4844-ad82-ea6d8751c7f2', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '514d4647-fa86-4d83-935d-9217d8ce2782', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('25ba8eee-626a-4a36-9513-8729233c221c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kabhi yaadon mein aaun', 'Intro (2x)
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('25ba8eee-626a-4a36-9513-8729233c221c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kabhi yaadon mein aaun', 'Intro (2x)
 ```E|-----8--5--8-----8--5--8-----8--5-----------------
 B|--8-----------8---------------8--------8--6--8--6--5--
 ```
@@ -24308,7 +24308,7 @@ Again Repeat Like Part One...', 'Abhijeet Bhattacharya', 'Tere Bina', 2003, NULL
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('e1fc80f6-7c5a-4f4e-8f9e-49407aa75602', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '25ba8eee-626a-4a36-9513-8729233c221c', '39d6ed04-fc5c-427e-9060-9041887f4d0e');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('07471041-2faf-4cdf-883f-c7b2b611c693', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '25ba8eee-626a-4a36-9513-8729233c221c', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('faa0a8f3-5f70-4947-877a-81a86908c0fc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '25ba8eee-626a-4a36-9513-8729233c221c', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('dfa7a7cd-71f0-4a22-ae2d-5d07724b8e74', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Alvida', 'chupke se kahin,  dheemein pawn se
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('dfa7a7cd-71f0-4a22-ae2d-5d07724b8e74', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Alvida', 'chupke se kahin,  dheemein pawn se
 ```e | ----------------------------------------
 B | ----------------------------------------
 G | 0-3-3-0-3-----------0-3-8-7-3-------
@@ -24363,7 +24363,7 @@ G | 8-7-8-8----5-7-8------------8-10-5-
 ```', 'KK', 'Life in a Metro', 2007, NULL, NULL, FALSE, '2017-11-07T13:43:13.827000+00:00', '2017-11-07T13:56:57.595000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('a1a264e4-aa37-4f9e-adc7-cb673fe0a9d7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'dfa7a7cd-71f0-4a22-ae2d-5d07724b8e74', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9de2e4a9-4691-46c3-936b-3916dfcb0c81', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'dfa7a7cd-71f0-4a22-ae2d-5d07724b8e74', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('45f4e2e0-879d-49f6-89d4-c61af5baa60a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tum Hi Aana - Marjaavan', 'Intro Music:
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('45f4e2e0-879d-49f6-89d4-c61af5baa60a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tum Hi Aana - Marjaavan', 'Intro Music:
 [Em] [D] [C] [Em] (Two Times)
 
 Tere (C)jaane ka (Em)gham
@@ -24409,7 +24409,7 @@ Strumming Pattern: D Chuck U   U Chuck U
 Chords used : Em, Bm, D, C, Am', 'https://www.youtube.com/watch?v=aF3D7M0nsv0', FALSE, '2019-10-16T02:27:39.913000+00:00', '2021-03-21T13:46:15.708000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ac421878-5ae4-4109-b643-17c940fdf240', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '45f4e2e0-879d-49f6-89d4-c61af5baa60a', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('89808ced-f5c7-46e3-bec0-054fd19d2b70', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '45f4e2e0-879d-49f6-89d4-c61af5baa60a', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('096430dd-d049-418a-a960-af1802d959f6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Pyar Humein - Satte pe Satta', '(Am)Tumne who kya dekha,Jo kaha dee(G)wana
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('096430dd-d049-418a-a960-af1802d959f6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Pyar Humein - Satte pe Satta', '(Am)Tumne who kya dekha,Jo kaha dee(G)wana
 (G)Hamko nahin kuch (F)samajh zara (Am)samjhana
 (Am)Pyaar main jab bhi aankh kahi lad (G)jaye
 (G)Tab dharkan aur (F)bechaini bar (Am)jaye
@@ -24449,7 +24449,7 @@ D U U
 Chords used : Am, G, F', 'https://tabs.ultimate-guitar.com/tab/satte_pe_satta/pyar_hume_kis_mode_chords_1680687', FALSE, '2018-11-01T04:03:13.891000+00:00', '2019-01-04T03:32:14.807000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2bc6c43e-db8c-4246-a672-57fc85240d3e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '096430dd-d049-418a-a960-af1802d959f6', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('b9cca6f6-1d82-461d-9f2c-531585ab6357', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '096430dd-d049-418a-a960-af1802d959f6', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('40703a9f-235f-41e5-9b5b-1de7b963bc28', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Teri Hogaiyaan - Vishal Mishra', '=========FINGERSTYLE (5-2-5--5-2)========
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('40703a9f-235f-41e5-9b5b-1de7b963bc28', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Teri Hogaiyaan - Vishal Mishra', '=========FINGERSTYLE (5-2-5--5-2)========
 [C]...[C]...[C]...[C]...
 Kaisa [C]pyaar tu jataaye [F]
 Kaise [C]paas mere aaye [F]
@@ -24521,7 +24521,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6b7f6c37-c3
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('82cdb362-0d98-4c0b-803b-3c93aed13149', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '40703a9f-235f-41e5-9b5b-1de7b963bc28', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('83156ba5-d68e-4f3c-a48b-78fec00e0b9c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '40703a9f-235f-41e5-9b5b-1de7b963bc28', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('f4325c9c-8f30-41de-b4dc-69fdb5d9b962', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '40703a9f-235f-41e5-9b5b-1de7b963bc28', '8d4fc519-7375-432c-8b6a-6cf000e9f287');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('eedd166c-59a2-4880-8ad3-26f8e750050e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kal Ho Naa Ho', 'Har ghadi badal rahi hai roop zindagi
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('eedd166c-59a2-4880-8ad3-26f8e750050e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kal Ho Naa Ho', 'Har ghadi badal rahi hai roop zindagi
 ```E|--------------------------------------10----------------------
 B|--11-10-11-10-11-10-11-------13-11-10-----10-----10-
 G|----------------------------------------------------------12----12----
@@ -24581,7 +24581,7 @@ INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('0e3743d0-f9
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('81ab67a7-efc7-4bcc-9de8-193c824c3161', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'eedd166c-59a2-4880-8ad3-26f8e750050e', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('91315a79-b267-4c29-abb0-0f4a1853c5ec', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'eedd166c-59a2-4880-8ad3-26f8e750050e', 'f6f1fa22-4ebb-4dfc-8a00-65f2e520dc91');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('20469d27-4e79-4587-88f6-7a1dfcae50c1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'eedd166c-59a2-4880-8ad3-26f8e750050e', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('e62c43ed-7d17-4f1e-8032-87b5532ba8bf', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Neele Neele Ambar Par', '```E |---5---3-3------
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('e62c43ed-7d17-4f1e-8032-87b5532ba8bf', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Neele Neele Ambar Par', '```E |---5---3-3------
 B |-3-6---6-----5----
 G |--------------
 D |--------------
@@ -24715,7 +24715,7 @@ Neele neele ambar par chaand jab aaye
 Pyaar barsaaye humko tarsaaye', 'Kishore Kumar', 'Kalaakaar', 1983, NULL, NULL, FALSE, '2017-10-27T07:01:43.734000+00:00', '2017-10-28T03:29:00.735000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6a4851ae-9fdc-4c13-9b34-681f7bc2fb5b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e62c43ed-7d17-4f1e-8032-87b5532ba8bf', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('12dadf2a-5df8-4766-bfe2-155c630cc7b5', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'e62c43ed-7d17-4f1e-8032-87b5532ba8bf', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('7a98f052-5d12-4f2d-bd8b-a781286eb9b6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kuch is tarah', 'Kuch is tarha
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('7a98f052-5d12-4f2d-bd8b-a781286eb9b6', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Kuch is tarah', 'Kuch is tarha
 B-13---11---10---8-----------------------------
 Teri palkein
 B-10-8--6--5---------------------------------
@@ -24751,7 +24751,7 @@ E-8--10-10--10-10--12-10/12--12-------------', 'Atif Aslam', 'Doorie', 2006, NUL
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('8cd794df-5e40-400d-b21a-9e9364cf5147', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7a98f052-5d12-4f2d-bd8b-a781286eb9b6', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('bff97909-3b14-4a14-9356-a092d0b40dfc', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7a98f052-5d12-4f2d-bd8b-a781286eb9b6', '484fde0b-53ea-4d62-82d9-dff38182c04c');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('ee59eb11-120f-4e09-a4a0-3000ebb5604e', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7a98f052-5d12-4f2d-bd8b-a781286eb9b6', '22c9085c-724b-4679-aa10-b79b72f9b0be');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('7447161d-2a33-400b-a9ec-eb979bb2a26f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Karma Theme Song', 'e-------------10\11-11-11-11-11-11-11-11-11-11--
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('7447161d-2a33-400b-a9ec-eb979bb2a26f', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Karma Theme Song', 'e-------------10\11-11-11-11-11-11-11-11-11-11--
 B--8--7--8--------------------------------------
 e--13--11--10--8--6-6-6-6-6-6-6
 
@@ -24776,7 +24776,7 @@ B--9-----9-----9--8--', 'Various Artists', 'Karma', 2009, NULL, NULL, FALSE, '20
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('afcee829-2a3e-459f-9cdd-4ea10e566b0c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7447161d-2a33-400b-a9ec-eb979bb2a26f', 'ae6a7dff-8c54-4846-bf93-deb177ecbb68');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('594d9b1a-ddcb-4a4a-82d9-cf587db047f1', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7447161d-2a33-400b-a9ec-eb979bb2a26f', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('da79c9cb-31f8-4952-8139-7ecd8a8cef4d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '7447161d-2a33-400b-a9ec-eb979bb2a26f', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('2aa751fb-abb8-44ad-a3cb-8f71b4bce49b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Yeh Shaam Mastani', '```E|----------------0-
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('2aa751fb-abb8-44ad-a3cb-8f71b4bce49b', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Yeh Shaam Mastani', '```E|----------------0-
 B|--1-3-1------1-1-3-3--
 G|-0----2-0-0-0-------
 ```
@@ -24824,7 +24824,7 @@ B|----------------3-----3-1-
 Mujhe Dor Koyee Khinche, Teri Aur Liyee Jaaye', 'Kishore Kumar', 'Kati Patang', 1971, NULL, 'http://tabandchord.com/2013/08/yeh-shaam-mastani-guitar-tab-best-version/', FALSE, '2018-08-27T01:51:19.933000+00:00', '2018-10-01T16:21:19.529000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('557cedcd-d0b0-402e-a35d-f5ce4dbe4d83', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2aa751fb-abb8-44ad-a3cb-8f71b4bce49b', '22c9085c-724b-4679-aa10-b79b72f9b0be');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('6f586fa7-449b-43e2-855b-4fca55ce4a30', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', '2aa751fb-abb8-44ad-a3cb-8f71b4bce49b', 'f22d1b82-b224-4a44-a581-b5c25015af54');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('c6d64e95-f4f9-413e-9cc0-56340f389fcb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jeene De Na', '(Em)Zindagi ae (C)zindagi,  (Am)Gham na de ae (B)zindagi
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('c6d64e95-f4f9-413e-9cc0-56340f389fcb', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Jeene De Na', '(Em)Zindagi ae (C)zindagi,  (Am)Gham na de ae (B)zindagi
 (Em)Na jalaa haa(C)thon ko yun,  (Am)Chhune de (B)koi khushi
 
 Kismat ne (C)yun chhoda hu(Am)mein,  Sheesha ba(B)na ke toda humein
@@ -24854,7 +24854,7 @@ Jeene de (Em)na... jeene de (C)na,  Zinda(B)gi tu jeene de na', 'Raj Barman', 'J
 Later              :      D UDUD  UDUD DU', 'https://www.youtube.com/watch?v=U2yehnodP8U', FALSE, '2019-10-20T05:23:56.815000+00:00', '2020-05-05T01:50:02.755000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('2b80491f-6e3c-4e91-865a-1a951b522585', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c6d64e95-f4f9-413e-9cc0-56340f389fcb', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('0aaa5740-4dcd-4f7d-8594-06a085ac9b5c', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'c6d64e95-f4f9-413e-9cc0-56340f389fcb', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('fcebe897-dd7a-4c24-b06a-dc06a94cca0a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tu banja gali Benaras ki', 'Tu (G)banja gali Ba(Am)naras ki
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('fcebe897-dd7a-4c24-b06a-dc06a94cca0a', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Tu banja gali Benaras ki', 'Tu (G)banja gali Ba(Am)naras ki
 Main (C)shaam talak bha(G)tkoon tujhmein
 
 (G)Hmmm
@@ -24884,7 +24884,7 @@ Main (C)shaam talak bha(G)tkoon tujhmein x (2)', 'Asit Tripathy', 'Shaadi Mein Z
 Chords used : G, C, D, Am', 'https://chordsmate.blogspot.com/2017/11/tu-banja-gali-banaras-ki-chords-and.html', FALSE, '2018-12-26T14:49:04.735000+00:00', '2019-01-17T02:17:40.029000+00:00');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('9efebb74-a5b3-4169-898a-841d306a1de7', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fcebe897-dd7a-4c24-b06a-dc06a94cca0a', '94f83bf8-1cd6-44f7-9e77-dc2d9928b555');
 INSERT INTO public.note_tags (id, user_id, note_id, tag_id) VALUES ('58542aa4-110d-451f-acf4-8502c3dd6d3d', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'fcebe897-dd7a-4c24-b06a-dc06a94cca0a', '26bec2c9-84b7-4e97-8246-28dd469f49cd');
-INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", isPinned, created_at, updated_at) VALUES ('399ab331-bab1-47dc-82a8-3a53ddfea7ad', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hothon se choo lo tum', '```e | - - - - - - - - - - - - - - - - -
+INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, "references", is_pinned, created_at, updated_at) VALUES ('399ab331-bab1-47dc-82a8-3a53ddfea7ad', '3917b9a9-a856-4f33-a910-6ad73f9fa25b', 'Hothon se choo lo tum', '```e | - - - - - - - - - - - - - - - - -
 B | - - -3-5-6 - - - -3-3 - - - 
 G | - 5- - - - - - - 5- - - -5 - - 
 ```

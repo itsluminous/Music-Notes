@@ -12,7 +12,7 @@ export type Note = {
   album?: string;
   release_year?: number;
   metadata?: string;
-  isPinned?: boolean;
+  is_pinned?: boolean;
   references?: string;
   created_at: string;
   updated_at?: string;

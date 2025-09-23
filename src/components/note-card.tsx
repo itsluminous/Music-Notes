@@ -28,6 +28,9 @@ export function NoteCard({ note, allTags, onCardClick }: NoteCardProps) {
     >
       <CardHeader>
         <CardTitle className="font-headline text-lg">{note.title}</CardTitle>
+        {note.artist && (
+          <div className="text-sm text-muted-foreground">{note.artist}</div>
+        )}
       </CardHeader>
       <CardContent className="flex-grow text-sm">
         <div className="line-clamp-6 whitespace-pre-wrap">

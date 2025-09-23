@@ -34,6 +34,7 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = React.useState('');
   const [selectedTags, setSelectedTags] = React.useState<string[]>([]);
   const [showUntagged, setShowUntagged] = React.useState(false);
+  const [showPinned, setShowPinned] = React.useState(false);
   const [editingNote, setEditingNote] = React.useState<Note | null>(null);
   const [viewingNote, setViewingNote] = React.useState<Note | null>(null);
   const [isEditorOpen, setIsEditorOpen] = React.useState(false);
@@ -60,13 +61,18 @@ export default function Home() {
 
     // Filter by tags first
     const notesWithTags = notes.filter((note) => {
+      // If 'Pinned' is selected, show only pinned notes
+      if (showPinned && selectedTags.length === 0 && !showUntagged) {
+        return note.is_pinned;
+      }
+      
       // If 'Untagged' is the only filter, show notes with no tags
-      if (showUntagged && selectedTags.length === 0) {
+      if (showUntagged && selectedTags.length === 0 && !showPinned) {
         return note.tags.length === 0;
       }
       
-      // If other tags are selected, 'Untagged' is ignored
-      if (selectedTags.length === 0) return true;
+      // If other tags are selected, 'Untagged' and 'Pinned' are ignored
+      if (selectedTags.length === 0 && !showUntagged && !showPinned) return true;
       return selectedTags.every((tagId) => note.tags.includes(tagId));
     });
 
@@ -130,11 +136,13 @@ export default function Home() {
       .sort((a, b) => b.score - a.score)
       .map(item => item.note);
 
-  }, [notes, searchQuery, selectedTags, showUntagged]);
+  }, [notes, searchQuery, selectedTags, showUntagged, showPinned]);
 
   const handleTagToggle = (tagId: string) => {
     if (tagId === 'untagged') {
       setShowUntagged(prev => !prev);
+    } else if (tagId === 'pinned') {
+      setShowPinned(prev => !prev);
     } else {
       setSelectedTags((prev) =>
         prev.includes(tagId) ? prev.filter((id) => id !== tagId) : [...prev, tagId]
@@ -168,6 +176,7 @@ export default function Home() {
   
   const allArtists = React.useMemo(() => [...new Set(notes.flatMap(n => n.artist?.split(',').map(a => a.trim()) || []).filter(Boolean) as string[])], [notes]);
   const allAlbums = React.useMemo(() => [...new Set(notes.map(n => n.album).filter(Boolean) as string[])], [notes]);
+  const hasPinnedNotes = React.useMemo(() => notes.some(note => note.is_pinned), [notes]);
 
 
   const TagSidebarContent = () => (
@@ -197,6 +206,18 @@ export default function Home() {
             </SidebarMenuItem>
           ))}
           <Separator className="my-2" />
+          {hasPinnedNotes && (
+            <SidebarMenuItem className="px-2">
+              <Label htmlFor="tag-pinned" className="flex items-center gap-3 cursor-pointer w-full text-sm font-normal">
+                <Checkbox
+                  id="tag-pinned"
+                  checked={showPinned}
+                  onCheckedChange={() => handleTagToggle('pinned')}
+                />
+                Pinned
+              </Label>
+            </SidebarMenuItem>
+          )}
           <SidebarMenuItem className="px-2">
             <Label htmlFor="tag-untagged" className="flex items-center gap-3 cursor-pointer w-full text-sm font-normal">
               <Checkbox
@@ -221,7 +242,7 @@ export default function Home() {
       );
     }
 
-    if (filteredNotes.length === 0 && (searchQuery || selectedTags.length > 0 || showUntagged)) {
+    if (filteredNotes.length === 0 && (searchQuery || selectedTags.length > 0 || showUntagged || showPinned)) {
       return (
         <div className="text-center text-muted-foreground">
           <p>No notes found for the selected filters and search query.</p>

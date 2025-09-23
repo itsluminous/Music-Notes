@@ -238,7 +238,7 @@ def generate_sql(notes: List[Dict], user_id: str):
         for idx, n in enumerate(notes):
             nid = note_ids[idx]
             out.write(
-                "INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, \"references\", isPinned, created_at, updated_at) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);\n"
+                "INSERT INTO public.notes (id, user_id, title, content, artist, album, release_year, metadata, \"references\", is_pinned, created_at, updated_at) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);\n"
                 % (
                     f"'{nid}'",
                     f"'{user_id}'",
