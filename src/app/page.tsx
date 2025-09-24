@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from 'react';
-import { Plus, Search, Music, ListFilter, Menu } from 'lucide-react';
+import { Plus, Search, Music, ListFilter, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
@@ -10,7 +10,6 @@ import {
   SidebarHeader,
   SidebarContent,
   SidebarTrigger,
-  SidebarInset,
   SidebarMenu,
   SidebarMenuItem,
 } from '@/components/ui/sidebar';
@@ -174,9 +173,16 @@ export default function Home() {
     }
   };
   
+  const handleClearAllFilters = () => {
+    setSelectedTags([]);
+    setShowUntagged(false);
+    setShowPinned(false);
+  };
+
   const allArtists = React.useMemo(() => [...new Set(notes.flatMap(n => n.artist?.split(',').map(a => a.trim()) || []).filter(Boolean) as string[])], [notes]);
   const allAlbums = React.useMemo(() => [...new Set(notes.map(n => n.album).filter(Boolean) as string[])], [notes]);
   const hasPinnedNotes = React.useMemo(() => notes.some(note => note.is_pinned), [notes]);
+  const hasActiveFilters = selectedTags.length > 0 || showUntagged || showPinned;
 
 
   const TagSidebarContent = () => (
@@ -189,9 +195,22 @@ export default function Home() {
       <Separator className="bg-border/50" />
       <SidebarContent>
         <SidebarMenu>
-          <div className="px-2 pb-2 text-sm font-medium text-muted-foreground flex items-center gap-2">
-            <ListFilter className="w-4 h-4" />
-            <span>Filter by Tags</span>
+          <div className="px-2 pb-2 text-sm font-medium text-muted-foreground flex items-center justify-between">
+            {hasActiveFilters ? (
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={handleClearAllFilters}
+                className="h-6 text-xs border-primary/50 hover:border-primary mt-1"
+              >
+                Clear All
+              </Button>
+            ) : (
+              <div className="flex items-center gap-2">
+                <ListFilter className="w-4 h-4" />
+                <span>Filter by Tags</span>
+              </div>
+            )}
           </div>
           {tags.map((tag) => (
             <SidebarMenuItem key={tag.id} className="px-2">
@@ -273,15 +292,25 @@ export default function Home() {
               <Music className="h-6 w-6 text-primary" />
               <span className="hidden md:inline">Music</span>
           </div>
-          <div className="relative flex-1">
+          <div className="relative flex-1 max-w-md mx-auto md:max-w-lg">
             <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
             <Input
               type="search"
               placeholder="Search notes..."
-              className="w-full rounded-lg bg-secondary pl-8"
+              className="w-full rounded-lg bg-secondary pl-8 pr-8"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
+            {searchQuery && (
+              <Button
+                variant="ghost"
+                size="sm"
+                className="absolute right-2.5 top-2.5 h-4 w-4 p-0 hover:bg-transparent"
+                onClick={() => setSearchQuery('')}
+              >
+                <X className="h-4 w-4 text-muted-foreground hover:text-foreground" />
+              </Button>
+            )}
           </div>
           <UserNav />
         </header>

@@ -3,6 +3,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { ThemeProvider } from '@/components/theme-provider';
 import './globals.css';
 import { cn } from '@/lib/utils';
+import { AuthHandler } from '@/components/auth-handler';
 
 export const metadata: Metadata = {
   title: 'Music Notes',
@@ -23,6 +24,7 @@ export default function RootLayout({
       </head>
       <body className={cn('font-body antialiased')}>
         <ThemeProvider defaultTheme="system">
+          <AuthHandler />
           {children}
           <Toaster />
         </ThemeProvider>
