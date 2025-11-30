@@ -1,5 +1,10 @@
 # Music Notes App
 
+[![CI](https://github.com/itsluminous/Music-Notes/actions/workflows/ci.yml/badge.svg)](https://github.com/itsluminous/Music-Notes/actions/workflows/ci.yml)
+[![CD](https://vercelbadge.vercel.app/api/itsluminous/Music-Notes)](https://vercel.com)
+[![Next.js](https://img.shields.io/badge/Next.js-15.3.3-black?logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript)](https://www.typescriptlang.org/)
+
 A modern, responsive web application for creating, organizing, and managing music notes, chords, tabs, and lyrics. Built with Next.js, TypeScript, and Supabase.
 
 **Public Access**: Anyone can view and search all notes without logging in. Creating and editing notes requires signed in user with approval from the admin.
