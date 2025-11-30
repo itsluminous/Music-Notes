@@ -20,6 +20,8 @@ import { NoteCard } from '@/components/note-card';
 import { NoteEditorDialog } from '@/components/note-editor-dialog';
 import { NoteViewDialog } from '@/components/note-view-dialog';
 import { UserNav } from '@/components/user-nav';
+import { PendingApprovalNotification } from '@/components/pending-approval-notification';
+import { AccountRemovedNotification } from '@/components/account-removed-notification';
 import type { Note, Tag } from '@/lib/types';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { useRouter } from 'next/navigation';
@@ -27,9 +29,11 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { supabase } from '@/lib/supabase';
 import { useToast } from '@/hooks/use-toast';
 import { useNotesData } from '@/hooks/use-notes-data';
+import { useAuth } from '@/hooks/use-auth';
 
 export default function Home() {
   const { notes, tags, loading: notesLoading, fetchNotesAndTags, saveNote } = useNotesData();
+  const { user, isPending, isApproved, profile, loading: authLoading, showAccountRemovedDialog, setShowAccountRemovedDialog } = useAuth();
   const [searchQuery, setSearchQuery] = React.useState('');
   const [selectedTags, setSelectedTags] = React.useState<string[]>([]);
   const [showUntagged, setShowUntagged] = React.useState(false);
@@ -38,22 +42,22 @@ export default function Home() {
   const [viewingNote, setViewingNote] = React.useState<Note | null>(null);
   const [isEditorOpen, setIsEditorOpen] = React.useState(false);
   const [isViewOpen, setIsViewOpen] = React.useState(false);
+  const [isPendingNotificationOpen, setIsPendingNotificationOpen] = React.useState(false);
+  const [hasShownLoginNotification, setHasShownLoginNotification] = React.useState(false);
   const isMobile = useIsMobile();
   const router = useRouter();
   const { toast } = useToast();
   // notes/tags loading handled by useNotesData
 
-  // Redirect to login if unauthenticated
+  // No auth redirect - allow anonymous visitors to view notes
+  
+  // Show pending notification on login for pending users
   React.useEffect(() => {
-    const ensureAuth = async () => {
-      const { data: { user } } = await supabase.auth.getUser();
-      if (!user) {
-        router.replace('/auth/login');
-      }
-    };
-
-    ensureAuth();
-  }, [router]);
+    if (!authLoading && user && isPending && !hasShownLoginNotification) {
+      setIsPendingNotificationOpen(true);
+      setHasShownLoginNotification(true);
+    }
+  }, [user, isPending, authLoading, hasShownLoginNotification]);
 
   const filteredNotes = React.useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
@@ -150,11 +154,35 @@ export default function Home() {
   };
 
   const handleCreateNewNote = () => {
+    // Check authentication status before opening editor
+    if (!user) {
+      router.push('/auth/login');
+      return;
+    }
+    
+    // Show pending notification if user is pending
+    if (isPending) {
+      setIsPendingNotificationOpen(true);
+      return;
+    }
+    
     setEditingNote(null);
     setIsEditorOpen(true);
   };
 
   const handleEditNote = (note: Note) => {
+    // Check authentication status before opening editor
+    if (!user) {
+      router.push('/auth/login');
+      return;
+    }
+    
+    // Show pending notification if user is pending
+    if (isPending) {
+      setIsPendingNotificationOpen(true);
+      return;
+    }
+    
     setIsViewOpen(false);
     setEditingNote(note);
     setIsEditorOpen(true);
@@ -180,6 +208,7 @@ export default function Home() {
   };
 
   const allArtists = React.useMemo(() => [...new Set(notes.flatMap(n => n.artist?.split(',').map(a => a.trim()) || []).filter(Boolean) as string[])], [notes]);
+  const allComposers = React.useMemo(() => [...new Set(notes.map(n => n.composer).filter(Boolean) as string[])], [notes]);
   const allAlbums = React.useMemo(() => [...new Set(notes.map(n => n.album).filter(Boolean) as string[])], [notes]);
   const hasPinnedNotes = React.useMemo(() => notes.some(note => note.is_pinned), [notes]);
   const hasActiveFilters = selectedTags.length > 0 || showUntagged || showPinned;
@@ -350,6 +379,7 @@ export default function Home() {
           onSave={handleSaveNote}
           allTags={tags}
           allArtists={allArtists}
+          allComposers={allComposers}
           allAlbums={allAlbums}
         />
         
@@ -368,6 +398,17 @@ export default function Home() {
             }}
           />
         )}
+        
+        <PendingApprovalNotification
+          isOpen={isPendingNotificationOpen}
+          onOpenChange={setIsPendingNotificationOpen}
+          email={profile?.email}
+        />
+        
+        <AccountRemovedNotification
+          isOpen={showAccountRemovedDialog}
+          onOpenChange={setShowAccountRemovedDialog}
+        />
       </div>
     </SidebarProvider>
   );

@@ -19,6 +19,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import type { Note, Tag } from '@/lib/types';
 import { TitleField } from './note-editor/title-field';
 import { ArtistField } from './note-editor/artist-field';
+import { ComposerField } from './note-editor/composer-field';
 import { AlbumField } from './note-editor/album-field';
 import { TagsField } from './note-editor/tags-field';
 
@@ -26,6 +27,7 @@ const noteSchema = z.object({
   title: z.string().min(1, 'Title is required'),
   content: z.string(),
   artist: z.string().optional(),
+  composer: z.string().optional(),
   album: z.string().optional(),
   release_year: z.string().optional(),
   metadata: z.string().optional(),
@@ -42,10 +44,11 @@ interface NoteEditorDialogProps {
   onSave: (note: Note) => void;
   allTags: Tag[];
   allArtists: string[];
+  allComposers: string[];
   allAlbums: string[];
 }
 
-export function NoteEditorDialog({ isOpen, onOpenChange, note, onSave, allTags, allArtists, allAlbums }: NoteEditorDialogProps) {
+export function NoteEditorDialog({ isOpen, onOpenChange, note, onSave, allTags, allArtists, allComposers, allAlbums }: NoteEditorDialogProps) {
   const [albumInput, setAlbumInput] = React.useState('');
   const [fetchingMB, setFetchingMB] = React.useState(false);
 
@@ -55,6 +58,7 @@ export function NoteEditorDialog({ isOpen, onOpenChange, note, onSave, allTags, 
       title: '',
       content: '',
       artist: '',
+      composer: '',
       album: '',
       release_year: '',
       metadata: '',
@@ -69,6 +73,7 @@ export function NoteEditorDialog({ isOpen, onOpenChange, note, onSave, allTags, 
         title: note.title,
         content: note.content,
         artist: note.artist || '',
+        composer: note.composer || '',
         album: note.album || '',
         release_year: note.release_year ? String(note.release_year) : '',
         metadata: note.metadata || '',
@@ -77,7 +82,7 @@ export function NoteEditorDialog({ isOpen, onOpenChange, note, onSave, allTags, 
       });
       setAlbumInput(note.album || '');
     } else {
-      methods.reset({ title: '', content: '', artist: '', album: '', release_year: '', metadata: '', references: '', tags: [] });
+      methods.reset({ title: '', content: '', artist: '', composer: '', album: '', release_year: '', metadata: '', references: '', tags: [] });
       setAlbumInput('');
     }
   }, [note, methods, isOpen]);
@@ -92,6 +97,7 @@ export function NoteEditorDialog({ isOpen, onOpenChange, note, onSave, allTags, 
       updated_at: now,
       ...data,
       artist: data.artist,
+      composer: data.composer,
       release_year: data.release_year ? parseInt(data.release_year) : undefined,
       tags: data.tags || [],
     };
@@ -139,6 +145,7 @@ export function NoteEditorDialog({ isOpen, onOpenChange, note, onSave, allTags, 
               />
               <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
                 <ArtistField allArtists={allArtists} />
+                <ComposerField allComposers={allComposers} />
                 <AlbumField allAlbums={allAlbums} albumInput={albumInput} setAlbumInput={setAlbumInput} />
                 <FormField
                   control={methods.control}

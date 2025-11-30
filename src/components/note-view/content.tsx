@@ -22,8 +22,6 @@ export function NoteViewContent({ note, allTags, effectiveTranspose, scrollRef }
   if (formattedUpdateDate === formattedCreationDate) {
     formattedUpdateDate = null;
   }
-
-  console.log('NoteViewContent rendering with:', { note, effectiveTranspose });
   
   return (
     <div className="flex-1 flex flex-col overflow-hidden">

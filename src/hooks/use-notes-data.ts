@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { supabase } from '@/lib/supabase';
 import type { Note, Tag } from '@/lib/types';
 import { useToast } from './use-toast';
+import { handlePotentialAccountRemoval } from '@/lib/account-removal-handler';
 
 // Helper function to fetch all records with pagination
 const fetchAllPaginated = async (table: string, user_id: string) => {
@@ -38,6 +39,123 @@ const fetchAllPaginated = async (table: string, user_id: string) => {
   return allData;
 };
 
+// Helper function to fetch all notes without user filtering (public access)
+const fetchAllNotesPaginated = async () => {
+  const PAGE_SIZE = 900;
+  let allData: any[] = [];
+  let page = 0;
+  let hasMore = true;
+
+  while (hasMore) {
+    // Fetch notes first
+    const { data, error } = await supabase
+      .from('notes')
+      .select('*')
+      .range(page * PAGE_SIZE, (page + 1) * PAGE_SIZE - 1);
+
+    if (error) {
+      throw error;
+    }
+
+    if (data) {
+      allData = [...allData, ...data];
+    }
+
+    if (!data || data.length < PAGE_SIZE) {
+      hasMore = false;
+    } else {
+      page++;
+    }
+  }
+  
+  // Fetch author names and emails separately for all notes that have an author
+  const authorIds = [...new Set(allData.filter(note => note.author).map(note => note.author))];
+  
+  if (authorIds.length > 0) {
+    const { data: profiles, error: profilesError } = await supabase
+      .from('user_profiles')
+      .select('id, email, name')
+      .in('id', authorIds);
+    
+    if (!profilesError && profiles) {
+      // Create maps of author id to email and name
+      const authorEmailMap = new Map(profiles.map(p => [p.id, p.email]));
+      const authorNameMap = new Map(profiles.map(p => [p.id, p.name]));
+      
+      // Add author_email and author_name to each note
+      allData = allData.map(note => ({
+        ...note,
+        author_email: note.author ? authorEmailMap.get(note.author) : null,
+        author_name: note.author ? authorNameMap.get(note.author) : null
+      }));
+    }
+  }
+  
+  return allData;
+};
+
+// Helper function to fetch all tags with pagination (public access)
+const fetchAllTagsPaginated = async () => {
+  const PAGE_SIZE = 900;
+  let allData: any[] = [];
+  let page = 0;
+  let hasMore = true;
+
+  while (hasMore) {
+    const { data, error } = await supabase
+      .from('tags')
+      .select('*')
+      .range(page * PAGE_SIZE, (page + 1) * PAGE_SIZE - 1);
+
+    if (error) {
+      throw error;
+    }
+
+    if (data) {
+      allData = [...allData, ...data];
+    }
+
+    if (!data || data.length < PAGE_SIZE) {
+      hasMore = false;
+    } else {
+      page++;
+    }
+  }
+  
+  return allData;
+};
+
+// Helper function to fetch all note_tags with pagination (public access)
+const fetchAllNoteTagsPaginated = async () => {
+  const PAGE_SIZE = 900;
+  let allData: any[] = [];
+  let page = 0;
+  let hasMore = true;
+
+  while (hasMore) {
+    const { data, error } = await supabase
+      .from('note_tags')
+      .select('*')
+      .range(page * PAGE_SIZE, (page + 1) * PAGE_SIZE - 1);
+
+    if (error) {
+      throw error;
+    }
+
+    if (data) {
+      allData = [...allData, ...data];
+    }
+
+    if (!data || data.length < PAGE_SIZE) {
+      hasMore = false;
+    } else {
+      page++;
+    }
+  }
+  
+  return allData;
+};
+
 
 export function useNotesData() {
 	const [notes, setNotes] = useState<Note[]>([]);
@@ -49,19 +167,14 @@ export function useNotesData() {
 		setLoading(true);
 		try {
 			const { data: { user } } = await supabase.auth.getUser();
-			if (!user) {
-				setNotes([]);
-				setTags([]);
-				setLoading(false);
-				return;
-			}
+			
+			// Fetch all notes regardless of authentication (public read access)
+			const notesData = await fetchAllNotesPaginated();
 
-            // Using the paginated fetcher
-            const [notesData, tagsData, noteTagsData] = await Promise.all([
-              fetchAllPaginated('notes', user.id),
-              fetchAllPaginated('tags', user.id),
-              fetchAllPaginated('note_tags', user.id)
-            ]);
+			// Fetch all tags and note_tags with pagination (public read access enabled)
+			// Anonymous users can now view tags on notes
+			const tagsData = await fetchAllTagsPaginated();
+			const noteTagsData = await fetchAllNoteTagsPaginated();
 
 			const notesWithTags = (notesData || []).map((note: any) => {
 				const noteTags = (noteTagsData || []).filter((nt: any) => nt.note_id === note.id);
@@ -69,7 +182,9 @@ export function useNotesData() {
 				// Keep DB snake_case timestamps as-is for frontend to use
 				const created_at = note.created_at;
 				const updated_at = note.updated_at;
-				return { ...note, tags: tagIds, created_at, updated_at } as Note;
+				// Author email is already added in fetchAllNotesPaginated
+				const author_email = note.author_email || null;
+				return { ...note, tags: tagIds, created_at, updated_at, author_email } as Note;
 			});
 
 			setNotes(notesWithTags);
@@ -104,10 +219,12 @@ export function useNotesData() {
 				title: savedNote.title,
 				content: savedNote.content,
 				artist: savedNote.artist,
+				composer: savedNote.composer,
 				album: savedNote.album,
 				metadata: savedNote.metadata,
 				references: savedNote.references,
 				user_id: user.id,
+				author: user.id, // Set author to current user ID
 			};
 
 			if (editingNote) {
@@ -123,6 +240,8 @@ export function useNotesData() {
 					.select()
 					.single();
 				if (error) {
+					// Check if user profile was deleted (RLS policy violation)
+					await handlePotentialAccountRemoval(user.id, error);
 					toast({ title: 'Error updating note', description: error.message, variant: 'destructive' });
 					return false;
 				}
@@ -139,6 +258,8 @@ export function useNotesData() {
 					.select()
 					.single();
 				if (error) {
+					// Check if user profile was deleted (RLS policy violation)
+					await handlePotentialAccountRemoval(user.id, error);
 					toast({ title: 'Error creating note', description: error.message, variant: 'destructive' });
 					return false;
 				}
