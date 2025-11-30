@@ -1,9 +1,8 @@
 "use client";
 
 import * as React from 'react';
-import { Plus, Search, Music, ListFilter, Menu, X } from 'lucide-react';
+import { Plus, Music, ListFilter, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import {
   SidebarProvider,
   Sidebar,
@@ -22,19 +21,23 @@ import { NoteViewDialog } from '@/components/note-view-dialog';
 import { UserNav } from '@/components/user-nav';
 import { PendingApprovalNotification } from '@/components/pending-approval-notification';
 import { AccountRemovedNotification } from '@/components/account-removed-notification';
-import type { Note, Tag } from '@/lib/types';
+import { SearchBox } from '@/components/search-box';
+import type { Note } from '@/lib/types';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { useRouter } from 'next/navigation';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { supabase } from '@/lib/supabase';
 import { useToast } from '@/hooks/use-toast';
 import { useNotesData } from '@/hooks/use-notes-data';
 import { useAuth } from '@/hooks/use-auth';
+import { useDebounce } from '@/hooks/use-debounce';
+import { parseSearchQuery } from '@/lib/search-parser';
+import { filterNotesByParsedQuery, rankSearchResults } from '@/lib/search-engine';
 
 export default function Home() {
   const { notes, tags, loading: notesLoading, fetchNotesAndTags, saveNote } = useNotesData();
   const { user, isPending, isApproved, profile, loading: authLoading, showAccountRemovedDialog, setShowAccountRemovedDialog } = useAuth();
   const [searchQuery, setSearchQuery] = React.useState('');
+  const debouncedSearchQuery = useDebounce(searchQuery, 300);
   const [selectedTags, setSelectedTags] = React.useState<string[]>([]);
   const [showUntagged, setShowUntagged] = React.useState(false);
   const [showPinned, setShowPinned] = React.useState(false);
@@ -60,9 +63,7 @@ export default function Home() {
   }, [user, isPending, authLoading, hasShownLoginNotification]);
 
   const filteredNotes = React.useMemo(() => {
-    const query = searchQuery.trim().toLowerCase();
-
-    // Filter by tags first
+    // Filter by tags first (existing tag filter functionality)
     const notesWithTags = notes.filter((note) => {
       // If 'Pinned' is selected, show only pinned notes
       if (showPinned && selectedTags.length === 0 && !showUntagged) {
@@ -79,67 +80,33 @@ export default function Home() {
       return selectedTags.every((tagId) => note.tags.includes(tagId));
     });
 
+    const query = debouncedSearchQuery.trim();
+
+    // If no search query, return tag-filtered notes sorted by date
     if (!query) {
       return notesWithTags.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
     }
 
-    const searchWords = query.split(/\s+/).filter(Boolean);
+    // Parse the search query to extract tagged and untagged terms
+    const parsedQuery = parseSearchQuery(query);
 
-    // If the user typed a single 4-digit year (e.g. "1999"), treat this as a year-only search
-    const yearOnlyMatch = /^\d{4}$/.test(query);
-    if (yearOnlyMatch) {
-      return notesWithTags
-        .filter((note) => note.release_year && String(note.release_year) === query)
-        .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+    // Apply new search engine logic
+    const filtered = filterNotesByParsedQuery(notesWithTags, parsedQuery);
+    const ranked = rankSearchResults(filtered, parsedQuery);
+
+    return ranked;
+
+  }, [notes, debouncedSearchQuery, selectedTags, showUntagged, showPinned]);
+
+  // Announce result count changes for screen readers
+  const resultCountMessage = React.useMemo(() => {
+    if (notesLoading) return 'Loading notes';
+    if (filteredNotes.length === 0 && (debouncedSearchQuery || selectedTags.length > 0 || showUntagged || showPinned)) {
+      return 'No notes found';
     }
-
-    const getScore = (note: Note) => {
-      const title = note.title.toLowerCase();
-      const content = note.content.toLowerCase();
-      const metadata = note.metadata?.toLowerCase() || '';
-      const artist = note.artist?.toLowerCase() || '';
-      const album = note.album?.toLowerCase() || '';
-      const yearStr = note.release_year ? String(note.release_year) : '';
-
-      const combinedContent = `${title} ${content} ${metadata} ${artist} ${album} ${yearStr}`;
-
-      // Check if all search words are present in the combined content
-      const allWordsPresent = searchWords.every(word => combinedContent.includes(word));
-      if (!allWordsPresent) {
-        return 0; // If not all words are present, it's not a match
-      }
-
-      let score = 0;
-
-      // 1. Highest preference: Exact match in title
-      if (title === query) {
-        score += 100;
-      }
-
-      // 2. Next preference: Exact match in metadata or body
-      if (metadata === query || content === query) {
-        score += 50;
-      }
-      
-      // 3. Partial matches scoring
-      searchWords.forEach(word => {
-        if (title.includes(word)) score += 10;
-        if (content.includes(word)) score += 1;
-        if (metadata.includes(word)) score += 2;
-        if (artist.includes(word)) score += 1;
-        if (album.includes(word)) score += 1;
-      });
-      
-      return score;
-    };
-
-    return notesWithTags
-      .map(note => ({ note, score: getScore(note) }))
-      .filter(item => item.score > 0)
-      .sort((a, b) => b.score - a.score)
-      .map(item => item.note);
-
-  }, [notes, searchQuery, selectedTags, showUntagged, showPinned]);
+    if (filteredNotes.length === 1) return '1 note found';
+    return `${filteredNotes.length} notes found`;
+  }, [filteredNotes.length, notesLoading, debouncedSearchQuery, selectedTags.length, showUntagged, showPinned]);
 
   const handleTagToggle = (tagId: string) => {
     if (tagId === 'untagged') {
@@ -290,7 +257,7 @@ export default function Home() {
       );
     }
 
-    if (filteredNotes.length === 0 && (searchQuery || selectedTags.length > 0 || showUntagged || showPinned)) {
+    if (filteredNotes.length === 0 && (debouncedSearchQuery || selectedTags.length > 0 || showUntagged || showPinned)) {
       return (
         <div className="text-center text-muted-foreground">
           <p>No notes found for the selected filters and search query.</p>
@@ -321,26 +288,11 @@ export default function Home() {
               <Music className="h-6 w-6 text-primary" />
               <span className="hidden md:inline">Music</span>
           </div>
-          <div className="relative flex-1 max-w-md mx-auto md:max-w-lg">
-            <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-            <Input
-              type="search"
-              placeholder="Search notes..."
-              className="w-full rounded-lg bg-secondary pl-8 pr-8"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-            {searchQuery && (
-              <Button
-                variant="ghost"
-                size="sm"
-                className="absolute right-2.5 top-2.5 h-4 w-4 p-0 hover:bg-transparent"
-                onClick={() => setSearchQuery('')}
-              >
-                <X className="h-4 w-4 text-muted-foreground hover:text-foreground" />
-              </Button>
-            )}
-          </div>
+          <SearchBox
+            value={searchQuery}
+            onChange={setSearchQuery}
+            className="flex-1 max-w-md mx-auto md:max-w-lg"
+          />
           <UserNav />
         </header>
         <div className="flex flex-1 pt-14">
@@ -349,6 +301,15 @@ export default function Home() {
           </Sidebar>
 
           <main className="flex-1 p-4 md:p-6 relative">
+            {/* ARIA live region for search result announcements */}
+            <div 
+              className="sr-only" 
+              role="status" 
+              aria-live="polite" 
+              aria-atomic="true"
+            >
+              {resultCountMessage}
+            </div>
             <ScrollArea className="h-full">
               {filteredNotes.length > 0 ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">

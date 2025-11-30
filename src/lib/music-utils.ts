@@ -102,7 +102,7 @@ const renderTextWithChords = (text: string, transposeSteps: number = 0, keyPrefi
         {
           key: `${keyPrefix}-${index}`,
           className:
-            'font-bold text-foreground bg-primary/20 rounded py-0.5',
+            'font-bold text-foreground rounded py-0.5',
         },
         transposedChord
       );

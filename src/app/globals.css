@@ -83,3 +83,13 @@
     @apply bg-[#F5F5F5] text-foreground dark:bg-black;
   }
 }
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
