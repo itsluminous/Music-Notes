@@ -89,7 +89,7 @@ describe('Incremental Fetch Property Tests', () => {
               content: fc.string({ minLength: 0, maxLength: 500 }),
               updated_at: fc.date({ min: new Date('2024-01-01'), max: new Date('2025-01-01') }),
               created_at: fc.date({ min: new Date('2024-01-01'), max: new Date('2025-01-01') }),
-              author: fc.option(fc.uuid(), { nil: null }),
+              author: fc.option(fc.uuid(), { nil: undefined }),
             }),
             { minLength: 5, maxLength: 50 }
           ),
@@ -324,7 +324,7 @@ describe('Incremental Fetch Property Tests', () => {
               content: fc.string({ minLength: 0, maxLength: 500 }),
               updated_at: fc.date({ min: new Date('2024-01-01'), max: new Date('2025-01-01') }),
               created_at: fc.date({ min: new Date('2024-01-01'), max: new Date('2025-01-01') }),
-              author: fc.option(fc.uuid(), { nil: null }),
+              author: fc.option(fc.uuid(), { nil: undefined }),
               tags: fc.array(fc.uuid(), { maxLength: 5 }),
             }),
             { minLength: 1, maxLength: 20 }
@@ -405,7 +405,7 @@ describe('Incremental Fetch Property Tests', () => {
               content: fc.string({ minLength: 0, maxLength: 500 }),
               updated_at: fc.date({ min: new Date('2024-01-01'), max: new Date('2025-01-01') }),
               created_at: fc.date({ min: new Date('2024-01-01'), max: new Date('2025-01-01') }),
-              author: fc.option(fc.uuid(), { nil: null }),
+              author: fc.option(fc.uuid(), { nil: undefined }),
               tags: fc.array(fc.uuid(), { maxLength: 5 }),
             }),
             { minLength: 1, maxLength: 20 }
@@ -492,7 +492,7 @@ describe('Incremental Fetch Property Tests', () => {
                 content: fc.string({ minLength: 0, maxLength: 500 }),
                 updated_at: fc.date({ min: new Date('2024-01-01'), max: new Date('2024-12-31') }),
                 created_at: fc.date({ min: new Date('2024-01-01'), max: new Date('2024-12-31') }),
-                author: fc.option(fc.uuid(), { nil: null }),
+                author: fc.option(fc.uuid(), { nil: undefined }),
                 tags: fc.array(fc.uuid(), { maxLength: 5 }),
               }),
               { minLength: 1, maxLength: 20 }
@@ -616,7 +616,7 @@ describe('Incremental Fetch Property Tests', () => {
                 content: fc.string({ minLength: 0, maxLength: 500 }),
                 updated_at: fc.date({ min: new Date('2024-01-01'), max: new Date('2024-12-31') }),
                 created_at: fc.date({ min: new Date('2024-01-01'), max: new Date('2024-12-31') }),
-                author: fc.option(fc.uuid(), { nil: null }),
+                author: fc.option(fc.uuid(), { nil: undefined }),
                 tags: fc.array(fc.uuid(), { maxLength: 5 }),
               }),
               { minLength: 1, maxLength: 20 }
@@ -650,7 +650,7 @@ describe('Incremental Fetch Property Tests', () => {
               content: fc.string({ minLength: 0, maxLength: 500 }),
               updated_at: fc.date({ min: new Date('2024-12-01'), max: new Date('2024-12-31') }),
               created_at: fc.date({ min: new Date('2024-12-01'), max: new Date('2024-12-31') }),
-              author: fc.option(fc.uuid(), { nil: null }),
+              author: fc.option(fc.uuid(), { nil: undefined }),
               tags: fc.array(fc.uuid(), { maxLength: 5 }),
             }),
             { minLength: 1, maxLength: 20 }
@@ -751,7 +751,7 @@ describe('Incremental Fetch Property Tests', () => {
             // Verify the data is from the fresh fetch, not the expired cache
             // (by checking that IDs don't match the expired cache)
             const expiredIds = new Set(expiredCache.notes.map(n => n.id));
-            const freshIds = new Set(data.map((n: any) => n.id));
+            const freshIds = new Set<string>(data.map((n: any) => n.id));
             
             // The test passes if:
             // 1. We have fresh data (at least one ID that's not in expired cache), OR
@@ -783,7 +783,7 @@ describe('Incremental Fetch Property Tests', () => {
               content: fc.string({ minLength: 0, maxLength: 500 }),
               updated_at: fc.date({ min: new Date('2024-12-01'), max: new Date('2024-12-31') }),
               created_at: fc.date({ min: new Date('2024-12-01'), max: new Date('2024-12-31') }),
-              author: fc.option(fc.uuid(), { nil: null }),
+              author: fc.option(fc.uuid(), { nil: undefined }),
               tags: fc.array(fc.uuid(), { maxLength: 5 }),
             }),
             { minLength: 1, maxLength: 20 }
@@ -859,7 +859,7 @@ describe('Incremental Fetch Property Tests', () => {
                 content: fc.string({ minLength: 0, maxLength: 500 }),
                 updated_at: fc.date({ min: new Date('2024-01-01'), max: new Date('2024-06-01') }),
                 created_at: fc.date({ min: new Date('2024-01-01'), max: new Date('2024-06-01') }),
-                author: fc.option(fc.uuid(), { nil: null }),
+                author: fc.option(fc.uuid(), { nil: undefined }),
                 tags: fc.array(fc.uuid(), { maxLength: 5 }),
               }),
               { minLength: 1, maxLength: 20 }
@@ -930,7 +930,7 @@ describe('Incremental Fetch Property Tests', () => {
               content: 'Fresh Content',
               updated_at: new Date().toISOString(),
               created_at: new Date().toISOString(),
-              author: null,
+              author: undefined,
               tags: [],
             }];
 
