@@ -186,6 +186,12 @@ describe('Property-Based Tests', () => {
         alphanumericString,
         alphanumericString,
         (artistTerm, untaggedTerm) => {
+          // Skip if one term is a substring of the other to avoid accidental matches
+          if (artistTerm.toLowerCase().includes(untaggedTerm.toLowerCase()) || 
+              untaggedTerm.toLowerCase().includes(artistTerm.toLowerCase())) {
+            return; // Skip this test case
+          }
+          
           // Use unique base that won't accidentally match search terms
           const uniqueBase = 'WWWWWWWWWWWWWWW';
           
