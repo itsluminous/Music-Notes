@@ -152,10 +152,6 @@ export function UserNav() {
                   {theme === "dark" ? <Sun className="mr-2 h-4 w-4" /> : <Moon className="mr-2 h-4 w-4" />}
                   {theme === "dark" ? "Light Mode" : "Dark Mode"}
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer" onSelect={handleExportNotes}>
-                  <Download className="mr-2 h-4 w-4" />
-                  Export Notes
-                </DropdownMenuItem>
               </DropdownMenuGroup>
               <DropdownMenuSeparator />
               <DropdownMenuItem className="cursor-pointer" onSelect={() => router.push('/auth/login')}>
@@ -189,18 +185,22 @@ export function UserNav() {
                   {theme === "dark" ? <Sun className="mr-2 h-4 w-4" /> : <Moon className="mr-2 h-4 w-4" />}
                   {theme === "dark" ? "Light Mode" : "Dark Mode"}
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer" onSelect={handleExportNotes}>
-                  <Download className="mr-2 h-4 w-4" />
-                  Export Notes
-                </DropdownMenuItem>
-                <DropdownMenuItem 
-                  className="cursor-pointer" 
-                  onSelect={handleImportClick}
-                  disabled={isImporting || !isApproved}
-                >
-                  <Upload className="mr-2 h-4 w-4" />
-                  {isImporting ? 'Importing...' : 'Import Notes'}
-                </DropdownMenuItem>
+                {isApproved && (
+                  <>
+                    <DropdownMenuItem className="cursor-pointer" onSelect={handleExportNotes}>
+                      <Download className="mr-2 h-4 w-4" />
+                      Export Notes
+                    </DropdownMenuItem>
+                    <DropdownMenuItem 
+                      className="cursor-pointer" 
+                      onSelect={handleImportClick}
+                      disabled={isImporting}
+                    >
+                      <Upload className="mr-2 h-4 w-4" />
+                      {isImporting ? 'Importing...' : 'Import Notes'}
+                    </DropdownMenuItem>
+                  </>
+                )}
               </DropdownMenuGroup>
               <DropdownMenuSeparator />
               <DropdownMenuItem className="cursor-pointer" onSelect={(e) => { e.preventDefault(); handleSignOut() }}>
