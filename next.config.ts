@@ -5,9 +5,6 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   images: {
     remotePatterns: [
       {
@@ -30,6 +27,11 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+} as NextConfig & { eslint?: { ignoreDuringBuilds?: boolean } };
+
+// Add eslint config separately to avoid type error
+(nextConfig as any).eslint = {
+  ignoreDuringBuilds: true,
 };
 
 export default nextConfig;

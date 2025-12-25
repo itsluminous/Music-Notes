@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/itsluminous/Music-Notes/actions/workflows/ci.yml/badge.svg)](https://github.com/itsluminous/Music-Notes/actions/workflows/ci.yml)
 [![CD](https://vercelbadge.vercel.app/api/itsluminous/Music-Notes)](https://vercel.com)
-[![Next.js](https://img.shields.io/badge/Next.js-15.3.3-black?logo=next.js)](https://nextjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-16.1.1-black?logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript)](https://www.typescriptlang.org/)
 
 A modern, responsive web application for creating, organizing, and managing music notes, chords, tabs, and lyrics. Built with Next.js, TypeScript, and Supabase.
@@ -79,7 +79,7 @@ A modern, responsive web application for creating, organizing, and managing musi
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: Next.js 15, React 18, TypeScript
+- **Frontend**: Next.js 16, React 18, TypeScript
 - **Styling**: Tailwind CSS, Radix UI components
 - **Backend**: Supabase (PostgreSQL database, Authentication)
 - **Icons**: Lucide React

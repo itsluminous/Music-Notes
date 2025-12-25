@@ -54,28 +54,29 @@ describe('Property-Based Tests', () => {
           }
           
           const yearValue = tag === 'year' ? parseInt(term, 10) : 1999;
+          const noMatchValue = 'WWWWWWWWWWWWWWW';
           
           // Create a note that matches ONLY in the specified field
           const matchingNote = createNote({
             id: 'matching',
-            title: tag === 'title' ? term : 'XYZ123NoMatch',
-            content: tag === 'content' ? term : 'XYZ123NoMatch',
-            artist: tag === 'artist' ? term : 'XYZ123NoMatch',
-            composer: tag === 'composer' ? term : 'XYZ123NoMatch',
-            album: tag === 'album' ? term : 'XYZ123NoMatch',
-            metadata: tag === 'metadata' ? term : 'XYZ123NoMatch',
+            title: tag === 'title' ? term : noMatchValue,
+            content: tag === 'content' ? term : noMatchValue,
+            artist: tag === 'artist' ? term : noMatchValue,
+            composer: tag === 'composer' ? term : noMatchValue,
+            album: tag === 'album' ? term : noMatchValue,
+            metadata: tag === 'metadata' ? term : noMatchValue,
             release_year: yearValue
           });
 
           // Create a note that does NOT match in the specified field
           const nonMatchingNote = createNote({
             id: 'non-matching',
-            title: tag !== 'title' ? term : 'XYZ123NoMatch',
-            content: tag !== 'content' ? term : 'XYZ123NoMatch',
-            artist: tag !== 'artist' ? term : 'XYZ123NoMatch',
-            composer: tag !== 'composer' ? term : 'XYZ123NoMatch',
-            album: tag !== 'album' ? term : 'XYZ123NoMatch',
-            metadata: tag !== 'metadata' ? term : 'XYZ123NoMatch',
+            title: tag !== 'title' ? term : noMatchValue,
+            content: tag !== 'content' ? term : noMatchValue,
+            artist: tag !== 'artist' ? term : noMatchValue,
+            composer: tag !== 'composer' ? term : noMatchValue,
+            album: tag !== 'album' ? term : noMatchValue,
+            metadata: tag !== 'metadata' ? term : noMatchValue,
             release_year: tag !== 'year' ? (parseInt(term) || 2000) : 1999
           });
 
@@ -111,9 +112,14 @@ describe('Property-Based Tests', () => {
         alphanumericString,
         alphanumericString,
         (artistTerm, composerTerm) => {
+          // Use unique base content that won't accidentally match search terms
+          const uniqueBase = 'ZZZZUNIQUE';
+          
           // Note that matches both tags
           const matchingBoth = createNote({
             id: 'both',
+            title: uniqueBase + '1',
+            content: uniqueBase + '1',
             artist: artistTerm,
             composer: composerTerm
           });
@@ -121,22 +127,28 @@ describe('Property-Based Tests', () => {
           // Note that matches only artist
           const matchingArtistOnly = createNote({
             id: 'artist-only',
+            title: uniqueBase + '2',
+            content: uniqueBase + '2',
             artist: artistTerm,
-            composer: 'XYZ123NoMatch'
+            composer: 'WWWWWWWWWWWWWWW'
           });
 
           // Note that matches only composer
           const matchingComposerOnly = createNote({
             id: 'composer-only',
-            artist: 'XYZ123NoMatch',
+            title: uniqueBase + '3',
+            content: uniqueBase + '3',
+            artist: 'WWWWWWWWWWWWWWW',
             composer: composerTerm
           });
 
           // Note that matches neither
           const matchingNeither = createNote({
             id: 'neither',
-            artist: 'XYZ123NoMatch',
-            composer: 'XYZ123NoMatch'
+            title: uniqueBase + '4',
+            content: uniqueBase + '4',
+            artist: 'WWWWWWWWWWWWWWW',
+            composer: 'WWWWWWWWWWWWWWW'
           });
 
           const notes = [matchingBoth, matchingArtistOnly, matchingComposerOnly, matchingNeither];
@@ -174,17 +186,22 @@ describe('Property-Based Tests', () => {
         alphanumericString,
         alphanumericString,
         (artistTerm, untaggedTerm) => {
+          // Use unique base that won't accidentally match search terms
+          const uniqueBase = 'WWWWWWWWWWWWWWW';
+          
           // Note that matches both artist tag and untagged term (in title)
           const matchingBoth = createNote({
             id: 'both',
             title: untaggedTerm,
+            content: uniqueBase + '1',
             artist: artistTerm
           });
 
           // Note that matches artist but not untagged term
           const matchingArtistOnly = createNote({
             id: 'artist-only',
-            title: 'XYZ123NoMatch',
+            title: uniqueBase + '2',
+            content: uniqueBase + '3',
             artist: artistTerm
           });
 
@@ -192,7 +209,8 @@ describe('Property-Based Tests', () => {
           const matchingUntaggedOnly = createNote({
             id: 'untagged-only',
             title: untaggedTerm,
-            artist: 'XYZ123NoMatch'
+            content: uniqueBase + '4',
+            artist: uniqueBase + '5'
           });
 
           const notes = [matchingBoth, matchingArtistOnly, matchingUntaggedOnly];
@@ -226,17 +244,48 @@ describe('Property-Based Tests', () => {
       fc.property(
         alphanumericString,
         (term) => {
+          // Use unique base that won't accidentally match search terms
+          const uniqueBase = 'ZZZZUNIQUE';
+          
           // Create notes matching in different fields
-          const matchingInTitle = createNote({ id: 'title', title: term });
-          const matchingInContent = createNote({ id: 'content', content: term });
-          const matchingInMetadata = createNote({ id: 'metadata', metadata: term });
-          const matchingInArtist = createNote({ id: 'artist', artist: term });
-          const matchingInAlbum = createNote({ id: 'album', album: term });
-          const matchingInComposer = createNote({ id: 'composer', composer: term });
+          const matchingInTitle = createNote({ 
+            id: 'title', 
+            title: term,
+            content: uniqueBase + '1'
+          });
+          const matchingInContent = createNote({ 
+            id: 'content', 
+            title: uniqueBase + '2',
+            content: term 
+          });
+          const matchingInMetadata = createNote({ 
+            id: 'metadata', 
+            title: uniqueBase + '3',
+            content: uniqueBase + '3',
+            metadata: term 
+          });
+          const matchingInArtist = createNote({ 
+            id: 'artist', 
+            title: uniqueBase + '4',
+            content: uniqueBase + '4',
+            artist: term 
+          });
+          const matchingInAlbum = createNote({ 
+            id: 'album', 
+            title: uniqueBase + '5',
+            content: uniqueBase + '5',
+            album: term 
+          });
+          const matchingInComposer = createNote({ 
+            id: 'composer', 
+            title: uniqueBase + '6',
+            content: uniqueBase + '6',
+            composer: term 
+          });
           const notMatching = createNote({ 
             id: 'none', 
-            title: 'XYZ123NoMatch',
-            content: 'XYZ123NoMatch'
+            title: 'WWWWWWWWWWWWWWW',
+            content: 'WWWWWWWWWWWWWWW'
           });
 
           const notes = [
@@ -293,13 +342,13 @@ describe('Property-Based Tests', () => {
           const someFieldsMatch = createNote({
             id: 'some',
             title: terms[0],
-            content: terms.length > 1 ? terms[1] : 'XYZ123NoMatch'
+            content: terms.length > 1 ? terms[1] : 'WWWWWWWWWWWWWWW'
           });
 
           const noFieldsMatch = createNote({
             id: 'none',
-            title: 'XYZ123NoMatch',
-            content: 'XYZ123NoMatch'
+            title: 'WWWWWWWWWWWWWWW',
+            content: 'WWWWWWWWWWWWWWW'
           });
 
           const notes = [allFieldsMatch, someFieldsMatch, noFieldsMatch];
@@ -409,7 +458,7 @@ describe('Property-Based Tests', () => {
           // Create partial matches with different scores
           const partialLowScore = createNote({
             id: 'partial-low',
-            title: 'XYZ123NoMatch',
+            title: 'WWWWWWWWWWWWWWW',
             content: `${term}Extra`, // content = +1 point (partial match only)
             created_at: '2023-06-01T00:00:00Z'
           });
@@ -468,7 +517,7 @@ describe('Property-Based Tests', () => {
           // Note with match only in content
           const contentMatch = createNote({
             id: 'content',
-            title: 'XYZ123NoMatch',
+            title: 'WWWWWWWWWWWWWWW',
             content: `${term}Extra`, // Also partial to be fair
             created_at: '2023-01-01T00:00:00Z'
           });
@@ -476,7 +525,7 @@ describe('Property-Based Tests', () => {
           // Note with match only in metadata
           const metadataMatch = createNote({
             id: 'metadata',
-            title: 'XYZ123NoMatch',
+            title: 'WWWWWWWWWWWWWWW',
             metadata: `${term}Extra`, // Also partial to be fair
             created_at: '2023-01-01T00:00:00Z'
           });
