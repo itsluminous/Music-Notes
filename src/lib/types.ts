@@ -9,7 +9,6 @@ export type Note = {
   content: string;
   tags: string[]; // array of tag IDs
   artist?: string;
-  composer?: string;
   album?: string;
   release_year?: number;
   metadata?: string;
@@ -39,7 +38,6 @@ export type ExportNote = {
   title: string;
   content: string;
   artist?: string;
-  composer?: string;
   album?: string;
   release_year?: number;
   metadata?: string;

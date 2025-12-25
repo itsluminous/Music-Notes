@@ -185,7 +185,6 @@ export default function Home() {
   };
 
   const allArtists = React.useMemo(() => [...new Set(notes.flatMap(n => n.artist?.split(',').map(a => a.trim()) || []).filter(Boolean) as string[])], [notes]);
-  const allComposers = React.useMemo(() => [...new Set(notes.map(n => n.composer).filter(Boolean) as string[])], [notes]);
   const allAlbums = React.useMemo(() => [...new Set(notes.map(n => n.album).filter(Boolean) as string[])], [notes]);
   const hasPinnedNotes = React.useMemo(() => notes.some(note => note.is_pinned), [notes]);
   const hasActiveFilters = selectedTags.length > 0 || showUntagged || showPinned;
@@ -361,7 +360,6 @@ export default function Home() {
           onSave={handleSaveNote}
           allTags={tags}
           allArtists={allArtists}
-          allComposers={allComposers}
           allAlbums={allAlbums}
         />
         

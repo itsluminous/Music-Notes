@@ -10,8 +10,7 @@
 --    'admin' role to the first user, 'pending' to all subsequent users
 -- 4. Author Attribution: Notes table includes 'author' column to track who
 --    created or last edited each note
--- 5. Composer Field: Separate from artist to distinguish performer from songwriter
--- 6. SECURITY DEFINER Functions: Helper functions bypass RLS to prevent infinite recursion
+-- 5. SECURITY DEFINER Functions: Helper functions bypass RLS to prevent infinite recursion
 
 -- ============================================================================
 -- Helper Functions for RLS Policies
@@ -134,7 +133,7 @@ ON public.tags FOR DELETE
 USING (public.is_approved(auth.uid()));
 
 
--- Create notes table with composer and author columns
+-- Create notes table with author column
 CREATE TABLE public.notes (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE NOT NULL,
@@ -142,7 +141,6 @@ CREATE TABLE public.notes (
     title TEXT NOT NULL,
     content TEXT,
     artist TEXT,
-    composer TEXT,
     album TEXT,
     release_year INTEGER,
     metadata TEXT,

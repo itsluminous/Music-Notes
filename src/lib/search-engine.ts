@@ -59,10 +59,6 @@ function matchesField(note: Note, tag: SearchTag, term: string): boolean {
       const artists = note.artist.split(',').map(a => a.trim().toLowerCase());
       return artists.some(artist => artist.includes(termLower));
 
-    case 'composer':
-      if (!note.composer) return false;
-      return note.composer.toLowerCase().includes(termLower);
-
     case 'album':
       if (!note.album) return false;
       return note.album.toLowerCase().includes(termLower);
@@ -118,9 +114,6 @@ function matchesAnyField(note: Note, term: string): boolean {
 
   // Check album
   if (note.album && note.album.toLowerCase().includes(termLower)) return true;
-
-  // Check composer
-  if (note.composer && note.composer.toLowerCase().includes(termLower)) return true;
 
   // Check year
   if (note.release_year && String(note.release_year).includes(term)) return true;
@@ -193,11 +186,6 @@ export function rankSearchResults(notes: Note[], parsedQuery: ParsedQuery): Note
       if (note.album && note.album.toLowerCase().includes(termLower)) {
         score += 1;
       }
-
-      // Composer matches: +1 point
-      if (note.composer && note.composer.toLowerCase().includes(termLower)) {
-        score += 1;
-      }
     });
 
     return {
@@ -244,9 +232,6 @@ function isExactMatch(note: Note, tag: SearchTag, term: string): boolean {
       if (!note.artist) return false;
       const artists = note.artist.split(',').map(a => a.trim().toLowerCase());
       return artists.some(artist => artist === termLower);
-
-    case 'composer':
-      return note.composer?.toLowerCase() === termLower;
 
     case 'album':
       return note.album?.toLowerCase() === termLower;
@@ -295,9 +280,6 @@ function hasExactMatchInAnyField(note: Note, term: string): boolean {
 
   // Check album
   if (note.album && note.album.toLowerCase() === termLower) return true;
-
-  // Check composer
-  if (note.composer && note.composer.toLowerCase() === termLower) return true;
 
   // Check year
   if (note.release_year && String(note.release_year) === term) return true;

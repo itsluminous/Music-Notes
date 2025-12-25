@@ -1,5 +1,5 @@
 // Search-specific types
-export type SearchTag = 'artist' | 'composer' | 'album' | 'title' | 'content' | 'metadata' | 'year';
+export type SearchTag = 'artist' | 'album' | 'title' | 'content' | 'metadata' | 'year';
 
 export interface TaggedTerm {
   tag: SearchTag;
@@ -13,7 +13,6 @@ export interface ParsedQuery {
 
 const VALID_TAGS: Set<string> = new Set([
   'artist',
-  'composer',
   'album',
   'title',
   'content',
@@ -28,12 +27,11 @@ const VALID_TAGS: Set<string> = new Set([
  * @returns ParsedQuery object with taggedTerms and untaggedTerms
  * 
  * @example
- * parseSearchQuery("@artist Arijit @composer Pritam love song")
+ * parseSearchQuery("@artist Arijit love song")
  * // Returns:
  * // {
  * //   taggedTerms: [
- * //     { tag: 'artist', term: 'Arijit' },
- * //     { tag: 'composer', term: 'Pritam' }
+ * //     { tag: 'artist', term: 'Arijit' }
  * //   ],
  * //   untaggedTerms: ['love', 'song']
  * // }

@@ -11,7 +11,7 @@ import { parseSearchQuery, type SearchTag } from './search-parser';
  */
 describe('Property-Based Tests', () => {
   it('Property 7: Query parsing correctness - correctly extracts tags and terms', () => {
-    const validTags: SearchTag[] = ['artist', 'composer', 'album', 'title', 'content', 'metadata', 'year'];
+    const validTags: SearchTag[] = ['artist', 'album', 'title', 'content', 'metadata', 'year'];
     
     // Arbitrary for generating valid tagged terms
     const taggedTermArb = fc.record({
@@ -102,54 +102,54 @@ describe('Unit Tests - Edge Cases', () => {
   });
 
   it('handles multiple spaces between terms', () => {
-    const result = parseSearchQuery('@artist  Arijit   @composer    Pritam');
+    const result = parseSearchQuery('@artist  Arijit   @content    Pritam');
     expect(result.taggedTerms).toEqual([
       { tag: 'artist', term: 'Arijit' },
-      { tag: 'composer', term: 'Pritam' }
+      { tag: 'content', term: 'Pritam' }
     ]);
   });
 
   it('handles mixed valid and invalid tags', () => {
-    const result = parseSearchQuery('@artist Arijit @invalid test @composer Pritam');
+    const result = parseSearchQuery('@artist Arijit @invalid test @content Pritam');
     expect(result.taggedTerms).toEqual([
       { tag: 'artist', term: 'Arijit' },
-      { tag: 'composer', term: 'Pritam' }
+      { tag: 'content', term: 'Pritam' }
     ]);
     expect(result.untaggedTerms).toEqual(['@invalid', 'test']);
   });
 
   it('handles case-insensitive tag names', () => {
-    const result = parseSearchQuery('@ARTIST Arijit @Composer Pritam');
+    const result = parseSearchQuery('@ARTIST Arijit @Title Pritam');
     expect(result.taggedTerms).toEqual([
       { tag: 'artist', term: 'Arijit' },
-      { tag: 'composer', term: 'Pritam' }
+      { tag: 'title', term: 'Pritam' }
     ]);
   });
 
   it('handles consecutive tags without terms', () => {
-    const result = parseSearchQuery('@artist @composer Pritam');
+    const result = parseSearchQuery('@artist @title Pritam');
     expect(result.taggedTerms).toEqual([
-      { tag: 'composer', term: 'Pritam' }
+      { tag: 'title', term: 'Pritam' }
     ]);
   });
 
   it('parses complex mixed query correctly', () => {
-    const result = parseSearchQuery('@artist Arijit @composer Pritam love song');
+    const result = parseSearchQuery('@artist Arijit @title Pritam love song');
     expect(result.taggedTerms).toEqual([
       { tag: 'artist', term: 'Arijit' },
-      { tag: 'composer', term: 'Pritam' }
+      { tag: 'title', term: 'Pritam' }
     ]);
     expect(result.untaggedTerms).toEqual(['love', 'song']);
   });
 
   it('handles all valid tag types', () => {
     const result = parseSearchQuery(
-      '@artist A @composer C @album Al @title T @content Co @metadata M @year 2020'
+      '@artist A @title C @album Al @title T @content Co @metadata M @year 2020'
     );
     expect(result.taggedTerms).toHaveLength(7);
     expect(result.taggedTerms).toEqual([
       { tag: 'artist', term: 'A' },
-      { tag: 'composer', term: 'C' },
+      { tag: 'title', term: 'C' },
       { tag: 'album', term: 'Al' },
       { tag: 'title', term: 'T' },
       { tag: 'content', term: 'Co' },

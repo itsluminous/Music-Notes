@@ -165,9 +165,7 @@ export function NoteViewHeader({ note, onEdit, onDeleted, onPinToggled, onOpenCh
             <DialogTitle className="font-headline text-2xl">{note.title}</DialogTitle>
             <DialogDescription className="flex items-center gap-4 pt-1">
               {note.artist && <span>{note.artist}</span>}
-              {note.artist && (note.composer || note.album || note.release_year) && <span className="text-muted-foreground">&bull;</span>}
-              {note.composer && <span className="italic">Composer: {note.composer}</span>}
-              {note.composer && (note.album || note.release_year) && <span className="text-muted-foreground">&bull;</span>}
+              {note.artist && (note.album || note.release_year) && <span className="text-muted-foreground">&bull;</span>}
               {note.album && <span className="italic">{note.album}</span>}
               {note.album && note.release_year && <span className="text-muted-foreground">&bull;</span>}
               {note.release_year && <span>{note.release_year}</span>}

@@ -366,7 +366,6 @@ export function useNotesData() {
 			title: savedNote.title,
 			content: savedNote.content,
 			artist: savedNote.artist,
-			composer: savedNote.composer,
 			album: savedNote.album,
 			metadata: savedNote.metadata,
 			references: savedNote.references,

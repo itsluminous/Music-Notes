@@ -43,7 +43,6 @@ const createMockNotes = (count: number, startId: number = 1, baseTimestamp: stri
     title: `Note ${startId + i}`,
     content: `Content for note ${startId + i}`,
     artist: `Artist ${startId + i}`,
-    composer: null,
     album: null,
     metadata: null,
     references: null,

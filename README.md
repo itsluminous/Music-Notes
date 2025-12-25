@@ -19,10 +19,9 @@ A modern, responsive web application for creating, organizing, and managing musi
 
 ### 📝 Note Management
 - **Create & Edit Notes**: Rich text editor for music notes, chords, tabs, and lyrics
-- **Metadata Support**: Add artist, composer, album, release year, and custom metadata
+- **Metadata Support**: Add artist, album, release year, and custom metadata
 - **Pin Important Notes**: Pin frequently used notes for quick access
 - **References**: Add external links and references to your notes
-- **Composer Field**: Distinguish between performing artist and composer
 
 ### 🔍 Advanced Search & Filtering
 - **Smart Search**: Search across titles, content, artists, albums, and metadata
@@ -67,13 +66,12 @@ A modern, responsive web application for creating, organizing, and managing musi
 - **Chord Transposition**: Transpose chords up or down by semitones with automatic capo detection
 - **Autoscroll**: Automatic scrolling with customizable speed for hands-free playing
 - **Artist & Album Management**: Autocomplete for artists and albums
-- **Composer Support**: Separate field for composer with autocomplete suggestions
 - **Music Metadata**: Store technical details like tuning, capo position, etc.
 
 ### 💾 Import/Export
 - **Export Notes**: Download all your notes as a JSON file with complete metadata
 - **Import Notes**: Restore or migrate notes from exported files
-- **Full Data Preservation**: Exports include title, content, artist, composer, album, tags, author, and timestamps
+- **Full Data Preservation**: Exports include title, content, artist, album, tags, author, and timestamps
 - **Tag Matching**: Import automatically matches or creates tags by name
 - **Backup & Migration**: Perfect for backing up your collection or moving between instances
 
@@ -157,7 +155,6 @@ The application will be available at `http://localhost:9002`.
    - **Title**: Name of the song/piece
    - **Content**: Chords, lyrics, tabs, or notes
    - **Artist**: Performing artist (with autocomplete)
-   - **Composer**: Song composer (with autocomplete, optional)
    - **Album**: Album name (with autocomplete)
    - **Tags**: Organize with custom tags
    - **Metadata**: Technical details (tuning, capo, etc.)
@@ -185,7 +182,7 @@ The application will be available at `http://localhost:9002`.
 1. Click your profile menu in the top-right corner
 2. Select "Export Notes"
 3. A JSON file will download containing all notes with complete metadata
-4. The export includes: title, content, artist, composer, album, release year, metadata, references, tags, author, and timestamps
+4. The export includes: title, content, artist, album, release year, metadata, references, tags, author, and timestamps
 
 #### Importing Notes
 1. Click your profile menu in the top-right corner
@@ -302,11 +299,6 @@ The search functionality uses a sophisticated scoring system:
 - **Multi-word support**: All terms must be present
 - **Year-only search**: Special handling for 4-digit years
 - **Available to All**: Anonymous visitors can use full search functionality
-
-### Composer vs Artist
-- **Artist**: The performer or band who recorded/performed the song
-- **Composer**: The person who composed music (optional)
-- **Autocomplete**: Both fields offer suggestions from existing entries
 
 ### Responsive Design
 - **Mobile-first**: Optimized for mobile devices

@@ -59,7 +59,6 @@ describe('Cache Manager', () => {
     content: fc.string({ minLength: 0, maxLength: 1000 }),
     tags: fc.array(fc.uuid(), { maxLength: 10 }),
     artist: fc.option(fc.string({ minLength: 1, maxLength: 100 }), { nil: undefined }),
-    composer: fc.option(fc.string({ minLength: 1, maxLength: 100 }), { nil: undefined }),
     album: fc.option(fc.string({ minLength: 1, maxLength: 100 }), { nil: undefined }),
     release_year: fc.option(fc.integer({ min: 1900, max: 2100 }), { nil: undefined }),
     metadata: fc.option(fc.string({ maxLength: 200 }), { nil: undefined }),

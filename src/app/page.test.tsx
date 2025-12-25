@@ -157,7 +157,7 @@ describe('Property-Based Tests - Tag Insertion', () => {
     // Generate arbitrary text before and after cursor, and a tag
     const textBeforeArb = fc.string({ maxLength: 20 });
     const textAfterArb = fc.string({ maxLength: 20 });
-    const tagArb = fc.constantFrom('@artist', '@composer', '@album', '@title', '@content', '@metadata', '@year');
+    const tagArb = fc.constantFrom('@artist', '@album', '@title', '@content', '@metadata', '@year');
 
     fc.assert(
       fc.property(textBeforeArb, textAfterArb, tagArb, (textBefore, textAfter, tag) => {
@@ -216,7 +216,7 @@ describe('Property-Based Tests - Tag Insertion', () => {
     const textBeforeAtArb = fc.string({ maxLength: 10 });
     const filterTextArb = fc.string({ maxLength: 5 }).filter(s => !s.includes(' ') && !s.includes('@'));
     const textAfterArb = fc.string({ maxLength: 10 });
-    const tagArb = fc.constantFrom('@artist', '@composer', '@album', '@title', '@content', '@metadata', '@year');
+    const tagArb = fc.constantFrom('@artist', '@album', '@title', '@content', '@metadata', '@year');
 
     fc.assert(
       fc.property(textBeforeAtArb, filterTextArb, textAfterArb, tagArb, (textBeforeAt, filterText, textAfter, tag) => {
@@ -254,7 +254,7 @@ describe('Property-Based Tests - Tag Insertion', () => {
     // Generate text before and after cursor, and a tag
     const textBeforeArb = fc.string({ maxLength: 20 }).filter(s => !s.includes('@'));
     const textAfterArb = fc.string({ maxLength: 20 });
-    const tagArb = fc.constantFrom('@artist', '@composer', '@album', '@title', '@content', '@metadata', '@year');
+    const tagArb = fc.constantFrom('@artist', '@album', '@title', '@content', '@metadata', '@year');
 
     fc.assert(
       fc.property(textBeforeArb, textAfterArb, tagArb, (textBefore, textAfter, tag) => {
@@ -366,7 +366,7 @@ describe('Unit Tests - @ Icon and Tag Selection', () => {
     // Setup: text with multiple @
     const searchQuery = '@artist Arijit @com';
     const cursorPosition = 19; // After "@com"
-    const selectedTag = '@composer';
+    const selectedTag = '@year';
     
     const textBeforeCursor = searchQuery.substring(0, cursorPosition);
     const textAfterCursor = searchQuery.substring(cursorPosition);
@@ -376,9 +376,9 @@ describe('Unit Tests - @ Icon and Tag Selection', () => {
     const beforeAt = searchQuery.substring(0, lastAtIndex);
     const newValue = beforeAt + selectedTag + ' ' + textAfterCursor;
     
-    expect(newValue).toBe('@artist Arijit @composer ');
+    expect(newValue).toBe('@artist Arijit @year ');
     expect(newValue).toContain('@artist');
-    expect(newValue).toContain('@composer');
+    expect(newValue).toContain('@year');
     // The original partial text "@com" is replaced by the full tag
     expect(searchQuery).toContain('@com');
   });

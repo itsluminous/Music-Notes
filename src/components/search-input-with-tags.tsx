@@ -15,7 +15,7 @@ interface SearchInputWithTagsProps {
   atButtonRef?: React.RefObject<HTMLButtonElement>;
 }
 
-const SEARCH_TAGS = ['@artist', '@composer', '@album', '@title', '@content', '@metadata', '@year'];
+const SEARCH_TAGS = ['@artist', '@album', '@title', '@content', '@metadata', '@year'];
 
 export function SearchInputWithTags({
   value,

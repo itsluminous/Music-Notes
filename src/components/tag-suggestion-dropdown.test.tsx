@@ -55,10 +55,10 @@ describe('Property-Based Tests', () => {
 });
 
 describe('Unit Tests - Dropdown UI Behavior', () => {
-  it('all 7 tags are available in AVAILABLE_TAGS', () => {
-    expect(AVAILABLE_TAGS).toHaveLength(7);
+  it('all 6 tags are available in AVAILABLE_TAGS', () => {
+    expect(AVAILABLE_TAGS).toHaveLength(6);
     
-    const expectedTags = ['artist', 'composer', 'album', 'title', 'content', 'metadata', 'year'];
+    const expectedTags = ['artist', 'album', 'title', 'content', 'metadata', 'year'];
     const actualTags = AVAILABLE_TAGS.map(t => t.tag);
     
     expectedTags.forEach(tag => {
@@ -89,7 +89,7 @@ describe('Unit Tests - Dropdown UI Behavior', () => {
   });
 
   it('filters tags by partial match on label', () => {
-    const filterText = 'Com';
+    const filterText = 'Art';
     const lowerFilter = filterText.toLowerCase();
     const filtered = AVAILABLE_TAGS.filter(tag => 
       tag.tag.toLowerCase().includes(lowerFilter) ||
@@ -97,7 +97,7 @@ describe('Unit Tests - Dropdown UI Behavior', () => {
     );
     
     expect(filtered.length).toBeGreaterThan(0);
-    expect(filtered.some(t => t.tag === 'composer')).toBe(true);
+    expect(filtered.some(t => t.tag === 'artist')).toBe(true);
   });
 
   it('returns empty array when no tags match filter', () => {

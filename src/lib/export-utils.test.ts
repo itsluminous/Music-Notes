@@ -22,7 +22,6 @@ describe('Export Utils', () => {
           title: 'Test Note',
           content: 'Test content',
           artist: 'Test Artist',
-          composer: 'Test Composer',
           album: 'Test Album',
           release_year: 2024,
           metadata: 'Test metadata',
@@ -50,7 +49,6 @@ describe('Export Utils', () => {
       expect(exportedNote.title).toBe('Test Note');
       expect(exportedNote.content).toBe('Test content');
       expect(exportedNote.artist).toBe('Test Artist');
-      expect(exportedNote.composer).toBe('Test Composer');
       expect(exportedNote.album).toBe('Test Album');
       expect(exportedNote.release_year).toBe(2024);
       expect(exportedNote.metadata).toBe('Test metadata');
@@ -151,7 +149,6 @@ describe('Export Utils', () => {
       const exportedNote = result.notes[0];
       
       expect(exportedNote.artist).toBeUndefined();
-      expect(exportedNote.composer).toBeUndefined();
       expect(exportedNote.album).toBeUndefined();
       expect(exportedNote.release_year).toBeUndefined();
       expect(exportedNote.metadata).toBeUndefined();

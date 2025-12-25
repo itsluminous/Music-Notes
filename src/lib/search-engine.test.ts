@@ -12,7 +12,6 @@ function createNote(overrides: Partial<Note> = {}): Note {
     content: overrides.content || 'Test content',
     tags: overrides.tags || [],
     artist: overrides.artist,
-    composer: overrides.composer,
     album: overrides.album,
     release_year: overrides.release_year,
     metadata: overrides.metadata,
@@ -35,7 +34,7 @@ describe('Property-Based Tests', () => {
    * all returned results should only match in the specified field and not in other fields.
    */
   it('Property 1: Tagged search field isolation', () => {
-    const validTags: SearchTag[] = ['artist', 'composer', 'album', 'title', 'content', 'metadata', 'year'];
+    const validTags: SearchTag[] = ['artist', 'album', 'title', 'content', 'metadata', 'year'];
     
     // Generate alphanumeric strings to avoid substring matching issues
     const alphanumericString = fc.stringMatching(/^[a-zA-Z0-9]{3,15}$/);
@@ -62,7 +61,6 @@ describe('Property-Based Tests', () => {
             title: tag === 'title' ? term : noMatchValue,
             content: tag === 'content' ? term : noMatchValue,
             artist: tag === 'artist' ? term : noMatchValue,
-            composer: tag === 'composer' ? term : noMatchValue,
             album: tag === 'album' ? term : noMatchValue,
             metadata: tag === 'metadata' ? term : noMatchValue,
             release_year: yearValue
@@ -74,7 +72,6 @@ describe('Property-Based Tests', () => {
             title: tag !== 'title' ? term : noMatchValue,
             content: tag !== 'content' ? term : noMatchValue,
             artist: tag !== 'artist' ? term : noMatchValue,
-            composer: tag !== 'composer' ? term : noMatchValue,
             album: tag !== 'album' ? term : noMatchValue,
             metadata: tag !== 'metadata' ? term : noMatchValue,
             release_year: tag !== 'year' ? (parseInt(term) || 2000) : 1999
@@ -111,7 +108,7 @@ describe('Property-Based Tests', () => {
       fc.property(
         alphanumericString,
         alphanumericString,
-        (artistTerm, composerTerm) => {
+        (artistTerm, albumTerm) => {
           // Use unique base content that won't accidentally match search terms
           const uniqueBase = 'ZZZZUNIQUE';
           
@@ -121,7 +118,7 @@ describe('Property-Based Tests', () => {
             title: uniqueBase + '1',
             content: uniqueBase + '1',
             artist: artistTerm,
-            composer: composerTerm
+            album: albumTerm
           });
 
           // Note that matches only artist
@@ -130,16 +127,16 @@ describe('Property-Based Tests', () => {
             title: uniqueBase + '2',
             content: uniqueBase + '2',
             artist: artistTerm,
-            composer: 'WWWWWWWWWWWWWWW'
+            album: 'WWWWWWWWWWWWWWW'
           });
 
-          // Note that matches only composer
-          const matchingComposerOnly = createNote({
-            id: 'composer-only',
+          // Note that matches only album
+          const matchingAlbumOnly = createNote({
+            id: 'album-only',
             title: uniqueBase + '3',
             content: uniqueBase + '3',
             artist: 'WWWWWWWWWWWWWWW',
-            composer: composerTerm
+            album: albumTerm
           });
 
           // Note that matches neither
@@ -148,14 +145,14 @@ describe('Property-Based Tests', () => {
             title: uniqueBase + '4',
             content: uniqueBase + '4',
             artist: 'WWWWWWWWWWWWWWW',
-            composer: 'WWWWWWWWWWWWWWW'
+            album: 'WWWWWWWWWWWWWWW'
           });
 
-          const notes = [matchingBoth, matchingArtistOnly, matchingComposerOnly, matchingNeither];
+          const notes = [matchingBoth, matchingArtistOnly, matchingAlbumOnly, matchingNeither];
           const query: ParsedQuery = {
             taggedTerms: [
               { tag: 'artist', term: artistTerm },
-              { tag: 'composer', term: composerTerm }
+              { tag: 'album', term: albumTerm }
             ],
             untaggedTerms: []
           };
@@ -241,7 +238,7 @@ describe('Property-Based Tests', () => {
    * **Validates: Requirements 4.1**
    * 
    * For any search query without "@" tags, the search should return notes that 
-   * match the query in any of the fields: title, content, metadata, artist, album, composer, or year.
+   * match the query in any of the fields: title, content, metadata, artist, album, or year.
    */
   it('Property 8: Untagged query searches all fields', () => {
     const alphanumericString = fc.stringMatching(/^[a-zA-Z0-9]{3,15}$/);
@@ -282,12 +279,6 @@ describe('Property-Based Tests', () => {
             content: uniqueBase + '5',
             album: term 
           });
-          const matchingInComposer = createNote({ 
-            id: 'composer', 
-            title: uniqueBase + '6',
-            content: uniqueBase + '6',
-            composer: term 
-          });
           const notMatching = createNote({ 
             id: 'none', 
             title: 'WWWWWWWWWWWWWWW',
@@ -300,7 +291,6 @@ describe('Property-Based Tests', () => {
             matchingInMetadata,
             matchingInArtist,
             matchingInAlbum,
-            matchingInComposer,
             notMatching
           ];
 
@@ -312,7 +302,7 @@ describe('Property-Based Tests', () => {
           const results = filterNotesByParsedQuery(notes, query);
 
           // All notes except the non-matching one should be returned
-          expect(results.length).toBe(6);
+          expect(results.length).toBe(5);
           expect(results.find(n => n.id === 'none')).toBeUndefined();
         }
       ),
@@ -744,30 +734,30 @@ describe('Property-Based Tests', () => {
 });
 
 describe('Unit Tests - Specific Search Examples', () => {
-  it('searches "@artist Arijit @composer Pritam" correctly', () => {
+  it('searches "@artist Arijit @album Blah" correctly', () => {
     const matching = createNote({
       id: 'match',
       artist: 'Arijit Singh',
-      composer: 'Pritam'
+      album: 'Blah'
     });
 
     const onlyArtist = createNote({
       id: 'artist',
       artist: 'Arijit Singh',
-      composer: 'Different'
+      album: 'Different'
     });
 
-    const onlyComposer = createNote({
-      id: 'composer',
+    const onlyAlbum = createNote({
+      id: 'album',
       artist: 'Different',
-      composer: 'Pritam'
+      album: 'yoyo'
     });
 
-    const notes = [matching, onlyArtist, onlyComposer];
+    const notes = [matching, onlyArtist, onlyAlbum];
     const query: ParsedQuery = {
       taggedTerms: [
         { tag: 'artist', term: 'Arijit' },
-        { tag: 'composer', term: 'Pritam' }
+        { tag: 'album', term: 'Blah' }
       ],
       untaggedTerms: []
     };

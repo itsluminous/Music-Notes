@@ -3,7 +3,7 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 
-export type SearchTag = 'artist' | 'composer' | 'album' | 'title' | 'content' | 'metadata' | 'year';
+export type SearchTag = 'artist' | 'album' | 'title' | 'content' | 'metadata' | 'year';
 
 export interface TagSuggestion {
   value: string;
@@ -14,7 +14,6 @@ export interface TagSuggestion {
 
 export const AVAILABLE_TAGS: TagSuggestion[] = [
   { value: '@artist', label: 'Artist', description: 'Search by artist name', tag: 'artist' },
-  { value: '@composer', label: 'Composer', description: 'Search by composer name', tag: 'composer' },
   { value: '@album', label: 'Album', description: 'Search by album name', tag: 'album' },
   { value: '@title', label: 'Title', description: 'Search by note title', tag: 'title' },
   { value: '@content', label: 'Content', description: 'Search in note content', tag: 'content' },
