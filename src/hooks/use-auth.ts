@@ -8,6 +8,47 @@ let deletionAlertShown = false;
 // Global state for the dialog to persist across re-renders
 let globalShowAccountRemovedDialog = false;
 let dialogStateSetters: Set<(show: boolean) => void> = new Set();
+// Global flag to prevent multiple auth listener setups
+let isAuthInitialized = false;
+let authSubscription: any = null;
+
+// Helper to get cached auth state from localStorage
+const getCachedAuthState = () => {
+  try {
+    const cached = localStorage.getItem('auth-state-cache');
+    if (cached) {
+      const parsed = JSON.parse(cached);
+      const age = Date.now() - parsed.timestamp;
+      // Read TTL from environment variable (in days), default to 30 days
+      const ttlDays = parseInt(process.env.NEXT_PUBLIC_CACHE_TTL_DAYS || '30', 10);
+      const TTL = ttlDays * 24 * 60 * 60 * 1000; // Convert days to milliseconds
+      
+      if (age < TTL) {
+        return {
+          user: parsed.user,
+          profile: parsed.profile,
+          loading: false
+        };
+      }
+    }
+  } catch (e) {
+    console.error('[Auth] Error reading cache:', e);
+  }
+  return null;
+};
+
+// Helper to set cached auth state in localStorage
+const setCachedAuthState = (user: User | null, profile: UserProfile | null) => {
+  try {
+    localStorage.setItem('auth-state-cache', JSON.stringify({
+      user,
+      profile,
+      timestamp: Date.now()
+    }));
+  } catch (e) {
+    console.error('[Auth] Error writing cache:', e);
+  }
+};
 
 /**
  * Custom hook for authentication and user profile management
@@ -23,10 +64,13 @@ let dialogStateSetters: Set<(show: boolean) => void> = new Set();
  * when a user authenticates, enabling role-based access control throughout the app.
  */
 export function useAuth() {
-  const [user, setUser] = useState<User | null>(null);
+  // Try to get cached state first
+  const cachedState = getCachedAuthState();
+  
+  const [user, setUser] = useState<User | null>(cachedState?.user || null);
   const [session, setSession] = useState<Session | null>(null);
-  const [profile, setProfile] = useState<UserProfile | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [profile, setProfile] = useState<UserProfile | null>(cachedState?.profile || null);
+  const [loading, setLoading] = useState(cachedState ? false : true);
   const [showAccountRemovedDialog, setShowAccountRemovedDialog] = useState(globalShowAccountRemovedDialog);
   const deletionInProgress = useRef(false);
   
@@ -110,37 +154,62 @@ export function useAuth() {
   };
 
   useEffect(() => {
-    // Subscribe to auth state changes (login, logout, token refresh)
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (_event, session) => {
+    // Always fetch current session for this instance first
+    const sessionPromise = supabase.auth.getSession();
+    
+    sessionPromise.then(async ({ data: { session } }) => {
       setSession(session);
       setUser(session?.user || null);
       
-      // Fetch user profile when user authenticates
-      // This ensures we have role information for access control
       if (session?.user) {
         const userProfile = await fetchUserProfile(session.user.id);
         setProfile(userProfile);
+        
+        // Cache the auth state
+        setCachedAuthState(session.user, userProfile);
       } else {
-        setProfile(null);
+        // Clear cache if no session
+        setCachedAuthState(null, null);
       }
       
       setLoading(false);
-    });
-
-    // Initial session check on mount
-    // Handles page refresh or direct navigation with existing session
-    supabase.auth.getSession().then(async ({ data: { session } }) => {
-      setSession(session);
-      setUser(session?.user || null);
-      
-      // Fetch user profile for initial session
-      if (session?.user) {
-        const userProfile = await fetchUserProfile(session.user.id);
-        setProfile(userProfile);
-      }
-      
+    }).catch(error => {
+      console.error('[Auth] Error getting session:', error);
       setLoading(false);
     });
+    
+    // Only set up the listener once globally
+    if (isAuthInitialized) {
+      return;
+    }
+    
+    isAuthInitialized = true;
+    
+    // Subscribe to auth state changes (login, logout, token refresh)
+    // IMPORTANT: This callback must be non-blocking to avoid deadlocks
+    // See: https://github.com/nuxt-modules/supabase/issues/273#issuecomment-2051932773
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      // Use setTimeout to make this non-blocking and avoid deadlocks
+      setTimeout(async () => {
+        setSession(session);
+        setUser(session?.user || null);
+        
+        if (session?.user) {
+          const userProfile = await fetchUserProfile(session.user.id);
+          setProfile(userProfile);
+          
+          // Cache the auth state
+          setCachedAuthState(session.user, userProfile);
+        } else {
+          setProfile(null);
+          setCachedAuthState(null, null);
+        }
+        
+        setLoading(false);
+      }, 0);
+    });
+    
+    authSubscription = subscription;
 
     // Listen for account removal events triggered by CRUD operations
     const handleAccountRemoved = () => {
@@ -161,8 +230,8 @@ export function useAuth() {
     window.addEventListener('account-removed', handleAccountRemoved);
 
     return () => {
-      subscription.unsubscribe();
       window.removeEventListener('account-removed', handleAccountRemoved);
+      // Don't unsubscribe - keep the global listener alive
     };
   }, []);
 

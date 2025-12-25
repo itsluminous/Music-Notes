@@ -12,13 +12,14 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { User, Download, Upload, Sun, Moon, Power, Shield } from "lucide-react"
+import { User, Download, Upload, Sun, Moon, Power, Shield, Database } from "lucide-react"
 import { supabase } from '@/lib/supabase'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/hooks/use-auth'
 import { useTheme } from '@/components/theme-provider'
 import { useNotesData } from '@/hooks/use-notes-data'
 import { AdminPanel } from '@/components/admin-panel'
+import { CacheInfoDialog } from '@/components/cache-info-dialog'
 import { PendingApprovalNotification } from '@/components/pending-approval-notification'
 import { exportNotes, downloadExportData, importNotes } from '@/lib/export-utils'
 import { useToast } from '@/hooks/use-toast'
@@ -29,6 +30,7 @@ export function UserNav() {
   const { theme, setTheme } = useTheme();
   const { notes, tags, fetchNotesAndTags } = useNotesData();
   const [adminPanelOpen, setAdminPanelOpen] = useState(false);
+  const [cacheInfoOpen, setCacheInfoOpen] = useState(false);
   const [pendingDialogOpen, setPendingDialogOpen] = useState(false);
   const [isImporting, setIsImporting] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -172,10 +174,16 @@ export function UserNav() {
               <DropdownMenuSeparator />
               <DropdownMenuGroup>
                 {isAdmin && (
-                  <DropdownMenuItem className="cursor-pointer" onSelect={() => setAdminPanelOpen(true)}>
-                    <Shield className="mr-2 h-4 w-4" />
-                    Manage Users
-                  </DropdownMenuItem>
+                  <>
+                    <DropdownMenuItem className="cursor-pointer" onSelect={() => setAdminPanelOpen(true)}>
+                      <Shield className="mr-2 h-4 w-4" />
+                      Manage Users
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="cursor-pointer" onSelect={() => setCacheInfoOpen(true)}>
+                      <Database className="mr-2 h-4 w-4" />
+                      Cache Info
+                    </DropdownMenuItem>
+                  </>
                 )}
                 <DropdownMenuItem className="cursor-pointer" onSelect={() => setTheme(theme === "dark" ? "light" : "dark")}>
                   {theme === "dark" ? <Sun className="mr-2 h-4 w-4" /> : <Moon className="mr-2 h-4 w-4" />}
@@ -203,6 +211,7 @@ export function UserNav() {
           )}
         </DropdownMenuContent>
         <AdminPanel open={adminPanelOpen} onOpenChange={setAdminPanelOpen} />
+        <CacheInfoDialog open={cacheInfoOpen} onOpenChange={setCacheInfoOpen} />
         <PendingApprovalNotification 
           isOpen={pendingDialogOpen} 
           onOpenChange={setPendingDialogOpen}

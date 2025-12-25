@@ -37,18 +37,24 @@ interface NoteViewHeaderProps {
   note: Note;
   onEdit: () => void;
   onDeleted?: (id: string) => void;
+  onPinToggled?: () => void;
   onOpenChange: (isOpen: boolean) => void;
 }
 
-export function NoteViewHeader({ note, onEdit, onDeleted, onOpenChange }: NoteViewHeaderProps) {
+export function NoteViewHeader({ note, onEdit, onDeleted, onPinToggled, onOpenChange }: NoteViewHeaderProps) {
   const { toast } = useToast();
-  const { user, isPending, profile } = useAuth();
+  const { user, isPending, profile, loading } = useAuth();
   const router = useRouter();
   const [isDeleting, setIsDeleting] = React.useState(false);
   const [isPinning, setIsPinning] = React.useState(false);
   const [pendingDialogOpen, setPendingDialogOpen] = React.useState(false);
 
   const handleEdit = () => {
+    // Wait for auth to finish loading
+    if (loading) {
+      return;
+    }
+    
     // Check authentication status before editing
     if (!user) {
       router.push('/auth/login');
@@ -65,6 +71,11 @@ export function NoteViewHeader({ note, onEdit, onDeleted, onOpenChange }: NoteVi
   };
 
   const handlePinToggle = async () => {
+    // Wait for auth to finish loading
+    if (loading) {
+      return;
+    }
+    
     // Check authentication status before pinning
     if (!user) {
       router.push('/auth/login');
@@ -91,7 +102,12 @@ export function NoteViewHeader({ note, onEdit, onDeleted, onOpenChange }: NoteVi
         description: `Note ${note.is_pinned ? 'unpinned' : 'pinned'} successfully.` 
       });
       
-      // Refresh the note data by closing and reopening (or you could add a callback)
+      // Notify parent to refresh data
+      if (onPinToggled) {
+        onPinToggled();
+      }
+      
+      // Close dialog
       onOpenChange(false);
     } catch (err: any) {
       console.error('Failed to toggle pin', err);
@@ -102,6 +118,11 @@ export function NoteViewHeader({ note, onEdit, onDeleted, onOpenChange }: NoteVi
   };
 
   const handleDelete = async () => {
+    // Wait for auth to finish loading
+    if (loading) {
+      return;
+    }
+    
     // Check authentication status before deleting
     if (!user) {
       router.push('/auth/login');

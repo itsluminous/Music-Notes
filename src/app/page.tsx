@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from 'react';
-import { Plus, Music, ListFilter, Menu } from 'lucide-react';
+import { Plus, Music, ListFilter, Menu, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   SidebarProvider,
@@ -34,7 +34,7 @@ import { parseSearchQuery } from '@/lib/search-parser';
 import { filterNotesByParsedQuery, rankSearchResults } from '@/lib/search-engine';
 
 export default function Home() {
-  const { notes, tags, loading: notesLoading, fetchNotesAndTags, saveNote } = useNotesData();
+  const { notes, tags, loading: notesLoading, refreshing, fetchNotesAndTags, saveNote } = useNotesData();
   const { user, isPending, isApproved, profile, loading: authLoading, showAccountRemovedDialog, setShowAccountRemovedDialog } = useAuth();
   const [searchQuery, setSearchQuery] = React.useState('');
   const debouncedSearchQuery = useDebounce(searchQuery, 300);
@@ -121,6 +121,11 @@ export default function Home() {
   };
 
   const handleCreateNewNote = () => {
+    // Wait for auth to finish loading
+    if (authLoading) {
+      return;
+    }
+    
     // Check authentication status before opening editor
     if (!user) {
       router.push('/auth/login');
@@ -138,6 +143,11 @@ export default function Home() {
   };
 
   const handleEditNote = (note: Note) => {
+    // Wait for auth to finish loading
+    if (authLoading) {
+      return;
+    }
+    
     // Check authentication status before opening editor
     if (!user) {
       router.push('/auth/login');
@@ -288,6 +298,17 @@ export default function Home() {
               <Music className="h-6 w-6 text-primary" />
               <span className="hidden md:inline">Music</span>
           </div>
+          {refreshing && (
+            <div 
+              className="flex items-center gap-2 text-xs text-muted-foreground"
+              role="status"
+              aria-live="polite"
+              aria-label="Refreshing notes in background"
+            >
+              <Loader2 className="h-3 w-3 animate-spin" aria-hidden="true" />
+              <span className="hidden sm:inline">Refreshing...</span>
+            </div>
+          )}
           <SearchBox
             value={searchQuery}
             onChange={setSearchQuery}
@@ -351,11 +372,15 @@ export default function Home() {
             note={viewingNote}
             allTags={tags}
             onEdit={() => handleEditNote(viewingNote)}
-            onDeleted={(id: string) => {
-              // Refresh notes and clear viewing state so deleted note disappears from grid
-              fetchNotesAndTags();
+            onDeleted={async (id: string) => {
+              // Force full fetch to ensure deleted note is removed from cache
+              await fetchNotesAndTags(true);
               setViewingNote(null);
               setIsViewOpen(false);
+            }}
+            onPinToggled={async () => {
+              // Refresh notes to update pin status in the grid
+              await fetchNotesAndTags();
             }}
           />
         )}

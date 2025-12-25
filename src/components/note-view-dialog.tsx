@@ -15,6 +15,7 @@ interface NoteViewDialogProps {
   allTags: Tag[];
   onEdit: () => void;
   onDeleted?: (id: string) => void;
+  onPinToggled?: () => void;
 }
 
 export function NoteViewDialog({
@@ -24,6 +25,7 @@ export function NoteViewDialog({
   allTags,
   onEdit,
   onDeleted,
+  onPinToggled,
 }: NoteViewDialogProps) {
   const [initialCapo, setInitialCapo] = React.useState(0);
   const [manualTransposeSteps, setManualTransposeSteps] = React.useState(0);
@@ -94,6 +96,7 @@ export function NoteViewDialog({
           note={note}
           onEdit={onEdit}
           onDeleted={onDeleted}
+          onPinToggled={onPinToggled}
           onOpenChange={(open) => {
             if (!open) {
               setScrollSpeed(0);

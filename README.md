@@ -44,6 +44,8 @@ A modern, responsive web application for creating, organizing, and managing musi
 - **Modern Interface**: Clean, card-based layout
 - **Collapsible Sidebar**: Efficient use of screen space
 - **Real-time Updates**: Instant search and filter results
+- **Smart Caching**: Local storage caching with 30-day TTL for instant load times
+- **Background Refresh**: Automatic incremental updates without blocking the UI
 
 ### 🔐 Authentication & User Management
 - **Secure Login**: Supabase-powered authentication
@@ -58,6 +60,7 @@ A modern, responsive web application for creating, organizing, and managing musi
 - **Approve/Reject Users**: Control who can create and edit notes
 - **Pending User Queue**: See all users awaiting approval with email and signup date
 - **Admin Dashboard**: Dedicated interface for managing the platform
+- **Cache Management**: View cache statistics and manually clear cache for troubleshooting
 
 ### 🎵 Music-specific Features
 - **Chord Highlighting**: Automatic highlighting of chord notations in content
@@ -107,7 +110,13 @@ Create a `.env.local` file in the root directory:
 ```env
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+NEXT_PUBLIC_CACHE_TTL_DAYS=30
 ```
+
+**Environment Variables:**
+- `NEXT_PUBLIC_SUPABASE_URL`: Your Supabase project URL
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Your Supabase anonymous key
+- `NEXT_PUBLIC_CACHE_TTL_DAYS`: (Optional) Number of days to cache authentication state & notes in browser localStorage. Default: 30 days. The cache automatically refreshes on each app visit, so active users won't be logged out. The notes cache automatically refreshes with incremental updates on each app visit.
 
 ### 4. Database Setup
 Set up your Supabase database with the [sql script](DB_Setup.sql).
@@ -140,6 +149,7 @@ The application will be available at `http://localhost:9002`.
 3. **Review Pending Users**: See all users awaiting approval with their email and signup date
 4. **Approve or Reject**: Click approve to grant access or reject to deny
 5. **Full Permissions**: Create, edit, and delete notes like any approved user
+6. **Cache Management**: Access "Cache Info" in your profile menu to view cache statistics and clear cache if needed
 
 ### Creating Notes (Approved Users)
 1. Click the **+** button in the bottom-right corner
@@ -197,8 +207,78 @@ The application will be available at `http://localhost:9002`.
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
 - `npm run typecheck` - Run TypeScript type checking
+- `npm test` - Run all tests (unit, property-based, integration, and e2e)
+- `npm run test:watch` - Run tests in watch mode for development
+
+## 🧪 Testing
+
+The application includes a comprehensive test suite to ensure correctness and reliability:
+
+### Test Types
+- **Unit Tests**: Test individual functions and components in isolation
+- **Property-Based Tests**: Verify universal properties across many random inputs using fast-check
+- **Integration Tests**: Test interactions between multiple components
+- **End-to-End Tests**: Validate complete user workflows
+
+### Key Test Coverage
+- **Cache Manager**: Cache validity, read/write operations, error handling, TTL validation
+- **Merge Logic**: Data merging with overlapping/non-overlapping IDs, edge cases
+- **Search Engine**: Search scoring, multi-word queries, year-based search
+- **UI Components**: Accessibility, user interactions, form validation
+- **Data Hooks**: Data fetching, caching integration, error recovery
+
+### Running Tests
+```bash
+# Run all tests once
+npm test
+
+# Run tests in watch mode (for development)
+npm run test:watch
+
+# Run with coverage
+npm test -- --coverage
+```
+
+### Property-Based Testing
+The caching system uses property-based testing to verify correctness properties:
+- **Cache Freshness**: Validates 30-day TTL across random timestamps
+- **Merge Preserves Identity**: Ensures no duplicate notes after merging
+- **Merge Preserves All Notes**: Verifies all unique notes are retained
+- **Round-Trip Consistency**: Confirms data integrity after cache write/read
+- **Error Recovery**: Tests graceful degradation under various failure conditions
+
+Each property test runs 100+ iterations with randomly generated inputs to catch edge cases.
 
 ## 🎯 Key Features in Detail
+
+### Local Storage Caching
+The application implements an intelligent caching system to dramatically improve load times and user experience:
+
+#### How It Works
+- **First Visit**: Data is fetched from the database and cached in browser localStorage
+- **Subsequent Visits**: Cached data loads instantly (< 100ms) while fresh data is fetched in the background
+- **Incremental Updates**: Only changed records are fetched, reducing network traffic and server load
+- **Smart Merging**: New and updated records are automatically merged with cached data
+- **30-Day TTL**: Cache expires after 30 days, ensuring data freshness
+
+#### Benefits
+- **Instant Load Times**: See your notes immediately without waiting for network requests
+- **Reduced Server Load**: Incremental fetches minimize database queries
+- **Offline-Ready**: View cached notes even with poor connectivity
+- **Seamless Updates**: Background refresh keeps data current without interrupting your workflow
+- **Visual Feedback**: Subtle indicator shows when data is being refreshed
+
+#### Cache Management (Admin Only)
+Admins have access to cache management tools in their profile menu:
+- **Cache Statistics**: View cache age, size, and record count
+- **Manual Clear**: Clear cache for troubleshooting or testing
+- **Debug Logging**: Enable detailed cache operation logs via `DEBUG_LOG=true` environment variable
+
+#### Technical Details
+- **Storage**: Browser localStorage (typically 5-10MB limit)
+- **Cache Size**: ~2KB per note, comfortably fits 1000+ notes
+- **Error Handling**: Graceful fallback to full fetch if cache is corrupted or unavailable
+- **Privacy**: Only public note data is cached, no sensitive information
 
 ### Access Control & Security
 The application uses Row Level Security (RLS) policies in PostgreSQL:
@@ -240,6 +320,7 @@ The search functionality uses a sophisticated scoring system:
 - **Error handling**: Graceful error recovery
 - **Data validation**: Client and server-side validation
 - **Import/Export**: Full backup and restore capabilities
+- **Authentication cache**: User authentication state is cached in browser localStorage for improved performance. The cache expires after 30 days (configurable via `NEXT_PUBLIC_CACHE_TTL_DAYS`) but automatically refreshes on each app visit. This prevents unnecessary loading states when switching tabs or during hot reloads in development.
 
 ## 🤝 Contributing
 
