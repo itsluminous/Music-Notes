@@ -40,6 +40,7 @@ export default function Home() {
   const debouncedSearchQuery = useDebounce(searchQuery, 300);
   const [selectedTags, setSelectedTags] = React.useState<string[]>([]);
   const [showUntagged, setShowUntagged] = React.useState(false);
+  const [showNoCapo, setShowNoCapo] = React.useState(false);
   const [showPinned, setShowPinned] = React.useState(false);
   const [editingNote, setEditingNote] = React.useState<Note | null>(null);
   const [viewingNote, setViewingNote] = React.useState<Note | null>(null);
@@ -66,17 +67,22 @@ export default function Home() {
     // Filter by tags first (existing tag filter functionality)
     const notesWithTags = notes.filter((note) => {
       // If 'Pinned' is selected, show only pinned notes
-      if (showPinned && selectedTags.length === 0 && !showUntagged) {
+      if (showPinned && selectedTags.length === 0 && !showUntagged && !showNoCapo) {
         return note.is_pinned;
       }
       
       // If 'Untagged' is the only filter, show notes with no tags
-      if (showUntagged && selectedTags.length === 0 && !showPinned) {
+      if (showUntagged && selectedTags.length === 0 && !showPinned && !showNoCapo) {
         return note.tags.length === 0;
       }
       
-      // If other tags are selected, 'Untagged' and 'Pinned' are ignored
-      if (selectedTags.length === 0 && !showUntagged && !showPinned) return true;
+      // If 'No-Capo' is the only filter, show notes without Capo in metadata
+      if (showNoCapo && selectedTags.length === 0 && !showPinned && !showUntagged) {
+        return !note.metadata || !note.metadata.toLowerCase().includes('capo');
+      }
+      
+      // If other tags are selected, 'Untagged', 'No-Capo', and 'Pinned' are ignored
+      if (selectedTags.length === 0 && !showUntagged && !showPinned && !showNoCapo) return true;
       return selectedTags.every((tagId) => note.tags.includes(tagId));
     });
 
@@ -96,21 +102,23 @@ export default function Home() {
 
     return ranked;
 
-  }, [notes, debouncedSearchQuery, selectedTags, showUntagged, showPinned]);
+  }, [notes, debouncedSearchQuery, selectedTags, showUntagged, showNoCapo, showPinned]);
 
   // Announce result count changes for screen readers
   const resultCountMessage = React.useMemo(() => {
     if (notesLoading) return 'Loading notes';
-    if (filteredNotes.length === 0 && (debouncedSearchQuery || selectedTags.length > 0 || showUntagged || showPinned)) {
+    if (filteredNotes.length === 0 && (debouncedSearchQuery || selectedTags.length > 0 || showUntagged || showNoCapo || showPinned)) {
       return 'No notes found';
     }
     if (filteredNotes.length === 1) return '1 note found';
     return `${filteredNotes.length} notes found`;
-  }, [filteredNotes.length, notesLoading, debouncedSearchQuery, selectedTags.length, showUntagged, showPinned]);
+  }, [filteredNotes.length, notesLoading, debouncedSearchQuery, selectedTags.length, showUntagged, showNoCapo, showPinned]);
 
   const handleTagToggle = (tagId: string) => {
     if (tagId === 'untagged') {
       setShowUntagged(prev => !prev);
+    } else if (tagId === 'no-capo') {
+      setShowNoCapo(prev => !prev);
     } else if (tagId === 'pinned') {
       setShowPinned(prev => !prev);
     } else {
@@ -181,13 +189,15 @@ export default function Home() {
   const handleClearAllFilters = () => {
     setSelectedTags([]);
     setShowUntagged(false);
+    setShowNoCapo(false);
     setShowPinned(false);
   };
 
   const allArtists = React.useMemo(() => [...new Set(notes.flatMap(n => n.artist?.split(',').map(a => a.trim()) || []).filter(Boolean) as string[])], [notes]);
   const allAlbums = React.useMemo(() => [...new Set(notes.map(n => n.album).filter(Boolean) as string[])], [notes]);
   const hasPinnedNotes = React.useMemo(() => notes.some(note => note.is_pinned), [notes]);
-  const hasActiveFilters = selectedTags.length > 0 || showUntagged || showPinned;
+  const hasNoCapoNotes = React.useMemo(() => notes.some(note => !note.metadata || !note.metadata.toLowerCase().includes('capo')), [notes]);
+  const hasActiveFilters = selectedTags.length > 0 || showUntagged || showNoCapo || showPinned;
 
 
   const TagSidebarContent = () => (
@@ -252,6 +262,18 @@ export default function Home() {
               Untagged
             </Label>
           </SidebarMenuItem>
+          {hasNoCapoNotes && (
+            <SidebarMenuItem className="px-2">
+              <Label htmlFor="tag-no-capo" className="flex items-center gap-3 cursor-pointer w-full text-sm font-normal">
+                <Checkbox
+                  id="tag-no-capo"
+                  checked={showNoCapo}
+                  onCheckedChange={() => handleTagToggle('no-capo')}
+                />
+                No-Capo
+              </Label>
+            </SidebarMenuItem>
+          )}
         </SidebarMenu>
       </SidebarContent>
     </>
@@ -266,7 +288,7 @@ export default function Home() {
       );
     }
 
-    if (filteredNotes.length === 0 && (debouncedSearchQuery || selectedTags.length > 0 || showUntagged || showPinned)) {
+    if (filteredNotes.length === 0 && (debouncedSearchQuery || selectedTags.length > 0 || showUntagged || showNoCapo || showPinned)) {
       return (
         <div className="text-center text-muted-foreground">
           <p>No notes found for the selected filters and search query.</p>

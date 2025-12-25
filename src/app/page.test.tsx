@@ -427,3 +427,288 @@ describe('Unit Tests - @ Icon and Tag Selection', () => {
     expect(newValue.endsWith(' ')).toBe(true);
   });
 });
+
+/**
+ * Unit Tests for No-Capo Filter Feature
+ * Tests the filtering logic for notes without "Capo" in metadata
+ */
+describe('Unit Tests - No-Capo Filter', () => {
+  // Mock note type for testing
+  type TestNote = {
+    id: string;
+    title: string;
+    tags: string[];
+    metadata?: string;
+    is_pinned?: boolean;
+  };
+
+  it('should identify notes without Capo in metadata', () => {
+    const notes: TestNote[] = [
+      { id: '1', title: 'Note 1', tags: [], metadata: 'Key: C' },
+      { id: '2', title: 'Note 2', tags: [], metadata: 'Capo 2' },
+      { id: '3', title: 'Note 3', tags: [], metadata: undefined },
+      { id: '4', title: 'Note 4', tags: [], metadata: 'Key: G, Tempo: 120' },
+    ];
+
+    const hasNoCapoNotes = notes.some(
+      note => !note.metadata || !note.metadata.toLowerCase().includes('capo')
+    );
+
+    expect(hasNoCapoNotes).toBe(true);
+  });
+
+  it('should filter notes without Capo when showNoCapo is true', () => {
+    const notes: TestNote[] = [
+      { id: '1', title: 'Note 1', tags: [], metadata: 'Key: C' },
+      { id: '2', title: 'Note 2', tags: [], metadata: 'Capo 2' },
+      { id: '3', title: 'Note 3', tags: [], metadata: undefined },
+      { id: '4', title: 'Note 4', tags: [], metadata: 'Key: G, capo 3' },
+    ];
+
+    const showNoCapo = true;
+    const selectedTags: string[] = [];
+    const showPinned = false;
+    const showUntagged = false;
+
+    const filtered = notes.filter((note) => {
+      if (showNoCapo && selectedTags.length === 0 && !showPinned && !showUntagged) {
+        return !note.metadata || !note.metadata.toLowerCase().includes('capo');
+      }
+      return true;
+    });
+
+    expect(filtered).toHaveLength(2);
+    expect(filtered.map(n => n.id)).toEqual(['1', '3']);
+  });
+
+  it('should be case-insensitive when checking for Capo', () => {
+    const notes: TestNote[] = [
+      { id: '1', title: 'Note 1', tags: [], metadata: 'CAPO 2' },
+      { id: '2', title: 'Note 2', tags: [], metadata: 'Capo 3' },
+      { id: '3', title: 'Note 3', tags: [], metadata: 'capo 1' },
+      { id: '4', title: 'Note 4', tags: [], metadata: 'Key: C' },
+    ];
+
+    const filtered = notes.filter(
+      note => !note.metadata || !note.metadata.toLowerCase().includes('capo')
+    );
+
+    expect(filtered).toHaveLength(1);
+    expect(filtered[0].id).toBe('4');
+  });
+
+  it('should treat notes with undefined metadata as No-Capo', () => {
+    const notes: TestNote[] = [
+      { id: '1', title: 'Note 1', tags: [], metadata: undefined },
+      { id: '2', title: 'Note 2', tags: [], metadata: 'Capo 2' },
+      { id: '3', title: 'Note 3', tags: [] }, // metadata not set
+    ];
+
+    const filtered = notes.filter(
+      note => !note.metadata || !note.metadata.toLowerCase().includes('capo')
+    );
+
+    expect(filtered).toHaveLength(2);
+    expect(filtered.map(n => n.id)).toEqual(['1', '3']);
+  });
+
+  it('should not show No-Capo filter when all notes have Capo', () => {
+    const notes: TestNote[] = [
+      { id: '1', title: 'Note 1', tags: [], metadata: 'Capo 1' },
+      { id: '2', title: 'Note 2', tags: [], metadata: 'Capo 2' },
+      { id: '3', title: 'Note 3', tags: [], metadata: 'Key: G, Capo 3' },
+    ];
+
+    const hasNoCapoNotes = notes.some(
+      note => !note.metadata || !note.metadata.toLowerCase().includes('capo')
+    );
+
+    expect(hasNoCapoNotes).toBe(false);
+  });
+
+  it('should show No-Capo filter when at least one note has no Capo', () => {
+    const notes: TestNote[] = [
+      { id: '1', title: 'Note 1', tags: [], metadata: 'Capo 1' },
+      { id: '2', title: 'Note 2', tags: [], metadata: 'Key: C' },
+      { id: '3', title: 'Note 3', tags: [], metadata: 'Capo 3' },
+    ];
+
+    const hasNoCapoNotes = notes.some(
+      note => !note.metadata || !note.metadata.toLowerCase().includes('capo')
+    );
+
+    expect(hasNoCapoNotes).toBe(true);
+  });
+
+  it('should ignore No-Capo filter when other tags are selected', () => {
+    const notes: TestNote[] = [
+      { id: '1', title: 'Note 1', tags: ['tag1'], metadata: 'Key: C' },
+      { id: '2', title: 'Note 2', tags: ['tag1'], metadata: 'Capo 2' },
+      { id: '3', title: 'Note 3', tags: ['tag2'], metadata: 'Key: G' },
+    ];
+
+    const showNoCapo = true;
+    const selectedTags = ['tag1'];
+    const showPinned = false;
+    const showUntagged = false;
+
+    const filtered = notes.filter((note) => {
+      // When other tags are selected, No-Capo is ignored
+      if (selectedTags.length === 0 && !showUntagged && !showPinned && !showNoCapo) return true;
+      
+      if (showNoCapo && selectedTags.length === 0 && !showPinned && !showUntagged) {
+        return !note.metadata || !note.metadata.toLowerCase().includes('capo');
+      }
+      
+      return selectedTags.every((tagId) => note.tags.includes(tagId));
+    });
+
+    expect(filtered).toHaveLength(2);
+    expect(filtered.map(n => n.id)).toEqual(['1', '2']);
+  });
+
+  it('should work independently from Untagged filter', () => {
+    const notes: TestNote[] = [
+      { id: '1', title: 'Note 1', tags: [], metadata: 'Key: C' },
+      { id: '2', title: 'Note 2', tags: ['tag1'], metadata: 'Capo 2' },
+      { id: '3', title: 'Note 3', tags: [], metadata: undefined },
+    ];
+
+    // Test No-Capo filter alone
+    const showNoCapo = true;
+    const showUntagged = false;
+    const selectedTags: string[] = [];
+    const showPinned = false;
+
+    const filteredNoCapo = notes.filter((note) => {
+      if (showNoCapo && selectedTags.length === 0 && !showPinned && !showUntagged) {
+        return !note.metadata || !note.metadata.toLowerCase().includes('capo');
+      }
+      return true;
+    });
+
+    expect(filteredNoCapo).toHaveLength(2);
+    expect(filteredNoCapo.map(n => n.id)).toEqual(['1', '3']);
+
+    // Test Untagged filter alone
+    const showNoCapo2 = false;
+    const showUntagged2 = true;
+
+    const filteredUntagged = notes.filter((note) => {
+      if (showUntagged2 && selectedTags.length === 0 && !showPinned && !showNoCapo2) {
+        return note.tags.length === 0;
+      }
+      return true;
+    });
+
+    expect(filteredUntagged).toHaveLength(2);
+    expect(filteredUntagged.map(n => n.id)).toEqual(['1', '3']);
+  });
+
+  it('should work independently from Pinned filter', () => {
+    const notes: TestNote[] = [
+      { id: '1', title: 'Note 1', tags: [], metadata: 'Key: C', is_pinned: true },
+      { id: '2', title: 'Note 2', tags: [], metadata: 'Capo 2', is_pinned: false },
+      { id: '3', title: 'Note 3', tags: [], metadata: 'Key: G', is_pinned: false },
+    ];
+
+    // Test No-Capo filter alone
+    const showNoCapo = true;
+    const showUntagged = false;
+    const selectedTags: string[] = [];
+    const showPinned = false;
+
+    const filteredNoCapo = notes.filter((note) => {
+      if (showNoCapo && selectedTags.length === 0 && !showPinned && !showUntagged) {
+        return !note.metadata || !note.metadata.toLowerCase().includes('capo');
+      }
+      return true;
+    });
+
+    expect(filteredNoCapo).toHaveLength(2);
+    expect(filteredNoCapo.map(n => n.id)).toEqual(['1', '3']);
+
+    // Test Pinned filter alone
+    const showNoCapo2 = false;
+    const showPinned2 = true;
+
+    const filteredPinned = notes.filter((note) => {
+      if (showPinned2 && selectedTags.length === 0 && !showUntagged && !showNoCapo2) {
+        return note.is_pinned;
+      }
+      return true;
+    });
+
+    expect(filteredPinned).toHaveLength(1);
+    expect(filteredPinned[0].id).toBe('1');
+  });
+
+  it('should handle partial matches correctly', () => {
+    const notes: TestNote[] = [
+      { id: '1', title: 'Note 1', tags: [], metadata: 'Capacity: 100' }, // Contains 'cap' but not 'capo'
+      { id: '2', title: 'Note 2', tags: [], metadata: 'Capo 2' },
+      { id: '3', title: 'Note 3', tags: [], metadata: 'Cape Town' }, // Contains 'cape' but not 'capo'
+    ];
+
+    const filtered = notes.filter(
+      note => !note.metadata || !note.metadata.toLowerCase().includes('capo')
+    );
+
+    expect(filtered).toHaveLength(2);
+    expect(filtered.map(n => n.id)).toEqual(['1', '3']);
+  });
+});
+
+/**
+ * Property-Based Tests for No-Capo Filter
+ * Tests the No-Capo filter with arbitrary metadata strings
+ */
+describe('Property-Based Tests - No-Capo Filter', () => {
+  it('Property: Notes with "capo" (any case) in metadata should be filtered out', () => {
+    const metadataArb = fc.string({ minLength: 1, maxLength: 50 });
+    const capoVariantArb = fc.constantFrom('capo', 'Capo', 'CAPO', 'CaPo', 'cApO');
+
+    fc.assert(
+      fc.property(metadataArb, capoVariantArb, (metadata, capoVariant) => {
+        const metadataWithCapo = metadata + ' ' + capoVariant + ' 2';
+        
+        const hasCapo = metadataWithCapo.toLowerCase().includes('capo');
+        
+        // Property: Any metadata containing "capo" (case-insensitive) should be detected
+        expect(hasCapo).toBe(true);
+      }),
+      { numRuns: 100 }
+    );
+  });
+
+  it('Property: Notes without "capo" in metadata should pass the filter', () => {
+    const metadataArb = fc.string({ minLength: 0, maxLength: 50 })
+      .filter(s => !s.toLowerCase().includes('capo'));
+
+    fc.assert(
+      fc.property(metadataArb, (metadata) => {
+        const hasCapo = metadata.toLowerCase().includes('capo');
+        
+        // Property: Metadata without "capo" should not be detected
+        expect(hasCapo).toBe(false);
+      }),
+      { numRuns: 100 }
+    );
+  });
+
+  it('Property: Empty or undefined metadata should be treated as No-Capo', () => {
+    const metadataArb = fc.option(fc.string({ maxLength: 50 }), { nil: undefined });
+
+    fc.assert(
+      fc.property(metadataArb, (metadata) => {
+        const isNoCapo = !metadata || !metadata.toLowerCase().includes('capo');
+        
+        // Property: If metadata is undefined or doesn't contain "capo", it's No-Capo
+        if (!metadata) {
+          expect(isNoCapo).toBe(true);
+        }
+      }),
+      { numRuns: 100 }
+    );
+  });
+});

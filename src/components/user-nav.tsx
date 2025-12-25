@@ -26,7 +26,7 @@ import { useToast } from '@/hooks/use-toast'
 
 export function UserNav() {
   const router = useRouter();
-  const { user, loading, isAdmin, isApproved, isPending } = useAuth();
+  const { user, profile, loading, isAdmin, isApproved } = useAuth();
   const { theme, setTheme } = useTheme();
   const { notes, tags, fetchNotesAndTags } = useNotesData();
   const [adminPanelOpen, setAdminPanelOpen] = useState(false);
@@ -164,7 +164,7 @@ export function UserNav() {
             <>
               <DropdownMenuLabel className="font-normal">
                 <div className="flex flex-col space-y-1">
-                  <p className="text-sm font-medium leading-none">{loading ? 'Loading...' : user.email}</p>
+                  <p className="text-sm font-medium leading-none">{loading ? 'Loading...' : (profile?.name || user.email)}</p>
                 </div>
               </DropdownMenuLabel>
               <DropdownMenuSeparator />
