@@ -14,6 +14,11 @@ let authSubscription: any = null;
 
 // Helper to get cached auth state from localStorage
 const getCachedAuthState = () => {
+  // Check if we're in a browser environment
+  if (typeof window === 'undefined') {
+    return null;
+  }
+  
   try {
     const cached = localStorage.getItem('auth-state-cache');
     if (cached) {
@@ -39,6 +44,11 @@ const getCachedAuthState = () => {
 
 // Helper to set cached auth state in localStorage
 const setCachedAuthState = (user: User | null, profile: UserProfile | null) => {
+  // Check if we're in a browser environment
+  if (typeof window === 'undefined') {
+    return;
+  }
+  
   try {
     localStorage.setItem('auth-state-cache', JSON.stringify({
       user,

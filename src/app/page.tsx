@@ -66,24 +66,35 @@ export default function Home() {
   const filteredNotes = React.useMemo(() => {
     // Filter by tags first (existing tag filter functionality)
     const notesWithTags = notes.filter((note) => {
-      // If 'Pinned' is selected, show only pinned notes
-      if (showPinned && selectedTags.length === 0 && !showUntagged && !showNoCapo) {
-        return note.is_pinned;
+      // If no filters are active, show all notes
+      if (selectedTags.length === 0 && !showUntagged && !showPinned && !showNoCapo) {
+        return true;
       }
       
-      // If 'Untagged' is the only filter, show notes with no tags
-      if (showUntagged && selectedTags.length === 0 && !showPinned && !showNoCapo) {
-        return note.tags.length === 0;
+      // Apply all filters with AND logic
+      let matches = true;
+      
+      // Check pinned filter
+      if (showPinned) {
+        matches = matches && (note.is_pinned === true);
       }
       
-      // If 'No-Capo' is the only filter, show notes without Capo in metadata
-      if (showNoCapo && selectedTags.length === 0 && !showPinned && !showUntagged) {
-        return !note.metadata || !note.metadata.toLowerCase().includes('capo');
+      // Check untagged filter
+      if (showUntagged) {
+        matches = matches && note.tags.length === 0;
       }
       
-      // If other tags are selected, 'Untagged', 'No-Capo', and 'Pinned' are ignored
-      if (selectedTags.length === 0 && !showUntagged && !showPinned && !showNoCapo) return true;
-      return selectedTags.every((tagId) => note.tags.includes(tagId));
+      // Check no-capo filter
+      if (showNoCapo) {
+        matches = matches && (!note.metadata || !note.metadata.toLowerCase().includes('capo'));
+      }
+      
+      // Check selected tags (all must be present - AND logic)
+      if (selectedTags.length > 0) {
+        matches = matches && selectedTags.every((tagId) => note.tags.includes(tagId));
+      }
+      
+      return matches;
     });
 
     const query = debouncedSearchQuery.trim();
