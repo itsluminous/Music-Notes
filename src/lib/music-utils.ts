@@ -90,10 +90,24 @@ export const transpose = (chord: string, steps: number): string => {
   return `(${transposedMainChord})`;
 };
 
-const renderTextWithChords = (text: string, transposeSteps: number = 0, keyPrefix: string) => {
+export const renderUrlAsLink = (url: string, key: string) => {
+  return React.createElement(
+    'a',
+    {
+      key,
+      href: url,
+      target: '_blank',
+      rel: 'noopener noreferrer',
+      className: 'text-primary underline hover:text-primary/80',
+    },
+    url
+  );
+};
+
+const renderTextWithChords = (text: string, transposeSteps: number = 0, keyPrefix: string): React.ReactNode[] => {
   const parts = text.split(CHORD_REGEX);
   
-  return parts.map((part, index) => {
+  return parts.flatMap((part, index): React.ReactNode | React.ReactNode[] => {
     const chordContent = part.slice(1, -1);
     if ((part.startsWith('(') || part.startsWith('[')) && isChord(chordContent)) {
       const transposedChord = transpose(part, transposeSteps);
@@ -107,7 +121,15 @@ const renderTextWithChords = (text: string, transposeSteps: number = 0, keyPrefi
         transposedChord
       );
     }
-    return part;
+    
+    // Parse URLs in non-chord text
+    const urlParts = part.split(URL_REGEX);
+    return urlParts.map((urlPart, urlIndex): React.ReactNode => {
+      if (urlPart.match(URL_REGEX)) {
+        return renderUrlAsLink(urlPart, `${keyPrefix}-${index}-url-${urlIndex}`);
+      }
+      return urlPart;
+    });
   });
 }
 

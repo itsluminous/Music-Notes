@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { Badge } from '@/components/ui/badge';
 import { format } from 'date-fns';
-import { highlightChordsAndCode, linkify, isLinkPart } from '@/lib/music-utils';
+import { highlightChordsAndCode, linkify, isLinkPart, renderUrlAsLink } from '@/lib/music-utils';
 import type { Note, Tag } from '@/lib/types';
 import { cn } from '@/lib/utils';
 
@@ -36,19 +36,9 @@ export function NoteViewContent({ note, allTags, effectiveTranspose, scrollRef }
           {note.metadata && (
             <div className="text-sm text-muted-foreground whitespace-pre-wrap break-words">
               {linkify(note.metadata).map((part, index) =>
-                isLinkPart(part) ? (
-                  <a
-                    key={index}
-                    href={part.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary underline hover:text-primary/80"
-                  >
-                    {part.text}
-                  </a>
-                ) : (
+                isLinkPart(part) ? 
+                  renderUrlAsLink(part.href, `metadata-${index}`) : 
                   <React.Fragment key={index}>{part.text}</React.Fragment>
-                )
               )}
             </div>
           )}
@@ -61,19 +51,9 @@ export function NoteViewContent({ note, allTags, effectiveTranspose, scrollRef }
               <h4 className="font-semibold text-sm mb-2">References</h4>
               <div className="text-sm text-muted-foreground whitespace-pre-wrap break-words">
                 {linkify(note.references).map((part, index) =>
-                  isLinkPart(part) ? (
-                    <a
-                      key={index}
-                      href={part.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary underline hover:text-primary/80"
-                    >
-                      {part.text}
-                    </a>
-                  ) : (
+                  isLinkPart(part) ? 
+                    renderUrlAsLink(part.href, `references-${index}`) : 
                     <React.Fragment key={index}>{part.text}</React.Fragment>
-                  )
                 )}
               </div>
             </div>
