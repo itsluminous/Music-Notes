@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from 'react';
-import { supabase } from '@/lib/supabase';
+import { supabase, checkSupabaseConnection } from '@/lib/supabase';
 import type { Note, Tag } from '@/lib/types';
 import { useToast } from './use-toast';
 import { useAuth } from './use-auth';
@@ -157,6 +157,7 @@ export function useNotesData() {
 	const [loading, setLoading] = useState(true);
 	const [loadingFromCache, setLoadingFromCache] = useState(false);
 	const [refreshing, setRefreshing] = useState(false);
+	const [dbUnavailable, setDbUnavailable] = useState(false);
 	
 	const MAX_RETRY_ATTEMPTS = 3;
 	const RETRY_DELAY_MS = 2000;
@@ -347,6 +348,12 @@ export function useNotesData() {
 			debugLogger.logError('Fetch Notes and Tags', error);
 			toast({ title: 'Error fetching data', description: error.message, variant: 'destructive' });
 			console.error('Failed to fetch notes/tags:', error);
+			// Distinguish a query error from an unreachable (paused) database
+			// so the UI can show a helpful note instead of an empty state.
+			const reachable = await checkSupabaseConnection();
+			if (!reachable) {
+				setDbUnavailable(true);
+			}
 			setNotes([]);
 			setTags([]);
 		} finally {
@@ -518,5 +525,5 @@ export function useNotesData() {
 		}
 	}, [fetchNotesAndTags, tags, toast, user]);
 
-	return { notes, tags, loading, loadingFromCache, refreshing, fetchNotesAndTags, saveNote };
+	return { notes, tags, loading, loadingFromCache, refreshing, dbUnavailable, fetchNotesAndTags, saveNote };
 }

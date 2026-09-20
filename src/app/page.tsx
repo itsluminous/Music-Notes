@@ -29,12 +29,16 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { useToast } from '@/hooks/use-toast';
 import { useNotesData } from '@/hooks/use-notes-data';
 import { useAuth } from '@/hooks/use-auth';
+import { useSupabaseWatchdog } from '@/hooks/use-supabase-watchdog';
+import { DatabaseUnavailable } from '@/components/database-unavailable';
 import { useDebounce } from '@/hooks/use-debounce';
 import { parseSearchQuery } from '@/lib/search-parser';
 import { filterNotesByParsedQuery, rankSearchResults } from '@/lib/search-engine';
 
 export default function Home() {
-  const { notes, tags, loading: notesLoading, refreshing, fetchNotesAndTags, saveNote } = useNotesData();
+  const { notes, tags, loading: notesLoading, refreshing, dbUnavailable, fetchNotesAndTags, saveNote } = useNotesData();
+  // If the notes fetch hangs (e.g., paused Supabase project), detect it and show a note
+  const watchdogUnavailable = useSupabaseWatchdog(notesLoading);
   const { user, isPending, isApproved, profile, loading: authLoading, showAccountRemovedDialog, setShowAccountRemovedDialog } = useAuth();
   const [searchQuery, setSearchQuery] = React.useState('');
   const debouncedSearchQuery = useDebounce(searchQuery, 300);
@@ -318,6 +322,12 @@ export default function Home() {
     
     return null;
   };
+
+  // Show the unavailable note only when we have nothing cached to display —
+  // if cached notes rendered, the existing error toast is enough.
+  if ((dbUnavailable || watchdogUnavailable) && notes.length === 0) {
+    return <DatabaseUnavailable />;
+  }
 
   return (
     <SidebarProvider defaultOpen={!isMobile}>
